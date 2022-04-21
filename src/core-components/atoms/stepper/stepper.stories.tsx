@@ -18,7 +18,7 @@ export default {
 export const Primary: ComponentStory<typeof Stepper> = () => (
   <Stepper
     steps={['1', '2', '3', '4']}
-    currentStep={3}
+    currentStep={2}
     onStepClick={(currentStep, step) => {}}
     className="mt-4"
   />
