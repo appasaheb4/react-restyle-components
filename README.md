@@ -18,7 +18,7 @@ import {Stepper} from 'react-restyle-components';
 <Stepper
   steps={['1', '2', '3']}
   currentStep={2}
-  onStepClick={(currentStep, step) => {
+  onStepClick={(currentStep: any, step: any) => {
     // eslint-disable-next-line no-console
     console.log({currentStep, step});
   }}

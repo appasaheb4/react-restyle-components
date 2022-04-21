@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "private": false,
   "description": "Easy use restyle components",
   "types": "lib/index.d.ts",
@@ -32,7 +32,7 @@
     "dev": "craco start",
     "serve-webapp": "craco build && craco start",
     "deploy": "gh-pages -d ./storybook-static",
-    "build": "tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
+    "build": "tsc -p .",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
