@@ -2,8 +2,6 @@
 
 Easy use restyle components
 
-## Note: In development mode (facing same issue) 🚨
-
 ## Installation
 
 ```
@@ -15,7 +13,7 @@ yarn add react-restyle-components
 ##
 
 ```jsx
-import {List, Form, Buttons, Svg, Icons} from 'react-restyle-components';
+import {Stepper} from 'react-restyle-components';
 ```
 
 ### Outputs

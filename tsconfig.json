@@ -2,7 +2,7 @@
   "extends": "./tsconfig.paths.json",
   "compileOnSave": false,
   "compilerOptions": {
-    "lib": ["ES2015"],
+    "lib": ["ES2015", "dom", "dom.iterable", "esnext"],
     "target": "ES2015",
     "module": "ES2020",
     "strict": true,
@@ -10,7 +10,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./lib/esm",
-    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
