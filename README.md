@@ -15,6 +15,7 @@ yarn add tailwindcss
 
 ## Some changes required
 
+```
 tsconfig.json
 "compilerOptions": {
 ...
@@ -31,6 +32,8 @@ tsconfig.json
 https://github.com/appasaheb4/react-restyle-components/blob/master/craco.config.js
 https://github.com/appasaheb4/react-restyle-components/blob/master/postcss.config.js
 https://github.com/appasaheb4/react-restyle-components/blob/master/tailwind.config.js
+
+```
 
 ##
 

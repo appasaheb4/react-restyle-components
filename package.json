@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/index.js",
