@@ -14,6 +14,16 @@ yarn add react-restyle-components
 
 ```jsx
 import {Stepper} from 'react-restyle-components';
+
+<Stepper
+  steps={['1', '2', '3']}
+  currentStep={2}
+  onStepClick={(currentStep, step) => {
+    // eslint-disable-next-line no-console
+    console.log({currentStep, step});
+  }}
+  className="mt-4"
+/>;
 ```
 
 ### Outputs
