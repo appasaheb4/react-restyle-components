@@ -5,11 +5,8 @@ Easy use restyle components
 ## Installation
 
 ```
-npm i react-restyle-components
-or
-yarn add react-restyle-components
-yarn add -D @craco/craco craco-alias
-yarn add tailwindcss
+yarn add react-restyle-components tailwindcss
+yarn add -D @craco/craco craco-alias postcss autoprefixer
 
 ```
 
