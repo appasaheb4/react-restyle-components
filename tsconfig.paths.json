@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@core-components": ["./src/core-components/index"],
+      "@core-utils": ["./src/core-utils/index"]
+    },
+    "experimentalDecorators": true
+  },
+  "include": ["src"]
+}

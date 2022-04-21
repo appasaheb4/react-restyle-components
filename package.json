@@ -1,0 +1,101 @@
+{
+  "name": "react-restyle-components",
+  "version": "0.1.14",
+  "private": true,
+  "description": "Easy use restyle components",
+  "types": "lib/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "author": {
+    "email": "onlyappasaheb4@gmail.com",
+    "name": "Lakade Appasaheb",
+    "url": "http://github.com/appasaheb4"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.27",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.1",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.3",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "serve -s ./build",
+    "dev": "craco start",
+    "serve-webapp": "craco build && craco start",
+    "deploy": "gh-pages -d ./storybook-static",
+    "build": "tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "files": [
+    "lib/"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.4.3",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/builder-webpack5": "^6.4.22",
+    "@storybook/manager-webpack5": "^6.4.22",
+    "@storybook/node-logger": "^6.4.22",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.10",
+    "craco-alias": "^3.0.1",
+    "webpack": "^5.72.0"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "restyle-components",
+    "tech-abl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appasaheb4/react-restyle-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appasaheb4/react-restyle-components/issues"
+  },
+  "homepage": "https://github.com/appasaheb4/react-restyle-components#readme"
+}
