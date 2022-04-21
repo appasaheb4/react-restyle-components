@@ -8,7 +8,29 @@ Easy use restyle components
 npm i react-restyle-components
 or
 yarn add react-restyle-components
+yarn add -D @craco/craco craco-alias
+yarn add tailwindcss
+
 ```
+
+## Some changes required
+
+tsconfig.json
+"compilerOptions": {
+...
+"noImplicitAny": false
+},
+
+// modify script
+"start": "serve -s ./build",
+"dev": "craco start",
+"build": "craco build",
+"test": "craco test"
+
+// Paste 3 files your root path
+https://github.com/appasaheb4/react-restyle-components/blob/master/craco.config.js
+https://github.com/appasaheb4/react-restyle-components/blob/master/postcss.config.js
+https://github.com/appasaheb4/react-restyle-components/blob/master/tailwind.config.js
 
 ##
 
