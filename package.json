@@ -1,10 +1,10 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "private": false,
   "description": "Easy use restyle components",
-  "types": "lib",
-  "main": "lib/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
@@ -31,7 +31,7 @@
     "dev": "craco start",
     "serve-webapp": "craco build && craco start",
     "deploy": "gh-pages -d ./storybook-static",
-    "build": "tsc -p .",
+    "build": "tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
