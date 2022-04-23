@@ -2,7 +2,7 @@
   "extends": "./tsconfig.paths.json",
   "compileOnSave": false,
   "compilerOptions": {
-    "lib": ["ES2015"],
+    "lib": ["ES2015", "dom", "dom.iterable", "esnext"],
     "target": "ES2015",
     "module": "ES2020",
     "strict": true,
