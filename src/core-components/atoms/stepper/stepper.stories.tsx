@@ -8,10 +8,6 @@ import {Stepper} from './stepper.component';
 export default {
   title: 'Atoms/Stepper',
   component: Stepper,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: {control: 'color'},
-  },
 } as ComponentMeta<typeof Stepper>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

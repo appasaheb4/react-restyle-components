@@ -32,25 +32,7 @@ https://github.com/appasaheb4/react-restyle-components/blob/master/tailwind.conf
 
 ```
 
-##
-
-```jsx
-import {Stepper} from 'react-restyle-components';
-
-<Stepper
-  steps={['1', '2', '3']}
-  currentStep={2}
-  onStepClick={(currentStep: any, step: any) => {
-    // eslint-disable-next-line no-console
-    console.log({currentStep, step});
-  }}
-  className="mt-4"
-/>;
-```
-
-### Outputs
-
-# Storybook
+### 📚 Storybook
 
 https://appasaheb4.github.io/react-restyle-components
 
