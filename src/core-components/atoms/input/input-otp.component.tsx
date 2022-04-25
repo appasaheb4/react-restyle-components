@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, {useEffect, useRef} from 'react';
-import './inputOtp.styles.css';
+import './input-otp.styles.css';
 interface PinInputGridProps {
   title?: string;
   hasError?: boolean;

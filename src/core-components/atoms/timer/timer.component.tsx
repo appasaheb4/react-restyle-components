@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import React, {useEffect, Ref, useState, useImperativeHandle} from 'react';
-import {ReactComponent as TimerSVG} from '../../../library/assets/svg/timer.svg';
+import {ReactComponent as TimerSVG} from '@assets/svg/timer.svg';
 
 interface TimerProps {
   onClear: () => void;

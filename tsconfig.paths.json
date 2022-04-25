@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@core-components": ["./src/core-components/index"],
-      "@core-utils": ["./src/core-utils/index"]
+      "@core-utils": ["./src/core-utils/index"],
+      "@assets/*": ["./src/library/assets/*"]
     },
     "experimentalDecorators": true
   },

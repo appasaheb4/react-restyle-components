@@ -1,7 +1,7 @@
 import React, {useState, forwardRef} from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import {ReactComponent as DatePickerSvg} from '../../../library/assets/svg/datePicker.svg';
+import {ReactComponent as DatePickerSvg} from '@assets/svg/datePicker.svg';
 import dayjs from 'dayjs';
 
 interface DatePickerProps {
