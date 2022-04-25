@@ -6,10 +6,6 @@ import {Loader} from './loader.component';
 export default {
   title: 'Atoms/Loader',
   component: Loader,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: {control: 'color'},
-  },
 } as ComponentMeta<typeof Loader>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args

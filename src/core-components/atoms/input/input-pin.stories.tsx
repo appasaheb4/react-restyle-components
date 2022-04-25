@@ -7,10 +7,6 @@ import {InputPin} from './input-pin.component';
 export default {
   title: 'Atoms/InputPin',
   component: InputPin,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: {control: 'color'},
-  },
 } as ComponentMeta<typeof InputPin>;
 
 const pin = new Array(12);

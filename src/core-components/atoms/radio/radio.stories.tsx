@@ -6,10 +6,6 @@ import {Radio} from './radio.component';
 export default {
   title: 'Atoms/Radio',
   component: Radio,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: {control: 'color'},
-  },
 } as ComponentMeta<typeof Radio>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
