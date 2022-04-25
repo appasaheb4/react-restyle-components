@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/index.js",
@@ -36,12 +36,20 @@
     "build": "tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "precommit": "lint-staged --allow-empty",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -o docs-build",
-    "deploy-storybook": "gh-pages -d docs-build"
+    "deploy-storybook": "gh-pages -d docs-build",
+    "prettier": "prettier --write '**/*.{js,jsx}'",
+    "prepare": "husky install"
   },
   "files": [
-    "lib/"
+    "*.md",
+    "dist",
+    "lib"
+  ],
+  "sideEffects": [
+    "**/*.css"
   ],
   "eslintConfig": {
     "extends": [
@@ -86,6 +94,8 @@
     "@storybook/testing-library": "^0.0.10",
     "craco-alias": "^3.0.1",
     "gh-pages": "^3.2.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
     "node": "^17.7.2",
     "webpack": "^5.72.0"
   },
@@ -102,5 +112,11 @@
   "bugs": {
     "url": "https://github.com/appasaheb4/react-restyle-components/issues"
   },
-  "homepage": "https://github.com/appasaheb4/react-restyle-components#readme"
+  "homepage": "https://github.com/appasaheb4/react-restyle-components#readme",
+  "lint-staged": {
+    "*.{js,jsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
