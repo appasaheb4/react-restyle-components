@@ -36,4 +36,9 @@ https://github.com/appasaheb4/react-restyle-components/blob/master/tailwind.conf
 
 https://appasaheb4.github.io/react-restyle-components
 
-### More inforamtion watch youtube channel: https://www.youtube.com/tech-abl
+### Contributes / Support
+
+1.  Subscribe channel 😊 : https://www.youtube.com/tech-abl
+2.  Submit your pr for idea / issue / feature
+
+    😊 ALWAYS WELCOME 😊
