@@ -36,9 +36,23 @@ https://github.com/appasaheb4/react-restyle-components/blob/master/tailwind.conf
 
 https://appasaheb4.github.io/react-restyle-components
 
-### Contributes / Support
+☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
+Mobile No: +91 9260303151 <br />
+Email Id: onlyappasaheb4@gmail.com <br />
+Github: www.github.com/appasaheb4 <br />
+Website: www.tech-abl.com
+☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
+
+## Contributes / Support
 
 1.  Subscribe channel 😊 : https://www.youtube.com/tech-abl
-2.  Submit your pr for idea / issue / feature
 
-    😊 ALWAYS WELCOME 😊
+2.  Submit your pr for idea / issue / feature
+    ### How To Contribute
+        - Fork and clone this repository
+        - Make some changes as required
+        - Write unit test to showcase its functionality
+        - Run the test suites to make sure it's not breaking anything `$ npm test`
+        - Submit a pull request under `dev` branch
+
+😊 ALWAYS WELCOME 😊
