@@ -61,24 +61,13 @@
     "typescript": "*",
     "web-vitals": "*"
   },
-  "files": [
-    "*.md",
-    "dist",
-    "lib"
-  ],
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "files": ["*.md", "dist", "lib"],
+  "sideEffects": ["**/*.css"],
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
+    "extends": ["react-app", "react-app/jest"],
     "overrides": [
       {
-        "files": [
-          "**/*.stories.*"
-        ],
+        "files": ["**/*.stories.*"],
         "rules": {
           "import/no-anonymous-default-export": "off"
         }
@@ -86,11 +75,7 @@
     ]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -117,12 +102,7 @@
     "node": "^17.7.2",
     "webpack": "^5.72.0"
   },
-  "keywords": [
-    "react",
-    "components",
-    "restyle-components",
-    "tech-abl"
-  ],
+  "keywords": ["react", "components", "restyle-components", "tech-abl"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/appasaheb4/react-restyle-components.git"
@@ -132,9 +112,6 @@
   },
   "homepage": "https://github.com/appasaheb4/react-restyle-components#readme",
   "lint-staged": {
-    "*.{js,jsx,json,css,scss,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,jsx,json,css,scss,md}": ["prettier --write", "git add"]
   }
 }
