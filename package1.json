@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -o docs-build",
+    "build-storybook": "rm -rf docs-build && build-storybook -o docs-build",
     "deploy-storybook": "gh-pages -d docs-build",
     "prettier": "prettier --write '**/*.{js,jsx}'",
     "prepare": "husky install"
