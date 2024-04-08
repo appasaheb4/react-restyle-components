@@ -1,26 +1,25 @@
 "use strict";
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
-  [459],
+  [929],
   {
-    42459: function (
+    30929: (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__
-    ) {
+    ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
-          getScrollAreaStyles: function () {
-            return getScrollAreaStyles;
-          },
+          default: () => GlobalScrollAreaStyles,
+          getScrollAreaStyles: () => getScrollAreaStyles,
         });
-      __webpack_require__(47042), __webpack_require__(43371);
+      __webpack_require__(34782), __webpack_require__(52811);
       var _templateObject,
-        react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(67294),
+        react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(96540),
         _storybook_theming__WEBPACK_IMPORTED_MODULE_3__ =
-          __webpack_require__(19883);
+          __webpack_require__(72494);
       var hsResizeObserverDummyAnimation = (0,
-        _storybook_theming__WEBPACK_IMPORTED_MODULE_3__.F4)(
+        _storybook_theming__WEBPACK_IMPORTED_MODULE_3__.i7)(
           _templateObject ||
             (_templateObject = (function _taggedTemplateLiteral(strings, raw) {
               return (
@@ -438,12 +437,10 @@
         },
         GlobalScrollAreaStyles = function GlobalScrollAreaStyles() {
           return react__WEBPACK_IMPORTED_MODULE_2__.createElement(
-            _storybook_theming__WEBPACK_IMPORTED_MODULE_3__.xB,
+            _storybook_theming__WEBPACK_IMPORTED_MODULE_3__.mL,
             { styles: getScrollAreaStyles }
           );
         };
-      (GlobalScrollAreaStyles.displayName = "GlobalScrollAreaStyles"),
-        (__webpack_exports__.default = GlobalScrollAreaStyles);
     },
   },
 ]);

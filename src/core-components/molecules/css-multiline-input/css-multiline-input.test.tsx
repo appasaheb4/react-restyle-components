@@ -6,6 +6,6 @@ import {render} from '@core-utils';
 import {CSSMultiline} from './css-multiline-input.component';
 
 it('render CSSMultiline correctly', () => {
-  const time = render(<CSSMultiline onChange={() => {}} />);
-  expect(time).toMatchSnapshot();
+  const result = render(<CSSMultiline onChange={() => {}} />);
+  expect(result).toMatchSnapshot();
 });

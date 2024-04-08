@@ -1,9 +1,5 @@
 import React, {useState, useEffect, Ref} from 'react';
-import dayjs from 'dayjs';
-import '../css/toggle.css';
-import '../css/toggle-2.css';
 import classNames from 'classnames';
-import '../css/date-time-picker.css';
 
 interface LabelProps {
   htmlFor: string;
