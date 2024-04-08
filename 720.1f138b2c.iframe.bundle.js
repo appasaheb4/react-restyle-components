@@ -1,209 +1,114 @@
-/*! For license information please see 331.d2615140243359fa036e.manager.bundle.js.LICENSE.txt */
+/*! For license information please see 720.1f138b2c.iframe.bundle.js.LICENSE.txt */
+"use strict";
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
-  [331],
+  [720],
   {
-    11331: function (
-      __unused_webpack_module,
-      __webpack_exports__,
-      __webpack_require__
-    ) {
-      "use strict";
-      __webpack_require__.r(__webpack_exports__),
-        __webpack_require__.d(__webpack_exports__, {
-          OverlayScrollbarsComponent: function () {
-            return OverlayScrollbarsComponent;
-          },
-        });
-      __webpack_require__(24603),
-        __webpack_require__(74916),
-        __webpack_require__(39714),
-        __webpack_require__(15306),
-        __webpack_require__(69600),
-        __webpack_require__(57327),
-        __webpack_require__(23123),
-        __webpack_require__(4723),
-        __webpack_require__(92222),
-        __webpack_require__(47941),
-        __webpack_require__(82526),
-        __webpack_require__(19601);
-      var react__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(67294),
-        overlayscrollbars__WEBPACK_IMPORTED_MODULE_13__ =
-          __webpack_require__(45432),
-        overlayscrollbars__WEBPACK_IMPORTED_MODULE_13___default =
-          __webpack_require__.n(
-            overlayscrollbars__WEBPACK_IMPORTED_MODULE_13__
+    "./node_modules/@storybook/components/dist/esm/OverlayScrollbars-1355f44c.js":
+      (__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+        __webpack_require__.r(__webpack_exports__),
+          __webpack_require__.d(__webpack_exports__, {
+            OverlayScrollbarsComponent: () => OverlayScrollbarsComponent,
+            default: () => OverlayScrollbarsComponent,
+          });
+        __webpack_require__("./node_modules/core-js/modules/es.array.slice.js"),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.regexp.exec.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.string.replace.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.string.split.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.array.concat.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.object.to-string.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.regexp.to-string.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.string.match.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.array.join.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.array.splice.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.array.filter.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.array.find.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.regexp.constructor.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.number.to-fixed.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.function.name.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.object.assign.js"
+          ),
+          __webpack_require__("./node_modules/core-js/modules/es.symbol.js"),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.symbol.description.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.symbol.iterator.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.array.iterator.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/es.string.iterator.js"
+          ),
+          __webpack_require__(
+            "./node_modules/core-js/modules/web.dom-collections.iterator.js"
           );
-      function _extends() {
-        return (
-          (_extends =
-            Object.assign ||
-            function (target) {
-              for (var i = 1; i < arguments.length; i++) {
-                var source = arguments[i];
-                for (var key in source)
-                  Object.prototype.hasOwnProperty.call(source, key) &&
-                    (target[key] = source[key]);
-              }
-              return target;
-            }),
-          _extends.apply(this, arguments)
-        );
-      }
-      function _objectWithoutProperties(source, excluded) {
-        if (null == source) return {};
-        var key,
-          i,
-          target = (function _objectWithoutPropertiesLoose(source, excluded) {
-            if (null == source) return {};
-            var key,
-              i,
-              target = {},
-              sourceKeys = Object.keys(source);
-            for (i = 0; i < sourceKeys.length; i++)
-              (key = sourceKeys[i]),
-                excluded.indexOf(key) >= 0 || (target[key] = source[key]);
-            return target;
-          })(source, excluded);
-        if (Object.getOwnPropertySymbols) {
-          var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-          for (i = 0; i < sourceSymbolKeys.length; i++)
-            (key = sourceSymbolKeys[i]),
-              excluded.indexOf(key) >= 0 ||
-                (Object.prototype.propertyIsEnumerable.call(source, key) &&
-                  (target[key] = source[key]));
+        var _index_681e4b07_js__WEBPACK_IMPORTED_MODULE_25__ =
+            __webpack_require__(
+              "./node_modules/@storybook/components/dist/esm/index-681e4b07.js"
+            ),
+          react__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
+            "./node_modules/react/index.js"
+          );
+        __webpack_require__("./node_modules/memoizerific/memoizerific.js"),
+          __webpack_require__("./node_modules/@storybook/csf/dist/index.js");
+        function _typeof(obj) {
+          return (
+            (_typeof =
+              "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+                ? function (obj) {
+                    return typeof obj;
+                  }
+                : function (obj) {
+                    return obj &&
+                      "function" == typeof Symbol &&
+                      obj.constructor === Symbol &&
+                      obj !== Symbol.prototype
+                      ? "symbol"
+                      : typeof obj;
+                  }),
+            _typeof(obj)
+          );
         }
-        return target;
-      }
-      var OverlayScrollbarsComponent = function OverlayScrollbarsComponent(
-        _ref
-      ) {
-        var _ref$options = _ref.options,
-          options = void 0 === _ref$options ? {} : _ref$options,
-          extensions = _ref.extensions,
-          className = _ref.className,
-          children = _ref.children,
-          rest = _objectWithoutProperties(_ref, [
-            "options",
-            "extensions",
-            "className",
-            "children",
-          ]),
-          osTargetRef = react__WEBPACK_IMPORTED_MODULE_12__.useRef(),
-          osInstance = react__WEBPACK_IMPORTED_MODULE_12__.useRef();
-        return (
-          react__WEBPACK_IMPORTED_MODULE_12__.useEffect(function () {
-            return (
-              (osInstance.current =
-                overlayscrollbars__WEBPACK_IMPORTED_MODULE_13___default()(
-                  osTargetRef.current,
-                  options,
-                  extensions
-                )),
-              mergeHostClassNames(osInstance.current, className),
-              function () {
-                overlayscrollbars__WEBPACK_IMPORTED_MODULE_13___default().valid(
-                  osInstance.current
-                ) &&
-                  (osInstance.current.destroy(), (osInstance.current = null));
-              }
-            );
-          }, []),
-          react__WEBPACK_IMPORTED_MODULE_12__.useEffect(
-            function () {
-              overlayscrollbars__WEBPACK_IMPORTED_MODULE_13___default().valid(
-                osInstance.current
-              ) && osInstance.current.options(options);
-            },
-            [options]
-          ),
-          react__WEBPACK_IMPORTED_MODULE_12__.useEffect(
-            function () {
-              overlayscrollbars__WEBPACK_IMPORTED_MODULE_13___default().valid(
-                osInstance.current
-              ) && mergeHostClassNames(osInstance.current, className);
-            },
-            [className]
-          ),
-          react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-            "div",
-            _extends({ className: "os-host" }, rest, { ref: osTargetRef }),
-            react__WEBPACK_IMPORTED_MODULE_12__.createElement("div", {
-              className: "os-resize-observer-host",
-            }),
-            react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-              "div",
-              { className: "os-padding" },
-              react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-                "div",
-                { className: "os-viewport" },
-                react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-                  "div",
-                  { className: "os-content" },
-                  children
-                )
-              )
-            ),
-            react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-              "div",
-              { className: "os-scrollbar os-scrollbar-horizontal " },
-              react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-                "div",
-                { className: "os-scrollbar-track" },
-                react__WEBPACK_IMPORTED_MODULE_12__.createElement("div", {
-                  className: "os-scrollbar-handle",
-                })
-              )
-            ),
-            react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-              "div",
-              { className: "os-scrollbar os-scrollbar-vertical" },
-              react__WEBPACK_IMPORTED_MODULE_12__.createElement(
-                "div",
-                { className: "os-scrollbar-track" },
-                react__WEBPACK_IMPORTED_MODULE_12__.createElement("div", {
-                  className: "os-scrollbar-handle",
-                })
-              )
-            ),
-            react__WEBPACK_IMPORTED_MODULE_12__.createElement("div", {
-              className: "os-scrollbar-corner",
-            })
-          )
-        );
-      };
-      function mergeHostClassNames(osInstance, className) {
-        if (
-          overlayscrollbars__WEBPACK_IMPORTED_MODULE_13___default().valid(
-            osInstance
-          )
-        ) {
-          var host = osInstance.getElements().host,
-            regex = new RegExp(
-              "(^os-host([-_].+|)$)|".concat(
-                osInstance.options().className.replace(/\s/g, "$|"),
-                "$"
-              ),
-              "g"
-            ),
-            osClassNames = host.className
-              .split(" ")
-              .filter(function (name) {
-                return name.match(regex);
-              })
-              .join(" ");
-          host.className = "".concat(osClassNames, " ").concat(className || "");
-        }
-      }
-      (OverlayScrollbarsComponent.displayName = "OverlayScrollbarsComponent"),
-        (__webpack_exports__.default = OverlayScrollbarsComponent);
-    },
-    45432: function (module, exports, __webpack_require__) {
-      var __WEBPACK_AMD_DEFINE_RESULT__, global;
-      (global = "undefined" != typeof window ? window : this),
-        (__WEBPACK_AMD_DEFINE_RESULT__ = function () {
-          return (function (window, document, undefined) {
-            "use strict";
+        var module,
+          global,
+          OverlayScrollbars$1 = { exports: {} };
+        (module = OverlayScrollbars$1),
+          (global =
+            "undefined" != typeof window
+              ? window
+              : _index_681e4b07_js__WEBPACK_IMPORTED_MODULE_25__.c),
+          (module.exports = (function (window, document, undefined$1) {
             var _targets,
               _instancePropertyString,
               _easingsMath,
@@ -245,7 +150,7 @@
                 return {
                   _cssPrefixes: cssPrefixes,
                   _jsPrefixes: jsPrefixes,
-                  _cssProperty: function (name) {
+                  _cssProperty: function _cssProperty(name) {
                     var result = cssCache[name];
                     if (cssCache[LEXICON.hOP](name)) return result;
                     for (
@@ -274,13 +179,17 @@
                         v < resultPossibilities[LEXICON.l];
                         v++
                       )
-                        if (elmStyle[resultPossibilities[v]] !== undefined) {
+                        if (elmStyle[resultPossibilities[v]] !== undefined$1) {
                           result = resultPossibilities[v];
                           break;
                         }
                     return (cssCache[name] = result), result;
                   },
-                  _cssPropertyValue: function (property, values, suffix) {
+                  _cssPropertyValue: function _cssPropertyValue(
+                    property,
+                    values,
+                    suffix
+                  ) {
                     var name = property + " " + values,
                       result = cssCache[name];
                     if (cssCache[LEXICON.hOP](name)) return result;
@@ -309,7 +218,7 @@
                         }
                     return (cssCache[name] = result), result;
                   },
-                  _jsAPI: function (name, isInterface, fallback) {
+                  _jsAPI: function _jsAPI(name, isInterface, fallback) {
                     var i = 0,
                       result = jsCache[name];
                     if (!jsCache[LEXICON.hOP](name)) {
@@ -343,11 +252,11 @@
                         document.body[LEXICON.cH];
                 }
                 function bind(func, thisObj) {
-                  if (typeof func != TYPES.f) throw "Can't bind function!";
+                  if (_typeof(func) != TYPES.f) throw "Can't bind function!";
                   var proto = LEXICON.p,
                     aArgs = Array[proto].slice.call(arguments, 2),
-                    fNOP = function () {},
-                    fBound = function () {
+                    fNOP = function fNOP() {},
+                    fBound = function fBound() {
                       return func.apply(
                         this instanceof fNOP ? this : thisObj,
                         aArgs.concat(Array[proto].slice.call(arguments))
@@ -382,20 +291,20 @@
                       return window.clearTimeout(id);
                     }
                   ),
-                  now: function () {
+                  now: function now() {
                     return (Date.now && Date.now()) || new Date().getTime();
                   },
-                  stpP: function (event) {
+                  stpP: function stpP(event) {
                     event.stopPropagation
                       ? event.stopPropagation()
                       : (event.cancelBubble = !0);
                   },
-                  prvD: function (event) {
+                  prvD: function prvD(event) {
                     event.preventDefault && event.cancelable
                       ? event.preventDefault()
                       : (event.returnValue = !1);
                   },
-                  page: function (event) {
+                  page: function page(event) {
                     var strPage = "page",
                       strClient = "client",
                       strX = "X",
@@ -408,7 +317,7 @@
                         ).ownerDocument || document,
                       doc = eventDoc.documentElement,
                       body = eventDoc.body;
-                    if (event.touches !== undefined) {
+                    if (event.touches !== undefined$1) {
                       var touch = event.touches[0];
                       return {
                         x: touch[strPage + strX],
@@ -438,9 +347,9 @@
                         }
                       : { x: event[strPage + strX], y: event[strPage + strY] };
                   },
-                  mBtn: function (event) {
+                  mBtn: function mBtn(event) {
                     var button = event.button;
-                    return event.which || button === undefined
+                    return event.which || button === undefined$1
                       ? event.which
                       : 1 & button
                       ? 1
@@ -450,26 +359,26 @@
                       ? 2
                       : 0;
                   },
-                  inA: function (item, arr) {
+                  inA: function inA(item, arr) {
                     for (var i = 0; i < arr[LEXICON.l]; i++)
                       try {
                         if (arr[i] === item) return i;
                       } catch (e) {}
                     return -1;
                   },
-                  isA: function (arr) {
+                  isA: function isA(arr) {
                     var def = Array.isArray;
                     return def ? def(arr) : this.type(arr) == TYPES.a;
                   },
-                  type: function (obj) {
-                    return obj === undefined || null === obj
+                  type: function type(obj) {
+                    return obj === undefined$1 || null === obj
                       ? obj + ""
                       : Object[LEXICON.p].toString
                           .call(obj)
                           .replace(/^\[object (.+)\]$/, "$1")
                           .toLowerCase();
                   },
-                  bind: bind,
+                  bind,
                 };
               })(),
               MATH = Math,
@@ -486,86 +395,86 @@
                   o: 1.70158,
                 }),
                 {
-                  swing: function (x, t, b, c, d) {
+                  swing: function swing(x, t, b, c, d) {
                     return 0.5 - _easingsMath.c(x * _easingsMath.p) / 2;
                   },
-                  linear: function (x, t, b, c, d) {
+                  linear: function linear(x, t, b, c, d) {
                     return x;
                   },
-                  easeInQuad: function (x, t, b, c, d) {
+                  easeInQuad: function easeInQuad(x, t, b, c, d) {
                     return c * (t /= d) * t + b;
                   },
-                  easeOutQuad: function (x, t, b, c, d) {
+                  easeOutQuad: function easeOutQuad(x, t, b, c, d) {
                     return -c * (t /= d) * (t - 2) + b;
                   },
-                  easeInOutQuad: function (x, t, b, c, d) {
+                  easeInOutQuad: function easeInOutQuad(x, t, b, c, d) {
                     return (t /= d / 2) < 1
                       ? (c / 2) * t * t + b
                       : (-c / 2) * (--t * (t - 2) - 1) + b;
                   },
-                  easeInCubic: function (x, t, b, c, d) {
+                  easeInCubic: function easeInCubic(x, t, b, c, d) {
                     return c * (t /= d) * t * t + b;
                   },
-                  easeOutCubic: function (x, t, b, c, d) {
+                  easeOutCubic: function easeOutCubic(x, t, b, c, d) {
                     return c * ((t = t / d - 1) * t * t + 1) + b;
                   },
-                  easeInOutCubic: function (x, t, b, c, d) {
+                  easeInOutCubic: function easeInOutCubic(x, t, b, c, d) {
                     return (t /= d / 2) < 1
                       ? (c / 2) * t * t * t + b
                       : (c / 2) * ((t -= 2) * t * t + 2) + b;
                   },
-                  easeInQuart: function (x, t, b, c, d) {
+                  easeInQuart: function easeInQuart(x, t, b, c, d) {
                     return c * (t /= d) * t * t * t + b;
                   },
-                  easeOutQuart: function (x, t, b, c, d) {
+                  easeOutQuart: function easeOutQuart(x, t, b, c, d) {
                     return -c * ((t = t / d - 1) * t * t * t - 1) + b;
                   },
-                  easeInOutQuart: function (x, t, b, c, d) {
+                  easeInOutQuart: function easeInOutQuart(x, t, b, c, d) {
                     return (t /= d / 2) < 1
                       ? (c / 2) * t * t * t * t + b
                       : (-c / 2) * ((t -= 2) * t * t * t - 2) + b;
                   },
-                  easeInQuint: function (x, t, b, c, d) {
+                  easeInQuint: function easeInQuint(x, t, b, c, d) {
                     return c * (t /= d) * t * t * t * t + b;
                   },
-                  easeOutQuint: function (x, t, b, c, d) {
+                  easeOutQuint: function easeOutQuint(x, t, b, c, d) {
                     return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
                   },
-                  easeInOutQuint: function (x, t, b, c, d) {
+                  easeInOutQuint: function easeInOutQuint(x, t, b, c, d) {
                     return (t /= d / 2) < 1
                       ? (c / 2) * t * t * t * t * t + b
                       : (c / 2) * ((t -= 2) * t * t * t * t + 2) + b;
                   },
-                  easeInSine: function (x, t, b, c, d) {
+                  easeInSine: function easeInSine(x, t, b, c, d) {
                     return (
                       -c * _easingsMath.c((t / d) * (_easingsMath.p / 2)) +
                       c +
                       b
                     );
                   },
-                  easeOutSine: function (x, t, b, c, d) {
+                  easeOutSine: function easeOutSine(x, t, b, c, d) {
                     return (
                       c * _easingsMath.s((t / d) * (_easingsMath.p / 2)) + b
                     );
                   },
-                  easeInOutSine: function (x, t, b, c, d) {
+                  easeInOutSine: function easeInOutSine(x, t, b, c, d) {
                     return (
                       (-c / 2) *
                         (_easingsMath.c((_easingsMath.p * t) / d) - 1) +
                       b
                     );
                   },
-                  easeInExpo: function (x, t, b, c, d) {
+                  easeInExpo: function easeInExpo(x, t, b, c, d) {
                     return 0 == t
                       ? b
                       : c * _easingsMath.w(2, 10 * (t / d - 1)) + b;
                   },
-                  easeOutExpo: function (x, t, b, c, d) {
+                  easeOutExpo: function easeOutExpo(x, t, b, c, d) {
                     return t == d
                       ? b + c
                       : c * (1 - _easingsMath.w(2, (-10 * t) / d)) + b;
                   },
-                  easeInOutExpo: function (x, t, b, c, d) {
+                  easeInOutExpo: function easeInOutExpo(x, t, b, c, d) {
                     return 0 == t
                       ? b
                       : t == d
@@ -574,18 +483,18 @@
                       ? (c / 2) * _easingsMath.w(2, 10 * (t - 1)) + b
                       : (c / 2) * (2 - _easingsMath.w(2, -10 * --t)) + b;
                   },
-                  easeInCirc: function (x, t, b, c, d) {
+                  easeInCirc: function easeInCirc(x, t, b, c, d) {
                     return -c * (_easingsMath.t(1 - (t /= d) * t) - 1) + b;
                   },
-                  easeOutCirc: function (x, t, b, c, d) {
+                  easeOutCirc: function easeOutCirc(x, t, b, c, d) {
                     return c * _easingsMath.t(1 - (t = t / d - 1) * t) + b;
                   },
-                  easeInOutCirc: function (x, t, b, c, d) {
+                  easeInOutCirc: function easeInOutCirc(x, t, b, c, d) {
                     return (t /= d / 2) < 1
                       ? (-c / 2) * (_easingsMath.t(1 - t * t) - 1) + b
                       : (c / 2) * (_easingsMath.t(1 - (t -= 2) * t) + 1) + b;
                   },
-                  easeInElastic: function (x, t, b, c, d) {
+                  easeInElastic: function easeInElastic(x, t, b, c, d) {
                     var s = _easingsMath.o,
                       p = 0,
                       a = c;
@@ -606,7 +515,7 @@
                           ) +
                           b);
                   },
-                  easeOutElastic: function (x, t, b, c, d) {
+                  easeOutElastic: function easeOutElastic(x, t, b, c, d) {
                     var s = _easingsMath.o,
                       p = 0,
                       a = c;
@@ -628,7 +537,7 @@
                           c +
                           b);
                   },
-                  easeInOutElastic: function (x, t, b, c, d) {
+                  easeInOutElastic: function easeInOutElastic(x, t, b, c, d) {
                     var s = _easingsMath.o,
                       p = 0,
                       a = c;
@@ -659,7 +568,7 @@
                             c +
                             b);
                   },
-                  easeInBack: function (x, t, b, c, d, s) {
+                  easeInBack: function easeInBack(x, t, b, c, d, s) {
                     return (
                       c *
                         (t /= d) *
@@ -668,7 +577,7 @@
                       b
                     );
                   },
-                  easeOutBack: function (x, t, b, c, d, s) {
+                  easeOutBack: function easeOutBack(x, t, b, c, d, s) {
                     return (
                       c *
                         ((t = t / d - 1) *
@@ -678,7 +587,7 @@
                       b
                     );
                   },
-                  easeInOutBack: function (x, t, b, c, d, s) {
+                  easeInOutBack: function easeInOutBack(x, t, b, c, d, s) {
                     return (
                       (s = s || _easingsMath.o),
                       (t /= d / 2) < 1
@@ -688,10 +597,10 @@
                           b
                     );
                   },
-                  easeInBounce: function (x, t, b, c, d) {
+                  easeInBounce: function easeInBounce(x, t, b, c, d) {
                     return c - this.easeOutBounce(x, d - t, 0, c, d) + b;
                   },
-                  easeOutBounce: function (x, t, b, c, d) {
+                  easeOutBounce: function easeOutBounce(x, t, b, c, d) {
                     var o = 7.5625;
                     return (t /= d) < 1 / 2.75
                       ? c * (o * t * t) + b
@@ -701,7 +610,7 @@
                       ? c * (o * (t -= 2.25 / 2.75) * t + 0.9375) + b
                       : c * (o * (t -= 2.625 / 2.75) * t + 0.984375) + b;
                   },
-                  easeInOutBounce: function (x, t, b, c, d) {
+                  easeInOutBounce: function easeInOutBounce(x, t, b, c, d) {
                     return t < d / 2
                       ? 0.5 * this.easeInBounce(x, 2 * t, 0, c, d) + b
                       : 0.5 * this.easeOutBounce(x, 2 * t - d, 0, c, d) +
@@ -768,7 +677,7 @@
                                   : (clone =
                                       src && isPlainObject(src) ? src : {}),
                                 (target[name] = extend(deep, clone, copy)))
-                              : copy !== undefined && (target[name] = copy));
+                              : copy !== undefined$1 && (target[name] = copy));
                   return target;
                 }
                 function inArray(item, arr, fromIndex) {
@@ -805,7 +714,7 @@
                   for (key in obj);
                   return _type(key) == TYPES.u || hasOwnProperty.call(obj, key);
                 }
-                function each(obj, callback) {
+                function _each(obj, callback) {
                   var i = 0;
                   if (isArrayLike(obj))
                     for (
@@ -861,7 +770,7 @@
                 }
                 function setCSSVal(el, prop, val) {
                   try {
-                    el[LEXICON.s][prop] !== undefined &&
+                    el[LEXICON.s][prop] !== undefined$1 &&
                       (el[LEXICON.s][prop] = parseCSSVal(prop, val));
                   } catch (e) {}
                 }
@@ -878,7 +787,7 @@
                   !1 !== removeFromQ && animObj.q.splice(0, 1),
                     animObj.q[LEXICON.l] > 0
                       ? ((nextAnim = animObj.q[0]),
-                        animate(
+                        _animate(
                           animObj.el,
                           nextAnim.props,
                           nextAnim.duration,
@@ -894,7 +803,7 @@
                     ? (el[prop] = value)
                     : setCSSVal(el, prop, value);
                 }
-                function animate(
+                function _animate(
                   el,
                   props,
                   options,
@@ -915,7 +824,6 @@
                   for (
                     hasOptions
                       ? ((easing = options.easing),
-                        options.start,
                         (progress = options.progress),
                         (step = options.step),
                         (specialEasing = options.specialEasing),
@@ -934,7 +842,7 @@
                       break;
                     }
                   for (key in (animObj ||
-                    ((animObj = { el: el, q: [] }), _animations.push(animObj)),
+                    ((animObj = { el, q: [] }), _animations.push(animObj)),
                   props))
                     from[key] =
                       key === _strScrollLeft || key === _strScrollTop
@@ -942,7 +850,7 @@
                         : FakejQuery(el).css(key);
                   for (key in from)
                     from[key] !== props[key] &&
-                      props[key] !== undefined &&
+                      props[key] !== undefined$1 &&
                       (to[key] = props[key]);
                   if (isEmptyObject(to))
                     guaranteedNext && startNextAnimationInQ(animObj);
@@ -954,14 +862,14 @@
                       toVal,
                       easedVal,
                       timeStart,
-                      frame,
+                      _frame,
                       elapsed,
                       qPos = guaranteedNext ? 0 : inArray(qObj, animObj.q),
                       qObj = {
                         props: to,
                         duration: hasOptions ? options : duration,
-                        easing: easing,
-                        complete: complete,
+                        easing,
+                        complete,
                       };
                     if (
                       (-1 === qPos &&
@@ -970,7 +878,7 @@
                     )
                       if (duration > 0)
                         (timeStart = COMPATIBILITY.now()),
-                          (frame = function () {
+                          (_frame = function frame() {
                             for (key in ((timeNow = COMPATIBILITY.now()),
                             (elapsed = timeNow - timeStart),
                             (end = qObj.stop || elapsed >= duration),
@@ -1001,11 +909,11 @@
                                     end: toVal,
                                     pos: percent,
                                     options: {
-                                      easing: easing,
+                                      easing,
                                       speacialEasing: specialEasing,
-                                      duration: duration,
-                                      complete: complete,
-                                      step: step,
+                                      duration,
+                                      complete,
+                                      step,
                                     },
                                     startTime: timeStart,
                                   });
@@ -1018,16 +926,16 @@
                               end
                                 ? (startNextAnimationInQ(animObj),
                                   isFunction(complete) && complete())
-                                : (qObj.frame = COMPATIBILITY.rAF()(frame));
+                                : (qObj.frame = COMPATIBILITY.rAF()(_frame));
                           }),
-                          (qObj.frame = COMPATIBILITY.rAF()(frame));
+                          (qObj.frame = COMPATIBILITY.rAF()(_frame));
                       else {
                         for (key in to) setAnimationValue(el, key, to[key]);
                         startNextAnimationInQ(animObj);
                       }
                   }
                 }
-                function stop(el, clearQ, jumpToEnd) {
+                function _stop(el, clearQ, jumpToEnd) {
                   for (
                     var animObj, qObj, key, i = 0;
                     i < _animations[LEXICON.l];
@@ -1094,7 +1002,7 @@
                 }
                 return (
                   (FakejQuery[LEXICON.p] = {
-                    on: function (eventName, handler) {
+                    on: function on(eventName, handler) {
                       var el,
                         eventNameLength = (eventName = (
                           eventName || _strEmpty
@@ -1112,7 +1020,7 @@
                         } catch (e) {}
                       });
                     },
-                    off: function (eventName, handler) {
+                    off: function off(eventName, handler) {
                       var el,
                         eventNameLength = (eventName = (
                           eventName || _strEmpty
@@ -1130,7 +1038,7 @@
                         } catch (e) {}
                       });
                     },
-                    one: function (eventName, handler) {
+                    one: function one(eventName, handler) {
                       return (
                         (eventName = (eventName || _strEmpty).match(
                           _rnothtmlwhite
@@ -1140,7 +1048,7 @@
                           FakejQuery.each(
                             eventName,
                             function (i, oneEventName) {
-                              var oneHandler = function (e) {
+                              var oneHandler = function oneHandler(e) {
                                 handler.call(this, e),
                                   el.off(oneEventName, oneHandler);
                               };
@@ -1150,7 +1058,7 @@
                         })
                       );
                     },
-                    trigger: function (eventName) {
+                    trigger: function trigger(eventName) {
                       var el, event;
                       return this.each(function () {
                         (el = this),
@@ -1165,34 +1073,34 @@
                             : el.fireEvent("on" + eventName);
                       });
                     },
-                    append: function (child) {
+                    append: function append(child) {
                       return this.each(function () {
                         insertAdjacentElement(this, "beforeend", child);
                       });
                     },
-                    prepend: function (child) {
+                    prepend: function prepend(child) {
                       return this.each(function () {
                         insertAdjacentElement(this, "afterbegin", child);
                       });
                     },
-                    before: function (child) {
+                    before: function before(child) {
                       return this.each(function () {
                         insertAdjacentElement(this, "beforebegin", child);
                       });
                     },
-                    after: function (child) {
+                    after: function after(child) {
                       return this.each(function () {
                         insertAdjacentElement(this, "afterend", child);
                       });
                     },
-                    remove: function () {
+                    remove: function remove() {
                       return this.each(function () {
                         var el = this,
                           parentNode = el.parentNode;
                         null != parentNode && parentNode.removeChild(el);
                       });
                     },
-                    unwrap: function () {
+                    unwrap: function unwrap() {
                       var i,
                         el,
                         parent,
@@ -1216,7 +1124,7 @@
                       }
                       return this;
                     },
-                    wrapAll: function (wrapperHTML) {
+                    wrapAll: function wrapAll(wrapperHTML) {
                       for (
                         var i,
                           nodes = this,
@@ -1239,7 +1147,7 @@
                         : parent.firstChild;
                       return parent.insertBefore(wrapper, nextSibling), this;
                     },
-                    wrapInner: function (wrapperHTML) {
+                    wrapInner: function wrapInner(wrapperHTML) {
                       return this.each(function () {
                         var el = FakejQuery(this),
                           contents = el.contents();
@@ -1248,18 +1156,18 @@
                           : el.append(wrapperHTML);
                       });
                     },
-                    wrap: function (wrapperHTML) {
+                    wrap: function wrap(wrapperHTML) {
                       return this.each(function () {
                         FakejQuery(this).wrapAll(wrapperHTML);
                       });
                     },
-                    css: function (styles, val) {
+                    css: function css(styles, val) {
                       var el,
                         key,
                         cptStyle,
                         getCptStyle = window.getComputedStyle;
                       return _type(styles) == TYPES.s
-                        ? val === undefined
+                        ? val === undefined$1
                           ? ((el = this[0]),
                             (cptStyle = getCptStyle
                               ? getCptStyle(el, null)
@@ -1277,7 +1185,7 @@
                               setCSSVal(this, key, styles[key]);
                           });
                     },
-                    hasClass: function (className) {
+                    hasClass: function hasClass(className) {
                       for (
                         var elem,
                           classList,
@@ -1303,7 +1211,7 @@
                       }
                       return !1;
                     },
-                    addClass: function (className) {
+                    addClass: function addClass(className) {
                       var classes,
                         elem,
                         cur,
@@ -1322,8 +1230,8 @@
                         )
                           if (
                             ((elmClassList = elem.classList),
-                            supportClassList === undefined &&
-                              (supportClassList = elmClassList !== undefined),
+                            supportClassList === undefined$1 &&
+                              (supportClassList = elmClassList !== undefined$1),
                             supportClassList)
                           )
                             for (; (clazz = classes[v++]); )
@@ -1344,7 +1252,7 @@
                           }
                       return this;
                     },
-                    removeClass: function (className) {
+                    removeClass: function removeClass(className) {
                       var classes,
                         elem,
                         cur,
@@ -1363,8 +1271,8 @@
                         )
                           if (
                             ((elmClassList = elem.classList),
-                            supportClassList === undefined &&
-                              (supportClassList = elmClassList !== undefined),
+                            supportClassList === undefined$1 &&
+                              (supportClassList = elmClassList !== undefined$1),
                             supportClassList)
                           )
                             for (; (clazz = classes[v++]); )
@@ -1392,30 +1300,30 @@
                           }
                       return this;
                     },
-                    hide: function () {
+                    hide: function hide() {
                       return this.each(function () {
                         this[LEXICON.s].display = "none";
                       });
                     },
-                    show: function () {
+                    show: function show() {
                       return this.each(function () {
                         this[LEXICON.s].display = "block";
                       });
                     },
-                    attr: function (attrName, value) {
+                    attr: function attr(attrName, value) {
                       for (var el, i = 0; (el = this[i++]); ) {
-                        if (value === undefined)
+                        if (value === undefined$1)
                           return el.getAttribute(attrName);
                         el.setAttribute(attrName, value);
                       }
                       return this;
                     },
-                    removeAttr: function (attrName) {
+                    removeAttr: function removeAttr(attrName) {
                       return this.each(function () {
                         this.removeAttribute(attrName);
                       });
                     },
-                    offset: function () {
+                    offset: function offset() {
                       var rect = this[0][LEXICON.bCR](),
                         scrollLeft =
                           window.pageXOffset ||
@@ -1428,40 +1336,40 @@
                         left: rect.left + scrollLeft,
                       };
                     },
-                    position: function () {
+                    position: function position() {
                       var el = this[0];
                       return { top: el.offsetTop, left: el.offsetLeft };
                     },
-                    scrollLeft: function (value) {
+                    scrollLeft: function scrollLeft(value) {
                       for (var el, i = 0; (el = this[i++]); ) {
-                        if (value === undefined) return el[_strScrollLeft];
+                        if (value === undefined$1) return el[_strScrollLeft];
                         el[_strScrollLeft] = value;
                       }
                       return this;
                     },
-                    scrollTop: function (value) {
+                    scrollTop: function scrollTop(value) {
                       for (var el, i = 0; (el = this[i++]); ) {
-                        if (value === undefined) return el[_strScrollTop];
+                        if (value === undefined$1) return el[_strScrollTop];
                         el[_strScrollTop] = value;
                       }
                       return this;
                     },
-                    val: function (value) {
+                    val: function val(value) {
                       var el = this[0];
                       return value ? ((el.value = value), this) : el.value;
                     },
-                    first: function () {
+                    first: function first() {
                       return this.eq(0);
                     },
-                    last: function () {
+                    last: function last() {
                       return this.eq(-1);
                     },
-                    eq: function (index) {
+                    eq: function eq(index) {
                       return FakejQuery(
                         this[index >= 0 ? index : this[LEXICON.l] + index]
                       );
                     },
-                    find: function (selector) {
+                    find: function find(selector) {
                       var i,
                         children = [];
                       return (
@@ -1473,7 +1381,7 @@
                         FakejQuery(children)
                       );
                     },
-                    children: function (selector) {
+                    children: function children(selector) {
                       var el,
                         ch,
                         i,
@@ -1495,7 +1403,7 @@
                         FakejQuery(children)
                       );
                     },
-                    parent: function (selector) {
+                    parent: function parent(selector) {
                       var parent,
                         parents = [];
                       return (
@@ -1507,7 +1415,7 @@
                         FakejQuery(parents)
                       );
                     },
-                    is: function (selector) {
+                    is: function is(selector) {
                       var el, i;
                       for (i = 0; i < this[LEXICON.l]; i++) {
                         if (((el = this[i]), ":visible" === selector))
@@ -1522,7 +1430,7 @@
                       }
                       return !1;
                     },
-                    contents: function () {
+                    contents: function contents() {
                       var childs,
                         i,
                         contents = [];
@@ -1538,26 +1446,31 @@
                         FakejQuery(contents)
                       );
                     },
-                    each: function (callback) {
-                      return each(this, callback);
+                    each: function each(callback) {
+                      return _each(this, callback);
                     },
-                    animate: function (props, duration, easing, complete) {
+                    animate: function animate(
+                      props,
+                      duration,
+                      easing,
+                      complete
+                    ) {
                       return this.each(function () {
-                        animate(this, props, duration, easing, complete);
+                        _animate(this, props, duration, easing, complete);
                       });
                     },
-                    stop: function (clearQ, jump) {
+                    stop: function stop(clearQ, jump) {
                       return this.each(function () {
-                        stop(this, clearQ, jump);
+                        _stop(this, clearQ, jump);
                       });
                     },
                   }),
                   extend(FakejQuery, {
-                    extend: extend,
-                    inArray: inArray,
-                    isEmptyObject: isEmptyObject,
-                    isPlainObject: isPlainObject,
-                    each: each,
+                    extend,
+                    inArray,
+                    isEmptyObject,
+                    isPlainObject,
+                    each: _each,
                   }),
                   FakejQuery
                 );
@@ -1671,8 +1584,8 @@
                       },
                     }),
                     {
-                      _defaults: (convert = function (template) {
-                        var recursive = function (obj) {
+                      _defaults: (convert = function convert(template) {
+                        return (function recursive(obj) {
                           var key, val, valType;
                           for (key in obj)
                             obj[LEXICON.hOP](key) &&
@@ -1682,13 +1595,12 @@
                                 : valType == TYPES.o &&
                                   (obj[key] = recursive(val)));
                           return obj;
-                        };
-                        return recursive(
+                        })(
                           FRAMEWORK.extend(!0, {}, optionsDefaultsAndTemplate)
                         );
                       })(),
                       _template: convert(!0),
-                      _validate: function (
+                      _validate: function _validate(
                         obj,
                         template,
                         writeErrors,
@@ -1699,7 +1611,7 @@
                           objectCopy = FRAMEWORK.extend(!0, {}, obj),
                           inArray = FRAMEWORK.inArray,
                           isEmptyObj = FRAMEWORK.isEmptyObject,
-                          checkObjectProps = function (
+                          checkObjectProps = function checkObjectProps(
                             data,
                             template,
                             diffData,
@@ -1746,7 +1658,7 @@
                                   errorRestrictedStrings = [];
                                 if (
                                   ((dataDiffValue =
-                                    dataDiffValue === undefined
+                                    dataDiffValue === undefined$1
                                       ? {}
                                       : dataDiffValue),
                                   templateIsComplex && dataValueType == TYPES.o)
@@ -1969,12 +1881,12 @@
                     };
                   }
                   FRAMEWORK.extend(_base, {
-                    defaultOptions: defaultOptions,
-                    msie: msie,
+                    defaultOptions,
+                    msie,
                     autoUpdateLoop: !1,
                     autoUpdateRecommended: !COMPATIBILITY.mO(),
-                    nativeScrollbarSize: nativeScrollbarSize,
-                    nativeScrollbarIsOverlaid: nativeScrollbarIsOverlaid,
+                    nativeScrollbarSize,
+                    nativeScrollbarIsOverlaid,
                     nativeScrollbarStyling: (function () {
                       var result = !1;
                       scrollbarDummyElement.addClass(
@@ -2047,7 +1959,7 @@
                           "test",
                           null,
                           Object.defineProperty({}, "passive", {
-                            get: function () {
+                            get: function get() {
                               supportsPassive = !0;
                             },
                           })
@@ -2068,7 +1980,7 @@
                           windowWidth = COMPATIBILITY.wW(),
                           windowHeight = COMPATIBILITY.wH(),
                           windowDpr = getWindowDPR(),
-                          onResize = function () {
+                          onResize = function onResize() {
                             if (INSTANCES().length > 0) {
                               var newW = COMPATIBILITY.wW(),
                                 newH = COMPATIBILITY.wH(),
@@ -2148,7 +2060,7 @@
                     _loopIntervalDefault = 33,
                     _loopInterval = _loopIntervalDefault,
                     _loopTimeOld = _getNow(),
-                    loop = function () {
+                    loop = function loop() {
                       if (_loopingInstances[_strLength] > 0 && _loopIsActive) {
                         _loopID = COMPATIBILITY.rAF()(function () {
                           loop();
@@ -2170,7 +2082,7 @@
                             i < _loopingInstances[_strLength];
                             i++
                           )
-                            (instance = _loopingInstances[i]) !== undefined &&
+                            (instance = _loopingInstances[i]) !== undefined$1 &&
                               ((instanceAutoUpdateAllowed = (instanceOptions =
                                 instance.options())[_strAutoUpdate]),
                               (instanceAutoUpdateInterval = MATH.max(
@@ -2216,7 +2128,7 @@
                           _loopIsActive &&
                           ((_loopIsActive = !1),
                           (globals.autoUpdateLoop = _loopIsActive),
-                          _loopID !== undefined &&
+                          _loopID !== undefined$1 &&
                             (COMPATIBILITY.cAF()(_loopID), (_loopID = -1))));
                     });
                 }
@@ -2537,7 +2449,7 @@
                                     update({
                                       _contentSizeChanged: contentSizeC,
                                       _changedOptions: _initialized
-                                        ? undefined
+                                        ? undefined$1
                                         : _currentPreparedOptions,
                                     }))
                                 : force === _strSync
@@ -2607,7 +2519,7 @@
                               _updateOnLoadEventName,
                               updateOnLoadCallback
                             );
-                          (_updateOnLoadElms = undefined),
+                          (_updateOnLoadElms = undefined$1),
                             (_destroyed = !0),
                             (_sleeping = !0),
                             INSTANCES(pluginTargetElement, 0),
@@ -2622,7 +2534,7 @@
                       ) {
                         if (
                           0 === arguments.length ||
-                          coordinates === undefined
+                          coordinates === undefined$1
                         ) {
                           var infoX = _scrollHorizontalInfo,
                             infoY = _scrollVerticalInfo,
@@ -2737,13 +2649,14 @@
                           possibleElementIsHTMLElement =
                             !possibleElementIsJQuery &&
                             isHTMLElement(possibleElement),
-                          updateScrollbarInfos = function () {
-                            doScrollLeft && refreshScrollbarHandleOffset(!0),
-                              doScrollTop && refreshScrollbarHandleOffset(!1);
-                          },
+                          updateScrollbarInfos =
+                            function updateScrollbarInfos() {
+                              doScrollLeft && refreshScrollbarHandleOffset(!0),
+                                doScrollTop && refreshScrollbarHandleOffset(!1);
+                            },
                           proxyCompleteCallback =
                             type(completeCallback) != TYPES.f
-                              ? undefined
+                              ? undefined$1
                               : function () {
                                   updateScrollbarInfos(), completeCallback();
                                 };
@@ -2834,7 +2747,7 @@
                                     : rawScroll
                                 )))
                               : (amount = rawScroll),
-                            amount !== undefined &&
+                            amount !== undefined$1 &&
                               !isNaN(amount) &&
                               type(amount) == TYPES.n)
                           ) {
@@ -2882,7 +2795,7 @@
                                     ));
                           }
                           return finalValue === currScroll
-                            ? undefined
+                            ? undefined$1
                             : finalValue;
                         }
                         function getPerAxisValue(
@@ -3105,7 +3018,7 @@
                                     settingsMargin[0] +
                                     settingsMargin[2],
                                 },
-                                finalizeBlock = function (isX) {
+                                finalizeBlock = function finalizeBlock(isX) {
                                   var vars = getScrollbarVars(isX),
                                     wh = vars._w_h,
                                     lt = vars._left_top,
@@ -3171,16 +3084,16 @@
                             getRawScroll(!1, coordinates)
                           )),
                           (doScrollLeft =
-                            finalScroll[_strScrollLeft] !== undefined),
+                            finalScroll[_strScrollLeft] !== undefined$1),
                           (doScrollTop =
-                            finalScroll[_strScrollTop] !== undefined),
+                            finalScroll[_strScrollTop] !== undefined$1),
                           (doScrollLeft || doScrollTop) &&
                           (duration > 0 || durationIsObject)
                             ? durationIsObject
                               ? ((duration.complete = proxyCompleteCallback),
                                 _viewportElement.animate(finalScroll, duration))
                               : ((animationOptions = {
-                                  duration: duration,
+                                  duration,
                                   complete: proxyCompleteCallback,
                                 }),
                                 COMPATIBILITY.isA(easing) ||
@@ -3238,7 +3151,10 @@
                         function prepare(obj) {
                           if (!FRAMEWORK.isPlainObject(obj)) return obj;
                           var extended = extendDeep({}, obj),
-                            changePropertyName = function (from, to) {
+                            changePropertyName = function changePropertyName(
+                              from,
+                              to
+                            ) {
                               extended[LEXICON.hOP](from) &&
                                 ((extended[to] = extended[from]),
                                 delete extended[from]);
@@ -3375,7 +3291,7 @@
                         passiveOrOptionsIsObj &&
                         (passiveOrOptions._capture || !1),
                       nativeParam = _supportPassiveEvents
-                        ? { passive: passive, capture: capture }
+                        ? { passive, capture }
                         : capture;
                     if (collected)
                       for (; i < eventNames[LEXICON.l]; i++)
@@ -3427,7 +3343,7 @@
                           "animationstart mozAnimationStart webkitAnimationStart MSAnimationStart",
                         strChildNodes = "childNodes",
                         constScroll = 3333333,
-                        callback = function () {
+                        callback = function callback() {
                           targetElement[_strScrollTop](constScroll)[
                             _strScrollLeft
                           ](
@@ -3496,7 +3412,7 @@
                             heightCache = observerElement[LEXICON.oH],
                             factor = 2,
                             nativeScrollbarSize = globals.nativeScrollbarSize,
-                            reset = function () {
+                            reset = function reset() {
                               expandElement[_strScrollLeft](constScroll)[
                                 _strScrollTop
                               ](constScroll),
@@ -3504,14 +3420,14 @@
                                   _strScrollTop
                                 ](constScroll);
                             },
-                            onResized = function () {
+                            onResized = function onResized() {
                               (rAFId = 0),
                                 isDirty &&
                                   ((widthCache = currWidth),
                                   (heightCache = currHeight),
                                   callback());
                             },
-                            onScroll = function (event) {
+                            onScroll = function onScroll(event) {
                               return (
                                 (currWidth = observerElement[LEXICON.oW]),
                                 (currHeight = observerElement[LEXICON.oH]),
@@ -3552,7 +3468,7 @@
                             reset();
                         } else {
                           var attachEvent = _documentElementNative.attachEvent,
-                            isIE = _msieVersion !== undefined;
+                            isIE = _msieVersion !== undefined$1;
                           if (attachEvent)
                             targetElement.prepend(
                               generateDiv(_classNameResizeObserverElement)
@@ -3587,7 +3503,7 @@
                           }
                         }
                         if (targetElement[0] === _sizeObserverElementNative) {
-                          var directionChanged = function () {
+                          var directionChanged = function directionChanged() {
                             var dir = _hostElement.css("direction"),
                               css = {},
                               scrollLeftValue = 0,
@@ -3660,96 +3576,101 @@
                         mutationObserverContentLag = 11,
                         mutationObserver = COMPATIBILITY.mO(),
                         contentLastUpdate = COMPATIBILITY.now();
-                      (_mutationObserverContentCallback = function (mutations) {
-                        var doUpdate = !1;
-                        return (
-                          _initialized &&
-                            !_sleeping &&
-                            (each(mutations, function () {
-                              return !(doUpdate = isUnknownMutation(this));
-                            }),
-                            doUpdate &&
-                              ((now = COMPATIBILITY.now()),
-                              (sizeAuto = _heightAutoCache || _widthAutoCache),
-                              (action = function () {
-                                _destroyed ||
-                                  ((contentLastUpdate = now),
-                                  _isTextarea && textareaUpdate(),
-                                  sizeAuto ? update() : _base.update(_strAuto));
+                      (_mutationObserverContentCallback =
+                        function _mutationObserverContentCallback(mutations) {
+                          var doUpdate = !1;
+                          return (
+                            _initialized &&
+                              !_sleeping &&
+                              (each(mutations, function () {
+                                return !(doUpdate = isUnknownMutation(this));
                               }),
-                              clearTimeout(contentTimeout),
-                              mutationObserverContentLag <= 0 ||
-                              now - contentLastUpdate >
-                                mutationObserverContentLag ||
-                              !sizeAuto
-                                ? action()
-                                : (contentTimeout = setTimeout(
-                                    action,
-                                    mutationObserverContentLag
-                                  )))),
-                          doUpdate
-                        );
-                      }),
-                        (_mutationObserverHost = new mutationObserver(
-                          (_mutationObserverHostCallback = function (
-                            mutations
-                          ) {
-                            var mutation,
-                              doUpdate = !1,
-                              doUpdateForce = !1,
-                              mutatedAttrs = [];
-                            return (
-                              _initialized &&
-                                !_sleeping &&
-                                (each(mutations, function () {
-                                  (mutationTarget = (mutation = this).target),
-                                    (mutationAttrName = mutation.attributeName),
-                                    (mutationIsClass =
-                                      mutationAttrName === LEXICON.c),
-                                    (oldMutationVal = mutation.oldValue),
-                                    (newClassVal = mutationTarget.className),
-                                    _domExists &&
-                                      mutationIsClass &&
-                                      !doUpdateForce &&
-                                      oldMutationVal.indexOf(
-                                        _classNameHostElementForeign
-                                      ) > -1 &&
-                                      newClassVal.indexOf(
-                                        _classNameHostElementForeign
-                                      ) < 0 &&
-                                      ((hostClassNameRegex =
-                                        createHostClassNameRegExp(!0)),
-                                      (_hostElementNative.className =
-                                        newClassVal
-                                          .split(_strSpace)
-                                          .concat(
-                                            oldMutationVal
-                                              .split(_strSpace)
-                                              .filter(function (name) {
-                                                return name.match(
-                                                  hostClassNameRegex
-                                                );
-                                              })
-                                          )
-                                          .join(_strSpace)),
-                                      (doUpdate = doUpdateForce = !0)),
-                                    doUpdate ||
-                                      (doUpdate = mutationIsClass
-                                        ? hostClassNamesChanged(
-                                            oldMutationVal,
-                                            newClassVal
-                                          )
-                                        : mutationAttrName !== LEXICON.s ||
-                                          oldMutationVal !==
-                                            mutationTarget[LEXICON.s].cssText),
-                                    mutatedAttrs.push(mutationAttrName);
+                              doUpdate &&
+                                ((now = COMPATIBILITY.now()),
+                                (sizeAuto =
+                                  _heightAutoCache || _widthAutoCache),
+                                (action = function action() {
+                                  _destroyed ||
+                                    ((contentLastUpdate = now),
+                                    _isTextarea && textareaUpdate(),
+                                    sizeAuto
+                                      ? update()
+                                      : _base.update(_strAuto));
                                 }),
-                                updateViewportAttrsFromTarget(mutatedAttrs),
-                                doUpdate &&
-                                  _base.update(doUpdateForce || _strAuto)),
-                              doUpdate
-                            );
-                          })
+                                clearTimeout(contentTimeout),
+                                mutationObserverContentLag <= 0 ||
+                                now - contentLastUpdate >
+                                  mutationObserverContentLag ||
+                                !sizeAuto
+                                  ? action()
+                                  : (contentTimeout = setTimeout(
+                                      action,
+                                      mutationObserverContentLag
+                                    )))),
+                            doUpdate
+                          );
+                        }),
+                        (_mutationObserverHost = new mutationObserver(
+                          (_mutationObserverHostCallback =
+                            function _mutationObserverHostCallback(mutations) {
+                              var mutation,
+                                doUpdate = !1,
+                                doUpdateForce = !1,
+                                mutatedAttrs = [];
+                              return (
+                                _initialized &&
+                                  !_sleeping &&
+                                  (each(mutations, function () {
+                                    (mutationTarget = (mutation = this).target),
+                                      (mutationAttrName =
+                                        mutation.attributeName),
+                                      (mutationIsClass =
+                                        mutationAttrName === LEXICON.c),
+                                      (oldMutationVal = mutation.oldValue),
+                                      (newClassVal = mutationTarget.className),
+                                      _domExists &&
+                                        mutationIsClass &&
+                                        !doUpdateForce &&
+                                        oldMutationVal.indexOf(
+                                          _classNameHostElementForeign
+                                        ) > -1 &&
+                                        newClassVal.indexOf(
+                                          _classNameHostElementForeign
+                                        ) < 0 &&
+                                        ((hostClassNameRegex =
+                                          createHostClassNameRegExp(!0)),
+                                        (_hostElementNative.className =
+                                          newClassVal
+                                            .split(_strSpace)
+                                            .concat(
+                                              oldMutationVal
+                                                .split(_strSpace)
+                                                .filter(function (name) {
+                                                  return name.match(
+                                                    hostClassNameRegex
+                                                  );
+                                                })
+                                            )
+                                            .join(_strSpace)),
+                                        (doUpdate = doUpdateForce = !0)),
+                                      doUpdate ||
+                                        (doUpdate = mutationIsClass
+                                          ? hostClassNamesChanged(
+                                              oldMutationVal,
+                                              newClassVal
+                                            )
+                                          : mutationAttrName !== LEXICON.s ||
+                                            oldMutationVal !==
+                                              mutationTarget[LEXICON.s]
+                                                .cssText),
+                                      mutatedAttrs.push(mutationAttrName);
+                                  }),
+                                  updateViewportAttrsFromTarget(mutatedAttrs),
+                                  doUpdate &&
+                                    _base.update(doUpdateForce || _strAuto)),
+                                doUpdate
+                              );
+                            })
                         )),
                         (_mutationObserverContent = new mutationObserver(
                           _mutationObserverContentCallback
@@ -3878,11 +3799,11 @@
                     var i,
                       regex,
                       currClasses =
-                        typeof newClassNames == TYPES.s
+                        _typeof(newClassNames) == TYPES.s
                           ? newClassNames.split(_strSpace)
                           : [],
                       diff = getArrayDifferences(
-                        typeof oldClassNames == TYPES.s
+                        _typeof(oldClassNames) == TYPES.s
                           ? oldClassNames.split(_strSpace)
                           : [],
                         currClasses
@@ -3920,7 +3841,7 @@
                           mutation.oldValue,
                           mutationTarget.className
                         );
-                      if (typeof mutationTarget[strClosest] != TYPES.f)
+                      if (_typeof(mutationTarget[strClosest]) != TYPES.f)
                         return !0;
                       if (
                         null !==
@@ -3999,7 +3920,7 @@
                               _mutationObserverAttrsHost.concat(":visible"),
                           },
                           {
-                            _elem: _isTextarea ? _targetElement : undefined,
+                            _elem: _isTextarea ? _targetElement : undefined$1,
                             _attrs: _mutationObserverAttrsTextarea,
                           },
                         ];
@@ -4072,7 +3993,10 @@
                         _overflowBehaviorCache.x === _strS ||
                         _overflowBehaviorCache.x === _strVS,
                       sizeIsAffected = !1,
-                      checkPropertyName = function (arr, name) {
+                      checkPropertyName = function checkPropertyName(
+                        arr,
+                        name
+                      ) {
                         for (var i = 0; i < arr[LEXICON.l]; i++)
                           if (arr[i] === name) return !0;
                         return !1;
@@ -4184,7 +4108,6 @@
                       force = !!_swallowedUpdateHints._force,
                       changedOptions = updateHints._changedOptions,
                       swallow =
-                        _swallowUpdateLag > 0 &&
                         _initialized &&
                         !_destroyed &&
                         !force &&
@@ -4230,7 +4153,7 @@
                               (_nativeScrollbarIsOverlaid.y ? 0 : 3)),
                         }),
                         (changedOptions = changedOptions || {});
-                      var checkCacheAutoForce = function () {
+                      var checkCacheAutoForce = function checkCacheAutoForce() {
                           return checkCache.apply(
                             this,
                             [].slice.call(arguments).concat([force])
@@ -4376,7 +4299,7 @@
                           ),
                           addClass(
                             _hostElement,
-                            className !== undefined &&
+                            className !== undefined$1 &&
                               null !== className &&
                               className.length > 0
                               ? className
@@ -4450,7 +4373,7 @@
                             .find("*")
                             .trigger(_strScroll)),
                         (displayIsHidden =
-                          displayIsHidden === undefined
+                          displayIsHidden === undefined$1
                             ? _hostElement.is(":hidden")
                             : displayIsHidden);
                       var sizeAutoObserverElementBCRect,
@@ -4556,13 +4479,13 @@
                         margin = getTopRightBottomLeftHost(_strMarginMinus),
                         contentElementCSS = {},
                         contentGlueElementCSS = {},
-                        getHostSize = function () {
+                        getHostSize = function getHostSize() {
                           return {
                             w: _hostElementNative[LEXICON.cW],
                             h: _hostElementNative[LEXICON.cH],
                           };
                         },
-                        getViewportSize = function () {
+                        getViewportSize = function getViewportSize() {
                           return {
                             w:
                               _paddingElementNative[LEXICON.oW] +
@@ -4834,42 +4757,48 @@
                                 h: contentMeasureElement[LEXICON.cH],
                               }));
                           var textareaCoverCSS = {},
-                            setContentGlueElementCSSfunction = function (
-                              horizontal
-                            ) {
-                              var scrollbarVars = getScrollbarVars(horizontal),
-                                wh = scrollbarVars._w_h,
-                                strWH = scrollbarVars._width_height,
-                                autoSize = horizontal ? widthAuto : heightAuto,
-                                borderSize = horizontal ? _borderX : _borderY,
-                                paddingSize = horizontal
-                                  ? _paddingX
-                                  : _paddingY,
-                                marginSize = horizontal ? _marginX : _marginY,
-                                viewportSize =
-                                  _viewportSize[wh] -
-                                  borderSize -
-                                  marginSize -
-                                  (_isBorderBox ? 0 : paddingSize);
-                              (!autoSize || (!autoSize && border.c)) &&
-                                (contentGlueElementCSS[strWH] =
-                                  hostAbsoluteRectSize[wh] - 1),
-                                !(autoSize && contentSize[wh] < viewportSize) ||
-                                  (horizontal &&
-                                    _isTextarea &&
-                                    textareaAutoWrapping) ||
-                                  (_isTextarea &&
-                                    (textareaCoverCSS[strWH] =
-                                      parseToZeroOrNumber(
-                                        _textareaCoverElement.css(strWH)
-                                      ) - 1),
-                                  (contentGlueElementCSS[strWH] -= 1)),
-                                contentSize[wh] > 0 &&
-                                  (contentGlueElementCSS[strWH] = MATH.max(
-                                    1,
-                                    contentGlueElementCSS[strWH]
-                                  ));
-                            };
+                            setContentGlueElementCSSfunction =
+                              function setContentGlueElementCSSfunction(
+                                horizontal
+                              ) {
+                                var scrollbarVars =
+                                    getScrollbarVars(horizontal),
+                                  wh = scrollbarVars._w_h,
+                                  strWH = scrollbarVars._width_height,
+                                  autoSize = horizontal
+                                    ? widthAuto
+                                    : heightAuto,
+                                  borderSize = horizontal ? _borderX : _borderY,
+                                  paddingSize = horizontal
+                                    ? _paddingX
+                                    : _paddingY,
+                                  marginSize = horizontal ? _marginX : _marginY,
+                                  viewportSize =
+                                    _viewportSize[wh] -
+                                    borderSize -
+                                    marginSize -
+                                    (_isBorderBox ? 0 : paddingSize);
+                                (!autoSize || (!autoSize && border.c)) &&
+                                  (contentGlueElementCSS[strWH] =
+                                    hostAbsoluteRectSize[wh] - 1),
+                                  !(
+                                    autoSize && contentSize[wh] < viewportSize
+                                  ) ||
+                                    (horizontal &&
+                                      _isTextarea &&
+                                      textareaAutoWrapping) ||
+                                    (_isTextarea &&
+                                      (textareaCoverCSS[strWH] =
+                                        parseToZeroOrNumber(
+                                          _textareaCoverElement.css(strWH)
+                                        ) - 1),
+                                    (contentGlueElementCSS[strWH] -= 1)),
+                                  contentSize[wh] > 0 &&
+                                    (contentGlueElementCSS[strWH] = MATH.max(
+                                      1,
+                                      contentGlueElementCSS[strWH]
+                                    ));
+                              };
                           setContentGlueElementCSSfunction(!0),
                             setContentGlueElementCSSfunction(!1),
                             _isTextarea &&
@@ -4912,7 +4841,9 @@
                           hideOverflow = {},
                           canScroll = {},
                           viewportRect = _paddingElementNative[LEXICON.bCR](),
-                          setOverflowVariables = function (horizontal) {
+                          setOverflowVariables = function setOverflowVariables(
+                            horizontal
+                          ) {
                             var scrollbarVars = getScrollbarVars(horizontal),
                               xyI = getScrollbarVars(!horizontal)._x_y,
                               xy = scrollbarVars._x_y,
@@ -5024,49 +4955,50 @@
                                 _strBorderMinus + isRTLRight
                               ] =
                                 _strEmpty),
-                              (setContentElementCSS = function (horizontal) {
-                                var scrollbarVars =
-                                    getScrollbarVars(horizontal),
-                                  scrollbarVarsInverted = getScrollbarVars(
-                                    !horizontal
-                                  ),
-                                  xy = scrollbarVars._x_y,
-                                  strDirection = horizontal
-                                    ? _strBottom
-                                    : isRTLLeft,
-                                  invertedAutoSize = horizontal
-                                    ? heightAuto
-                                    : widthAuto;
-                                _nativeScrollbarIsOverlaid[xy] &&
-                                hasOverflow[xy] &&
-                                hideOverflow[xy + "s"]
-                                  ? ((contentElementCSS[
-                                      _strMarginMinus + strDirection
-                                    ] = invertedAutoSize
-                                      ? ignoreOverlayScrollbarHiding
-                                        ? _strEmpty
-                                        : _overlayScrollbarDummySize[xy]
-                                      : _strEmpty),
-                                    (contentElementCSS[
-                                      _strBorderMinus + strDirection
-                                    ] =
-                                      (horizontal && invertedAutoSize) ||
-                                      ignoreOverlayScrollbarHiding
-                                        ? _strEmpty
-                                        : _overlayScrollbarDummySize[xy] +
-                                          borderDesign))
-                                  : ((arrangeContent[
-                                      scrollbarVarsInverted._w_h
-                                    ] =
-                                      contentElementCSS[
+                              (setContentElementCSS =
+                                function setContentElementCSS(horizontal) {
+                                  var scrollbarVars =
+                                      getScrollbarVars(horizontal),
+                                    scrollbarVarsInverted = getScrollbarVars(
+                                      !horizontal
+                                    ),
+                                    xy = scrollbarVars._x_y,
+                                    strDirection = horizontal
+                                      ? _strBottom
+                                      : isRTLLeft,
+                                    invertedAutoSize = horizontal
+                                      ? heightAuto
+                                      : widthAuto;
+                                  _nativeScrollbarIsOverlaid[xy] &&
+                                  hasOverflow[xy] &&
+                                  hideOverflow[xy + "s"]
+                                    ? ((contentElementCSS[
                                         _strMarginMinus + strDirection
-                                      ] =
-                                      contentElementCSS[
+                                      ] = invertedAutoSize
+                                        ? ignoreOverlayScrollbarHiding
+                                          ? _strEmpty
+                                          : _overlayScrollbarDummySize[xy]
+                                        : _strEmpty),
+                                      (contentElementCSS[
                                         _strBorderMinus + strDirection
                                       ] =
-                                        _strEmpty),
-                                    (arrangeChanged = !0));
-                              }),
+                                        (horizontal && invertedAutoSize) ||
+                                        ignoreOverlayScrollbarHiding
+                                          ? _strEmpty
+                                          : _overlayScrollbarDummySize[xy] +
+                                            borderDesign))
+                                    : ((arrangeContent[
+                                        scrollbarVarsInverted._w_h
+                                      ] =
+                                        contentElementCSS[
+                                          _strMarginMinus + strDirection
+                                        ] =
+                                        contentElementCSS[
+                                          _strBorderMinus + strDirection
+                                        ] =
+                                          _strEmpty),
+                                      (arrangeChanged = !0));
+                                }),
                               _nativeScrollbarStyling
                                 ? addRemoveClass(
                                     _viewportElement,
@@ -5112,7 +5044,9 @@
                             clipAlwaysChanged ||
                             heightAutoChanged) &&
                             ((viewportElementCSS[isRTLRight] = _strEmpty),
-                            (setViewportCSS = function (horizontal) {
+                            (setViewportCSS = function setViewportCSS(
+                              horizontal
+                            ) {
                               var scrollbarVars = getScrollbarVars(horizontal),
                                 scrollbarVarsInverted = getScrollbarVars(
                                   !horizontal
@@ -5122,7 +5056,7 @@
                                 strDirection = horizontal
                                   ? _strBottom
                                   : isRTLLeft,
-                                reset = function () {
+                                reset = function reset() {
                                   (viewportElementCSS[strDirection] =
                                     _strEmpty),
                                     (_contentBorderSize[
@@ -5220,7 +5154,6 @@
                           var elementStyle = _contentElementNative[LEXICON.s];
                           (elementStyle.webkitTransform = "scale(1)"),
                             (elementStyle.display = "run-in"),
-                            _contentElementNative[LEXICON.oH],
                             (elementStyle.display = _strEmpty),
                             (elementStyle.webkitTransform = _strEmpty);
                         }
@@ -5251,7 +5184,7 @@
                           var textareaInfo = getTextareaInfo();
                           if (textareaInfo) {
                             var textareaRowsChanged =
-                                _textareaInfoCache === undefined ||
+                                _textareaInfoCache === undefined$1 ||
                                 textareaInfo._rows !== _textareaInfoCache._rows,
                               cursorRow = textareaInfo._cursorRow,
                               cursorCol = textareaInfo._cursorColumn,
@@ -5314,22 +5247,20 @@
                             "h" === scrollbarsVisibility,
                           scrollbarsVisibilityAuto =
                             "a" === scrollbarsVisibility,
-                          refreshScrollbarsVisibility = function (
-                            showX,
-                            showY
-                          ) {
-                            (showY = showY === undefined ? showX : showY),
-                              refreshScrollbarAppearance(
-                                !0,
-                                showX,
-                                canScroll.x
-                              ),
-                              refreshScrollbarAppearance(
-                                !1,
-                                showY,
-                                canScroll.y
-                              );
-                          };
+                          refreshScrollbarsVisibility =
+                            function refreshScrollbarsVisibility(showX, showY) {
+                              (showY = showY === undefined$1 ? showX : showY),
+                                refreshScrollbarAppearance(
+                                  !0,
+                                  showX,
+                                  canScroll.x
+                                ),
+                                refreshScrollbarAppearance(
+                                  !1,
+                                  showY,
+                                  canScroll.y
+                                );
+                            };
                         addRemoveClass(
                           _hostElement,
                           _classNameHostOverflow,
@@ -5553,7 +5484,7 @@
                       adoptAttrs =
                         _currentPreparedOptions.textarea.inheritedAttrs,
                       adoptAttrsMap = {},
-                      applyAdoptedAttrs = function () {
+                      applyAdoptedAttrs = function applyAdoptedAttrs() {
                         var applyAdoptedAttrsElm = destroy
                           ? _targetElement
                           : _hostElement;
@@ -5621,7 +5552,7 @@
                           ? selectOrGenerateDivByClass(
                               _classNameTextareaCoverElement
                             )
-                          : undefined)),
+                          : undefined$1)),
                       _domExists &&
                         addClass(_hostElement, _classNameHostElementForeign),
                       destroy &&
@@ -5811,7 +5742,7 @@
                     }
                     function viewportOnScroll(event) {
                       _sleeping ||
-                        (scrollStopTimeoutId !== undefined
+                        (scrollStopTimeoutId !== undefined$1
                           ? clearTimeout(scrollStopTimeoutId)
                           : ((_scrollbarsAutoHideScroll ||
                               _scrollbarsAutoHideMove) &&
@@ -5826,7 +5757,7 @@
                         (scrollStopTimeoutId = setTimeout(function () {
                           _destroyed ||
                             (clearTimeout(scrollStopTimeoutId),
-                            (scrollStopTimeoutId = undefined),
+                            (scrollStopTimeoutId = undefined$1),
                             (_scrollbarsAutoHideScroll ||
                               _scrollbarsAutoHideMove) &&
                               refreshScrollbarsAutoHide(!1),
@@ -5875,34 +5806,35 @@
                   function setupScrollbarsDOM(destroy) {
                     var horizontalElements,
                       verticalElements,
-                      selectOrGenerateScrollbarDOM = function (isHorizontal) {
-                        var scrollbar = selectOrGenerateDivByClass(
-                            _classNameScrollbar +
-                              _strSpace +
-                              (isHorizontal
-                                ? _classNameScrollbarHorizontal
-                                : _classNameScrollbarVertical),
-                            !0
-                          ),
-                          track = selectOrGenerateDivByClass(
-                            _classNameScrollbarTrack,
-                            scrollbar
-                          ),
-                          handle = selectOrGenerateDivByClass(
-                            _classNameScrollbarHandle,
-                            scrollbar
+                      selectOrGenerateScrollbarDOM =
+                        function selectOrGenerateScrollbarDOM(isHorizontal) {
+                          var scrollbar = selectOrGenerateDivByClass(
+                              _classNameScrollbar +
+                                _strSpace +
+                                (isHorizontal
+                                  ? _classNameScrollbarHorizontal
+                                  : _classNameScrollbarVertical),
+                              !0
+                            ),
+                            track = selectOrGenerateDivByClass(
+                              _classNameScrollbarTrack,
+                              scrollbar
+                            ),
+                            handle = selectOrGenerateDivByClass(
+                              _classNameScrollbarHandle,
+                              scrollbar
+                            );
+                          return (
+                            _domExists ||
+                              destroy ||
+                              (scrollbar.append(track), track.append(handle)),
+                            {
+                              _scrollbar: scrollbar,
+                              _track: track,
+                              _handle: handle,
+                            }
                           );
-                        return (
-                          _domExists ||
-                            destroy ||
-                            (scrollbar.append(track), track.append(handle)),
-                          {
-                            _scrollbar: scrollbar,
-                            _track: track,
-                            _handle: handle,
-                          }
-                        );
-                      };
+                        };
                     function resetScrollbarDOM(isHorizontal) {
                       var scrollbarVars = getScrollbarVars(isHorizontal),
                         scrollbar = scrollbarVars._scrollbar,
@@ -5991,7 +5923,7 @@
                     }
                     function onMouseTouchDownContinue(event) {
                       var isTouchEvent =
-                        (event.originalEvent || event).touches !== undefined;
+                        (event.originalEvent || event).touches !== undefined$1;
                       return (
                         !(
                           _sleeping ||
@@ -6066,14 +5998,14 @@
                         removeClass(scrollbarVars._handle, strActive),
                         removeClass(scrollbarVars._track, strActive),
                         removeClass(scrollbarVars._scrollbar, strActive),
-                        (mouseDownScroll = undefined),
-                        (mouseDownOffset = undefined),
+                        (mouseDownScroll = undefined$1),
+                        (mouseDownOffset = undefined$1),
                         (mouseDownInvertedScale = 1),
                         decreaseTrackScrollAmount(),
-                        trackTimeout !== undefined &&
+                        trackTimeout !== undefined$1 &&
                           (_base.scrollStop(),
                           clearTimeout(trackTimeout),
-                          (trackTimeout = undefined)),
+                          (trackTimeout = undefined$1)),
                         event)
                       ) {
                         var rect = _hostElementNative[LEXICON.bCR]();
@@ -6162,18 +6094,20 @@
                           instantScrollTransition = instantScroll && ctrlKey,
                           isFirstIteration = !0,
                           easing = "linear",
-                          scrollActionFinsished = function (transition) {
-                            _scrollbarsHandlesDefineScrollPos &&
-                              refreshScrollbarHandleOffset(
-                                isHorizontal,
-                                transition
-                              );
-                          },
-                          scrollActionInstantFinished = function () {
-                            scrollActionFinsished(),
-                              onHandleMouseTouchDownAction(event);
-                          },
-                          scrollAction = function () {
+                          scrollActionFinsished =
+                            function scrollActionFinsished(transition) {
+                              _scrollbarsHandlesDefineScrollPos &&
+                                refreshScrollbarHandleOffset(
+                                  isHorizontal,
+                                  transition
+                                );
+                            },
+                          scrollActionInstantFinished =
+                            function scrollActionInstantFinished() {
+                              scrollActionFinsished(),
+                                onHandleMouseTouchDownAction(event);
+                            },
+                          scrollAction = function scrollAction() {
                             if (!_destroyed) {
                               var mouseOffset =
                                   (mouseDownOffset - trackOffset) *
@@ -6206,8 +6140,8 @@
                                   : handleOffset > mouseOffset,
                                 scrollObj = {},
                                 animationObj = {
-                                  easing: easing,
-                                  step: function (now) {
+                                  easing,
+                                  step: function step(now) {
                                     _scrollbarsHandlesDefineScrollPos &&
                                       (_viewportElement[scroll](now),
                                       refreshScrollbarHandleOffset(
@@ -6270,7 +6204,7 @@
                                     )
                                       ? (clearTimeout(trackTimeout),
                                         _base.scrollStop(),
-                                        (trackTimeout = undefined),
+                                        (trackTimeout = undefined$1),
                                         scrollActionFinsished(!0))
                                       : ((trackTimeout = setTimeout(
                                           scrollAction,
@@ -6406,7 +6340,7 @@
                     else {
                       var anyActive,
                         strActive = "active",
-                        hide = function () {
+                        hide = function hide() {
                           _scrollbarsHandleHovered ||
                             _destroyed ||
                             (!(anyActive =
@@ -6478,7 +6412,7 @@
                         ? _viewportElement[_strScrollLeft]()
                         : _viewportElement[_strScrollTop](),
                       currentScroll =
-                        scrollOrTransition === undefined || transition
+                        scrollOrTransition === undefined$1 || transition
                           ? nativeScroll
                           : scrollOrTransition,
                       handleLength = scrollbarVarsInfo._handleLength,
@@ -6496,12 +6430,12 @@
                             "client" + scrollbarVars._Width_Height
                           ]) *
                         (_rtlScrollBehavior.n && isRTLisHorizontal ? -1 : 1),
-                      getScrollRatio = function (base) {
+                      getScrollRatio = function getScrollRatio(base) {
                         return isNaN(base / maxScroll)
                           ? 0
                           : MATH.max(0, MATH.min(1, base / maxScroll));
                       },
-                      getHandleOffset = function (scrollRatio) {
+                      getHandleOffset = function getHandleOffset(scrollRatio) {
                         var offset = handleTrackDiff * scrollRatio;
                         return (
                           (offset = isNaN(offset) ? 0 : offset),
@@ -6647,7 +6581,7 @@
                       } else documentMouseTouchUp(event);
                     }
                     function documentMouseTouchUp(event) {
-                      var eventIsTrusted = event !== undefined;
+                      var eventIsTrusted = event !== undefined$1;
                       setupResponsiveEventListener(
                         _documentElement,
                         [
@@ -6673,7 +6607,7 @@
                     }
                     function onMouseTouchDownContinue(event) {
                       var isTouchEvent =
-                        (event.originalEvent || event).touches !== undefined;
+                        (event.originalEvent || event).touches !== undefined$1;
                       return (
                         !_sleeping &&
                         !_destroyed &&
@@ -6812,7 +6746,9 @@
                           "property duration timing-function delay".split(" "),
                         result = [],
                         i = 0,
-                        splitCssStyleByComma = function (str) {
+                        splitCssStyleByComma = function splitCssStyleByComma(
+                          str
+                        ) {
                           if (((strResult = []), !str.match(regExpValidate)))
                             return str;
                           for (; str.match(regExpMain); )
@@ -6843,10 +6779,13 @@
                     var i,
                       split,
                       appendix,
-                      appendClasses = function (classes, condition) {
+                      appendClasses = function appendClasses(
+                        classes,
+                        condition
+                      ) {
                         if (
                           ((appendix = ""),
-                          condition && typeof classes == TYPES.s)
+                          condition && _typeof(classes) == TYPES.s)
                         )
                           for (
                             split = classes.split(_strSpace), i = 0;
@@ -6893,13 +6832,13 @@
                           o[strOwnerDocument] &&
                           o[strOwnerDocument].parentWindow) ||
                         window;
-                    return typeof wnd[strHTMLElement] == TYPES.o
+                    return _typeof(wnd[strHTMLElement]) == TYPES.o
                       ? o instanceof wnd[strHTMLElement]
                       : o &&
-                          typeof o == TYPES.o &&
+                          _typeof(o) == TYPES.o &&
                           null !== o &&
                           1 === o.nodeType &&
-                          typeof o.nodeName == TYPES.s;
+                          _typeof(o.nodeName) == TYPES.s;
                   }
                   function getArrayDifferences(a1, a2) {
                     var i,
@@ -6919,7 +6858,7 @@
                   function getTextareaInfo() {
                     var textareaCursorPosition =
                       _targetElementNative.selectionStart;
-                    if (textareaCursorPosition !== undefined) {
+                    if (textareaCursorPosition !== undefined$1) {
                       var rowCols,
                         i,
                         textareaValue = _targetElement.val(),
@@ -7081,7 +7020,7 @@
                     return _frameworkProto.find.call(el, selector).eq(0);
                   }
                   function construct(targetElement, options, extensions) {
-                    var initBodyScroll, bodyMouseTouchDownListener;
+                    var initBodyScroll, _bodyMouseTouchDownListener;
                     return (
                       (_defaultOptions = globals.defaultOptions),
                       (_nativeScrollbarStyling =
@@ -7112,7 +7051,6 @@
                       (_supportResizeObserver = globals.supportResizeObserver),
                       (_supportMutationObserver =
                         globals.supportMutationObserver),
-                      globals.restrictedMeasuring,
                       (_documentElement = FRAMEWORK(
                         targetElement.ownerDocument
                       )),
@@ -7161,16 +7099,17 @@
                               _htmlElement[_strScrollTop](),
                               _windowElement[_strScrollTop]()
                             )),
-                            (bodyMouseTouchDownListener = function () {
-                              _viewportElement.removeAttr(LEXICON.ti),
-                                setupResponsiveEventListener(
-                                  _viewportElement,
-                                  _strMouseTouchDownEvent,
-                                  bodyMouseTouchDownListener,
-                                  !0,
-                                  !0
-                                );
-                            })),
+                            (_bodyMouseTouchDownListener =
+                              function bodyMouseTouchDownListener() {
+                                _viewportElement.removeAttr(LEXICON.ti),
+                                  setupResponsiveEventListener(
+                                    _viewportElement,
+                                    _strMouseTouchDownEvent,
+                                    _bodyMouseTouchDownListener,
+                                    !0,
+                                    !0
+                                  );
+                              })),
                           setupStructureDOM(),
                           setupScrollbarsDOM(),
                           setupScrollbarCornerDOM(),
@@ -7194,7 +7133,7 @@
                               setupResponsiveEventListener(
                                 _viewportElement,
                                 _strMouseTouchDownEvent,
-                                bodyMouseTouchDownListener,
+                                _bodyMouseTouchDownListener,
                                 !1,
                                 !0
                               ))),
@@ -7234,7 +7173,7 @@
                         optsIsPlainObj = FRAMEWORK.isPlainObject(options);
                       return pluginTargetElements
                         ? ((pluginTargetElements =
-                            pluginTargetElements[LEXICON.l] != undefined
+                            pluginTargetElements[LEXICON.l] != undefined$1
                               ? pluginTargetElements
                               : [
                                   pluginTargetElements[0] ||
@@ -7246,7 +7185,7 @@
                               ? FRAMEWORK.each(
                                   pluginTargetElements,
                                   function (i, v) {
-                                    (inst = v) !== undefined &&
+                                    (inst = v) !== undefined$1 &&
                                       arr.push(
                                         OverlayScrollbarsInstance(
                                           inst,
@@ -7267,7 +7206,7 @@
                                         (COMPATIBILITY.type(options) ==
                                           TYPES.f &&
                                           options(v, inst)) ||
-                                        options === undefined) &&
+                                        options === undefined$1) &&
                                         arr.push(inst);
                                   }
                                 ),
@@ -7285,7 +7224,7 @@
                   (_plugin.defaultOptions = function (newDefaultOptions) {
                     initOverlayScrollbarsStatics();
                     var currDefaultOptions = _pluginsGlobals.defaultOptions;
-                    if (newDefaultOptions === undefined)
+                    if (newDefaultOptions === undefined$1)
                       return FRAMEWORK.extend(!0, {}, currDefaultOptions);
                     _pluginsGlobals.defaultOptions = FRAMEWORK.extend(
                       !0,
@@ -7325,7 +7264,7 @@
                         _pluginsExtensions.push({
                           name: extensionName,
                           extensionFactory: extension,
-                          defaultOptions: defaultOptions,
+                          defaultOptions,
                         });
                       else
                         for (; i < _pluginsExtensions[LEXICON.l]; i++)
@@ -7356,10 +7295,120 @@
                 }),
               PLUGIN
             );
-          })(global, global.document, void 0);
-        }.call(exports, __webpack_require__, exports, module)),
-        void 0 === __WEBPACK_AMD_DEFINE_RESULT__ ||
-          (module.exports = __WEBPACK_AMD_DEFINE_RESULT__);
-    },
+          })(global, global.document, void 0));
+        var OverlayScrollbars = OverlayScrollbars$1.exports,
+          OverlayScrollbarsComponent = function OverlayScrollbarsComponent(_a) {
+            var _a$options = _a.options,
+              options = void 0 === _a$options ? {} : _a$options,
+              extensions = _a.extensions,
+              className = _a.className,
+              children = _a.children,
+              rest = (0, _index_681e4b07_js__WEBPACK_IMPORTED_MODULE_25__.d)(
+                _a,
+                ["options", "extensions", "className", "children"]
+              ),
+              osTargetRef = (0, react__WEBPACK_IMPORTED_MODULE_22__.useRef)(),
+              osInstance = (0, react__WEBPACK_IMPORTED_MODULE_22__.useRef)();
+            return (
+              (0, react__WEBPACK_IMPORTED_MODULE_22__.useEffect)(function () {
+                return (
+                  (osInstance.current = OverlayScrollbars(
+                    osTargetRef.current,
+                    options,
+                    extensions
+                  )),
+                  mergeHostClassNames(osInstance.current, className),
+                  function () {
+                    OverlayScrollbars.valid(osInstance.current) &&
+                      (osInstance.current.destroy(),
+                      (osInstance.current = null));
+                  }
+                );
+              }, []),
+              (0, react__WEBPACK_IMPORTED_MODULE_22__.useEffect)(
+                function () {
+                  OverlayScrollbars.valid(osInstance.current) &&
+                    osInstance.current.options(options);
+                },
+                [options]
+              ),
+              (0, react__WEBPACK_IMPORTED_MODULE_22__.useEffect)(
+                function () {
+                  OverlayScrollbars.valid(osInstance.current) &&
+                    mergeHostClassNames(osInstance.current, className);
+                },
+                [className]
+              ),
+              react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                "div",
+                Object.assign({ className: "os-host" }, rest, {
+                  ref: osTargetRef,
+                }),
+                react__WEBPACK_IMPORTED_MODULE_22__.createElement("div", {
+                  className: "os-resize-observer-host",
+                }),
+                react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                  "div",
+                  { className: "os-padding" },
+                  react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                    "div",
+                    { className: "os-viewport" },
+                    react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                      "div",
+                      { className: "os-content" },
+                      children
+                    )
+                  )
+                ),
+                react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                  "div",
+                  { className: "os-scrollbar os-scrollbar-horizontal " },
+                  react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                    "div",
+                    { className: "os-scrollbar-track" },
+                    react__WEBPACK_IMPORTED_MODULE_22__.createElement("div", {
+                      className: "os-scrollbar-handle",
+                    })
+                  )
+                ),
+                react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                  "div",
+                  { className: "os-scrollbar os-scrollbar-vertical" },
+                  react__WEBPACK_IMPORTED_MODULE_22__.createElement(
+                    "div",
+                    { className: "os-scrollbar-track" },
+                    react__WEBPACK_IMPORTED_MODULE_22__.createElement("div", {
+                      className: "os-scrollbar-handle",
+                    })
+                  )
+                ),
+                react__WEBPACK_IMPORTED_MODULE_22__.createElement("div", {
+                  className: "os-scrollbar-corner",
+                })
+              )
+            );
+          };
+        function mergeHostClassNames(osInstance, className) {
+          if (OverlayScrollbars.valid(osInstance)) {
+            var host = osInstance.getElements().host,
+              regex = new RegExp(
+                "(^os-host([-_].+|)$)|".concat(
+                  osInstance.options().className.replace(/\s/g, "$|"),
+                  "$"
+                ),
+                "g"
+              ),
+              osClassNames = host.className
+                .split(" ")
+                .filter(function (name) {
+                  return name.match(regex);
+                })
+                .join(" ");
+            host.className = ""
+              .concat(osClassNames, " ")
+              .concat(className || "");
+          }
+        }
+      },
   },
 ]);

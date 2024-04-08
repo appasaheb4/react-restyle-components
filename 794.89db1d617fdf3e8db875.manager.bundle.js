@@ -1,8 +1,8 @@
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
-  [295],
+  [794],
   {
-    19295: function (module) {
+    83794: (module) => {
       module.exports = function (e, n) {
         return (
           (n = n || {}),
