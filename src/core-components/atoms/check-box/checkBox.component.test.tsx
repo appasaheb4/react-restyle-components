@@ -3,7 +3,7 @@ import React from 'react';
 import {render} from '@core-utils';
 import {CheckBox} from './checkBox.component';
 
-it('render XB_CheckBox correctly', () => {
+it('render CheckBox correctly', () => {
   const checkbox = render(
     <CheckBox checked={true} onChange={() => jest.fn()} />
   );

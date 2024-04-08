@@ -3,7 +3,7 @@ import React from 'react';
 import {render} from '@core-utils';
 import {Loader} from './loader.component';
 
-it('render XB_Loader correctly', () => {
+it('render Loader correctly', () => {
   const loader = render(<Loader />);
   expect(loader).toMatchSnapshot();
 });

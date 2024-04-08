@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
-import UpArrow from '@assets/svg/UpArrow.svg';
-import DownArrow from '@assets/svg/DownArrow.svg';
+import UpArrow from '../../../library/assets/svg/UpArrow.svg';
+import DownArrow from '../../../library/assets/svg/DownArrow.svg';
 interface InputDropdownProps {
   title: string;
   items: Array<string>;

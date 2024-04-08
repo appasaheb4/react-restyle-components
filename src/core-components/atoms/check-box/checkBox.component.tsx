@@ -1,6 +1,6 @@
 import React from 'react';
-import {ReactComponent as UnCheckbox} from '@assets/svg/unCheckbox.svg';
-import {ReactComponent as CheckedBox} from '@assets/svg/checkedBox.svg';
+import {ReactComponent as UnCheckbox} from '../../../library/assets/svg/unCheckbox.svg';
+import {ReactComponent as CheckedBox} from '../../../library/assets/svg/checkedBox.svg';
 interface CheckBoxProps {
   checked?: boolean;
   className?: string;

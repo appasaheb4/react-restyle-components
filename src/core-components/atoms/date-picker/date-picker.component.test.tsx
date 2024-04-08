@@ -4,7 +4,7 @@ import {render} from '@core-utils';
 import {DatePickerComp} from './date-picker.component';
 import dayjs from 'dayjs';
 
-it('render XB_DatePicker correctly', () => {
+it('render DatePicker correctly', () => {
   const datepicker = render(
     <DatePickerComp
       className="mt-6"
