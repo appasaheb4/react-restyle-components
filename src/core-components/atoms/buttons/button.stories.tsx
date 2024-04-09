@@ -27,10 +27,10 @@ export const Primary: Story = {
   },
 };
 
-export const Disable: Story = {
-  args: {
-    ...Primary.args,
-    children: <span>Disable</span>,
-    disable: true,
-  },
-};
+// export const Disable: Story = {
+//   args: {
+//     ...Primary.args,
+//     children: <span>Disable</span>,
+//     disable: true,
+//   },
+// };

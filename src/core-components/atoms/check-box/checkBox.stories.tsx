@@ -7,24 +7,14 @@ const meta: Meta<typeof CheckBox> = {
   component: CheckBox,
   tags: ['autodocs'],
 };
+
 export default meta;
 type Story = StoryObj<typeof CheckBox>;
 
-export const Primary: Story = {
+export const Primary1: Story = {
   args: {
-    checked: true,
     className: 'flex flex-row',
+    checked: true,
+    disable: false,
   },
 };
-
-// // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-// export const Primary: ComponentStory<typeof CheckBox> = () => (
-//   <div className="flex flex-row">
-//     <CheckBox checked={true} onChange={() => {}} />
-//     <span>
-//       I agree and authorize MiMo to fetch my personal details from UIDAI. I
-//       confirm that I have not used the OTP-based Aadhar verification to open any
-//       other bank account. I have read and accepted all Terms & Conditions
-//     </span>
-//   </div>
-// );
