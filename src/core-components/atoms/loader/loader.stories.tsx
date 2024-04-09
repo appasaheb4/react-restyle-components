@@ -4,7 +4,7 @@ import {Loader} from './loader.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Loader',
+  title: 'Design System/Atoms/Loader',
   component: Loader,
 } as ComponentMeta<typeof Loader>;
 

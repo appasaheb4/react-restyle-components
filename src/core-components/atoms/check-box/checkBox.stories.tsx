@@ -5,7 +5,7 @@ import {CheckBox} from './checkBox.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/CheckBox',
+  title: 'Design System/Atoms/CheckBox',
   component: CheckBox,
 } as ComponentMeta<typeof CheckBox>;
 

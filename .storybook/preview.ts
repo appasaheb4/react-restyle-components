@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-export const parameters = {
+const preview = {
   actions: {argTypesRegex: '^on[A-Z].*'},
   controls: {
     matchers: {
@@ -7,4 +7,20 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  docs: {
+    autodocs: 'tag',
+  },
+  parameters: {
+    backgrounds: {
+      values: [
+        {name: 'light', value: '#fff'},
+        {name: 'dark', value: '#333'},
+      ],
+    },
+    docs: {
+      toc: true, // 👈 Enables the table of contents
+    },
+  },
+  args: {theme: 'dark'},
 };
+export default preview;

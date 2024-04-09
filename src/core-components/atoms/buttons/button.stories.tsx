@@ -1,21 +1,37 @@
 import React from 'react';
-import {Meta, StoryObj} from '@storybook/react';
+import type {Meta, StoryObj} from '@storybook/react';
 import {Button} from './buttons.component';
 
 const meta: Meta<typeof Button> = {
-  title: 'Atoms/Button',
+  title: 'Design System/Atoms/Button',
   component: Button,
+  tags: ['autodocs'],
+  args: {
+    className: 'bg-orange w-40',
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
+  // parameters: {
+  //   backgrounds: {
+  //     default: 'dark',
+  //   },
+  // },
   args: {
-    className: 'bg-gray-light w-40',
     disable: false,
-    type: 'solid' || 'outline',
+    type: 'solid' || 'outline' || 'submit',
     children: <span>Primary</span>,
+  },
+};
+
+export const Disable: Story = {
+  args: {
+    ...Primary.args,
+    children: <span>Disable</span>,
+    disable: true,
   },
 };
 

@@ -4,7 +4,7 @@ import {Radio} from './radio.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Radio',
+  title: 'Design System/Atoms/Radio',
   component: Radio,
 } as ComponentMeta<typeof Radio>;
 

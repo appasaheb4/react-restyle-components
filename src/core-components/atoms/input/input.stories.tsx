@@ -4,7 +4,7 @@ import {Input} from './input.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Input',
+  title: 'Design System/Atoms/Input',
   component: Input,
 } as ComponentMeta<typeof Input>;
 

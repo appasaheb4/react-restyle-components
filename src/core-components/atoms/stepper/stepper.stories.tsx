@@ -6,7 +6,7 @@ import {Stepper} from './stepper.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Stepper',
+  title: 'Design System/Atoms/Stepper',
   component: Stepper,
 } as ComponentMeta<typeof Stepper>;
 

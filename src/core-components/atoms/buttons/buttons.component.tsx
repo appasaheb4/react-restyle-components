@@ -17,7 +17,9 @@ export const Button = ({
     <button
       data-testid="buttonElement"
       disabled={disable}
-      className={`${className} rounded-100px px-3 py-1 text-text-base text-md pt-2 pb-2 font-nunitoSansRegular`}
+      className={`${className} rounded-100px px-3 py-1 text-text-base text-md pt-2 pb-2 font-nunitoSansRegular ${
+        disable ? 'opacity-50' : 'opacity-100'
+      }`}
       onClick={() => onClick()}
     >
       {children}

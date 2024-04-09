@@ -5,7 +5,7 @@ import {InputPin} from './input-pin.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/InputPin',
+  title: 'Design System/Atoms/InputPin',
   component: InputPin,
 } as ComponentMeta<typeof InputPin>;
 

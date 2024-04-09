@@ -4,7 +4,7 @@ import {InputDropdown} from './input-dropdown.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/InputDropdown',
+  title: 'Design System/Atoms/InputDropdown',
   component: InputDropdown,
 } as ComponentMeta<typeof InputDropdown>;
 

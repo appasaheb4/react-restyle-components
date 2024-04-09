@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx|svg)"],
+  stories: ["../src/**/*.stories.@(js|jsx|ts|tsx|svg|mdx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -10,6 +10,11 @@ module.exports = {
   framework: "@storybook/react",
   core: {
     builder: "webpack5",
+  },
+  staticDirs: ["../public"],
+  docs: {
+    autodocs: "tag",
+    defaultName: "Documentation",
   },
 };
 

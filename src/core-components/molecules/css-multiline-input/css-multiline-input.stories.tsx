@@ -6,7 +6,7 @@ import {CSSMultiline} from './css-multiline-input.component';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Molecules/CSSMultiline',
+  title: 'Design System/Molecules/CSSMultiline',
   component: CSSMultiline,
 } as ComponentMeta<typeof CSSMultiline>;
 
