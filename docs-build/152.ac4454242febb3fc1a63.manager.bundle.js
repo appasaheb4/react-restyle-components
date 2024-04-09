@@ -21993,14 +21993,12 @@
               : Object.assign(Object.assign({}, additionalParams), {
                   id: storyId,
                 });
-          return ""
-            .concat(url)
-            .concat(
-              qs__WEBPACK_IMPORTED_MODULE_55___default().stringify(params, {
-                addQueryPrefix: !0,
-                encode: !1,
-              })
-            );
+          return "".concat(url).concat(
+            qs__WEBPACK_IMPORTED_MODULE_55___default().stringify(params, {
+              addQueryPrefix: !0,
+              encode: !1,
+            })
+          );
         },
         Zoom = function Zoom(_ref118) {
           var zoom = _ref118.zoom,
