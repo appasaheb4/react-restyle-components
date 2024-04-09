@@ -1,24 +1,18 @@
 import React from 'react';
-import {ComponentStory, ComponentMeta} from '@storybook/react';
-
+import type {Meta, StoryObj} from '@storybook/react';
 import {InputPin} from './input-pin.component';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
+const meta: Meta<typeof InputPin> = {
   title: 'Design System/Atoms/InputPin',
   component: InputPin,
-} as ComponentMeta<typeof InputPin>;
+  tags: ['autodocs'],
+};
+export default meta;
+type Story = StoryObj<typeof InputPin>;
 
-const pin = new Array(12);
-
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Primary: ComponentStory<typeof InputPin> = () => (
-  <InputPin
-    title="Enter your Aadhaar Number"
-    hasError={true}
-    onPinChanged={(value) => {
-      console.log({value});
-    }}
-    pin={pin}
-  />
-);
+export const Primary: Story = {
+  args: {
+    title: 'Enter your Aadhaar Number',
+    hasError: true,
+  },
+};

@@ -22,11 +22,9 @@ const config: StorybookConfig = {
   webpackFinal: async (config) => {
     const imageRule = config.module?.rules?.find((rule) => {
       const test = (rule as {test: RegExp}).test;
-
       if (!test) {
         return false;
       }
-
       return test.test('.svg');
     }) as {[key: string]: any};
 

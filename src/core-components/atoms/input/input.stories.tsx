@@ -1,20 +1,20 @@
 import React from 'react';
-import {ComponentStory, ComponentMeta} from '@storybook/react';
+import type {Meta, StoryObj} from '@storybook/react';
 import {Input} from './input.component';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
+const meta: Meta<typeof Input> = {
   title: 'Design System/Atoms/Input',
   component: Input,
-} as ComponentMeta<typeof Input>;
+  tags: ['autodocs'],
+};
+export default meta;
+type Story = StoryObj<typeof Input>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Primary: ComponentStory<typeof Input> = () => (
-  <Input
-    className="mt-4"
-    title="Enter your Pan Number"
-    hasError={true}
-    value=""
-    onChange={(panNumber) => console.log({panNumber})}
-  />
-);
+export const Primary: Story = {
+  args: {
+    className: 'mt-4',
+    title: 'Enter your Pan Number',
+    hasError: true,
+    value: '',
+  },
+};

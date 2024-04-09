@@ -1,6 +1,5 @@
 import React from 'react';
-import {ReactComponent as CheckedRadio} from '../../../library/assets/svg/checkedRadio.svg';
-import {ReactComponent as UncheckRadio} from '../../../library/assets/svg/uncheckRadio.svg';
+import {CheckedRadio, UncheckRadio} from '../../../library/assets/svg';
 
 interface RadioProps {
   checked?: boolean;
