@@ -52,8 +52,12 @@ export const InputDropdown = ({
           }}
           onChange={(event) => onChange && onChange(event.target.value)}
         />
-        {!isOpen && <img src={UpArrow} className="absolute h-4 w-4 right-0" />}
-        {isOpen && <img src={DownArrow} className="absolute h-4 w-4 right-0" />}
+        {!isOpen && (
+          <img src={UpArrow as any} className="absolute h-4 w-4 right-0" />
+        )}
+        {isOpen && (
+          <img src={DownArrow as any} className="absolute h-4 w-4 right-0" />
+        )}
       </div>
       {isOpen && (
         <div

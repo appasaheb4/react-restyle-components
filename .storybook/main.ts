@@ -10,6 +10,14 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -27,14 +35,11 @@ const config: StorybookConfig = {
       }
       return test.test('.svg');
     }) as {[key: string]: any};
-
     imageRule.exclude = /\.svg$/;
-
     config.module?.rules?.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-
     return config;
   },
 };

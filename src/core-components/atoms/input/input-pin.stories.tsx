@@ -14,5 +14,6 @@ export const Primary: Story = {
   args: {
     title: 'Enter your Aadhaar Number',
     hasError: true,
+    pin: new Array(12),
   },
 };
