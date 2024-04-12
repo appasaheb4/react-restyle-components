@@ -6,7 +6,6 @@ Easy use restyle components
 
 ```
 yarn add react-restyle-components tailwindcss
-yarn add -D @craco/craco craco-alias postcss autoprefixer
 
 ```
 

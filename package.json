@@ -1,8 +1,10 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.33",
+  "version": "0.1.37",
   "private": false,
   "description": "Easy use restyle components",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
@@ -31,14 +33,10 @@
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "dayjs": "^1.11.1",
-    "react": "^18.0.0",
     "react-datepicker": "^4.7.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1",
     "reactstrap": "^9.0.2",
     "tailwindcss": "^3.0.24",
-    "typescript": "^4.6.3",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.6.3"
   },
   "peerDependencies": {
     "@testing-library/jest-dom": "*",
@@ -101,21 +99,17 @@
     "@storybook/addon-interactions": "^8.0.6",
     "@storybook/addon-links": "^8.0.6",
     "@storybook/addon-onboarding": "^8.0.6",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addon-styling-webpack": "^1.0.0",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
     "@storybook/blocks": "^8.0.6",
     "@storybook/react": "^8.0.6",
     "@storybook/react-webpack5": "^8.0.6",
     "@storybook/test": "^8.0.6",
     "craco-alias": "^3.0.1",
-    "crypto-browserify": "^3.12.0",
     "eslint-plugin-storybook": "^0.8.0",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
     "storybook": "^8.0.6",
-    "stream-browserify": "^3.0.0",
     "webpack": "^5.72.0"
   },
   "keywords": [
