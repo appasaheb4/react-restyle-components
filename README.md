@@ -5,7 +5,7 @@ Easy use restyle components
 ## Installation
 
 ```
-yarn add react-restyle-components tailwindcss
+yarn add react-restyle-components
 
 ```
 
