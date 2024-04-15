@@ -1,6 +1,7 @@
 import React from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
 import {Button} from './buttons.component';
+import {Title, Description} from '@storybook/blocks';
 
 const meta: Meta<typeof Button> = {
   title: 'Design System/Atoms/Button',
@@ -9,17 +10,17 @@ const meta: Meta<typeof Button> = {
   args: {
     className: 'bg-orange w-40',
   },
-  // parameters: {
-  //   componentSubtitle: 'Button New',
-  //   docs: {
-  //     page: () => (
-  //       <>
-  //         <Title />
-  //         <Description />
-  //       </>
-  //     ),
-  //   },
-  // },
+  parameters: {
+    componentSubtitle: 'Button New',
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Description />
+        </>
+      ),
+    },
+  },
 };
 
 export default meta;
