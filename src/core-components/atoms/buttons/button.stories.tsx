@@ -1,14 +1,15 @@
 import React from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
 import {Button} from './buttons.component';
-import {Title, Description} from '@storybook/blocks';
+import {Title, Source, Canvas} from '@storybook/blocks';
+import {fn} from '@storybook/test';
 
 const meta: Meta<typeof Button> = {
   title: 'Design System/Atoms/Button',
   component: Button,
   tags: ['autodocs'],
   args: {
-    className: 'bg-orange w-40',
+    className: 'w-40',
   },
   parameters: {
     componentSubtitle: 'Button New',
@@ -16,7 +17,19 @@ const meta: Meta<typeof Button> = {
       page: () => (
         <>
           <Title />
-          <Description />
+
+          <Canvas />
+          <Source
+            code={`
+import {Button} from 'react-restyle-components';
+    <Button
+      disable={false}
+      type='solid'
+      onClick={()=>{}}>
+       <span>Primary</span>
+    </Button>
+            `}
+          />
         </>
       ),
     },
@@ -34,8 +47,9 @@ export const Primary: Story = {
   // },
   args: {
     disable: false,
-    type: 'solid' || 'outline' || 'submit',
+    type: 'solid' || 'outline',
     children: <span>Primary</span>,
+    onClick: fn(),
   },
 };
 
