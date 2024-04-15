@@ -107,7 +107,7 @@
                 react.createElement(dist.hE, null),
                 react.createElement(dist.Hl, null),
                 react.createElement(dist.kL, {
-                  code: "\nimport {Button} from 'react-restyle-components';\n   <Button\n   disable={false}\n   type='solid'\n   onClick={()=>{}}>\n    <span>Primary</span>\n   </Button>\n            ",
+                  code: "\nimport {Button} from 'react-restyle-components';\n    <Button\n      disable={false}\n      type='solid'\n      onClick={()=>{}}>\n       <span>Primary</span>\n    </Button>\n            ",
                 }),
               );
             },

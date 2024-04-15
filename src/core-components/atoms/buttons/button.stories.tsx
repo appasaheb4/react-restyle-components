@@ -1,7 +1,7 @@
 import React from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
 import {Button} from './buttons.component';
-import {Title, Source, Canvas} from '@storybook/blocks';
+import {Title, Component, Source, Canvas, ArgTypes} from '@storybook/blocks';
 import {fn} from '@storybook/test';
 
 const meta: Meta<typeof Button> = {
@@ -17,7 +17,6 @@ const meta: Meta<typeof Button> = {
       page: () => (
         <>
           <Title />
-
           <Canvas />
           <Source
             code={`
@@ -30,6 +29,7 @@ import {Button} from 'react-restyle-components';
     </Button>
             `}
           />
+          <ArgTypes />
         </>
       ),
     },

@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.33",
+  "version": "0.1.41",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/index.js",
@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o docs-build",
+    "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
     "deploy-storybook": "gh-pages -d docs-build",
     "prettier": "prettier --write '**/*.{js,jsx}'",
     "prepare": "husky install"
