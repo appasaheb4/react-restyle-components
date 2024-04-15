@@ -9,6 +9,17 @@ const meta: Meta<typeof Button> = {
   args: {
     className: 'bg-orange w-40',
   },
+  // parameters: {
+  //   componentSubtitle: 'Button New',
+  //   docs: {
+  //     page: () => (
+  //       <>
+  //         <Title />
+  //         <Description />
+  //       </>
+  //     ),
+  //   },
+  // },
 };
 
 export default meta;
