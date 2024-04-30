@@ -1,12 +1,12 @@
-import { Provider, renderStorybookUI } from "./chunk-O6NCVXC4.js";
+import { Provider, renderStorybookUI } from "./chunk-GFFGH77H.js";
 import {
   CHANNEL_CREATED,
   addons,
   createBrowserChannel,
-} from "./chunk-RHK3WMPG.js";
-import "./chunk-TZAR34JC.js";
-import "./chunk-VMGB76WP.js";
-import { scope } from "./chunk-UOBNU442.js";
+} from "./chunk-KCHUFUTG.js";
+import "./chunk-XCO5HRLK.js";
+import "./chunk-FEE35O7J.js";
+import { scope } from "./chunk-S4VOIVUE.js";
 import "./chunk-XP3HGWTR.js";
 var ReactProvider = class extends Provider {
     constructor() {

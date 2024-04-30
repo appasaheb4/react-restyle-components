@@ -9,7 +9,7 @@ var __require = ((x2) =>
     ? require
     : typeof Proxy < "u"
       ? new Proxy(x2, {
-          get: (a, b2) => (typeof require < "u" ? require : a)[b2],
+          get: (a, b) => (typeof require < "u" ? require : a)[b],
         })
       : x2)(function (x2) {
   if (typeof require < "u") return require.apply(this, arguments);
@@ -3019,9 +3019,9 @@ var require_implementation2 = __commonJS({
       toStr = Object.prototype.toString,
       max = Math.max,
       funcType = "[object Function]",
-      concatty = function (a, b2) {
+      concatty = function (a, b) {
         for (var arr = [], i = 0; i < a.length; i += 1) arr[i] = a[i];
-        for (var j = 0; j < b2.length; j += 1) arr[j + a.length] = b2[j];
+        for (var j = 0; j < b.length; j += 1) arr[j + a.length] = b[j];
         return arr;
       },
       slicy = function (arrLike, offset) {
@@ -4200,7 +4200,8 @@ var require_object_inspect = __commonJS({
         symMap;
       if (hasShammedSymbols) {
         symMap = {};
-        for (var k = 0; k < syms.length; k++) symMap["$" + syms[k]] = syms[k];
+        for (var k2 = 0; k2 < syms.length; k2++)
+          symMap["$" + syms[k2]] = syms[k2];
       }
       for (var key2 in obj)
         has2(obj, key2) &&
@@ -4509,8 +4510,8 @@ var require_utils = __commonJS({
               obj.constructor.isBuffer(obj)
             );
       },
-      combine = function (a, b2) {
-        return [].concat(a, b2);
+      combine = function (a, b) {
+        return [].concat(a, b);
       },
       maybeMap = function (val, fn) {
         if (isArray2(val)) {
@@ -5309,10 +5310,10 @@ var require_browser_dtector_umd_min = __commonJS({
                     p = u2[5] || u2[3] || u2[1] || null,
                     w2 = f3[0] || null,
                     x2 = u2[4] || u2[2] || null,
-                    b2 = i();
+                    b = i();
                   p === "chrome" &&
-                    typeof (b2 == null ||
-                    (t3 = b2.brave) === null ||
+                    typeof (b == null ||
+                    (t3 = b.brave) === null ||
                     t3 === void 0
                       ? void 0
                       : t3.isBrave) == "function" &&
@@ -7084,9 +7085,9 @@ var replacer = function (options2) {
     let mutated = new Map();
     return function mutateUndefined(value2) {
       isObject3(value2) &&
-        Object.entries(value2).forEach(([k, v2]) => {
+        Object.entries(value2).forEach(([k2, v2]) => {
           v2 === "_undefined_"
-            ? (value2[k] = void 0)
+            ? (value2[k2] = void 0)
             : mutated.get(v2) || (mutated.set(v2, !0), mutateUndefined(v2));
         }),
         Array.isArray(value2) &&
@@ -7293,7 +7294,7 @@ var isMulti = (args2) => args2.transports !== void 0,
             maxDepth,
             space,
             lazyEval,
-          }).filter(([k, v2]) => typeof v2 < "u"),
+          }).filter(([k2, v2]) => typeof v2 < "u"),
         ),
         stringifyOptions = {
           ...defaultEventOptions,
@@ -7489,10 +7490,12 @@ __export(preview_errors_exports, {
   MissingRenderToCanvasError: () => MissingRenderToCanvasError,
   MissingStoryAfterHmrError: () => MissingStoryAfterHmrError,
   MissingStoryFromCsfFileError: () => MissingStoryFromCsfFileError,
+  NextJsSharpError: () => NextJsSharpError,
   NoStoryMatchError: () => NoStoryMatchError,
   StoryIndexFetchError: () => StoryIndexFetchError,
   StoryStoreAccessedBeforeInitializationError: () =>
     StoryStoreAccessedBeforeInitializationError,
+  UnknownArgTypesError: () => UnknownArgTypesError,
 });
 var StorybookError = class extends Error {
   constructor() {
@@ -7597,6 +7600,7 @@ function dedent(templ) {
 }
 var esm_default = dedent;
 var Category = ((Category2) => (
+    (Category2.DOCS_TOOLS = "DOCS-TOOLS"),
     (Category2.PREVIEW_CLIENT_LOGGER = "PREVIEW_CLIENT-LOGGER"),
     (Category2.PREVIEW_CHANNELS = "PREVIEW_CHANNELS"),
     (Category2.PREVIEW_CORE_EVENTS = "PREVIEW_CORE-EVENTS"),
@@ -7613,6 +7617,7 @@ var Category = ((Category2) => (
     (Category2.RENDERER_VUE = "RENDERER_VUE"),
     (Category2.RENDERER_VUE3 = "RENDERER_VUE3"),
     (Category2.RENDERER_WEB_COMPONENTS = "RENDERER_WEB-COMPONENTS"),
+    (Category2.FRAMEWORK_NEXTJS = "FRAMEWORK_NEXTJS"),
     Category2
   ))(Category || {}),
   MissingStoryAfterHmrError = class extends StorybookError {
@@ -7798,6 +7803,42 @@ This is deprecated and won't work in Storybook 8 anymore.
     It is not recommended to use methods directly on the Story Store anyway, in Storybook 9 we will
     remove access to the store entirely`;
     }
+  },
+  NextJsSharpError = class extends StorybookError {
+    constructor() {
+      super(...arguments),
+        (this.category = "FRAMEWORK_NEXTJS"),
+        (this.code = 1),
+        (this.documentation =
+          "https://storybook.js.org/docs/get-started/nextjs#faq");
+    }
+    template() {
+      return esm_default`
+    You are importing avif images, but you don't have sharp installed.
+
+    You have to install sharp in order to use image optimization features in Next.js.
+    `;
+    }
+  },
+  UnknownArgTypesError = class extends StorybookError {
+    constructor(data) {
+      super(),
+        (this.data = data),
+        (this.category = "DOCS-TOOLS"),
+        (this.code = 1),
+        (this.documentation =
+          "https://github.com/storybookjs/storybook/issues/26606");
+    }
+    template() {
+      return esm_default`There was a failure when generating detailed ArgTypes in ${this.data.language} for:
+    
+    ${JSON.stringify(this.data.type, null, 2)} 
+    
+    Storybook will fall back to use a generic type description instead.
+
+    This type is either not supported or it is a bug in the docgen generation in Storybook.
+    If you think this is a bug, please detail it as much as possible in the Github issue.`;
+    }
   };
 var dist_exports5 = {};
 __export(dist_exports5, {
@@ -7912,9 +7953,9 @@ function dequal(foo, bar) {
   return foo !== foo && bar !== bar;
 }
 var import_isPlainObject = __toESM(require_isPlainObject(), 1);
-var B = Object.create,
-  R = Object.defineProperty,
-  b = Object.getOwnPropertyDescriptor,
+var F = Object.create,
+  u = Object.defineProperty,
+  B = Object.getOwnPropertyDescriptor,
   C = Object.getOwnPropertyNames,
   h = Object.getPrototypeOf,
   w = Object.prototype.hasOwnProperty,
@@ -7924,17 +7965,17 @@ var B = Object.create,
       for (let a of C(e))
         !w.call(r, a) &&
           a !== n &&
-          R(r, a, {
+          u(r, a, {
             get: () => e[a],
-            enumerable: !(t = b(e, a)) || t.enumerable,
+            enumerable: !(t = B(e, a)) || t.enumerable,
           });
     return r;
   },
   v = (r, e, n) => (
-    (n = r != null ? B(h(r)) : {}),
+    (n = r != null ? F(h(r)) : {}),
     E(
       e || !r || !r.__esModule
-        ? R(n, "default", { value: r, enumerable: !0 })
+        ? u(n, "default", { value: r, enumerable: !0 })
         : n,
       r,
     )
@@ -7950,27 +7991,27 @@ var B = Object.create,
               }
             : Object.keys;
         return function (t, a) {
-          return (function i(o, s, p) {
+          return (function i(o, s, d) {
             var y,
               g,
-              d,
-              A = r.call(o),
-              F = r.call(s);
+              p,
+              l = r.call(o),
+              b = r.call(s);
             if (o === s) return !0;
             if (o == null || s == null) return !1;
-            if (p.indexOf(o) > -1 && p.indexOf(s) > -1) return !0;
+            if (d.indexOf(o) > -1 && d.indexOf(s) > -1) return !0;
             if (
-              (p.push(o, s),
-              A != F ||
+              (d.push(o, s),
+              l != b ||
                 ((y = n(o)),
                 (g = n(s)),
                 y.length != g.length ||
-                  y.some(function (l) {
-                    return !i(o[l], s[l], p);
+                  y.some(function (A) {
+                    return !i(o[A], s[A], d);
                   })))
             )
               return !1;
-            switch (A.slice(8, -1)) {
+            switch (l.slice(8, -1)) {
               case "Symbol":
                 return o.valueOf() == s.valueOf();
               case "Date":
@@ -7984,8 +8025,8 @@ var B = Object.create,
               case "Set":
               case "Map":
                 (y = o.entries()), (g = s.entries());
-                do if (!i((d = y.next()).value, g.next().value, p)) return !1;
-                while (!d.done);
+                do if (!i((p = y.next()).value, g.next().value, d)) return !1;
+                while (!p.done);
                 return !0;
               case "ArrayBuffer":
                 (o = new Uint8Array(o)), (s = new Uint8Array(s));
@@ -8003,15 +8044,15 @@ var B = Object.create,
               case "Arguments":
               case "Array":
                 if (o.length != s.length) return !1;
-                for (d = 0; d < o.length; d++)
+                for (p = 0; p < o.length; p++)
                   if (
-                    (d in o || d in s) &&
-                    (d in o != d in s || !i(o[d], s[d], p))
+                    (p in o || p in s) &&
+                    (p in o != p in s || !i(o[p], s[p], d))
                   )
                     return !1;
                 return !0;
               case "Object":
-                return i(e(o), e(s), p);
+                return i(e(o), e(s), d);
               default:
                 return !1;
             }
@@ -8019,7 +8060,7 @@ var B = Object.create,
         };
       })());
   });
-function u(r) {
+function R(r) {
   return r
     .replace(/_/g, " ")
     .replace(/-/g, " ")
@@ -8058,28 +8099,28 @@ var c = v(x()),
     let i = t ? e[t] : n[a];
     return P(r.if, i);
   },
-  L = (r) =>
+  k = (r) =>
     r
       .toLowerCase()
       .replace(/[ ’–—―′¿'`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "-")
       .replace(/-+/g, "-")
       .replace(/^-+/, "")
       .replace(/-+$/, ""),
-  f2 = (r, e) => {
-    let n = L(r);
+  m = (r, e) => {
+    let n = k(r);
     if (n === "")
       throw new Error(
         `Invalid ${e} '${r}', must include alphanumeric characters`,
       );
     return n;
   },
-  N = (r, e) => `${f2(r, "kind")}${e ? `--${f2(e, "name")}` : ""}`,
-  M = (r) => u(r);
-function m(r, e) {
+  N = (r, e) => `${m(r, "kind")}${e ? `--${m(e, "name")}` : ""}`,
+  M = (r) => R(r);
+function f2(r, e) {
   return Array.isArray(e) ? e.includes(r) : r.match(e);
 }
 function G(r, { includeStories: e, excludeStories: n }) {
-  return r !== "__esModule" && (!e || m(r, e)) && (!n || !m(r, n));
+  return r !== "__esModule" && (!e || f2(r, e)) && (!n || !f2(r, n));
 }
 var import_util_deprecate = __toESM(require_browser(), 1),
   import_pickBy = __toESM(require_pickBy(), 1);
@@ -10480,8 +10521,8 @@ var import_qs = __toESM(require_lib(), 1),
           return String(str).replace(strictEntityRe, replace);
         };
       }
-      var sorter = function (a, b2) {
-        return a < b2 ? 1 : -1;
+      var sorter = function (a, b) {
+        return a < b ? 1 : -1;
       };
       exports.decodeHTML = (function () {
         for (
@@ -10556,8 +10597,8 @@ var import_qs = __toESM(require_lib(), 1),
           _i < _a.length;
           _i++
         ) {
-          var k = _a[_i];
-          k.length === 1 ? single.push("\\" + k) : multiple.push(k);
+          var k2 = _a[_i];
+          k2.length === 1 ? single.push("\\" + k2) : multiple.push(k2);
         }
         single.sort();
         for (var start = 0; start < single.length - 1; start++) {
@@ -10795,9 +10836,9 @@ var import_qs = __toESM(require_lib(), 1),
         if (typeof Symbol > "u" || o[Symbol.iterator] == null) {
           if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) {
             var i = 0,
-              F = function () {};
+              F2 = function () {};
             return {
-              s: F,
+              s: F2,
               n: function () {
                 return i >= o.length
                   ? { done: !0 }
@@ -10806,7 +10847,7 @@ var import_qs = __toESM(require_lib(), 1),
               e: function (_e) {
                 throw _e;
               },
-              f: F,
+              f: F2,
             };
           }
           throw new TypeError(`Invalid attempt to iterate non-iterable instance.
@@ -10905,8 +10946,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         var c2 = 16 + red * 36 + green * 6 + blue,
           r = red > 0 ? red * 40 + 55 : 0,
           g = green > 0 ? green * 40 + 55 : 0,
-          b2 = blue > 0 ? blue * 40 + 55 : 0;
-        colors[c2] = toColorHexString([r, g, b2]);
+          b = blue > 0 ? blue * 40 + 55 : 0;
+        colors[c2] = toColorHexString([r, g, b]);
       }
       function toHexString(num) {
         for (var str = num.toString(16); str.length < 2; ) str = "0" + str;
@@ -11958,7 +11999,7 @@ function normalizeComponentAnnotations(
 ) {
   let { id, argTypes } = defaultExport;
   return {
-    id: L(id || title),
+    id: k(id || title),
     ...defaultExport,
     title,
     ...(argTypes && { argTypes: normalizeInputTypes(argTypes) }),
@@ -12234,10 +12275,12 @@ function prepareContext(context) {
       (acc, [key2, val]) => {
         if (!targetedContext.argTypes[key2]?.mapping)
           return (acc[key2] = val), acc;
-        let mappingFn = (originalValue) =>
-          originalValue in targetedContext.argTypes[key2].mapping
-            ? targetedContext.argTypes[key2].mapping[originalValue]
+        let mappingFn = (originalValue) => {
+          let mapping = targetedContext.argTypes[key2].mapping;
+          return mapping && originalValue in mapping
+            ? mapping[originalValue]
             : originalValue;
+        };
         return (
           (acc[key2] = Array.isArray(val)
             ? val.map(mappingFn)
@@ -12848,14 +12891,14 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
   STORY_KIND_PATH_SEPARATOR = /\s*\/\s*/,
   storySort =
     (options2 = {}) =>
-    (a, b2) => {
-      if (a.title === b2.title && !options2.includeNames) return 0;
+    (a, b) => {
+      if (a.title === b.title && !options2.includeNames) return 0;
       let method = options2.method || "configure",
         order = options2.order || [],
         storyTitleA = a.title.trim().split(STORY_KIND_PATH_SEPARATOR),
-        storyTitleB = b2.title.trim().split(STORY_KIND_PATH_SEPARATOR);
+        storyTitleB = b.title.trim().split(STORY_KIND_PATH_SEPARATOR);
       options2.includeNames &&
-        (storyTitleA.push(a.name), storyTitleB.push(b2.name));
+        (storyTitleA.push(a.name), storyTitleB.push(b.name));
       let depth = 0;
       for (; storyTitleA[depth] || storyTitleB[depth]; ) {
         if (!storyTitleA[depth]) return -1;
@@ -14096,7 +14139,7 @@ var PreviewWithSelection = class extends Preview {
           : Array.isArray(value2)
             ? value2.every((v2) => validateArgs(key2, v2))
             : (0, import_isPlainObject.default)(value2)
-              ? Object.entries(value2).every(([k, v2]) => validateArgs(k, v2))
+              ? Object.entries(value2).every(([k2, v2]) => validateArgs(k2, v2))
               : !1,
   QS_OPTIONS = {
     delimiter: ";",
