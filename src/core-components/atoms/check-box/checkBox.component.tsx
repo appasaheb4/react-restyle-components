@@ -1,29 +1,55 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {UnCheckbox, CheckedBox} from '../../../library/assets/svg';
+import {InputWrapper} from '../form/form.component';
 interface CheckBoxProps {
+  title: string;
+  data: Array<any>;
   className?: string;
-  checked?: boolean;
   disable?: boolean;
-  onChange: () => void;
+  onChange: (flag: boolean) => void;
 }
 
-export const CheckBox = ({className, checked, onChange}: CheckBoxProps) => {
+export const CheckBox = ({
+  title = 'Banks',
+  data = [{title: 'SBI Bank', checked: false}],
+  className,
+  onChange,
+}: CheckBoxProps) => {
+  const [list, setList] = useState(data);
   const width = 20;
-  const hanleClick = () => {
-    onChange();
+  const handleClick = () => {
+    setList(list?.map((item) => item.checked));
   };
   return (
-    <div className={`${className} flex flex-row  mr-2`} onClick={hanleClick}>
-      {checked ? (
-        <CheckedBox
-          width={width}
-          height={width}
-          fill="#E7503D"
-          stroke="E7503D"
-        />
-      ) : (
-        <UnCheckbox width={width} height={width} />
-      )}
-    </div>
+    <InputWrapper label={title}>
+      {list?.map((item, index) => (
+        <div
+          className={`${className} flex flex-row  items-center `}
+          onClick={() => {
+            const result = list?.map((e, i) => {
+              if (i == index) return {...e, checked: !item.checked};
+              else return {...e};
+            });
+            setList(result);
+          }}
+          key={index}
+        >
+          <div className="flex mt-1">
+            {item.checked ? (
+              <CheckedBox
+                width={width}
+                height={width}
+                fill="#E7503D"
+                stroke="E7503D"
+              />
+            ) : (
+              <UnCheckbox width={width} height={width} />
+            )}
+          </div>
+
+          <span>{item?.title}</span>
+        </div>
+      ))}
+    </InputWrapper>
   );
 };

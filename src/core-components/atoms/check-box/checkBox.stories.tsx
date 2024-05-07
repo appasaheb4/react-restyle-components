@@ -16,8 +16,11 @@ type Story = StoryObj<typeof CheckBox>;
 
 export const Primary1: Story = {
   args: {
-    className: 'flex flex-row',
-    checked: true,
+    title: 'Banks',
+    data: [
+      {title: 'SBI Bank', checked: false},
+      {title: 'ICICI Bank', checked: false},
+    ],
     disable: false,
   },
 };

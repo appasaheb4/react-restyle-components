@@ -3,8 +3,10 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import {DatePickerSvg} from '../../../library/assets/svg';
 import dayjs from 'dayjs';
+import {InputWrapper} from '../form/form.component';
 
 interface DatePickerProps {
+  title: string;
   value?: string;
   className?: string;
   disable?: boolean;
@@ -13,6 +15,7 @@ interface DatePickerProps {
 }
 
 export const DatePickerComp = ({
+  title = 'Title',
   className,
   disable,
   value,
@@ -26,7 +29,7 @@ export const DatePickerComp = ({
       <div
         onClick={!disable && props.onClick}
         ref={ref}
-        className=" border-gray-light place-items-center  border rounded-md px-2 flex flex-wrap "
+        className=" border-gray-light place-items-center  border rounded-md px-2 flex "
       >
         <label className="mr-3 font-nunitoSansRegular text-primaryCharcoal text-lg">
           {props.value || props.placeholder}
@@ -42,8 +45,8 @@ export const DatePickerComp = ({
   };
 
   return (
-    <div className={`${className}   items-center flex justify-start `}>
-      <div className="flex-wrap">
+    <InputWrapper label={title}>
+      <div className={`${className} flex zIndex-999`}>
         <DatePicker
           selected={pickedDate || new Date()}
           dateFormat={showFormat}
@@ -52,7 +55,6 @@ export const DatePickerComp = ({
           customInput={<CustomInput />}
         />
       </div>
-      {/* */}
-    </div>
+    </InputWrapper>
   );
 };

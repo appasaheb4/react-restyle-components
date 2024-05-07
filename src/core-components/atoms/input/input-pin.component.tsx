@@ -10,24 +10,29 @@ interface PinInputGridProps {
   className?: string;
   disable?: boolean;
   name?: string;
-  pin: Array<number | undefined>;
+  defaultPin: Array<number | undefined>;
   onPinChanged: (pinEntry: number | undefined, index: number) => void;
 }
 
 export const InputPin: React.FC<PinInputGridProps> = ({
   title,
   className,
-  pin,
+  defaultPin,
   errorMsg,
   defaultMsg,
   hasError,
   onPinChanged,
 }) => {
+  const pin = useRef<any>([]);
   const pinLength = 12;
   const Pin_Min_Value = 0;
   const Pin_Max_Value = 9;
   const BACKSPACE_Key = 'Backspace';
   const inputRefs = useRef<HTMLInputElement[]>([]);
+
+  console.log({
+    final: pin.current,
+  });
 
   const removeValuesFromArray = (valuesArray: string[], value: string) => {
     const valueIndex = valuesArray.findIndex((entry) => entry === value);
@@ -50,7 +55,7 @@ export const InputPin: React.FC<PinInputGridProps> = ({
   ) => {
     const previousValue = event.target.defaultValue;
     const valueArray = event.target.value.split('');
-    removeValuesFromArray(valueArray, previousValue);
+    const output = removeValuesFromArray(valueArray, previousValue);
     const value = valueArray.pop();
 
     if (!value) {
@@ -62,6 +67,11 @@ export const InputPin: React.FC<PinInputGridProps> = ({
       return;
     }
 
+    pin.current = pin.current.push(value);
+    console.log({
+      value,
+      final: pin.current,
+    });
     if (pinNumber >= Pin_Min_Value && pinNumber <= Pin_Max_Value) {
       onPinChanged(pinNumber, index);
       if (index < pinLength - 1) {
@@ -75,10 +85,10 @@ export const InputPin: React.FC<PinInputGridProps> = ({
   ) => {
     const keyboardKeyCode = event.nativeEvent.code;
     if (keyboardKeyCode != BACKSPACE_Key) return;
-    if (pin[index] !== undefined && keyboardKeyCode === BACKSPACE_Key) {
+    if (pin.current[index] !== undefined && keyboardKeyCode === BACKSPACE_Key) {
       changePinFocus(index - 1);
     }
-    if (pin[index] === undefined) {
+    if (pin.current[index] === undefined) {
       changePinFocus(index - 1);
     } else {
       onPinChanged(undefined, index);
@@ -100,12 +110,12 @@ export const InputPin: React.FC<PinInputGridProps> = ({
               onKeyUp={(event) => onKeyDown(event, index)}
               key={index}
               onMouseUp={() => {
-                if (pin.join('').length <= 0) {
+                if (pin.current.join('').length <= 0) {
                   changePinFocus(0);
                 }
               }}
               onClick={() => {
-                if (pin.join('').length <= 0) {
+                if (pin.current.join('').length <= 0) {
                   onPinChanged(undefined, 0);
                 }
               }}
@@ -115,7 +125,7 @@ export const InputPin: React.FC<PinInputGridProps> = ({
                 }
               }}
               onChange={(event) => onChange(event, index)}
-              value={pin[index]?.toString() || ''}
+              value={pin.current[index]?.toString() || ''}
             />
             <div className="invisible">
               {(index + 1) % 4 === 0 ? 'ss' : null}

@@ -46,7 +46,7 @@ export const InputDropdown = ({
           name="name"
           placeholder={title}
           value={value}
-          className=" text-gray-dark-secondary pt-3 pb-2  w-full px-0 mt-0 bg-transparent border-gray-secondary border-0 border-b appearance-none focus:outline-none focus:ring-0 font-nunitoSansRegular text-md"
+          className=" pt-3 pb-2  w-full px-0 mt-0 bg-transparent border-gray-secondary border-0 border-b appearance-none focus:outline-none focus:ring-0 font-nunitoSansRegular text-md"
           onClick={() => {
             setIsOpen(!isOpen);
           }}

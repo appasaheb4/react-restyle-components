@@ -16,7 +16,7 @@ type Story = StoryObj<typeof DatePickerComp>;
 
 export const Primary: Story = {
   args: {
-    className: 'mt-6',
+    title: 'Date',
     value: dayjs().format('YYYY-MM-DD'),
     showFormat: 'dd-MM-yyyy',
   },
