@@ -215,6 +215,10 @@
         title: "Design System/Atoms/InputPin",
         component: InputPin,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { InputPin } from 'react-restyle-components'",
+        },
       };
       var Primary = {
         args: {

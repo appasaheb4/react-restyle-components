@@ -6,6 +6,9 @@ const meta: Meta<typeof CheckBox> = {
   title: 'Design System/Atoms/CheckBox',
   component: CheckBox,
   tags: ['autodocs'],
+  parameters: {
+    componentSubtitle: `import { CheckBox } from 'react-restyle-components'`,
+  },
 };
 
 export default meta;

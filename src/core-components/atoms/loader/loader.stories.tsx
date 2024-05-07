@@ -6,6 +6,9 @@ const meta: Meta<typeof Loader> = {
   title: 'Design System/Atoms/Loader',
   component: Loader,
   tags: ['autodocs'],
+  parameters: {
+    componentSubtitle: `import { Loader } from 'react-restyle-components'`,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof Loader>;

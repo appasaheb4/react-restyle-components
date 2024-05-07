@@ -6,6 +6,9 @@ const meta: Meta<typeof Stepper> = {
   title: 'Design System/Atoms/Stepper',
   component: Stepper,
   tags: ['autodocs'],
+  parameters: {
+    componentSubtitle: `import { Stepper } from 'react-restyle-components'`,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof Stepper>;

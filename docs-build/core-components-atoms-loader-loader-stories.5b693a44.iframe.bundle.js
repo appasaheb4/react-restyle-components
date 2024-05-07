@@ -1,4 +1,4 @@
-/*! For license information please see core-components-atoms-loader-loader-stories.dd1b4c2a.iframe.bundle.js.LICENSE.txt */
+/*! For license information please see core-components-atoms-loader-loader-stories.5b693a44.iframe.bundle.js.LICENSE.txt */
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
   [570],
@@ -437,6 +437,10 @@
         title: "Design System/Atoms/Loader",
         component: Loader,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { Loader } from 'react-restyle-components'",
+        },
       };
       var Primary = { args: {} };
       Primary.parameters = {

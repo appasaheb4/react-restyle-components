@@ -164,6 +164,9 @@
         title: "Design System/Atoms/Radio",
         component: Radio,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle: "import { Radio } from 'react-restyle-components'",
+        },
       };
       var Primary = { args: {} };
       Primary.parameters = {

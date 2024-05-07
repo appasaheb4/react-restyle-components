@@ -1,3 +1,4 @@
+"use strict";
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
   [951],
@@ -7,7 +8,6 @@
       __webpack_exports__,
       __webpack_require__,
     ) => {
-      "use strict";
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
           Primary: () => Primary,
@@ -92,32 +92,16 @@
         },
       };
       var dist = __webpack_require__(
-          "./node_modules/@storybook/blocks/dist/index.mjs",
-        ),
-        test_dist = __webpack_require__(
-          "./node_modules/@storybook/test/dist/index.mjs",
-        );
+        "./node_modules/@storybook/test/dist/index.mjs",
+      );
       const button_stories = {
         title: "Design System/Atoms/Button",
         component: Button,
         tags: ["autodocs"],
         args: { className: "w-40" },
         parameters: {
-          componentSubtitle: "Button New",
-          docs: {
-            page: function () {
-              return react.createElement(
-                react.Fragment,
-                null,
-                react.createElement(dist.hE, null),
-                react.createElement(dist.Hl, null),
-                react.createElement(dist.kL, {
-                  code: "\nimport {Button} from 'react-restyle-components';\n    <Button\n      disable={false}\n      type='solid'\n      onClick={()=>{}}>\n       <span>Primary</span>\n    </Button>\n            ",
-                }),
-                react.createElement(dist.ov, null),
-              );
-            },
-          },
+          componentSubtitle:
+            "import { Button } from 'react-restyle-components'",
         },
       };
       var Primary = {
@@ -125,7 +109,7 @@
           disable: !1,
           type: "solid",
           children: react.createElement("span", null, "Primary"),
-          onClick: (0, test_dist.fn)(),
+          onClick: (0, dist.fn)(),
         },
       };
       Primary.parameters = {
@@ -140,16 +124,6 @@
         },
       };
       const __namedExportsOrder = ["Primary"];
-    },
-    "./node_modules/memoizerific sync recursive": (module) => {
-      function webpackEmptyContext(req) {
-        var e = new Error("Cannot find module '" + req + "'");
-        throw ((e.code = "MODULE_NOT_FOUND"), e);
-      }
-      (webpackEmptyContext.keys = () => []),
-        (webpackEmptyContext.resolve = webpackEmptyContext),
-        (webpackEmptyContext.id = "./node_modules/memoizerific sync recursive"),
-        (module.exports = webpackEmptyContext);
     },
   },
 ]);

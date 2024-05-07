@@ -1,4 +1,4 @@
-/*! For license information please see core-components-molecules-css-multiline-input-css-multiline-input-stories.cd3c8f64.iframe.bundle.js.LICENSE.txt */
+/*! For license information please see core-components-molecules-css-multiline-input-css-multiline-input-stories.8b19a78a.iframe.bundle.js.LICENSE.txt */
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
   [647],
@@ -1763,6 +1763,10 @@
           title: "Design System/Molecules/CSSMultiline",
           component: CSSMultiline,
           tags: ["autodocs"],
+          parameters: {
+            componentSubtitle:
+              "import { CSSMultiline } from 'react-restyle-components'",
+          },
         };
         var Primary = { args: {} };
         Primary.parameters = {

@@ -160,6 +160,10 @@
         title: "Design System/Atoms/Stepper",
         component: Stepper,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { Stepper } from 'react-restyle-components'",
+        },
       };
       var Primary = {
         args: {

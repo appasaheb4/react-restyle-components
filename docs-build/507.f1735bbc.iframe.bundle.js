@@ -1,7 +1,7 @@
-/*! For license information please see 171.dd9e0081.iframe.bundle.js.LICENSE.txt */
+/*! For license information please see 507.f1735bbc.iframe.bundle.js.LICENSE.txt */
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
-  [171],
+  [507],
   {
     "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js": (
       __unused_webpack_module,
@@ -207,40 +207,22 @@
         return { ...slotProps, ...overrideProps };
       }
     },
-    "./node_modules/@storybook/blocks/dist/chunk-GWAJ4KRU.mjs": (
+    "./node_modules/@storybook/addon-docs/dist/DocsRenderer-K4EAMTCU.mjs": (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__,
     ) => {
       "use strict";
       __webpack_require__.d(__webpack_exports__, {
-        Y: () => getControlSetterButtonId,
-        Z: () => getControlId,
+        DocsRenderer: () => DocsRenderer,
       });
-      var getControlId = (value) => `control-${value.replace(/\s+/g, "-")}`,
-        getControlSetterButtonId = (value) =>
-          `set-${value.replace(/\s+/g, "-")}`;
-    },
-    "./node_modules/@storybook/blocks/dist/index.mjs": (
-      __unused_webpack_module,
-      __webpack_exports__,
-      __webpack_require__,
-    ) => {
-      "use strict";
-      __webpack_require__.d(__webpack_exports__, {
-        zE: () => AnchorMdx,
-        ov: () => ArgTypes,
-        Hl: () => Canvas,
-        XA: () => CodeOrSourceMdx,
-        kQ: () => Docs,
-        Sw: () => HeadersMdx,
-        kL: () => Source2,
-        hE: () => Title2,
-      });
-      var chunk_GWAJ4KRU = __webpack_require__(
+      var react = __webpack_require__("./node_modules/react/index.js"),
+        react_18 = __webpack_require__(
+          "./node_modules/@storybook/react-dom-shim/dist/react-18.mjs",
+        ),
+        chunk_GWAJ4KRU = __webpack_require__(
           "./node_modules/@storybook/blocks/dist/chunk-GWAJ4KRU.mjs",
         ),
-        react = __webpack_require__("./node_modules/react/index.js"),
         dist = __webpack_require__(
           "./node_modules/@storybook/theming/dist/index.mjs",
         ),
@@ -7408,91 +7390,6 @@
                 ? component.__docgenInfo.displayName
                 : component.name;
         };
-      function extractComponentArgTypes(component, parameters) {
-        let { extractArgTypes } = parameters.docs || {};
-        if (!extractArgTypes)
-          throw new Error(
-            "Args unsupported. See Args documentation for your framework.",
-          );
-        return extractArgTypes(component);
-      }
-      var ArgTypes = (props) => {
-        let { of } = props;
-        if ("of" in props && void 0 === of)
-          throw new Error(
-            "Unexpected `of={undefined}`, did you mistype a CSF file reference?",
-          );
-        let resolved = useOf(of || "meta"),
-          { argTypes, parameters, component, subcomponents } =
-            (function getArgTypesFromResolved(resolved) {
-              if ("component" === resolved.type) {
-                let {
-                  component: component2,
-                  projectAnnotations: { parameters: parameters2 },
-                } = resolved;
-                return {
-                  argTypes: extractComponentArgTypes(component2, parameters2),
-                  parameters: parameters2,
-                  component: component2,
-                };
-              }
-              if ("meta" === resolved.type) {
-                let {
-                  preparedMeta: {
-                    argTypes: argTypes2,
-                    parameters: parameters2,
-                    component: component2,
-                    subcomponents: subcomponents2,
-                  },
-                } = resolved;
-                return {
-                  argTypes: argTypes2,
-                  parameters: parameters2,
-                  component: component2,
-                  subcomponents: subcomponents2,
-                };
-              }
-              let {
-                story: { argTypes, parameters, component, subcomponents },
-              } = resolved;
-              return { argTypes, parameters, component, subcomponents };
-            })(resolved),
-          argTypesParameters = parameters.docs?.argTypes || {},
-          include = props.include ?? argTypesParameters.include,
-          exclude = props.exclude ?? argTypesParameters.exclude,
-          sort = props.sort ?? argTypesParameters.sort,
-          filteredArgTypes = (0,
-          external_STORYBOOK_MODULE_PREVIEW_API_.filterArgTypes)(
-            argTypes,
-            include,
-            exclude,
-          );
-        if (!(subcomponents && Object.keys(subcomponents).length > 0))
-          return react.createElement(ArgsTable, {
-            rows: filteredArgTypes,
-            sort,
-          });
-        let mainComponentName = getComponentName(component),
-          subcomponentTabs = Object.fromEntries(
-            Object.entries(subcomponents).map(([key, comp]) => [
-              key,
-              {
-                rows: (0,
-                external_STORYBOOK_MODULE_PREVIEW_API_.filterArgTypes)(
-                  extractComponentArgTypes(comp, parameters),
-                  include,
-                  exclude,
-                ),
-                sort,
-              },
-            ]),
-          ),
-          tabs = {
-            [mainComponentName]: { rows: filteredArgTypes, sort },
-            ...subcomponentTabs,
-          };
-        return react.createElement(TabbedArgsTable, { tabs, sort });
-      };
       function argsHash(args) {
         return (0, telejson_dist.As)(args, { allowFunction: !1 });
       }
@@ -7609,12 +7506,6 @@
               dark,
             }
           );
-        },
-        Source2 = (props) => {
-          let sourceContext = (0, react.useContext)(SourceContext),
-            docsContext = (0, react.useContext)(DocsContext),
-            sourceProps = useSourceProps(props, docsContext, sourceContext);
-          return react.createElement(Source, { ...sourceProps });
         };
       function useStory(storyId, context) {
         let stories = (function useStories(storyIds, context) {
@@ -8474,6 +8365,89 @@
           }
         };
       external_STORYBOOK_MODULE_PREVIEW_API_.Preview;
+      var defaultComponents = {
+          code: CodeOrSourceMdx,
+          a: AnchorMdx,
+          ...HeadersMdx,
+        },
+        ErrorBoundary = class extends react.Component {
+          constructor() {
+            super(...arguments), (this.state = { hasError: !1 });
+          }
+          static getDerivedStateFromError() {
+            return { hasError: !0 };
+          }
+          componentDidCatch(err) {
+            let { showException } = this.props;
+            showException(err);
+          }
+          render() {
+            let { hasError } = this.state,
+              { children } = this.props;
+            return hasError
+              ? null
+              : react.createElement(react.Fragment, null, children);
+          }
+        },
+        DocsRenderer = class {
+          constructor() {
+            (this.render = async (context, docsParameter, element) => {
+              let components = {
+                  ...defaultComponents,
+                  ...docsParameter?.components,
+                },
+                TDocs = Docs;
+              return new Promise((resolve, reject) => {
+                __webpack_require__
+                  .e(648)
+                  .then(
+                    __webpack_require__.bind(
+                      __webpack_require__,
+                      "./node_modules/@mdx-js/react/index.js",
+                    ),
+                  )
+                  .then(({ MDXProvider }) =>
+                    (0, react_18.d)(
+                      react.createElement(
+                        ErrorBoundary,
+                        { showException: reject, key: Math.random() },
+                        react.createElement(
+                          MDXProvider,
+                          { components },
+                          react.createElement(TDocs, {
+                            context,
+                            docsParameter,
+                          }),
+                        ),
+                      ),
+                      element,
+                    ),
+                  )
+                  .then(() => resolve());
+              });
+            }),
+              (this.unmount = (element) => {
+                (0, react_18.H)(element);
+              });
+          }
+        };
+      __webpack_require__(
+        "./node_modules/@storybook/addon-docs/dist/chunk-GN5PWX3D.mjs",
+      );
+    },
+    "./node_modules/@storybook/blocks/dist/chunk-GWAJ4KRU.mjs": (
+      __unused_webpack_module,
+      __webpack_exports__,
+      __webpack_require__,
+    ) => {
+      "use strict";
+      __webpack_require__.d(__webpack_exports__, {
+        Y: () => getControlSetterButtonId,
+        Z: () => getControlId,
+      });
+      var getControlId = (value) => `control-${value.replace(/\s+/g, "-")}`,
+        getControlSetterButtonId = (value) =>
+          `set-${value.replace(/\s+/g, "-")}`;
     },
     "./node_modules/@storybook/components/dist/chunk-D3EWQ7UP.mjs": (
       __unused_webpack_module,
@@ -29637,4 +29611,4 @@
     },
   },
 ]);
-//# sourceMappingURL=171.dd9e0081.iframe.bundle.js.map
+//# sourceMappingURL=507.f1735bbc.iframe.bundle.js.map

@@ -1,7 +1,7 @@
 import React from 'react';
 import type {Meta, StoryObj} from '@storybook/react';
 import {Button} from './buttons.component';
-import {Title, Component, Source, Canvas, ArgTypes} from '@storybook/blocks';
+// import {Title, Component, Source, Canvas, ArgTypes} from '@storybook/blocks';
 import {fn} from '@storybook/test';
 
 const meta: Meta<typeof Button> = {
@@ -12,27 +12,27 @@ const meta: Meta<typeof Button> = {
     className: 'w-40',
   },
   parameters: {
-    componentSubtitle: 'Button New',
-    docs: {
-      page: () => (
-        <>
-          <Title />
-          <Canvas />
-          <Source
-            code={`
-import {Button} from 'react-restyle-components';
-    <Button
-      disable={false}
-      type='solid'
-      onClick={()=>{}}>
-       <span>Primary</span>
-    </Button>
-            `}
-          />
-          <ArgTypes />
-        </>
-      ),
-    },
+    componentSubtitle: `import { Button } from 'react-restyle-components'`,
+    //     docs: {
+    //       page: () => (
+    //         <>
+    //           <Title />
+    //           <Canvas />
+    //           <Source
+    //             code={`
+    // import {Button} from 'react-restyle-components';
+    //     <Button
+    //       disable={false}
+    //       type='solid'
+    //       onClick={()=>{}}>
+    //        <span>Primary</span>
+    //     </Button>
+    //             `}
+    //           />
+    //           <ArgTypes />
+    //         </>
+    //       ),
+    //     },
   },
 };
 

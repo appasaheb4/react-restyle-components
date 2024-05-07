@@ -6,6 +6,9 @@ const meta: Meta<typeof InputPin> = {
   title: 'Design System/Atoms/InputPin',
   component: InputPin,
   tags: ['autodocs'],
+  parameters: {
+    componentSubtitle: `import { InputPin } from 'react-restyle-components'`,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof InputPin>;

@@ -188,6 +188,10 @@
         title: "Design System/Atoms/CheckBox",
         component: CheckBox,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { CheckBox } from 'react-restyle-components'",
+        },
       };
       var Primary1 = {
         args: { className: "flex flex-row", checked: !0, disable: !1 },

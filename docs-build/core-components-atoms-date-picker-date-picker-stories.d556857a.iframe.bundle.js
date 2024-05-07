@@ -217,6 +217,10 @@
         title: "Design System/Atoms/DatePicker",
         component: DatePickerComp,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { DatePickerComp } from 'react-restyle-components'",
+        },
       };
       var Primary = {
         args: {

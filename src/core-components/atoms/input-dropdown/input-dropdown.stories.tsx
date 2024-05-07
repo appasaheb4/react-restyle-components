@@ -6,6 +6,9 @@ const meta: Meta<typeof InputDropdown> = {
   title: 'Design System/Atoms/InputDropdown',
   component: InputDropdown,
   tags: ['autodocs'],
+  parameters: {
+    componentSubtitle: `import { InputDropdown } from 'react-restyle-components'`,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof InputDropdown>;

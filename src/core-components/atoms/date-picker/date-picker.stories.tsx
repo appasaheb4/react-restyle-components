@@ -7,6 +7,9 @@ const meta: Meta<typeof DatePickerComp> = {
   title: 'Design System/Atoms/DatePicker',
   component: DatePickerComp,
   tags: ['autodocs'],
+  parameters: {
+    componentSubtitle: `import { DatePickerComp } from 'react-restyle-components'`,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof DatePickerComp>;

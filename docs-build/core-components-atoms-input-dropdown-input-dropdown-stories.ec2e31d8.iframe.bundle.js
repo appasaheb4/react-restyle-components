@@ -290,6 +290,10 @@
         title: "Design System/Atoms/InputDropdown",
         component: InputDropdown,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { InputDropdown } from 'react-restyle-components'",
+        },
       };
       var Primary = {
         args: {
