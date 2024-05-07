@@ -63,6 +63,9 @@
             })),
         );
       };
+      var form_component = __webpack_require__(
+        "./src/core-components/atoms/form/form.component.tsx",
+      );
       function _array_like_to_array(arr, len) {
         (null == len || len > arr.length) && (len = arr.length);
         for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
@@ -124,7 +127,9 @@
         );
       }
       var DatePickerComp = function (param) {
-        var className = param.className,
+        var _param_title = param.title,
+          title = void 0 === _param_title ? "Title" : _param_title,
+          className = param.className,
           disable = param.disable,
           value = param.value,
           _param_showFormat = param.showFormat,
@@ -146,7 +151,7 @@
                 onClick: !disable && props.onClick,
                 ref,
                 className:
-                  " border-gray-light place-items-center  border rounded-md px-2 flex flex-wrap ",
+                  " border-gray-light place-items-center  border rounded-md px-2 flex ",
               },
               react.createElement(
                 "label",
@@ -161,16 +166,11 @@
           });
         CustomInput.displayName = "CustomInput";
         return react.createElement(
-          "div",
-          {
-            className: "".concat(
-              className,
-              "   items-center flex justify-start ",
-            ),
-          },
+          form_component.oi,
+          { label: title },
           react.createElement(
             "div",
-            { className: "flex-wrap" },
+            { className: "".concat(className, " flex zIndex-999") },
             react.createElement(react_datepicker_min_default(), {
               selected: pickedDate || new Date(),
               dateFormat: showFormat,
@@ -188,6 +188,12 @@
         methods: [],
         displayName: "DatePickerComp",
         props: {
+          title: {
+            required: !1,
+            tsType: { name: "string" },
+            description: "",
+            defaultValue: { value: "'Title'", computed: !1 },
+          },
           value: { required: !1, tsType: { name: "string" }, description: "" },
           className: {
             required: !1,
@@ -224,7 +230,7 @@
       };
       var Primary = {
         args: {
-          className: "mt-6",
+          title: "Date",
           value: dayjs_min_default()().format("YYYY-MM-DD"),
           showFormat: "dd-MM-yyyy",
         },
@@ -235,7 +241,7 @@
           ...Primary.parameters?.docs,
           source: {
             originalSource:
-              "{\n  args: {\n    className: 'mt-6',\n    value: dayjs().format('YYYY-MM-DD'),\n    showFormat: 'dd-MM-yyyy'\n  }\n}",
+              "{\n  args: {\n    title: 'Date',\n    value: dayjs().format('YYYY-MM-DD'),\n    showFormat: 'dd-MM-yyyy'\n  }\n}",
             ...Primary.parameters?.docs?.source,
           },
         },

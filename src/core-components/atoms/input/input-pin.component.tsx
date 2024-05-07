@@ -11,7 +11,7 @@ interface PinInputGridProps {
   disable?: boolean;
   name?: string;
   defaultPin: Array<number | undefined>;
-  onPinChanged: (pinEntry: number | undefined, index: number) => void;
+  onPinChanged: (item: any, index: number) => void;
 }
 
 export const InputPin: React.FC<PinInputGridProps> = ({
@@ -24,15 +24,12 @@ export const InputPin: React.FC<PinInputGridProps> = ({
   onPinChanged,
 }) => {
   const pin = useRef<any>([]);
+  const [reload, setReload] = useState<boolean>(false);
   const pinLength = 12;
   const Pin_Min_Value = 0;
   const Pin_Max_Value = 9;
   const BACKSPACE_Key = 'Backspace';
   const inputRefs = useRef<HTMLInputElement[]>([]);
-
-  console.log({
-    final: pin.current,
-  });
 
   const removeValuesFromArray = (valuesArray: string[], value: string) => {
     const valueIndex = valuesArray.findIndex((entry) => entry === value);
@@ -66,14 +63,10 @@ export const InputPin: React.FC<PinInputGridProps> = ({
     if (isNaN(pinNumber) || value.length === 0) {
       return;
     }
-
-    pin.current = pin.current.push(value);
-    console.log({
-      value,
-      final: pin.current,
-    });
+    pin.current[pin.current?.length] = value;
+    setReload(!reload);
     if (pinNumber >= Pin_Min_Value && pinNumber <= Pin_Max_Value) {
-      onPinChanged(pinNumber, index);
+      onPinChanged(pin.current, index);
       if (index < pinLength - 1) {
         changePinFocus(index + 1);
       }

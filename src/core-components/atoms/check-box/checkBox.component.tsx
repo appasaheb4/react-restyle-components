@@ -6,7 +6,7 @@ interface CheckBoxProps {
   data: Array<any>;
   className?: string;
   disable?: boolean;
-  onChange: (flag: boolean) => void;
+  onChange: (items: any) => void;
 }
 
 export const CheckBox = ({
@@ -17,9 +17,7 @@ export const CheckBox = ({
 }: CheckBoxProps) => {
   const [list, setList] = useState(data);
   const width = 20;
-  const handleClick = () => {
-    setList(list?.map((item) => item.checked));
-  };
+
   return (
     <InputWrapper label={title}>
       {list?.map((item, index) => (
@@ -31,6 +29,7 @@ export const CheckBox = ({
               else return {...e};
             });
             setList(result);
+            onChange(result?.filter((item) => item.checked));
           }}
           key={index}
         >

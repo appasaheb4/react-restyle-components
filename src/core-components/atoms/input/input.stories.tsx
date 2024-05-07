@@ -15,6 +15,12 @@ export const Primary: Story = {
     className: 'mt-4',
     title: 'Enter your Pan Number',
     hasError: true,
-    value: '',
+    defaultValue: '',
+    onChange: (item) => {
+      console.log({item});
+    },
+    onBlur: (item) => {
+      console.log({item});
+    },
   },
 };

@@ -22,5 +22,8 @@ export const Primary1: Story = {
       {title: 'ICICI Bank', checked: false},
     ],
     disable: false,
+    onChange: (item) => {
+      console.log({item});
+    },
   },
 };

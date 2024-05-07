@@ -10,7 +10,7 @@ it('render InputOtp correctly without error', () => {
       hasError={false}
       errorMsg="Uh oh! You’ve entered an invalid aadhaar number"
       onPinChanged={() => jest.fn()}
-      pin={new Array(12)}
+      defaultPin={[]}
     />
   );
   expect(pinInput).toMatchSnapshot();
@@ -23,7 +23,7 @@ it('render InputOtp correctly with error', () => {
       hasError={true}
       errorMsg="Uh oh! You’ve entered an invalid aadhaar number"
       onPinChanged={() => jest.fn()}
-      pin={new Array(12)}
+      defaultPin={[]}
     />
   );
   expect(pinInput).toMatchSnapshot();

@@ -1,9 +1,9 @@
 "use strict";
 (self.webpackChunkreact_restyle_components =
   self.webpackChunkreact_restyle_components || []).push([
-  [662],
+  [884],
   {
-    "./src/core-components/atoms/input/input.stories.tsx": (
+    "./src/core-components/atoms/input/input-pin.stories.tsx": (
       __unused_webpack_module,
       __webpack_exports__,
       __webpack_require__,
@@ -12,84 +12,211 @@
         __webpack_require__.d(__webpack_exports__, {
           Primary: () => Primary,
           __namedExportsOrder: () => __namedExportsOrder,
-          default: () => input_stories,
+          default: () => input_pin_stories,
         });
-      var react = __webpack_require__("./node_modules/react/index.js"),
-        Input =
-          (__webpack_require__(
-            "./src/core-components/atoms/input/input.styles.css",
-          ),
-          function (param) {
-            var title = param.title,
-              value = param.value,
-              className = param.className,
-              disable = param.disable,
-              hasError = param.hasError,
-              errorMsg = param.errorMsg,
-              defaultMsg = param.defaultMsg,
-              inputStyle = param.inputStyle,
-              autoComplete = param.autoComplete,
-              _param_maxlength = param.maxlength,
-              maxlength = void 0 === _param_maxlength ? 40 : _param_maxlength,
-              onChange = param.onChange,
-              onBlur = param.onBlur;
-            return react.createElement(
-              "div",
-              { className: "".concat(className, " relative") },
-              react.createElement("input", {
-                "data-testid": "inputElement",
-                type: "text",
-                name: "name",
-                value,
-                placeholder: " ",
-                disabled: disable,
-                className:
-                  "pt-3 pb-2 bg-transparent block w-full px-0 mt-0  rounded-none  border-0 border-b appearance-none focus:outline-none focus:ring-0 focus:border-gray-secondary border-gray-secondary font-nunitoSansRegular ".concat(
-                    inputStyle,
-                  ),
-                onChange: function (e) {
-                  return onChange && onChange(e.target.value);
-                },
-                onKeyUp: function (event) {
-                  onChange(event.target.value);
-                },
-                onBlur: function (e) {
-                  return onBlur && onBlur(e.target.value);
-                },
-                autoComplete,
-                maxLength: maxlength,
-              }),
-              react.createElement(
-                "label",
-                {
-                  className:
-                    "absolute duration-300 top-3 -z-1 origin-0 text-gray-dark-secondary font-nunitoSansRegular text-md",
-                },
-                title,
-              ),
-              hasError &&
-                "required" !== (null == hasError ? void 0 : hasError.type) &&
-                react.createElement(
-                  "span",
-                  { className: "text-sm text-red text-4xs", id: "error" },
-                  "".concat(errorMsg || ""),
-                ),
-              (!hasError ||
-                "required" === (null == hasError ? void 0 : hasError.type)) &&
-                react.createElement(
-                  "span",
-                  { className: "text-sm text-4xs", id: "error" },
-                  "".concat(defaultMsg || ""),
-                ),
+      var react = __webpack_require__("./node_modules/react/index.js");
+      __webpack_require__("./src/core-components/atoms/input/input.styles.css");
+      function _array_like_to_array(arr, len) {
+        (null == len || len > arr.length) && (len = arr.length);
+        for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+        return arr2;
+      }
+      function _sliced_to_array(arr, i) {
+        return (
+          (function _array_with_holes(arr) {
+            if (Array.isArray(arr)) return arr;
+          })(arr) ||
+          (function _iterable_to_array_limit(arr, i) {
+            var _i =
+              null == arr
+                ? null
+                : ("undefined" != typeof Symbol && arr[Symbol.iterator]) ||
+                  arr["@@iterator"];
+            if (null != _i) {
+              var _s,
+                _e,
+                _arr = [],
+                _n = !0,
+                _d = !1;
+              try {
+                for (
+                  _i = _i.call(arr);
+                  !(_n = (_s = _i.next()).done) &&
+                  (_arr.push(_s.value), !i || _arr.length !== i);
+                  _n = !0
+                );
+              } catch (err) {
+                (_d = !0), (_e = err);
+              } finally {
+                try {
+                  _n || null == _i.return || _i.return();
+                } finally {
+                  if (_d) throw _e;
+                }
+              }
+              return _arr;
+            }
+          })(arr, i) ||
+          (function _unsupported_iterable_to_array(o, minLen) {
+            if (!o) return;
+            if ("string" == typeof o) return _array_like_to_array(o, minLen);
+            var n = Object.prototype.toString.call(o).slice(8, -1);
+            "Object" === n && o.constructor && (n = o.constructor.name);
+            if ("Map" === n || "Set" === n) return Array.from(n);
+            if (
+              "Arguments" === n ||
+              /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+            )
+              return _array_like_to_array(o, minLen);
+          })(arr, i) ||
+          (function _non_iterable_rest() {
+            throw new TypeError(
+              "Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
             );
-          });
-      Input.__docgenInfo = {
+          })()
+        );
+      }
+      var InputPin = function (param) {
+        var title = param.title,
+          className = param.className,
+          errorMsg = (param.defaultPin, param.errorMsg),
+          defaultMsg = param.defaultMsg,
+          hasError = param.hasError,
+          onPinChanged = param.onPinChanged,
+          pin = (0, react.useRef)([]),
+          _useState = _sliced_to_array((0, react.useState)(!1), 2),
+          reload = _useState[0],
+          setReload = _useState[1],
+          inputRefs = (0, react.useRef)([]),
+          changePinFocus = function (pinIndex) {
+            var ref = inputRefs.current[pinIndex];
+            ref && ref.focus();
+          };
+        return react.createElement(
+          "div",
+          { className: "".concat(className, " relative") },
+          react.createElement(
+            "label",
+            {
+              className:
+                "duration-300  -z-1 origin-0 text-gray-dark-secondary font-nunitoSansRegular text-md",
+            },
+            title,
+          ),
+          react.createElement(
+            "div",
+            { className: "flex  space-x-1" },
+            Array.from({ length: 12 }, function (_, index) {
+              var _pin_current_index;
+              return react.createElement(
+                "div",
+                {
+                  className: "flex space-x-1 max-w-full items-stretch",
+                  key: index,
+                },
+                react.createElement("input", {
+                  "data-testid": "inputElementPin",
+                  type: "tel",
+                  className:
+                    "pb-2 block  w-4  px-0 mt-0 bg-transparent text-center border-0 border-b z-20 appearance-none rounded-none focus:outline-none  focus:ring-0 focus:border-gray-secondary border-gray-secondary font-nunitoSansRegular ",
+                  onKeyUp: function (event) {
+                    return (function (event, index) {
+                      var keyboardKeyCode = event.nativeEvent.code;
+                      "Backspace" == keyboardKeyCode &&
+                        (void 0 !== pin.current[index] &&
+                          "Backspace" === keyboardKeyCode &&
+                          changePinFocus(index - 1),
+                        void 0 === pin.current[index]
+                          ? changePinFocus(index - 1)
+                          : onPinChanged(void 0, index));
+                    })(event, index);
+                  },
+                  key: index,
+                  onMouseUp: function () {
+                    pin.current.join("").length <= 0 && changePinFocus(0);
+                  },
+                  onClick: function () {
+                    pin.current.join("").length <= 0 && onPinChanged(void 0, 0);
+                  },
+                  ref: function (el) {
+                    el && (inputRefs.current[index] = el);
+                  },
+                  onChange: function (event) {
+                    return (function (event, index) {
+                      var _pin_current,
+                        previousValue = event.target.defaultValue,
+                        valueArray = event.target.value.split(""),
+                        value =
+                          ((function (valuesArray, value) {
+                            var valueIndex = valuesArray.findIndex(
+                              function (entry) {
+                                return entry === value;
+                              },
+                            );
+                            -1 !== valueIndex &&
+                              valuesArray.splice(valueIndex, 1);
+                          })(valueArray, previousValue),
+                          valueArray.pop());
+                      if (value) {
+                        var pinNumber = Number(value);
+                        isNaN(pinNumber) ||
+                          0 === value.length ||
+                          ((pin.current[
+                            null === (_pin_current = pin.current) ||
+                            void 0 === _pin_current
+                              ? void 0
+                              : _pin_current.length
+                          ] = value),
+                          setReload(!reload),
+                          pinNumber >= 0 &&
+                            pinNumber <= 9 &&
+                            (onPinChanged(pin.current, index),
+                            index < 11 && changePinFocus(index + 1)));
+                      }
+                    })(event, index);
+                  },
+                  value:
+                    (null === (_pin_current_index = pin.current[index]) ||
+                    void 0 === _pin_current_index
+                      ? void 0
+                      : _pin_current_index.toString()) || "",
+                }),
+                react.createElement(
+                  "div",
+                  { className: "invisible" },
+                  (index + 1) % 4 == 0 ? "ss" : null,
+                ),
+              );
+            }),
+          ),
+          hasError &&
+            "required" !== (null == hasError ? void 0 : hasError.type) &&
+            react.createElement(
+              "span",
+              {
+                className: "text-sm text-red text-4xs font-nunitoSansRegular",
+                id: "error",
+              },
+              "".concat(errorMsg || ""),
+            ),
+          (!hasError ||
+            "required" === (null == hasError ? void 0 : hasError.type)) &&
+            react.createElement(
+              "span",
+              {
+                className: "text-sm text-4xs font-nunitoSansRegular",
+                id: "error",
+              },
+              "".concat(defaultMsg || ""),
+            ),
+        );
+      };
+      InputPin.__docgenInfo = {
         description: "",
         methods: [],
-        displayName: "Input",
+        displayName: "InputPin",
         props: {
           title: { required: !0, tsType: { name: "string" }, description: "" },
-          value: { required: !0, tsType: { name: "string" }, description: "" },
           hasError: { required: !1, tsType: { name: "any" }, description: "" },
           errorMsg: {
             required: !1,
@@ -111,50 +238,33 @@
             tsType: { name: "boolean" },
             description: "",
           },
-          inputStyle: {
-            required: !1,
-            tsType: { name: "string" },
-            description: "",
-          },
-          autoComplete: {
-            required: !1,
+          name: { required: !1, tsType: { name: "string" }, description: "" },
+          defaultPin: {
+            required: !0,
             tsType: {
-              name: "union",
-              raw: "'off' | 'on'",
+              name: "Array",
               elements: [
-                { name: "literal", value: "'off'" },
-                { name: "literal", value: "'on'" },
+                {
+                  name: "union",
+                  raw: "number | undefined",
+                  elements: [{ name: "number" }, { name: "undefined" }],
+                },
               ],
+              raw: "Array<number | undefined>",
             },
             description: "",
           },
-          maxlength: {
-            required: !1,
-            tsType: { name: "number" },
-            description: "",
-            defaultValue: { value: "40", computed: !1 },
-          },
-          onChange: {
+          onPinChanged: {
             required: !0,
             tsType: {
               name: "signature",
               type: "function",
-              raw: "(value: any) => void",
+              raw: "(item: any, index: number) => void",
               signature: {
-                arguments: [{ type: { name: "any" }, name: "value" }],
-                return: { name: "void" },
-              },
-            },
-            description: "",
-          },
-          onBlur: {
-            required: !1,
-            tsType: {
-              name: "signature",
-              type: "function",
-              raw: "(value: any) => void",
-              signature: {
-                arguments: [{ type: { name: "any" }, name: "value" }],
+                arguments: [
+                  { type: { name: "any" }, name: "item" },
+                  { type: { name: "number" }, name: "index" },
+                ],
                 return: { name: "void" },
               },
             },
@@ -162,17 +272,23 @@
           },
         },
       };
-      const input_stories = {
-        title: "Design System/Atoms/Input",
-        component: Input,
+      const input_pin_stories = {
+        title: "Design System/Atoms/InputPin",
+        component: InputPin,
         tags: ["autodocs"],
+        parameters: {
+          componentSubtitle:
+            "import { InputPin } from 'react-restyle-components'",
+        },
       };
       var Primary = {
         args: {
-          className: "mt-4",
-          title: "Enter your Pan Number",
+          title: "Enter your Aadhaar Number",
           hasError: !0,
-          value: "",
+          defaultPin: [],
+          onPinChanged: function (item) {
+            console.log({ item });
+          },
         },
       };
       Primary.parameters = {
@@ -181,7 +297,7 @@
           ...Primary.parameters?.docs,
           source: {
             originalSource:
-              "{\n  args: {\n    className: 'mt-4',\n    title: 'Enter your Pan Number',\n    hasError: true,\n    value: ''\n  }\n}",
+              "{\n  args: {\n    title: 'Enter your Aadhaar Number',\n    hasError: true,\n    defaultPin: [],\n    onPinChanged: item => {\n      console.log({\n        item\n      });\n    }\n  }\n}",
             ...Primary.parameters?.docs?.source,
           },
         },

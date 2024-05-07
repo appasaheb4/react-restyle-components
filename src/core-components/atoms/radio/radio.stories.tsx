@@ -14,5 +14,14 @@ export default meta;
 type Story = StoryObj<typeof Radio>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    title: 'Source',
+    data: [
+      {title: 'Salary', checked: false},
+      {title: 'Business', checked: false},
+    ],
+    onChange: (item) => {
+      console.log({item});
+    },
+  },
 };

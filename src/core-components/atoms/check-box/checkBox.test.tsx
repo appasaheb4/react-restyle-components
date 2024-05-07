@@ -5,7 +5,7 @@ import {CheckBox} from './checkBox.component';
 
 it('render CheckBox correctly', () => {
   const checkbox = render(
-    <CheckBox checked={true} onChange={() => jest.fn()} />
+    <CheckBox title="Title" data={[]} onChange={() => jest.fn()} />
   );
   expect(checkbox).toMatchSnapshot();
 });

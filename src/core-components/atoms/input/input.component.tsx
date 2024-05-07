@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
-import React from 'react';
+import React, {useState} from 'react';
 import './input.styles.css';
 
 interface InputProps {
   title: string;
-  value: string;
+  defaultValue: string;
   hasError?: any;
   errorMsg?: string;
   defaultMsg?: string;
@@ -19,7 +19,7 @@ interface InputProps {
 
 export const Input = ({
   title,
-  value,
+  defaultValue,
   className,
   disable,
   hasError,
@@ -31,6 +31,8 @@ export const Input = ({
   onChange,
   onBlur,
 }: InputProps) => {
+  const [value, setValue] = useState(defaultValue);
+
   const onKeyUpValue = (event) => {
     onChange(event.target.value);
   };
@@ -45,7 +47,10 @@ export const Input = ({
         placeholder=" "
         disabled={disable}
         className={`pt-3 pb-2 bg-transparent block w-full px-0 mt-0  rounded-none  border-0 border-b appearance-none focus:outline-none focus:ring-0 focus:border-gray-secondary border-gray-secondary font-nunitoSansRegular ${inputStyle}`}
-        onChange={(e) => onChange && onChange(e.target.value)}
+        onChange={(e) => {
+          setValue(e.target.value);
+          onChange && onChange(e.target.value);
+        }}
         onKeyUp={onKeyUpValue}
         onBlur={(e) => onBlur && onBlur(e.target.value)}
         autoComplete={autoComplete}

@@ -4,6 +4,8 @@ import {render} from '@core-utils';
 import {Radio} from './radio.component';
 
 it('render Radio correctly', () => {
-  const radio = render(<Radio checked={true} onChange={() => jest.fn()} />);
+  const radio = render(
+    <Radio title="Title" data={[]} onChange={() => jest.fn()} />
+  );
   expect(radio).toMatchSnapshot();
 });
