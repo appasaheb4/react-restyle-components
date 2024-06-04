@@ -1,5 +1,5 @@
 {
-  "generatedAt": 1715085190536,
+  "generatedAt": 1717504572698,
   "hasCustomBabel": false,
   "hasCustomWebpack": true,
   "hasStaticDirs": true,
@@ -8,7 +8,7 @@
   "metaFramework": {
     "name": "CRA",
     "packageName": "react-scripts",
-    "version": "5.0.1"
+    "version": null
   },
   "packageManager": { "type": "yarn", "version": "1.22.21" },
   "preview": { "usesGlobals": false },

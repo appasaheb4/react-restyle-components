@@ -30,39 +30,37 @@
         return (
           (_extends = Object.assign
             ? Object.assign.bind()
-            : function (target) {
-                for (var i = 1; i < arguments.length; i++) {
-                  var source = arguments[i];
-                  for (var key in source)
-                    Object.prototype.hasOwnProperty.call(source, key) &&
-                      (target[key] = source[key]);
+            : function (n) {
+                for (var e = 1; e < arguments.length; e++) {
+                  var t = arguments[e];
+                  for (var r in t)
+                    ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
                 }
-                return target;
+                return n;
               }),
-          _extends.apply(this, arguments)
+          _extends.apply(null, arguments)
         );
       }
-      const datePicker = function SvgDatePicker(props) {
-        return react.createElement(
+      const datePicker = (props) =>
+        react.createElement(
           "svg",
           _extends(
             {
+              xmlns: "http://www.w3.org/2000/svg",
               width: 15,
               height: 15,
               fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
             },
             props,
           ),
           _path ||
             (_path = react.createElement("path", {
-              d: "M14.4 1.2h-3V.3a.3.3 0 10-.6 0v.9H4.2V.3a.3.3 0 00-.6 0v.9h-3a.6.6 0 00-.6.6v12a.6.6 0 00.6.6h13.8a.6.6 0 00.6-.6v-12a.6.6 0 00-.6-.6zm0 12.6H.6v-9h13.8v9zm0-9.6H.6V1.8h13.8v2.4z",
               fill: "#E7503D",
               stroke: "#E7503D",
               strokeWidth: 0.5,
+              d: "M14.4 1.2h-3V.3a.3.3 0 1 0-.6 0v.9H4.2V.3a.3.3 0 0 0-.6 0v.9h-3a.6.6 0 0 0-.6.6v12a.6.6 0 0 0 .6.6h13.8a.6.6 0 0 0 .6-.6v-12a.6.6 0 0 0-.6-.6Zm0 12.6H.6v-9h13.8zm0-9.6H.6V1.8h13.8z",
             })),
         );
-      };
       var form_component = __webpack_require__(
         "./src/core-components/atoms/form/form.component.tsx",
       );

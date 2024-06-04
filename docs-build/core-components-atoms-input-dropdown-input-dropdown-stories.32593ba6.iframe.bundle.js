@@ -20,71 +20,67 @@
         return (
           (_extends = Object.assign
             ? Object.assign.bind()
-            : function (target) {
-                for (var i = 1; i < arguments.length; i++) {
-                  var source = arguments[i];
-                  for (var key in source)
-                    Object.prototype.hasOwnProperty.call(source, key) &&
-                      (target[key] = source[key]);
+            : function (n) {
+                for (var e = 1; e < arguments.length; e++) {
+                  var t = arguments[e];
+                  for (var r in t)
+                    ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
                 }
-                return target;
+                return n;
               }),
-          _extends.apply(this, arguments)
+          _extends.apply(null, arguments)
         );
       }
-      const UpArrow = function SvgUpArrow(props) {
-        return react.createElement(
+      const UpArrow = (props) =>
+        react.createElement(
           "svg",
           _extends(
             {
+              xmlns: "http://www.w3.org/2000/svg",
               fill: "none",
               stroke: "#E7503E",
               viewBox: "0 -6 20 20",
-              xmlns: "http://www.w3.org/2000/svg",
             },
             props,
           ),
           _path ||
             (_path = react.createElement("path", {
-              d: "M1.646 4.646a.5.5 0 01.708 0L8 10.293l5.646-5.647a.5.5 0 01.708.708l-6 6a.5.5 0 01-.708 0l-6-6a.5.5 0 010-.708z",
+              d: "M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z",
             })),
         );
-      };
       var DownArrow_path;
       function DownArrow_extends() {
         return (
           (DownArrow_extends = Object.assign
             ? Object.assign.bind()
-            : function (target) {
-                for (var i = 1; i < arguments.length; i++) {
-                  var source = arguments[i];
-                  for (var key in source)
-                    Object.prototype.hasOwnProperty.call(source, key) &&
-                      (target[key] = source[key]);
+            : function (n) {
+                for (var e = 1; e < arguments.length; e++) {
+                  var t = arguments[e];
+                  for (var r in t)
+                    ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
                 }
-                return target;
+                return n;
               }),
-          DownArrow_extends.apply(this, arguments)
+          DownArrow_extends.apply(null, arguments)
         );
       }
-      const DownArrow = function SvgDownArrow(props) {
-        return react.createElement(
+      const DownArrow = (props) =>
+        react.createElement(
           "svg",
           DownArrow_extends(
             {
+              xmlns: "http://www.w3.org/2000/svg",
               fill: "none",
               stroke: "#E7503E",
               viewBox: "0 -6 20 20",
-              xmlns: "http://www.w3.org/2000/svg",
             },
             props,
           ),
           DownArrow_path ||
             (DownArrow_path = react.createElement("path", {
-              d: "M7.646 4.646a.5.5 0 01.708 0l6 6a.5.5 0 01-.708.708L8 5.707l-5.646 5.647a.5.5 0 01-.708-.708l6-6z",
+              d: "M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z",
             })),
         );
-      };
       function _array_like_to_array(arr, len) {
         (null == len || len > arr.length) && (len = arr.length);
         for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
