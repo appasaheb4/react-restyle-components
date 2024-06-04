@@ -21,7 +21,7 @@ export const Radio = ({
       <InputWrapper label={title}>
         {list?.map((item, index) => (
           <div
-            className={`${className} flex flex-row  items-center`}
+            className={`${className} flex items-center mb-1`}
             onClick={() => {
               const result = list?.map((e, i) => {
                 if (i == index) return {...e, checked: true};
@@ -32,12 +32,14 @@ export const Radio = ({
             }}
             key={index}
           >
-            {item.checked ? (
-              <CheckedRadio width={width} height={width} />
-            ) : (
-              <UncheckRadio width={width} height={width} />
-            )}
-            <span className="ml-2">{item?.title}</span>
+            <div className="flex flex-row gap-1 items-center">
+              {item.checked ? (
+                <CheckedRadio width={width} height={width} />
+              ) : (
+                <UncheckRadio width={width} height={width} />
+              )}
+              <span className="text-4xs">{item?.title}</span>
+            </div>
           </div>
         ))}
       </InputWrapper>
