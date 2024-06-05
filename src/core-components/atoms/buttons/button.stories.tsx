@@ -13,26 +13,6 @@ const meta: Meta<typeof Button> = {
   },
   parameters: {
     componentSubtitle: `import { Button } from 'react-restyle-components'`,
-    //     docs: {
-    //       page: () => (
-    //         <>
-    //           <Title />
-    //           <Canvas />
-    //           <Source
-    //             code={`
-    // import {Button} from 'react-restyle-components';
-    //     <Button
-    //       disable={false}
-    //       type='solid'
-    //       onClick={()=>{}}>
-    //        <span>Primary</span>
-    //     </Button>
-    //             `}
-    //           />
-    //           <ArgTypes />
-    //         </>
-    //       ),
-    //     },
   },
 };
 

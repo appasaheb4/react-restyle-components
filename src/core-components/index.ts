@@ -15,5 +15,6 @@ export * from './atoms/icons/icons.component';
 
 export * from './molecules/css-multiline-input/css-multiline-input.component';
 export * from './molecules/auto-complete-filter-multiple-select-multiple-fields-display/auto-complete-filter-multiple-select-multiple-fields-display.component';
+export * from './molecules/auto-complete-filter-single-select-multiple-fields-display/auto-complete-filter-single-select-multiple-fields-display.component';
 
 export {Form};
