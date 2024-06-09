@@ -27,6 +27,16 @@ const config: StorybookConfig = {
     autodocs: 'tag',
     defaultName: 'Documentation',
   },
+
+  core: {
+    builder: {
+      name: '@storybook/builder-webpack5',
+      options: {
+        lazyCompilation: true,
+        fsCache: true,
+      },
+    },
+  },
   webpackFinal: async (config) => {
     const imageRule = config.module?.rules?.find((rule) => {
       const test = (rule as {test: RegExp}).test;
@@ -40,6 +50,7 @@ const config: StorybookConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
+
     return config;
   },
 };
