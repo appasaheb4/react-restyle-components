@@ -12,6 +12,7 @@ export * from './atoms/stepper/stepper.component';
 export * from './atoms/timer/timer.component';
 export * from './atoms/tooltip/tooltip.component';
 export * from './atoms/icons/icons.component';
+export * from './atoms/tabs/tabs.component';
 
 export * from './molecules/css-multiline-input/css-multiline-input.component';
 export * from './molecules/auto-complete-filter-multiple-select-multiple-fields-display/auto-complete-filter-multiple-select-multiple-fields-display.component';

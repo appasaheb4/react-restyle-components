@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from '@core-utils';
 import {Stepper} from './stepper.component';
-it('rende Stepper correctly', () => {
+it('render Stepper correctly', () => {
   const stepper = render(
     <Stepper
       steps={['1', '2', '3', '4']}

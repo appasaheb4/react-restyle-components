@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.44",
+  "version": "0.1.41",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/index.js",
@@ -112,6 +112,8 @@
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.19",
     "craco-alias": "^3.0.1",
+    "style-loader": "^4.0.0",
+    "css-loader": "^7.1.2",
     "eslint-plugin-storybook": "^0.8.0",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
