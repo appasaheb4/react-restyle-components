@@ -29,17 +29,18 @@ export const Icon = ({
       .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
       .split(' ')[0]
       .toLocaleLowerCase();
-    // const fullLib = `react-icons/${lib}/index.js`;
-    const fullLib = `react-icons/md/index.js`;
 
-    let ElementIcon: any = loadable(() => import(fullLib), {
-      resolveComponent: (el) =>
-        el[nameIcon] != null ? el[nameIcon] : el[Object.keys(el.default)[0]],
-    });
-    // ElementIcon = loadable(() => import(`react-icons/${lib}`), {
-    //   resolveComponent: (el) =>
-    //     el[nameIcon] != null ? el[nameIcon] : el[Object.keys(el.default)[0]],
-    // });
+    let ElementIcon: any;
+    if (lib == 'md')
+      ElementIcon = loadable(() => import('react-icons/md'), {
+        resolveComponent: (el) =>
+          el[nameIcon] != null ? el[nameIcon] : el[Object.keys(el.default)[0]],
+      });
+    else
+      ElementIcon = loadable(() => import('react-icons/fa'), {
+        resolveComponent: (el) =>
+          el[nameIcon] != null ? el[nameIcon] : el[Object.keys(el.default)[0]],
+      });
 
     return (
       <div

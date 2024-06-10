@@ -27,7 +27,6 @@ const config: StorybookConfig = {
     autodocs: 'tag',
     defaultName: 'Documentation',
   },
-
   core: {
     builder: {
       name: '@storybook/builder-webpack5',
@@ -50,7 +49,6 @@ const config: StorybookConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-
     return config;
   },
 };
