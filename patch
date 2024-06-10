@@ -1,0 +1,21 @@
+  "version": "0.1.42",
+  "private": false,
+  "description": "Easy use restyle components",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "author": {
+    "email": "onlyappasaheb4@gmail.com",
+    "name": "Lakade Appasaheb",
+    "url": "http://github.com/appasaheb4"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "serve -s ./build",
+    "dev": "chmod +x setup.sh && sh ./setup.sh && craco start",
+    "serve-webapp": "craco build && craco start",
+    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs && cp package.json lib/package.json",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged --allow-empty",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
