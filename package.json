@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.62",
+  "version": "0.1.64",
   "private": false,
   "description": "Easy use restyle components",
   "main": "./lib/index.js",
@@ -18,7 +18,7 @@
     "start": "serve -s ./build",
     "dev": "chmod +x setup.sh && sh ./setup.sh && craco start",
     "serve-webapp": "craco build && craco start",
-    "build": "rm -rf ./lib && tsc",
+    "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
