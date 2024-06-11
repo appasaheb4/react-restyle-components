@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.41",
+  "version": "0.1.42",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/index.js",
@@ -15,14 +15,15 @@
     "start": "serve -s ./build",
     "dev": "chmod +x setup.sh && sh ./setup.sh && craco start",
     "serve-webapp": "craco build && craco start",
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs  && copyfiles -u 1 src/library/assets/**/* lib/esm && cp package.json lib/package.json",
+    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
     "deploy-storybook": "gh-pages -d docs-build",
-    "prettier": "prettier --write '**/*.{js,jsx}'"
+    "prettier": "prettier --write '**/*.{js,jsx}'",
+    "go": "npm run build && npm publish"
   },
   "dependencies": {
     "@loadable/component": "^5.16.4",
@@ -57,13 +58,25 @@
     "typescript": "*",
     "web-vitals": "*"
   },
-  "files": ["*.md", "dist", "lib"],
-  "sideEffects": ["**/*.css"],
+  "files": [
+    "*.md",
+    "lib",
+    "*.css"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest", "plugin:storybook/recommended"],
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ],
     "overrides": [
       {
-        "files": ["**/*.stories.*"],
+        "files": [
+          "**/*.stories.*"
+        ],
         "rules": {
           "import/no-anonymous-default-export": "off"
         }
@@ -71,7 +84,11 @@
     ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -94,19 +111,24 @@
     "@storybook/test": "^8.0.6",
     "@svgr/webpack": "^8.1.0",
     "autoprefixer": "^10.4.19",
+    "copyfiles": "^2.4.1",
     "craco-alias": "^3.0.1",
-    "style-loader": "^4.0.0",
     "css-loader": "^7.1.2",
     "eslint-plugin-storybook": "^0.8.0",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
-    "copyfiles": "^2.4.1",
     "lint-staged": "^12.4.0",
     "postcss-loader": "^8.1.1",
     "storybook": "^8.0.6",
+    "style-loader": "^4.0.0",
     "webpack": "^5.72.0"
   },
-  "keywords": ["react", "components", "restyle-components", "tech-abl"],
+  "keywords": [
+    "react",
+    "components",
+    "restyle-components",
+    "tech-abl"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/appasaheb4/react-restyle-components.git"
@@ -116,7 +138,10 @@
   },
   "homepage": "https://github.com/appasaheb4/react-restyle-components#readme",
   "lint-staged": {
-    "*.{js,jsx,json,css,scss,md}": ["prettier --write", "git add"]
+    "*.{js,jsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "resolutions": {
     "jackspeak": "2.1.1"
