@@ -25,6 +25,3 @@ yarn.lock
 package-lock.json
 /--snapshot--
 *storybook.log
-
-/lib/*
-lib/*
