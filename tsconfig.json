@@ -17,7 +17,7 @@
     "skipLibCheck": true,
     "noImplicitAny": false
   },
-  "include": ["src", "src/core-components/index.ts"],
+  "include": ["src", "index.ts"],
   "exclude": [
     "**/__tests__/*",
     "**/__helpers__/*",
