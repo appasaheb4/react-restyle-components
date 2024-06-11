@@ -100,9 +100,6 @@
     "@craco/craco": "^6.4.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@storybook/addon-essentials": "^8.0.6",
     "@storybook/addon-interactions": "^8.0.6",
     "@storybook/addon-links": "^8.0.6",
@@ -122,8 +119,6 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
     "postcss-loader": "^8.1.1",
-    "rollup": "^4.18.0",
-    "rollup-plugin-dts": "^6.1.1",
     "storybook": "^8.0.6",
     "style-loader": "^4.0.0",
     "webpack": "^5.72.0"
