@@ -1,24 +1,21 @@
 {
-  "extends": "./tsconfig.paths.json",
-  "compileOnSave": false,
   "compilerOptions": {
-    "lib": ["ES2015", "dom", "dom.iterable", "esnext"],
-    "target": "ES2015",
-    "module": "ES2020",
-    "strict": true,
-    "skipLibCheck": true,
+    // Default
+    "target": "es5",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./lib/esm",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Added
     "jsx": "react",
-    "noImplicitAny": false
-  },
-  "include": ["src", "src/custom.d.ts"],
-  "exclude": ["lib"],
-  "typeRoots": ["../node_modules/@types/index.d.ts"]
+    "module": "ESNext",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true
+  }
 }
