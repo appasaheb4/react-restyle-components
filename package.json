@@ -1,10 +1,10 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.60",
+  "version": "0.1.56",
   "private": false,
   "description": "Easy use restyle components",
-  "main": "lib/cjs/core-components/index.js",
-  "types": "lib/cjs/core-components/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
