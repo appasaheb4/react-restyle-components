@@ -3,8 +3,9 @@
   "version": "0.1.55",
   "private": false,
   "description": "Easy use restyle components",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": ["/lib"],
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
@@ -58,7 +59,6 @@
     "typescript": "*",
     "web-vitals": "*"
   },
-  "files": ["src/", "lib/"],
   "sideEffects": ["**/*.css"],
   "eslintConfig": {
     "extends": ["react-app", "react-app/jest", "plugin:storybook/recommended"],

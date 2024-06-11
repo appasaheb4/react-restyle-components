@@ -1,25 +1,30 @@
 {
   "extends": "./tsconfig.paths.json",
-  "compileOnSave": false,
   "compilerOptions": {
-    "lib": ["ES2015", "dom", "dom.iterable", "esnext"],
-    "target": "ES2015",
-    "module": "ES2020",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./lib/esm",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "target": "esnext",
+    "module": "ESNext",
+    "lib": ["ESNext", "dom"],
+    "allowJs": true,
     "jsx": "react",
-    "noImplicitAny": false,
-    "baseUrl": "./"
+    "declaration": true,
+    "outDir": "./lib",
+    "rootDir": "./",
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false
   },
-  "include": ["src", "src/custom.d.ts"],
-  "exclude": ["lib"],
-  "typeRoots": ["../node_modules/@types/index.d.ts"]
+  "include": ["src", "src/core-components/index.ts"],
+  "exclude": [
+    "**/__tests__/*",
+    "**/__helpers__/*",
+    "node_modules",
+    "babel.config.js",
+    "jest.config.js",
+    "jest.setup.js",
+    ".eslintrc.js"
+  ]
 }

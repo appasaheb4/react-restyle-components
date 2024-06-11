@@ -5,7 +5,7 @@ const Providers = ({children}: any) => {
   return <div>{children}</div>;
 };
 
-const render = (Component: JSX.Element) => {
+const render: any = (Component: JSX.Element) => {
   return renderComponent(Component, {wrapper: Providers});
 };
 

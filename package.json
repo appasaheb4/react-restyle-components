@@ -1,10 +1,13 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.56",
+  "version": "0.1.61",
   "private": false,
   "description": "Easy use restyle components",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
@@ -15,7 +18,7 @@
     "start": "serve -s ./build",
     "dev": "chmod +x setup.sh && sh ./setup.sh && craco start",
     "serve-webapp": "craco build && craco start",
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
+    "build": "rm -rf ./lib && tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
@@ -58,10 +61,6 @@
     "typescript": "*",
     "web-vitals": "*"
   },
-  "files": [
-    "src/",
-    "lib/"
-  ],
   "sideEffects": [
     "**/*.css"
   ],
