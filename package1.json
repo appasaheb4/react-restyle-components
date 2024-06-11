@@ -13,7 +13,7 @@
     "start": "serve -s ./build",
     "dev": "chmod +x setup.sh && sh ./setup.sh && craco start",
     "serve-webapp": "craco build && craco start",
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs && cp package.json lib/package.json",
+    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs  && copyfiles -u 1 src/library/assets/**/* lib/esm && cp package.json lib/package.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
