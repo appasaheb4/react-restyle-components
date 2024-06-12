@@ -2,6 +2,8 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Icon} from '../..';
 
+import '../../../../tc.css';
+
 interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
   uniqueField?: string;
   loader?: boolean;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './input.styles.css';
+import '../../../../tc.css';
 interface InputProps {
     title: string;
     defaultValue: string;

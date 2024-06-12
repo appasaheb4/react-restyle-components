@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {CheckedRadio, UncheckRadio} from '../../../library/assets/svg';
 import {InputWrapper} from '../form/form.component';
+
+import '../../../../tc.css';
 interface RadioProps {
   title: string;
   data: Array<any>;

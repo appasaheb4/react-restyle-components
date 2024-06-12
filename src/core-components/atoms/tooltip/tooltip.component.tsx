@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Material from '@mui/material';
 
+import '../../../../tc.css';
+
 interface TooltipProps {
   tooltipText?: any;
   position?: 'bottom' | 'left' | 'top';

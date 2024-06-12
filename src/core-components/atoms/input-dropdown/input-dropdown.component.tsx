@@ -1,5 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {UpArrow, DownArrow} from '../../../library/assets/svg';
+
+import '../../../../tc.css';
 interface InputDropdownProps {
   title: string;
   items: Array<string>;

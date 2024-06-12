@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../tc.css';
 interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
     uniqueField?: string;
     loader?: boolean;

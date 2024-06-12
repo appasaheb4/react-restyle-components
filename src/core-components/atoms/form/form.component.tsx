@@ -1,5 +1,8 @@
 import React, {useState, useEffect, Ref} from 'react';
+import '../../../../tc.css';
 import classNames from 'classnames';
+
+import '../../../../tc.css';
 
 interface LabelProps {
   htmlFor: string;

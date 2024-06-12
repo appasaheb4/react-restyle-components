@@ -1,4 +1,6 @@
 import React from 'react';
+import '../../../../tc.css';
+import '../../../../tc.css';
 interface LabelProps {
     htmlFor: string;
     hasError?: boolean;

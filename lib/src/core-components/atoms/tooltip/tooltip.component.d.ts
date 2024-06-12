@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../tc.css';
 interface TooltipProps {
     tooltipText?: any;
     position?: 'bottom' | 'left' | 'top';

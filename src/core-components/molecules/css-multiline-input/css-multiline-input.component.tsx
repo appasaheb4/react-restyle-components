@@ -3,6 +3,8 @@ import _ from 'lodash';
 import {Form} from '../..';
 import {properties as propertiesObj} from './css-properties';
 
+import '../../../../tc.css';
+
 interface CSSMultilineProps {
   label?: string;
   defaultValue?: string;

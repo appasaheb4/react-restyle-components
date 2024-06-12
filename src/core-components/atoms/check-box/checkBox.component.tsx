@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import '../../../../tc.css';
 import {UnCheckbox, CheckedBox} from '../../../library/assets/svg';
 import {InputWrapper} from '../form/form.component';
+
 interface CheckBoxProps {
   title: string;
   data: Array<any>;

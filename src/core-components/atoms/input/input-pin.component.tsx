@@ -2,6 +2,8 @@
 import React, {useRef, useState} from 'react';
 import './input.styles.css';
 
+import '../../../../tc.css';
+
 interface PinInputGridProps {
   title: string;
   hasError?: any;

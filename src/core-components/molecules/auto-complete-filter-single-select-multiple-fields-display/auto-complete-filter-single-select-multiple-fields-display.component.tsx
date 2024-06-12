@@ -3,6 +3,8 @@ import React, {useState, useEffect, useRef} from 'react';
 import _ from 'lodash';
 import {Icon} from '../..';
 
+import '../../../../tc.css';
+
 interface AutoCompleteFilterSingleSelectMultiFieldsDisplayProps {
   loader?: boolean;
   disable?: boolean;

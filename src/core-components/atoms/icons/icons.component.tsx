@@ -4,6 +4,8 @@ import {Tooltip} from '../..';
 import loadable from '@loadable/component';
 import {IconBaseProps} from 'react-icons/lib';
 
+import '../../../../tc.css';
+
 interface IconProps {
   nameIcon: string;
   propsIcon?: IconBaseProps;

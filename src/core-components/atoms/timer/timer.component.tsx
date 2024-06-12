@@ -3,6 +3,8 @@
 import React, {useEffect, Ref, useState, useImperativeHandle} from 'react';
 import {TimerSVG} from '../../../library/assets/svg';
 
+import '../../../../tc.css';
+
 interface TimerProps {
   onClear: () => void;
 }

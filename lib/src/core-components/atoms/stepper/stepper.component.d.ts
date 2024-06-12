@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../tc.css';
 interface StepperProps {
     className?: string;
     steps: Array<string>;

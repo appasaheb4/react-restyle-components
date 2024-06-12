@@ -1,5 +1,6 @@
 import React from 'react';
 import './input-otp.styles.css';
+import '../../../../tc.css';
 interface PinInputGridProps {
     title?: string;
     hasError?: boolean;

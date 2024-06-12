@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../tc.css';
 interface ButtonProps {
     type?: 'solid' | 'outline';
     className?: any;
