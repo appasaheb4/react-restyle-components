@@ -1044,6 +1044,10 @@ video {
   font-family: Nunito Sans Regular;
 }
 
+.text-3md {
+  font-size: 20px;
+}
+
 .text-3xs {
   font-size: 12px;
 }

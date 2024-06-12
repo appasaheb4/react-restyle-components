@@ -31,7 +31,7 @@ export const Tabs = ({options, onSelect}: TabsProps) => {
                   size: 24,
                 }}
               />
-              {item.title}
+              <span className="text-3md">{item.title}</span>
             </div>
           </li>
         ))}
