@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Icon} from '../..';
-import '../../../../tc.css';
+// import '../../../../tc.css';
 
 interface TabsProps {
   options: Array<{title: string; icon: string}>;
