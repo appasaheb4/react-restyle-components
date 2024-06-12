@@ -1,4 +1,4 @@
-import '../../global.css';
+import '../../tc.css';
 import * as Form from './atoms/form/form.component';
 export * from './atoms/buttons/buttons.component';
 export * from './atoms/check-box/checkBox.component';

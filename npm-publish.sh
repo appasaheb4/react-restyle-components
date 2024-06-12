@@ -15,5 +15,6 @@
 
 copyfiles -u 1 src/library/assets/svg/*.svg lib/src
 copyfiles -u 1 src/**/*.css lib/src
-npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o global.css
-cp global.css lib
+# npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o global.css
+# cp global.css lib
+tailwindcss -o lib/tc.css --minify

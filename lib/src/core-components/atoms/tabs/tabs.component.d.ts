@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../../tc.css';
 interface TabsProps {
     options: Array<{
         title: string;

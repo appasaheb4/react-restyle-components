@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Icon} from '../..';
+import '../../../../tc.css';
 
 interface TabsProps {
   options: Array<{title: string; icon: string}>;
@@ -12,7 +13,7 @@ export const Tabs = ({options, onSelect}: TabsProps) => {
     <div className="flex justify-center">
       <ul className="flex flex-wrap items-center justify-center -mb-px text-sm font-medium text-center text-black cursor-pointer gap-2">
         {options?.map((item, index) => (
-          <li key={index} className="bg-red rounded-md">
+          <li key={index} className="bg-orange1 rounded-md">
             <div
               className={`inline-flex items-center justify-center p-3 border-b-2 gap-1 ${
                 item.title == selected
