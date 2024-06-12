@@ -1,2 +1,2 @@
-import './global.scss';
+import './global.css';
 export * from './src/core-components';

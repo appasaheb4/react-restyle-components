@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.66",
+  "version": "0.1.68",
   "private": false,
   "description": "Easy use restyle components",
   "main": "./lib/index.js",
@@ -117,6 +117,8 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.4.0",
     "postcss-loader": "^8.1.1",
+    "sass": "^1.77.5",
+    "sass-loader": "^14.2.1",
     "storybook": "^8.0.6",
     "style-loader": "^4.0.0",
     "webpack": "^5.72.0"
