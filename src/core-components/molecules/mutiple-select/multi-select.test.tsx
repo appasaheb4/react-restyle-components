@@ -7,7 +7,11 @@ import {MultipleSelect} from './multi-select.component';
 
 it('render MultipleSelect correctly', () => {
   const result = render(
-    <MultipleSelect options={['']} selectedItems={['']} onSelect={() => {}} />
+    <MultipleSelect
+      options={['UPI', 'CASH']}
+      selectedItems={['CASH']}
+      onSelect={() => {}}
+    />
   );
   expect(result).toMatchSnapshot();
 });
