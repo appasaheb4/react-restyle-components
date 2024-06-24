@@ -16,7 +16,7 @@ type Story = StoryObj<typeof MultipleSelect>;
 export const Primary: Story = {
   args: {
     options: ['UPI', 'CARD', 'CASH'],
-    selectedItems: ['CASH'],
+    selectedItems: ['CASH', 'UPI'],
     onSelect: (item) => {
       console.log({item});
     },
