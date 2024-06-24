@@ -63,8 +63,6 @@ export const InputOtp: React.FC<PinInputGridProps> = ({
     event: React.KeyboardEvent<HTMLInputElement>,
     index: number
   ) => {
-    console.log({event, index});
-
     const keyboardKeyCode = event.nativeEvent.code;
     if (keyboardKeyCode != BACKSPACE_Key) return;
 
