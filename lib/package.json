@@ -130,6 +130,13 @@
     "restyle-components",
     "tech-abl"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appasaheb4/react-restyle-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appasaheb4/react-restyle-components/issues"
+  },
   "homepage": "https://appasaheb4.github.io/react-restyle-components",
   "lint-staged": {
     "*.{js,jsx,json,css,scss,md}": [
