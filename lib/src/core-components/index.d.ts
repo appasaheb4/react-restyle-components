@@ -17,6 +17,6 @@ export * from './atoms/tabs/tabs.component';
 export * from './molecules/css-multiline-input/css-multiline-input.component';
 export * from './molecules/auto-complete-filter-multiple-select-multiple-fields-display/auto-complete-filter-multiple-select-multiple-fields-display.component';
 export * from './molecules/auto-complete-filter-single-select-multiple-fields-display/auto-complete-filter-single-select-multiple-fields-display.component';
-export * from './molecules/multi-select/multi-select.component';
-export * from './molecules/multi-select-with-field/multi-select-with-field.component';
+export * from './molecules/mutiple-select/multi-select.component';
+export * from './molecules/modal-confirm/modal-confirm.component';
 export { Form };
