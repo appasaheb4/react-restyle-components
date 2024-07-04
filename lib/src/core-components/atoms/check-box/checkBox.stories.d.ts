@@ -3,4 +3,4 @@ import { CheckBox } from './checkBox.component';
 declare const meta: Meta<typeof CheckBox>;
 export default meta;
 type Story = StoryObj<typeof CheckBox>;
-export declare const Primary1: Story;
+export declare const Primary: Story;
