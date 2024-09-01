@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.84",
+  "version": "0.1.85",
   "private": false,
   "description": "Easy use restyle components",
   "main": "./lib/index.js",
