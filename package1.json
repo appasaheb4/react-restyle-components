@@ -13,6 +13,7 @@
     "start": "serve -s ./build",
     "dev": "chmod +x setup.sh && sh ./setup.sh && craco start",
     "serve-webapp": "craco build && craco start",
+    "dev1": "craco start --max_old_space_size=95000",
     "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -21,7 +22,9 @@
     "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
     "deploy-storybook": "gh-pages -d docs-build",
     "prettier": "prettier --write '**/*.{js,jsx}'",
-    "go": "npm run build && npm publish"
+    "go": "npm run build && npm publish",
+    "lint": "npx tslint src/**/*.ts",
+    "lint:fix": "npx tslint src/**/*.ts --fix"
   },
   "dependencies": {
     "@loadable/component": "^5.16.4",
@@ -110,7 +113,6 @@
     "storybook": "^8.0.6",
     "stream-browserify": "^3.0.0",
     "web-vitals": "^4.0.1",
-
     "webpack": "^5.72.0"
   },
   "keywords": ["react", "components", "restyle-components", "tech-abl"],

@@ -17,7 +17,7 @@
     "skipLibCheck": true,
     "noImplicitAny": false
   },
-  "include": ["src", "index.ts"],
+  "include": ["src", "index.ts", "tc.css"],
   "exclude": [
     "**/__tests__/*",
     "**/__helpers__/*",
