@@ -1,7 +1,14 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.0",
+  "version": "0.1.86",
   "private": true,
+  "description": "Easy use restyle components",
+  "author": {
+    "email": "onlyappasaheb4@gmail.com",
+    "name": "Lakade Appasaheb",
+    "url": "http://github.com/appasaheb4"
+  },
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -30,6 +37,11 @@
     "prettier": "prettier --write '**/*.{js,jsx}'",
     "go": "npm run build && npm publish"
   },
+  "files": [
+    "*.md",
+    "dist",
+    "lib"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,5 +59,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "components",
+    "restyle-components",
+    "tech-abl"
+  ]
 }
