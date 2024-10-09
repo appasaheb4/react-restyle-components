@@ -17,10 +17,18 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "serve -s ./build",
+    "dev": "craco start",
+    "serve-webapp": "craco build && craco start",
+    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged --allow-empty",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
+    "deploy-storybook": "gh-pages -d docs-build",
+    "prettier": "prettier --write '**/*.{js,jsx}'",
+    "go": "npm run build && npm publish"
   },
   "eslintConfig": {
     "extends": [
