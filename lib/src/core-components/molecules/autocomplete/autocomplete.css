@@ -1,0 +1,51 @@
+input {
+  font-size: 14px;
+  height: 30px;
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+  outline-color: transparent;
+  border: solid 1px;
+  border-radius: 10px;
+  border-width: 1px;
+  min-width: 200px;
+}
+
+.no-options {
+  position: fixed;
+  padding: 0 10px 0px 10px;
+  /* background: white; */
+  background-color: #f3f6f4;
+  color: black;
+}
+
+.autocomplete-list {
+  list-style: none;
+  position: fixed;
+  margin-top: 0;
+  min-width: 200px;
+  /* padding-left: 10px; */
+  padding: 0 10px 0px 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  /* background: white; */
+  background-color: #f3f6f4;
+  z-index: 1;
+}
+
+.autocomplete-list li {
+  /* padding: 4px; */
+  color: var(--input-autocomplete-item-text, #000);
+}
+
+.autocomplete-list li.active-option {
+  background-color: #f3f6f4;
+  background: var(--multiselect-item-hover);
+  cursor: pointer;
+  font-weight: bold;
+}
+.autocomplete-list li:hover {
+  background-color: #f3f6f4;
+  background: var(--multiselect-item-hover);
+  cursor: pointer;
+}
