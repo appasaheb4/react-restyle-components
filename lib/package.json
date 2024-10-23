@@ -1,7 +1,7 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.87",
-  "private": true,
+  "version": "0.1.91",
+  "private": false,
   "description": "Easy use restyle components",
   "author": {
     "email": "onlyappasaheb4@gmail.com",
@@ -9,11 +9,16 @@
     "url": "http://github.com/appasaheb4"
   },
   "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
     "start": "serve -s ./build",
     "dev": "craco start",
     "serve-webapp": "craco build && craco start",
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
+    "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "test": "jest",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
@@ -34,9 +39,7 @@
     "@types/react-dom": "^18.3.0",
     "dayjs": "^1.11.1",
     "jest-environment-jsdom": "^29.7.0",
-    "react": "^18.3.1",
     "react-datepicker": "^4.7.0",
-    "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.0.2",
@@ -94,11 +97,6 @@
     "ts-jest": "^29.2.5",
     "webpack": "^5.72.0"
   },
-  "files": [
-    "*.md",
-    "dist",
-    "lib"
-  ],
   "eslintConfig": {
     "extends": [
       "react-app",

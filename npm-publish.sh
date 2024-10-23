@@ -19,3 +19,7 @@ copyfiles -u 1 src/**/*.css lib/src
 # cp global.css lib
 tailwindcss -o lib/tc.css --minify
 cp package.json lib
+
+
+
+# when you npm publish then remove react and react-dom to package.json

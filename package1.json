@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.1.87",
+  "version": "0.1.91",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -9,11 +9,14 @@
     "url": "http://github.com/appasaheb4"
   },
   "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": ["/lib"],
   "scripts": {
     "start": "serve -s ./build",
     "dev": "craco start",
     "serve-webapp": "craco build && craco start",
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
+    "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "test": "jest",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
@@ -94,7 +97,6 @@
     "ts-jest": "^29.2.5",
     "webpack": "^5.72.0"
   },
-  "files": ["*.md", "dist", "lib"],
   "eslintConfig": {
     "extends": ["react-app", "react-app/jest"]
   },

@@ -21,4 +21,5 @@ export * from './molecules/multi-select/multi-select.component';
 export * from './molecules/multi-select-with-field/multi-select-with-field.component';
 export * from './molecules/modal-confirm/modal-confirm.component';
 export * from './molecules/autocomplete/autocomplete';
+export * from './molecules/auto-complete-group-by/auto-complete-group-by.component';
 export { Form };
