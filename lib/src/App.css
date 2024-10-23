@@ -1,6 +1,5 @@
-body {
-  background-color: #eeeeee;
-  padding: 40px;
+.App {
+  text-align: center;
 }
 
 .App-logo {
@@ -36,4 +35,11 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.react-bootstrap-table table {
+  table-layout: auto;
+}
+.bg-orange1 {
+  background-color: '#EF4444';
 }
