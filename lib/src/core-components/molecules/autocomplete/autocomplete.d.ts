@@ -1,5 +1,4 @@
 import React from 'react';
-import './autocomplete.css';
 import '../../../tc.css';
 interface AutocompleteProps {
     value: string;
