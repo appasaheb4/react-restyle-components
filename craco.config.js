@@ -1,13 +1,13 @@
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = {
   plugins: [
     {
-      plugin: require('craco-alias'),
+      plugin: require("craco-alias"),
       options: {
-        source: 'tsconfig',
-        baseUrl: '.',
-        tsConfigPath: './tsconfig.paths.json',
+        source: "tsconfig",
+        baseUrl: ".",
+        tsConfigPath: "./tsconfig.paths.json",
       },
     },
   ],
@@ -18,15 +18,15 @@ module.exports = {
       },
       plugins: [
         new webpack.ProvidePlugin({
-          Buffer: ['buffer', 'Buffer'],
-          process: 'process/browser',
+          Buffer: ["buffer", "Buffer"],
+          process: "process/browser",
         }),
       ],
     },
   },
   style: {
     postcssOptions: {
-      plugins: [require('tailwindcss'), require('autoprefixer')],
+      plugins: [require("tailwindcss"), require("autoprefixer")],
     },
   },
 };
