@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.4",
+  "version": "0.2.7",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "start": "serve -s ./build",
-    "dev": "craco start",
+    "dev": "DISABLE_ESLINT_PLUGIN=true craco start",
     "serve-webapp": "craco build && craco start",
     "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "test": "jest",
@@ -25,7 +25,10 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
     "deploy-storybook": "gh-pages -d docs-build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "prettier": "prettier --write '**/*.{js,jsx}'",
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "go": "npm run build && npm publish"
   },
   "dependencies": {
@@ -41,6 +44,7 @@
     "@types/react-dom": "^18.3.0",
     "dayjs": "^1.11.1",
     "jest-environment-jsdom": "^29.7.0",
+    "react-colorful": "^5.6.1",
     "react-datepicker": "^4.7.0",
     "react-icons": "^5.2.1",
     "react-scripts": "5.0.1",
@@ -71,12 +75,14 @@
     "copyfiles": "^2.4.1",
     "craco-alias": "^3.0.1",
     "css-loader": "^7.1.2",
+    "eslint": "^9.14.0",
     "eslint-plugin-storybook": "^0.8.0",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "jest": "^29.7.0",
     "lint-staged": "^12.4.0",
     "postcss-loader": "^8.1.1",
+    "prettier": "^3.3.3",
     "sass": "^1.77.5",
     "sass-loader": "^14.2.1",
     "storybook": "^8.0.6",

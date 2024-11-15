@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.5",
+  "version": "0.2.8",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "start": "serve -s ./build",
-    "dev": "craco start",
+    "dev": "DISABLE_ESLINT_PLUGIN=true craco start",
     "serve-webapp": "craco build && craco start",
     "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "test": "jest",
@@ -44,6 +44,7 @@
     "@types/react-dom": "^18.3.0",
     "dayjs": "^1.11.1",
     "jest-environment-jsdom": "^29.7.0",
+    "react-colorful": "^5.6.1",
     "react-datepicker": "^4.7.0",
     "react-icons": "^5.2.1",
     "react-scripts": "5.0.1",

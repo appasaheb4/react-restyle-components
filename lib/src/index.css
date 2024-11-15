@@ -4,24 +4,24 @@
 
 @layer base {
   @font-face {
-    font-family: "Arima Regular";
-    src: url("./library/assets/fonts/arima/Arima-Regular.ttf");
+    font-family: 'Arima Regular';
+    src: url('./library/assets/fonts/arima/Arima-Regular.ttf');
   }
   @font-face {
-    font-family: "NunitoSans Regular";
-    src: url("./library/assets/fonts/nunito-sans/NunitoSans-Regular.ttf");
+    font-family: 'NunitoSans Regular';
+    src: url('./library/assets/fonts/nunito-sans/NunitoSans-Regular.ttf');
   }
   @font-face {
-    font-family: "NunitoSans Bold";
-    src: url("./library/assets/fonts/nunito-sans/NunitoSans-Bold.ttf");
+    font-family: 'NunitoSans Bold';
+    src: url('./library/assets/fonts/nunito-sans/NunitoSans-Bold.ttf');
   }
   @font-face {
-    font-family: "DancingScript-Bold";
-    src: url("./library/assets/fonts/dancing-script/DancingScript-Bold.ttf");
+    font-family: 'DancingScript-Bold';
+    src: url('./library/assets/fonts/dancing-script/DancingScript-Bold.ttf');
   }
   @font-face {
-    font-family: "DancingScript-Regular";
-    src: url("./library/assets/fonts/dancing-script/DancingScript-Regular.ttf");
+    font-family: 'DancingScript-Regular';
+    src: url('./library/assets/fonts/dancing-script/DancingScript-Regular.ttf');
   }
 }
 
@@ -49,7 +49,7 @@
 
 body {
   font-size: 14px;
-  font-family: "Arima Regular";
+  font-family: 'Arima Regular';
 }
 
 .ps__rail-y {
@@ -68,7 +68,7 @@ body {
 }
 
 .bg-orange1 {
-  background-color: "#EF4444";
+  background-color: '#EF4444';
 }
 
 .react-pdf__Page__canvas {
@@ -79,3 +79,48 @@ body {
 /* :root {
   scrollbar-color: transparent transparent;
 } */
+
+/* Outer box for reference */
+.outer-box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 2px solid #333;
+  overflow: hidden; /* Ensure the menu does not spill out */
+}
+
+/* Parent container */
+.parent-container {
+  position: relative;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+/* Menu styling */
+.menu {
+  position: absolute; /* Allows the menu to exist independently */
+  top: 100%; /* Position it just below the parent */
+  left: 0;
+  width: 100%;
+  max-height: 200px; /* Define a max height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+/* Styling for the menu items */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu li:last-child {
+  border-bottom: none;
+}
