@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../../tc.css';
-import '../../../tc.css';
 interface LabelProps {
     htmlFor: string;
     hasError?: boolean;
@@ -47,7 +46,6 @@ export declare const InputPassword: React.ForwardRefExoticComponent<Omit<InputPr
 export declare const Input1: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
 export declare const Input2: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
 export declare const MultilineInput: (props: InputProps) => React.JSX.Element;
-export declare const MultilineInput1: (props: InputProps) => React.JSX.Element;
 interface InputRadioProps extends InputWrapperProps {
     values?: any[];
     value?: string;
