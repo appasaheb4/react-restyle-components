@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../tc.css';
 interface GridProps {
     cols?: number;
     children?: React.ReactNode;
