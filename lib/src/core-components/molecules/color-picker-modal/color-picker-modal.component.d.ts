@@ -3,7 +3,7 @@ import './color-picker-modal.css';
 import '../../../tc.css';
 interface ColorPickerModalProps {
     color: string;
-    onChange: (string: any) => void;
+    onChange: (color: string) => void;
     onClose?: () => void;
 }
 export declare const ColorPickerModal: ({ color, onChange, onClose, }: ColorPickerModalProps) => React.JSX.Element;
