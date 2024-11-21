@@ -100,5 +100,13 @@
       "last 1 safari version"
     ]
   },
-  "keywords": ["react", "components", "restyle-components", "tech-abl"]
+  "keywords": ["react", "components", "restyle-components", "tech-abl"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appasaheb4/react-restyle-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appasaheb4/react-restyle-components/issues"
+  },
+  "homepage": "https://github.com/appasaheb4/react-restyle-components#readme"
 }

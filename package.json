@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -114,5 +114,13 @@
     "components",
     "restyle-components",
     "tech-abl"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appasaheb4/react-restyle-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appasaheb4/react-restyle-components/issues"
+  },
+  "homepage": "https://github.com/appasaheb4/react-restyle-components#readme"
 }

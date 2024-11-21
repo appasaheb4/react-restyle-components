@@ -9,31 +9,13 @@ yarn add react-restyle-components
 
 ```
 
-<!-- ## Some changes required
-
-```
-tsconfig.json
-"compilerOptions": {
-...
-"noImplicitAny": false
-},
-
-// modify script
-"start": "serve -s ./build",
-"dev": "craco start",
-"build": "craco build",
-"test": "craco test"
-
-// Paste 3 files your root path
-https://github.com/appasaheb4/react-restyle-components/blob/master/craco.config.js
-https://github.com/appasaheb4/react-restyle-components/blob/master/postcss.config.js
-https://github.com/appasaheb4/react-restyle-components/blob/master/tailwind.config.js
-
-``` -->
-
 ### 📚 Storybook
 
 https://appasaheb4.github.io/react-restyle-components
+
+### Why we use this lib
+
+<img src="https://github.com/appasaheb4/react-restyle-components/blob/master/library/assets/img/libWapper.png">
 
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
 Github: www.github.com/appasaheb4 <br />
