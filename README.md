@@ -22,6 +22,8 @@ Github: www.github.com/appasaheb4 <br />
 Website: www.tech-abl.com
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
 
+### If you use pdf components ref : [a relative link](PDF-README.md)
+
 ## Contributes / Support
 
 1.  More content here : https://www.youtube.com/@techabl
