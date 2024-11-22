@@ -3,7 +3,7 @@ import { Style } from '@react-pdf/types';
 interface PdfTextProps {
     fontWeight?: 'bold' | 'medium' | 'normal';
     fontSize?: number;
-    fontFamily?: 'Arima' | string;
+    fontFamily?: 'ArimaRegular' | string;
     textAlign?: 'center' | 'left' | 'right';
     style?: Style | Style[];
     lineHeight?: number;

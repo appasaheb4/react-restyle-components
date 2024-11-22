@@ -4,24 +4,8 @@
 
 @layer base {
   @font-face {
-    font-family: 'Arima Regular';
-    src: url('./library/assets/fonts/arima/Arima-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'NunitoSans Regular';
-    src: url('./library/assets/fonts/nunito-sans/NunitoSans-Regular.ttf');
-  }
-  @font-face {
-    font-family: 'NunitoSans Bold';
-    src: url('./library/assets/fonts/nunito-sans/NunitoSans-Bold.ttf');
-  }
-  @font-face {
-    font-family: 'DancingScript-Bold';
-    src: url('./library/assets/fonts/dancing-script/DancingScript-Bold.ttf');
-  }
-  @font-face {
-    font-family: 'DancingScript-Regular';
-    src: url('./library/assets/fonts/dancing-script/DancingScript-Regular.ttf');
+    font-family: 'ArimaRegular';
+    src: url('./library/assets/fonts/arima/arima-regular.ttf');
   }
 }
 
