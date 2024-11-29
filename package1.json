@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.16",
+  "version": "0.2.23",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -27,19 +27,22 @@
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --write '**/*.{js,jsx}'",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-    "go": "npm run build && npm publish"
+    "go": "npm run build && npm publish",
+    "local": "yarn add file:/Users/appasaheb4/Documents/project/npm/react-restyle-components/lib"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@loadable/component": "^5.16.4",
     "@mui/material": "^5.15.19",
+    "@react-pdf/renderer": "^4.1.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.113",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
+    "buffer": "^6.0.3",
     "dayjs": "^1.11.1",
     "jest-environment-jsdom": "^29.7.0",
     "react-colorful": "^5.6.1",
@@ -107,6 +110,5 @@
   },
   "bugs": {
     "url": "https://github.com/appasaheb4/react-restyle-components/issues"
-  },
-  "homepage": "https://github.com/appasaheb4/react-restyle-components#readme"
+  }
 }
