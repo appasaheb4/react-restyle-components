@@ -1,6 +1,31 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Tooltip } from './tooltip.component';
-declare const meta: Meta<typeof Tooltip>;
+import React from 'react';
+import type { StoryObj } from '@storybook/react';
+declare const meta: {
+    title: string;
+    component: ({ align, side, children, content, avoidCollisions, alignOffset, sideOffset, disabled, delay, padding, className, }: React.PropsWithChildren<import("./Tooltip.types").TooltipProps>) => React.JSX.Element;
+    tags: string[];
+    parameters: {
+        docs: {
+            page: () => React.JSX.Element;
+        };
+    };
+    decorators: ((Story: import("@storybook/csf").PartialStoryFn<import("@storybook/react/dist/types-a5624094").R, {
+        className?: string | undefined;
+        padding?: "s" | "xl" | "l" | "m" | "custom" | undefined;
+        delay?: number | undefined;
+        side?: "top" | "right" | "bottom" | "left" | undefined;
+        sideOffset?: number | undefined;
+        content?: React.ReactNode;
+        align?: "center" | "start" | "end" | undefined;
+        alignOffset?: number | undefined;
+        avoidCollisions?: boolean | undefined;
+        disabled?: boolean | undefined;
+        children?: React.ReactNode;
+    }>) => React.JSX.Element)[];
+};
 export default meta;
-type Story = StoryObj<typeof Tooltip>;
-export declare const Primary: Story;
+type Story = StoryObj<typeof meta>;
+export declare const BasicExample: Story;
+export declare const Positions: Story;
+export declare const JSXContent: Story;
+export declare const JSXContentDifferentAlignments: Story;

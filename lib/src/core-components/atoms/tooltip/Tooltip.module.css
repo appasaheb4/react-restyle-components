@@ -1,0 +1,44 @@
+:global .theme--dark {
+  --tooltip_bg: var(--Gl600);
+  --tooltip_color: var(--N50);
+}
+
+:global .theme--light {
+  --tooltip_bg: var(--N0);
+  --tooltip_color: var(--N600);
+}
+:where(.tooltip_content) {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--tooltip_color);
+  background-color: var(--tooltip_bg);
+  opacity: 1;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.24)) drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.08));
+  max-width: min(500px, 90vw);
+  z-index: var(--tooltip-z-custom);
+  border-radius: 3px;
+}
+
+.tooltip_content.tooltip_padding_s {
+  padding: 4px;
+}
+.tooltip_content.tooltip_padding_m {
+  padding: 8px;
+}
+.tooltip_content.tooltip_padding_l {
+  padding: 12px;
+}
+.tooltip_content.tooltip_padding_xl {
+  padding: 16px;
+}
+.tooltip_content.tooltip_padding_custom {
+  padding: var(--tooltip_padding);
+}
+
+.tooltip_arrow {
+  fill: var(--tooltip_bg);
+}
+
+.tooltip_reset_button {
+  all: unset;
+}

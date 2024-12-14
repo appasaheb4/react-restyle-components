@@ -1,7 +1,30 @@
 import type {StorybookConfig} from '@storybook/react-webpack5';
+import {configureSort} from 'storybook-multilevel-sort';
+configureSort({
+  storyOrder: {
+    introduction: null,
+    'getting started': null,
+    changelog: null,
+    colors: null,
+    icons: null,
+    fonts: null,
+    techABL: {
+      '*': {
+        status: null,
+        docs: null,
+        'basic usage': null,
+      },
+    },
+    '**': {
+      status: null,
+      docs: null,
+      'basic usage': null,
+    },
+  },
+  typeOrder: [],
+});
 
 const config: StorybookConfig = {
-  staticDirs: ['../public'],
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
     '@storybook/addon-webpack5-compiler-swc',
@@ -23,6 +46,7 @@ const config: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {},
   },
+  staticDirs: ['../public'],
   docs: {
     autodocs: 'tag',
     defaultName: 'Documentation',
@@ -35,6 +59,9 @@ const config: StorybookConfig = {
         fsCache: true,
       },
     },
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
   webpackFinal: async (config) => {
     const imageRule = config.module?.rules?.find((rule) => {

@@ -13,10 +13,6 @@ yarn add react-restyle-components
 
 https://appasaheb4.github.io/react-restyle-components
 
-### Why we use this lib: 👇
-
-<img src="https://github.com/appasaheb4/react-restyle-components/blob/master/assets/img/libWapper.png">
-
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
 Github: www.github.com/appasaheb4 <br />
 Website: www.tech-abl.com
