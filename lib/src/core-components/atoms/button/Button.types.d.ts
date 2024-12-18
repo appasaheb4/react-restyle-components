@@ -1,20 +1,9 @@
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 import { LinkProps } from 'react-router-dom';
 export type ButtonProps = {
+    variant?: 'solid' | 'outline';
     /** Optional tooltip content */
     tooltip?: string;
-    /** What level of button? Defaults to 'primary' */
-    level?: 'primary' | 'secondary';
-    /** What variant of button? Defaults to 'brand' */
-    variant?: 'brand' | 'danger' | 'accent' | 'neutral';
-    /** What size of button? Defaults to 'm' */
-    scale?: 'xl' | 'l' | 'm' | 's' | 'xs' | 'xxs';
-    /** Does the button only include a single SVG? If so we will tweak styles. Defaults to false. */
-    iconOnly?: boolean;
-    /** What kind of focus of button? Defaults to 'visible' */
-    focus?: 'visible' | 'focus' | 'none';
-    /** should we replace content with a loading indicator */
-    loading?: boolean;
     /** ClassName to add so you can add additional styling */
     className?: string;
 };

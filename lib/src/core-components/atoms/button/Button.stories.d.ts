@@ -13,13 +13,8 @@ declare const meta: {
         };
     };
     decorators: ((Story: import("@storybook/csf").PartialStoryFn<import("@storybook/react/dist/types-a5624094").R, {
+        variant?: "solid" | "outline" | undefined;
         tooltip?: string | undefined;
-        level?: "primary" | "secondary" | undefined;
-        variant?: "brand" | "danger" | "accent" | "neutral" | undefined;
-        scale?: "s" | "xl" | "l" | "m" | "xs" | "xxs" | undefined;
-        iconOnly?: boolean | undefined;
-        focus?: "none" | "visible" | "focus" | undefined;
-        loading?: boolean | undefined;
         className?: string | undefined;
         disabled?: boolean | undefined;
         form?: string | undefined;
@@ -307,14 +302,4 @@ type Story = StoryObj<typeof meta>;
  * However the Design System uses a different size for icons if they are the _only_ thing in the button.
  * To handle this we add the prop `iconOnly`.
  */
-export declare const IconOnly: Story;
-export declare const TextOnly: Story;
-/**
- * The Button doesn't technically have any controls to position the icon. The Button can accept any content as its children, so if you want to add an icon at the end of text, you simply add both as children in that order:
- */
-export declare const TextWithIconAtEnd: Story;
-/**
- * Or to put it at the start you just... put it at the start:
- */
-export declare const TextWithIconAtStart: Story;
-export declare const Loading: Story;
+export declare const Basic: Story;

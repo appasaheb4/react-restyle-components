@@ -2,7 +2,7 @@ import React from 'react';
 import type { StoryObj } from '@storybook/react';
 declare const meta: {
     title: string;
-    component: ({ align, side, children, content, avoidCollisions, alignOffset, sideOffset, disabled, delay, padding, className, }: React.PropsWithChildren<import("./Tooltip.types").TooltipProps>) => React.JSX.Element;
+    component: ({ align, side, children, content, avoidCollisions, alignOffset, sideOffset, disabled, delay, className, }: React.PropsWithChildren<import("./Tooltip.types").TooltipProps>) => React.JSX.Element;
     tags: string[];
     parameters: {
         docs: {
@@ -11,7 +11,6 @@ declare const meta: {
     };
     decorators: ((Story: import("@storybook/csf").PartialStoryFn<import("@storybook/react/dist/types-a5624094").R, {
         className?: string | undefined;
-        padding?: "s" | "xl" | "l" | "m" | "custom" | undefined;
         delay?: number | undefined;
         side?: "top" | "right" | "bottom" | "left" | undefined;
         sideOffset?: number | undefined;

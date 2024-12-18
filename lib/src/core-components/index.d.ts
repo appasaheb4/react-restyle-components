@@ -1,8 +1,6 @@
 import '../tc.css';
 import * as Form from './atoms/form/form.component';
 export * from './atoms/button/button.component';
-export * from './atoms/button/linkButton.component';
-export * from './atoms/button/toggleButton.component';
 export * from './atoms/button/buttonGroup/buttonGroup.component';
 export * from './atoms/check-box/checkBox.component';
 export * from './atoms/date-picker/date-picker.component';

@@ -2,8 +2,6 @@
 export type TooltipProps = {
     /** custom classname to pass to the tooltip element */
     className?: string;
-    /** padding within the tooltip element*/
-    padding?: 's' | 'm' | 'l' | 'xl' | 'custom';
     /** The delay (in ms) before showing the tooltip */
     delay?: number;
     /** Sets the preferred position relative to the trigger */

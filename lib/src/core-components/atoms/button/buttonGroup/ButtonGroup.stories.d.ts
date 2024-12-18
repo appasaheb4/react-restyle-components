@@ -34,20 +34,3 @@ export declare const Basic: Story;
  * If only a single `Button` is passed in, it will be visually the same as not wrapping in a `ButtonGroup`.
  */
 export declare const BasicOneButton: Story;
-/**
- * To creat a split button you would add a `DropdownMenu` as the last child. Its trigger should be a `Button`.
- */
-/**
- * ButtonGroups can be passed `orientation="vertical"` to stack buttons vertically.
- */
-export declare const Vertical: Story;
-/**
- * Vertical ButtonGroups can also contain a `DropdownMenu`.
- */
-/**
- * ButtonGroups also work with LinkButtons and ToggleButtons.
- *
- * However ToggleButton styling is not currently ideal as the divider is hard to see.
- * Also note that ButtonGroup with ToggleButtons is not the same as a ToggleGroup. The former will allow multiple buttons to be active at once, whereas the latter will only allow one button to be active at a time.
- */
-export declare const FillModes: Story;
