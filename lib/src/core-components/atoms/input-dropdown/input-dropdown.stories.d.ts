@@ -3,4 +3,4 @@ import { InputDropdown } from './input-dropdown.component';
 declare const meta: Meta<typeof InputDropdown>;
 export default meta;
 type Story = StoryObj<typeof InputDropdown>;
-export declare const Primary: Story;
+export declare const Basic: Story;

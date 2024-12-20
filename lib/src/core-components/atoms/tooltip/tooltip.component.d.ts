@@ -6,11 +6,4 @@ import { TooltipProps } from './Tooltip.types';
  *  The `Tooltip` must be nested somewhere inside the `TooltipProvider` in the component tree.
  */
 export declare const Tooltip: ({ align, side, children, content, avoidCollisions, alignOffset, sideOffset, disabled, delay, className, }: PropsWithChildren<TooltipProps>) => React.JSX.Element;
-/**
- * Wrap a UI tooltip element with TooltipProvider to give it a tooltip.
- */
 export declare const TooltipProvider: React.FC<TooltipPrimitive.TooltipProviderProps>;
-/**
- * Exports a tooltip body element to match the full tooltip component.
- * Useful when another library needs to be used for the tooltip trigger - eg AG-grid.
- */

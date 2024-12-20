@@ -297,9 +297,4 @@ declare const meta: {
 };
 export default meta;
 type Story = StoryObj<typeof meta>;
-/**
- * The component contains styles that will automatically adjust the size of any svg you add as a child.
- * However the Design System uses a different size for icons if they are the _only_ thing in the button.
- * To handle this we add the prop `iconOnly`.
- */
 export declare const Basic: Story;

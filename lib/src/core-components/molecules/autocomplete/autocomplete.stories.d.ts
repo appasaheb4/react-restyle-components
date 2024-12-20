@@ -3,4 +3,4 @@ import { Autocomplete } from './autocomplete';
 declare const meta: Meta<typeof Autocomplete>;
 export default meta;
 type Story = StoryObj<typeof Autocomplete>;
-export declare const Primary: Story;
+export declare const Basic: Story;

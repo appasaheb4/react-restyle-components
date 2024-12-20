@@ -5,19 +5,15 @@ declare const meta: {
     parameters: {
         componentSubtitle: string;
     };
-    component: ({ children, orientation, horizontalSizing, verticalSizing, className, }: {
+    component: ({ children, orientation, className, }: {
         children: React.ReactNode;
         orientation?: "horizontal" | "vertical" | undefined;
-        horizontalSizing?: "fill" | "hug" | undefined;
-        verticalSizing?: "fill" | "hug" | undefined;
         className?: string | undefined;
     }) => React.JSX.Element;
     tags: string[];
     decorators: ((Story: import("@storybook/csf").PartialStoryFn<import("@storybook/react/dist/types-a5624094").R, {
         children: React.ReactNode;
         orientation?: "horizontal" | "vertical" | undefined;
-        horizontalSizing?: "fill" | "hug" | undefined;
-        verticalSizing?: "fill" | "hug" | undefined;
         className?: string | undefined;
     }>) => React.JSX.Element)[];
 };
@@ -30,7 +26,3 @@ type Story = StoryObj<typeof meta>;
  * You should use the same scale for all buttons in a group but could mix and match variants and levels.
  */
 export declare const Basic: Story;
-/**
- * If only a single `Button` is passed in, it will be visually the same as not wrapping in a `ButtonGroup`.
- */
-export declare const BasicOneButton: Story;

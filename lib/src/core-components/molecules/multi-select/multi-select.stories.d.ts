@@ -3,4 +3,4 @@ import { MultiSelect } from './multi-select.component';
 declare const meta: Meta<typeof MultiSelect>;
 export default meta;
 type Story = StoryObj<typeof MultiSelect>;
-export declare const Primary: Story;
+export declare const Basic: Story;

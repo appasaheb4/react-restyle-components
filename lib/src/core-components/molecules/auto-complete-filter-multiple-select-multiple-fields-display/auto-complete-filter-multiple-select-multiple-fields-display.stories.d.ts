@@ -3,4 +3,4 @@ import { AutoCompleteFilterMultipleSelectMultipleFieldsDisplay } from './auto-co
 declare const meta: Meta<typeof AutoCompleteFilterMultipleSelectMultipleFieldsDisplay>;
 export default meta;
 type Story = StoryObj<typeof AutoCompleteFilterMultipleSelectMultipleFieldsDisplay>;
-export declare const Primary: Story;
+export declare const Basic: Story;

@@ -24,7 +24,7 @@ declare const meta: {
 };
 export default meta;
 type Story = StoryObj<typeof meta>;
-export declare const BasicExample: Story;
+export declare const Basic: Story;
 export declare const Positions: Story;
 export declare const JSXContent: Story;
 export declare const JSXContentDifferentAlignments: Story;

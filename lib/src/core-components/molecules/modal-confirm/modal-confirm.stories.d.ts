@@ -3,4 +3,4 @@ import { ModalConfirm } from './modal-confirm.component';
 declare const meta: Meta<typeof ModalConfirm>;
 export default meta;
 type Story = StoryObj<typeof ModalConfirm>;
-export declare const Primary: Story;
+export declare const Basic: Story;

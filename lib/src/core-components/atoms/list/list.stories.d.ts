@@ -3,4 +3,4 @@ import { List } from './list.component';
 declare const meta: Meta<typeof List>;
 export default meta;
 type Story = StoryObj<typeof List>;
-export declare const Primary: Story;
+export declare const Basic: Story;

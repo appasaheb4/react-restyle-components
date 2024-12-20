@@ -3,4 +3,4 @@ import { MultiSelectWithField } from './multi-select-with-field.component';
 declare const meta: Meta<typeof MultiSelectWithField>;
 export default meta;
 type Story = StoryObj<typeof MultiSelectWithField>;
-export declare const Primary: Story;
+export declare const Basic: Story;

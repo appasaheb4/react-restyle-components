@@ -3,4 +3,4 @@ import { Input } from './input.component';
 declare const meta: Meta<typeof Input>;
 export default meta;
 type Story = StoryObj<typeof Input>;
-export declare const Primary: Story;
+export declare const Basic: Story;
