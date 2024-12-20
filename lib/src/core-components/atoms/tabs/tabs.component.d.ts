@@ -1,19 +1,17 @@
-import React, { ReactNode, ReactElement } from 'react';
+import React from 'react';
 import '../../../tc.css';
 interface TabProps {
     title: string;
-    children: ReactNode;
+    children: React.JSX.Element;
 }
 export declare const Tab: ({ title, children }: TabProps) => React.JSX.Element;
 export interface TabsProps {
-    tabsClass?: string;
     options: Array<{
         title: string;
-        content?: React.ReactNode;
+        content?: React.JSX.Element;
         inActive?: boolean;
     }>;
-    onSelect: (item: any, index: number) => void;
-    children?: ReactElement<TabProps> | ReactElement<TabProps>[];
+    children: React.JSX.Element[];
 }
-export declare const Tabs: ({ tabsClass, options, onSelect, children, }: TabsProps) => React.JSX.Element;
+export declare const Tabs: ({ options, children }: TabsProps) => React.JSX.Element;
 export {};
