@@ -24,14 +24,14 @@ declare const meta: {
         formNoValidate?: boolean | undefined;
         formTarget?: string | undefined;
         name?: string | undefined;
-        type?: "button" | "reset" | "submit" | undefined;
+        type?: "button" | "submit" | "reset" | undefined;
         value?: string | number | readonly string[] | undefined;
         defaultChecked?: boolean | undefined;
         defaultValue?: string | number | readonly string[] | undefined;
         suppressContentEditableWarning?: boolean | undefined;
         suppressHydrationWarning?: boolean | undefined;
         accessKey?: string | undefined;
-        autoCapitalize?: (string & {}) | "off" | "on" | "none" | "sentences" | "words" | "characters" | undefined;
+        autoCapitalize?: "off" | "none" | "on" | "sentences" | "words" | "characters" | (string & {}) | undefined;
         autoFocus?: boolean | undefined;
         contentEditable?: (boolean | "true" | "false") | "inherit" | "plaintext-only" | undefined;
         contextMenu?: string | undefined;
@@ -72,7 +72,7 @@ declare const meta: {
         results?: number | undefined;
         security?: string | undefined;
         unselectable?: "off" | "on" | undefined;
-        inputMode?: "search" | "text" | "email" | "tel" | "url" | "none" | "numeric" | "decimal" | undefined;
+        inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
         is?: string | undefined;
         "aria-activedescendant"?: string | undefined;
         "aria-atomic"?: (boolean | "true" | "false") | undefined;
@@ -86,7 +86,7 @@ declare const meta: {
         "aria-colindextext"?: string | undefined;
         "aria-colspan"?: number | undefined;
         "aria-controls"?: string | undefined;
-        "aria-current"?: boolean | "time" | "date" | "true" | "false" | "page" | "step" | "location" | undefined;
+        "aria-current"?: boolean | "time" | "true" | "false" | "date" | "page" | "step" | "location" | undefined;
         "aria-describedby"?: string | undefined;
         "aria-description"?: string | undefined;
         "aria-details"?: string | undefined;

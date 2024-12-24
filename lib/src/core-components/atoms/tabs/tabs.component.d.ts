@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../tc.css';
 interface TabProps {
     title: string;
     children: React.JSX.Element;

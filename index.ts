@@ -1,2 +1,2 @@
-import './tc.css';
+// import './tc.css';
 export * from './src/core-components';

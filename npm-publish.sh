@@ -18,7 +18,7 @@ copyfiles -u 1 src/library/assets/fonts/*/*.ttf lib/src
 copyfiles -u 1 src/**/*.css lib/src
 # npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o global.css
 # cp global.css lib
-tailwindcss -o lib/tc.css --minify
+tailwindcss -o lib/src/tc.module.css --minify
 cp package.json lib
 
 
