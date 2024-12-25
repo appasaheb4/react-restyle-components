@@ -18,8 +18,11 @@ copyfiles -u 1 src/library/assets/fonts/*/*.ttf lib/src
 copyfiles -u 1 src/**/*.css lib/src
 # npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o global.css
 # cp global.css lib
-tailwindcss -o ./src/tc.module.css --minify
-tailwindcss -o lib/src/tc.module.css --minify
+npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./src/tc.module.css
+# tailwindcss -o ./src/tc.module.css
+# tailwindcss -o lib/src/tc.module.css --minify
+node convert-tailwind-to-css.js
+# copyfiles -u 1 ./src/tc.module.css lib/src
 cp package.json lib
 
 
