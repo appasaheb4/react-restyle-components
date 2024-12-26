@@ -1,4 +1,4 @@
 import React from 'react';
-import '../../../tc.css';
+import '../../../tc.module.css';
 export declare const Loader: () => React.JSX.Element;
 export declare const ModalLoader: () => React.JSX.Element;

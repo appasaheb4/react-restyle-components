@@ -1,4 +1,5 @@
 import type {StorybookConfig} from '@storybook/react-webpack5';
+import path from 'path';
 import {configureSort} from 'storybook-multilevel-sort';
 configureSort({
   storyOrder: {
@@ -76,6 +77,7 @@ const config: StorybookConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
+
     return config;
   },
 };

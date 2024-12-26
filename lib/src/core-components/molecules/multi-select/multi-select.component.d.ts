@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../tc.css';
+import '../../../tc.module.css';
 interface MultiSelectProps {
     options: Array<string>;
     selectedItems?: Array<string>;

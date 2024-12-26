@@ -1,6 +1,6 @@
 import React from 'react';
 import './color-picker-modal.css';
-import '../../../tc.css';
+import '../../../tc.module.css';
 interface ColorPickerModalProps {
     color: string;
     onChange: (color: string) => void;

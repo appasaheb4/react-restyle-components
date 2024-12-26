@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../tc.css';
+import '../../../tc.module.css';
 interface CheckBoxProps {
     title: string;
     data: Array<any>;

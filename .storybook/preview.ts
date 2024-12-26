@@ -2,6 +2,8 @@ import type {Preview, ReactRenderer} from '@storybook/react';
 import {withThemeByClassName} from '@storybook/addon-themes';
 import '../src/index.css';
 import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
+import '../storybook-css.css';
+import '../src/tc.module.css';
 
 const preview: Preview = {
   parameters: {
@@ -16,13 +18,6 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    // backgrounds: {
-    //   values: [
-    //     {name: 'light', value: '#fff'},
-    //     {name: 'dark', value: '#333'},
-    //     {name: 'light-gray', value: '#F6F9FC'},
-    //   ],
-    // },
     decorators: [
       withThemeByClassName<ReactRenderer>({
         themes: {

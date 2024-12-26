@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactNode } from 'react';
-import '../../../../tc.css';
+import '../../../../tc.module.css';
 export declare const ButtonGroup: ({ children, orientation, className, }: {
     children: ReactNode;
     orientation?: "horizontal" | "vertical" | undefined;

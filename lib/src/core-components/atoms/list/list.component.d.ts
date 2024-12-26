@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../tc.css';
+import '../../../tc.module.css';
 interface ListProps {
     direction?: 'row' | 'col';
     space?: number;
