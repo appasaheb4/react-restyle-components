@@ -64,7 +64,7 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-  webpackFinal: async (config) => {
+  webpackFinal: async (config: any) => {
     const imageRule = config.module?.rules?.find((rule) => {
       const test = (rule as {test: RegExp}).test;
       if (!test) {
