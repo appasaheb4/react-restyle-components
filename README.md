@@ -5,13 +5,9 @@ Easy use restyle components
 ## Installation
 
 ```
+npm install react-restyle-components
 yarn add react-restyle-components
-
 ```
-
-## IMP : Please use before 0.2.34 version.
-
-Currently WIP
 
 ### 📚 Storybook
 
