@@ -8,7 +8,7 @@ configureSort({
     colors: null,
     icons: null,
     fonts: null,
-    'react-restyle-components': {
+    techABL: {
       '*': {
         status: null,
         docs: null,
