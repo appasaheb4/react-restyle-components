@@ -6,3 +6,4 @@ interface GridProps {
 }
 export declare const Grid: React.FunctionComponent<GridProps>;
 export {};
+//# sourceMappingURL=grid.component.d.ts.map

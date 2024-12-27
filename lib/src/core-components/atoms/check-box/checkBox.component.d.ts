@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface CheckBoxProps {
     title: string;
@@ -7,5 +6,6 @@ interface CheckBoxProps {
     disable?: boolean;
     onChange: (items: any) => void;
 }
-export declare const CheckBox: ({ title, data, className, onChange, }: CheckBoxProps) => React.JSX.Element;
+export declare const CheckBox: ({ title, data, className, onChange, }: CheckBoxProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=checkBox.component.d.ts.map

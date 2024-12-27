@@ -1,9 +1,10 @@
-import UnCheckbox from './unCheckbox.svg';
-import CheckedBox from './checkedBox.svg';
-import DatePickerSvg from './datePicker.svg';
-import CheckedRadio from './checkedRadio.svg';
-import UncheckRadio from './uncheckRadio.svg';
-import TimerSVG from './timer.svg';
-import UpArrow from './UpArrow.svg';
-import DownArrow from './DownArrow.svg';
+import UnCheckbox from './UnCheckbox.svg?react';
+import CheckedBox from './CheckedBox.svg?react';
+import DatePickerSvg from './datePicker.svg?react';
+import CheckedRadio from './checkedRadio.svg?react';
+import UncheckRadio from './uncheckRadio.svg?react';
+import TimerSVG from './timer.svg?react';
+import UpArrow from './UpArrow.svg?react';
+import DownArrow from './DownArrow.svg?react';
 export { UnCheckbox, CheckedBox, DatePickerSvg, CheckedRadio, UncheckRadio, TimerSVG, UpArrow, DownArrow, };
+//# sourceMappingURL=index.d.ts.map

@@ -12,3 +12,4 @@ interface ListProps {
 }
 export declare const List: React.FunctionComponent<ListProps>;
 export {};
+//# sourceMappingURL=list.component.d.ts.map

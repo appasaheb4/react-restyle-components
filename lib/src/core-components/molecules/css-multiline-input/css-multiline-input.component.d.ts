@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface CSSMultilineProps {
     label?: string;
@@ -8,5 +7,6 @@ interface CSSMultilineProps {
     style?: any;
     onChange(item: any): void;
 }
-export declare const CSSMultiline: ({ label, defaultValue, className, style, placeholder, onChange, }: CSSMultilineProps) => React.JSX.Element;
+export declare const CSSMultiline: ({ label, defaultValue, className, style, placeholder, onChange, }: CSSMultilineProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=css-multiline-input.component.d.ts.map

@@ -1,6 +1,6 @@
-import React from 'react';
 import './color-picker.css';
 export declare const ColorPicker: ({ color, onChange }: {
     color: any;
     onChange: any;
-}) => React.JSX.Element;
+}) => import("react/jsx-runtime").JSX.Element;
+//# sourceMappingURL=color-picker.component.d.ts.map

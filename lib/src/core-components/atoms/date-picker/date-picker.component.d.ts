@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 interface DatePickerProps {
@@ -9,5 +8,6 @@ interface DatePickerProps {
     showFormat?: string;
     placeholder?: string;
 }
-export declare const DatePickerComp: ({ title, className, disable, value, showFormat, placeholder, }: DatePickerProps) => React.JSX.Element;
+export declare const DatePickerComp: ({ title, className, disable, value, showFormat, placeholder, }: DatePickerProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=date-picker.component.d.ts.map

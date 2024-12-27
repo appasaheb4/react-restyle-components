@@ -1,4 +1,3 @@
-import React from 'react';
 interface MultiSelectWithFieldProps {
     displayField: string;
     options: Array<any>;
@@ -6,5 +5,6 @@ interface MultiSelectWithFieldProps {
     hasError?: boolean;
     onSelect: (item: any) => any;
 }
-export declare const MultiSelectWithField: ({ displayField, options, selectedItems, hasError, onSelect, }: MultiSelectWithFieldProps) => React.JSX.Element;
+export declare const MultiSelectWithField: ({ displayField, options, selectedItems, hasError, onSelect, }: MultiSelectWithFieldProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=multi-select-with-field.component.d.ts.map

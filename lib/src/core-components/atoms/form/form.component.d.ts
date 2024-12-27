@@ -45,7 +45,7 @@ export declare const Input: React.ForwardRefExoticComponent<Omit<InputProps, "re
 export declare const InputPassword: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
 export declare const Input1: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
 export declare const Input2: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
-export declare const MultilineInput: (props: InputProps) => React.JSX.Element;
+export declare const MultilineInput: (props: InputProps) => import("react/jsx-runtime").JSX.Element;
 interface InputRadioProps extends InputWrapperProps {
     values?: any[];
     value?: string;
@@ -55,7 +55,7 @@ interface InputRadioProps extends InputWrapperProps {
     labelStyle?: any;
     onChange?: (e: any) => void;
 }
-export declare const InputRadio: (props: InputRadioProps) => React.JSX.Element;
+export declare const InputRadio: (props: InputRadioProps) => import("react/jsx-runtime").JSX.Element;
 interface InputDateProps extends InputWrapperProps {
     value?: any;
     name?: string;
@@ -71,8 +71,8 @@ interface InputDateProps extends InputWrapperProps {
     onCalendarToggle?: (status: boolean) => void;
     onFocusRemove?: (date: any) => void;
 }
-export declare const InputDate: ({ name, value, placeholder, use12Hours, label, id, hasError, disabled, format, onChange, onFocusRemove, }: InputDateProps) => React.JSX.Element;
-export declare const CheckBox: (props: any) => React.JSX.Element;
+export declare const InputDate: ({ name, value, placeholder, use12Hours, label, id, hasError, disabled, format, onChange, onFocusRemove, }: InputDateProps) => import("react/jsx-runtime").JSX.Element;
+export declare const CheckBox: (props: any) => import("react/jsx-runtime").JSX.Element;
 interface InputFileProps extends InputWrapperProps {
     value?: any;
     name?: string;
@@ -83,7 +83,7 @@ interface InputFileProps extends InputWrapperProps {
     hasError?: boolean;
     onChange?: (e: any) => void;
 }
-export declare const InputFile: (props: InputFileProps) => React.JSX.Element;
+export declare const InputFile: (props: InputFileProps) => import("react/jsx-runtime").JSX.Element;
 interface ToggleProps extends InputWrapperProps {
     disabled?: boolean;
     isToggleLabel?: boolean;
@@ -95,6 +95,7 @@ interface ToggleProps extends InputWrapperProps {
     onChange?: (e: boolean) => void;
     style?: any;
 }
-export declare const Toggle: (props: ToggleProps) => React.JSX.Element;
-export declare const DeliveryScheduleToggle: (props: ToggleProps) => React.JSX.Element;
+export declare const Toggle: (props: ToggleProps) => import("react/jsx-runtime").JSX.Element;
+export declare const DeliveryScheduleToggle: (props: ToggleProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=form.component.d.ts.map

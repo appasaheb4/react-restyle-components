@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface StepperProps {
     className?: string;
@@ -6,5 +5,6 @@ interface StepperProps {
     currentStep: number;
     onStepClick: (currentStep: any, index: any) => void;
 }
-export declare const Stepper: ({ className, steps, currentStep, onStepClick, }: StepperProps) => React.JSX.Element;
+export declare const Stepper: ({ className, steps, currentStep, onStepClick, }: StepperProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=stepper.component.d.ts.map

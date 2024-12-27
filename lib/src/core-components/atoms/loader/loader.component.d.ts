@@ -1,4 +1,4 @@
-import React from 'react';
 import '../../../tc.module.css';
-export declare const Loader: () => React.JSX.Element;
-export declare const ModalLoader: () => React.JSX.Element;
+export declare const Loader: () => import("react/jsx-runtime").JSX.Element;
+export declare const ModalLoader: () => import("react/jsx-runtime").JSX.Element;
+//# sourceMappingURL=loader.component.d.ts.map

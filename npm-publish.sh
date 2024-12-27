@@ -15,10 +15,11 @@
 
 copyfiles -u 1 src/library/assets/svg/*.svg lib/src
 copyfiles -u 1 src/library/assets/fonts/*/*.ttf lib/src
-copyfiles -u 1 src/**/*.css lib/src
+# copyfiles -u 1 src/**/*.css lib/src
 # npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o global.css
 # cp global.css lib
 npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./src/tc.module.css
+npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./lib/src/tc.module.css
 # tailwindcss -o ./src/tc.module.css
 # tailwindcss -o lib/src/tc.module.css --minify
 node convert-tailwind-to-css.js

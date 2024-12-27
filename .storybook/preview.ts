@@ -1,7 +1,7 @@
 import type {Preview, ReactRenderer} from '@storybook/react';
 import {withThemeByClassName} from '@storybook/addon-themes';
 import '../src/index.css';
-import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
+// import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import '../storybook-css.css';
 import '../src/tc.module.css';
 

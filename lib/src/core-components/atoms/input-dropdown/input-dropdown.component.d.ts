@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface InputDropdownProps {
     title: string;
@@ -7,5 +6,6 @@ interface InputDropdownProps {
     className?: string;
     onChange?: (item: string) => void;
 }
-export declare const InputDropdown: ({ items, className, hasError, title, onChange, }: InputDropdownProps) => React.JSX.Element;
+export declare const InputDropdown: ({ items, className, hasError, title, onChange, }: InputDropdownProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=input-dropdown.component.d.ts.map

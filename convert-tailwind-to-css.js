@@ -7,7 +7,7 @@ import tailwindcss from 'tailwindcss';
 // Generated CSS indent spaces count
 const indentSpaces = 2;
 // Generated CSS output file
-const outputCSS = './src/tc.module.css';
+const outputCSS = './lib/src/tc.module.css';
 
 // Load tailwind.config.js
 const __filename = fileURLToPath(import.meta.url);

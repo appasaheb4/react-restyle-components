@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface RadioProps {
     title: string;
@@ -6,5 +5,6 @@ interface RadioProps {
     className?: string;
     onChange: (item: any) => void;
 }
-export declare const Radio: ({ title, data, className, onChange, }: RadioProps) => React.JSX.Element;
+export declare const Radio: ({ title, data, className, onChange, }: RadioProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=radio.component.d.ts.map

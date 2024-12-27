@@ -3,7 +3,7 @@ interface TabProps {
     title: string;
     children: React.JSX.Element;
 }
-export declare const Tab: ({ title, children }: TabProps) => React.JSX.Element;
+export declare const Tab: ({ title, children }: TabProps) => import("react/jsx-runtime").JSX.Element;
 export interface TabsProps {
     options: Array<{
         title: string;
@@ -12,5 +12,6 @@ export interface TabsProps {
     }>;
     children: React.JSX.Element[];
 }
-export declare const Tabs: ({ options, children }: TabsProps) => React.JSX.Element;
+export declare const Tabs: ({ options, children }: TabsProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=tabs.component.d.ts.map

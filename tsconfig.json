@@ -1,30 +1,41 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
     "module": "ESNext",
-    "lib": ["ESNext", "dom"],
-    "allowJs": true,
-    "jsx": "react",
-    "declaration": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
     "outDir": "./lib",
     "rootDir": "./",
     "isolatedModules": true,
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "jsx": "react-jsx",
+    "declaration": true,
     "skipLibCheck": true,
-    "noImplicitAny": false
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "types": [
+      "vite/client",
+      "vite-plugin-svgr/client",
+      "vitest-dom/extend-expect"
+    ]
   },
-  "include": ["src", "index.ts", "tc.css"],
+  "include": ["index.ts"],
   "exclude": [
+    "__mocks__",
     "**/__tests__/*",
     "**/__helpers__/*",
     "node_modules",
     "babel.config.js",
     "jest.config.js",
     "jest.setup.js",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "**/*.stories.tsx"
   ]
 }

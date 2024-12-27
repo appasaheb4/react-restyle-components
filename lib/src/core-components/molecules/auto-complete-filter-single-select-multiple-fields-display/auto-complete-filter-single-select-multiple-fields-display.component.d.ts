@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface AutoCompleteFilterSingleSelectMultiFieldsDisplayProps {
     loader?: boolean;
@@ -13,5 +12,6 @@ interface AutoCompleteFilterSingleSelectMultiFieldsDisplayProps {
     onSelect?: (item: any) => any;
     onBlur?: (item: any) => any;
 }
-export declare const AutoCompleteFilterSingleSelectMultiFieldsDisplay: ({ disable, loader, displayValue, placeholder, data, hasError, className, posstion, onFilter, onSelect, onBlur, }: AutoCompleteFilterSingleSelectMultiFieldsDisplayProps) => React.JSX.Element;
+export declare const AutoCompleteFilterSingleSelectMultiFieldsDisplay: ({ disable, loader, displayValue, placeholder, data, hasError, className, posstion, onFilter, onSelect, onBlur, }: AutoCompleteFilterSingleSelectMultiFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=auto-complete-filter-single-select-multiple-fields-display.component.d.ts.map

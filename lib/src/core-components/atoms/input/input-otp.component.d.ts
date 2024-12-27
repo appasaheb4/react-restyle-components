@@ -13,3 +13,4 @@ interface PinInputGridProps {
 }
 export declare const InputOtp: React.FC<PinInputGridProps>;
 export {};
+//# sourceMappingURL=input-otp.component.d.ts.map

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../../tc.module.css';
 interface AutocompleteGroupByProps {
     data: any[];
@@ -7,5 +6,6 @@ interface AutocompleteGroupByProps {
     displayValue?: string;
     onClose?: () => void;
 }
-export declare const AutocompleteGroupBy: (props: AutocompleteGroupByProps) => React.JSX.Element;
+export declare const AutocompleteGroupBy: (props: AutocompleteGroupByProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=auto-complete-group-by.component.d.ts.map

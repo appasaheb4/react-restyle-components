@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { IconBaseProps } from 'react-icons/lib';
 import '../../../tc.module.css';
 interface IconProps {
@@ -9,3 +10,4 @@ interface IconProps {
 }
 export declare const Icon: ({ nameIcon, propsIcon, tooltip, isDisable, onClick, }: IconProps) => JSX.Element;
 export {};
+//# sourceMappingURL=icons.component.d.ts.map

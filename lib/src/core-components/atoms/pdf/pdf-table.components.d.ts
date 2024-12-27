@@ -1,4 +1,3 @@
-import React from 'react';
 import { Style } from '@react-pdf/types';
 interface PdfTableProps {
     style?: Style;
@@ -7,5 +6,6 @@ interface PdfTableProps {
     fields: Array<any>;
     data: Array<any>;
 }
-export declare const PdfTable: ({ headerFixed, fields, data, style, headerStyle, }: PdfTableProps) => React.JSX.Element;
+export declare const PdfTable: ({ headerFixed, fields, data, style, headerStyle, }: PdfTableProps) => import("react/jsx-runtime").JSX.Element;
 export {};
+//# sourceMappingURL=pdf-table.components.d.ts.map
