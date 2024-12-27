@@ -8,7 +8,7 @@ configureSort({
     colors: null,
     icons: null,
     fonts: null,
-    jefferies: {
+    'react-restyle-components': {
       '*': {
         status: null,
         docs: null,

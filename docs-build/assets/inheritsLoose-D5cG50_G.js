@@ -1,0 +1,1 @@
+import{_ as a}from"./setPrototypeOf-NYsvoNVB.js";function o(){return o=Object.assign?Object.assign.bind():function(t){for(var r=1;r<arguments.length;r++){var e=arguments[r];for(var n in e)({}).hasOwnProperty.call(e,n)&&(t[n]=e[n])}return t},o.apply(null,arguments)}function p(t,r){t.prototype=Object.create(r.prototype),t.prototype.constructor=t,a(t,r)}export{p as _,o as a};
