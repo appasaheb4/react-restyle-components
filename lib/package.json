@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.42",
+  "version": "0.2.43",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -24,6 +24,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "rm -rf docs-build && storybook build -o docs-build",
     "deploy-storybook": "gh-pages -d docs-build",
+    "serve-storybook": "npm run build-storybook -- -o ./docs-build && npx http-server ./docs-build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --write '**/*.{js,jsx}'",

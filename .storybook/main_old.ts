@@ -33,29 +33,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
-    {
-      name: '@storybook/addon-styling-webpack',
-      options: {
-        rules: [
-          // Replaces existing CSS rules to support CSS Modules
-          {
-            test: /\.css$/,
-            use: [
-              'style-loader',
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: {
-                    auto: true,
-                    localIdentName: '[name]__[local]--[hash:base64:5]',
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-    },
+    'storybook-css-modules',
     {
       name: '@storybook/addon-postcss',
       options: {
@@ -86,7 +64,13 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-  webpackFinal: async (config: any) => {
+  webpackFinal: async (config: any, {configType}) => {
+    if (configType === 'DEVELOPMENT') {
+      // Modify config for development
+    }
+    if (configType === 'PRODUCTION') {
+      // Modify config for production
+    }
     const imageRule = config.module?.rules?.find((rule) => {
       const test = (rule as {test: RegExp}).test;
       if (!test) {

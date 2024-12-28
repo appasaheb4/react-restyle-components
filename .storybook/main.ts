@@ -1,4 +1,4 @@
-import type {StorybookConfig} from '@storybook/react-vite';
+import type {StorybookConfig} from '@storybook/react-webpack5';
 import {configureSort} from 'storybook-multilevel-sort';
 configureSort({
   storyOrder: {
@@ -23,30 +23,68 @@ configureSort({
   },
   typeOrder: [],
 });
+
 const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx|mjs)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
+    '@storybook/addon-webpack5-compiler-swc',
+    '@storybook/addon-onboarding',
     '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@chromatic-com/storybook',
+    '@storybook/addon-interactions',
+    'storybook-css-modules',
     {
-      name: '@storybook/addon-essentials',
+      name: '@storybook/addon-postcss',
       options: {
-        backgrounds: false,
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
       },
     },
-    '@storybook/addon-interactions',
-    '@storybook/addon-themes',
   ],
   framework: {
-    name: '@storybook/react-vite',
+    name: '@storybook/react-webpack5',
     options: {},
   },
   staticDirs: ['../public'],
   docs: {
     autodocs: 'tag',
+    defaultName: 'Documentation',
+  },
+  core: {
+    builder: {
+      name: '@storybook/builder-webpack5',
+      options: {
+        lazyCompilation: true,
+        fsCache: true,
+      },
+    },
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',
   },
-};
+  webpackFinal: async (config: any, {configType}) => {
+    if (configType === 'DEVELOPMENT') {
+      // Modify config for development
+    }
+    if (configType === 'PRODUCTION') {
+      // Modify config for production
+    }
+    const imageRule = config.module?.rules?.find((rule) => {
+      const test = (rule as {test: RegExp}).test;
+      if (!test) {
+        return false;
+      }
+      return test.test('.svg');
+    }) as {[key: string]: any};
+    imageRule.exclude = /\.svg$/;
+    config.module?.rules?.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
 
+    return config;
+  },
+};
 export default config;
