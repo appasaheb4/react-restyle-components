@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 interface DatePickerProps {
     title: string;

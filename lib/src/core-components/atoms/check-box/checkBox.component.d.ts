@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface CheckBoxProps {
     title: string;
     data: Array<any>;
