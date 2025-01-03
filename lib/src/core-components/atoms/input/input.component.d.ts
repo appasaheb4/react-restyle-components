@@ -1,5 +1,4 @@
 import './input.styles.css';
-import '../../../tc.module.css';
 interface InputProps {
     title: string;
     defaultValue: string;

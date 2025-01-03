@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface StepperProps {
     className?: string;
     steps: Array<string>;

@@ -8,10 +8,11 @@ interface AutoCompleteFilterSingleSelectMultiFieldsDisplayProps {
     hasError?: boolean;
     className?: string;
     posstion?: string;
+    keyboard?: string;
     onFilter?: (item: any) => void;
     onSelect?: (item: any) => any;
     onBlur?: (item: any) => any;
 }
-export declare const AutoCompleteFilterSingleSelectMultiFieldsDisplay: ({ disable, loader, displayValue, placeholder, data, hasError, className, posstion, onFilter, onSelect, onBlur, }: AutoCompleteFilterSingleSelectMultiFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterSingleSelectMultiFieldsDisplay: ({ disable, loader, displayValue, placeholder, data, hasError, className, posstion, keyboard, onFilter, onSelect, onBlur, }: AutoCompleteFilterSingleSelectMultiFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=auto-complete-filter-single-select-multiple-fields-display.component.d.ts.map
