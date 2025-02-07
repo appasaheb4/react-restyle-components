@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface InputDropdownProps {
     title: string;
     items: Array<string>;

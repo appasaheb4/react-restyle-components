@@ -30,5 +30,6 @@ export * from './molecules/autocomplete/autocomplete';
 export * from './molecules/auto-complete-group-by/auto-complete-group-by.component';
 export * from './molecules/color-picker/color-picker.component';
 export * from './molecules/color-picker-modal/color-picker-modal.component';
+export * from './molecules/auto-complete-filter-single-select/auto-complete-filter-single-select.component';
 export { Form };
 //# sourceMappingURL=index.d.ts.map

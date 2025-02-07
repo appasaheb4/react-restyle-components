@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
     uniqueField?: string;
     isSelectedStringArray?: boolean;

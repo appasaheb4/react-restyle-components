@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../tc.module.css';
 interface TimerProps {
     onClear: () => void;
 }

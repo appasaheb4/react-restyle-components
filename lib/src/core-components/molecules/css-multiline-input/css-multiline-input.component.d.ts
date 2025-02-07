@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface CSSMultilineProps {
     label?: string;
     defaultValue?: string;

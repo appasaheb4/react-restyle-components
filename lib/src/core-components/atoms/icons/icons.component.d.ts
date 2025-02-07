@@ -1,6 +1,5 @@
 /// <reference types="react" />
 import { IconBaseProps } from 'react-icons/lib';
-import '../../../tc.module.css';
 interface IconProps {
     nameIcon: string;
     propsIcon?: IconBaseProps;

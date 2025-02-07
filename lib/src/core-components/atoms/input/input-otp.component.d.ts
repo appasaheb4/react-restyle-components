@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../tc.module.css';
 interface PinInputGridProps {
     title?: string;
     hasError?: boolean;

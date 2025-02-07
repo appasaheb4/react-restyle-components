@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../../tc.module.css';
 interface LabelProps {
     htmlFor: string;
     hasError?: boolean;
@@ -43,8 +42,6 @@ interface InputProps extends InputWrapperProps {
 }
 export declare const Input: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
 export declare const InputPassword: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
-export declare const Input1: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
-export declare const Input2: React.ForwardRefExoticComponent<Omit<InputProps, "ref"> & React.RefAttributes<any>>;
 export declare const MultilineInput: (props: InputProps) => import("react/jsx-runtime").JSX.Element;
 interface InputRadioProps extends InputWrapperProps {
     values?: any[];
@@ -59,11 +56,9 @@ export declare const InputRadio: (props: InputRadioProps) => import("react/jsx-r
 interface InputDateProps extends InputWrapperProps {
     value?: any;
     name?: string;
-    placeholder?: string;
     disabled?: boolean;
     hasError?: boolean;
     format?: string;
-    use12Hours?: boolean;
     isCalenderOpen?: boolean;
     minDate?: Date;
     maxDate?: Date;
@@ -71,7 +66,17 @@ interface InputDateProps extends InputWrapperProps {
     onCalendarToggle?: (status: boolean) => void;
     onFocusRemove?: (date: any) => void;
 }
-export declare const InputDate: ({ name, value, placeholder, use12Hours, label, id, hasError, disabled, format, onChange, onFocusRemove, }: InputDateProps) => import("react/jsx-runtime").JSX.Element;
+export declare const InputDate: ({ name, value, label, id, hasError, disabled, format, onChange, onFocusRemove, }: InputDateProps) => import("react/jsx-runtime").JSX.Element;
+interface InputDateTimeProps extends InputWrapperProps {
+    type?: string;
+    id?: string;
+    label?: string;
+    hasError?: boolean;
+    className?: string;
+    min?: string;
+    onChange?: (value: any) => void;
+}
+export declare const InputDateTime: ({ type, id, label, hasError, className, min, onChange, }: InputDateTimeProps) => import("react/jsx-runtime").JSX.Element;
 export declare const CheckBox: (props: any) => import("react/jsx-runtime").JSX.Element;
 interface InputFileProps extends InputWrapperProps {
     value?: any;
@@ -96,6 +101,5 @@ interface ToggleProps extends InputWrapperProps {
     style?: any;
 }
 export declare const Toggle: (props: ToggleProps) => import("react/jsx-runtime").JSX.Element;
-export declare const DeliveryScheduleToggle: (props: ToggleProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=form.component.d.ts.map

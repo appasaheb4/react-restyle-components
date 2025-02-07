@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface MultiSelectProps {
     options: Array<string>;
     selectedItems?: Array<string>;
