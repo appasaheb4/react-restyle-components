@@ -1,0 +1,16 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/**
+ * @param {Object[]} nodes
+ * @param {number[]} lines
+ * @param {Object} settings
+ * @preserve Knuth and Plass line breaking algorithm in JavaScript
+ *
+ * Licensed under the new BSD License.
+ * Copyright 2009-2010, Bram Stein
+ * All rights reserved.
+ */
