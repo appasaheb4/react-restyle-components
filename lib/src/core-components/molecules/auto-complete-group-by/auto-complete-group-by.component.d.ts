@@ -1,10 +1,10 @@
 interface AutocompleteGroupByProps {
     data: any[];
-    onChange?: (item: any, children: any) => void;
     hasError?: boolean;
     displayValue?: string;
+    onChange?: (item: any, children: any) => void;
     onClose?: () => void;
 }
-export declare const AutocompleteGroupBy: (props: AutocompleteGroupByProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutocompleteGroupBy: ({ data, hasError, displayValue, onChange, onClose, }: AutocompleteGroupByProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=auto-complete-group-by.component.d.ts.map

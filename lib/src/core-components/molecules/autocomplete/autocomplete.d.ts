@@ -1,4 +1,3 @@
-import '../../../tc.module.css';
 interface AutocompleteProps {
     value: string;
     onValueChange: (value: string) => void;
