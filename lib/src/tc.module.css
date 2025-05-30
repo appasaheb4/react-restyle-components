@@ -1,5 +1,7 @@
 .visible { visibility: visible;
 } .invisible { visibility: hidden;
+} .collapse { visibility: collapse;
+} .static { position: static;
 } .fixed { position: fixed;
 } .absolute { position: absolute;
 } .relative { position: relative;
