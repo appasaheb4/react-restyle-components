@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.89",
+  "version": "0.2.91",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -15,7 +15,7 @@
     "/lib"
   ],
   "scripts": {
-    "build": "rm -rf ./lib && tsc",
+    "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
     "storybook": "storybook dev -p 6006",
