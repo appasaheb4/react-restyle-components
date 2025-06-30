@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.2.86",
+  "version": "0.2.87",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -15,10 +15,7 @@
     "/lib"
   ],
   "scripts": {
-    "start": "serve -s ./build",
-    "serve-webapp": "craco build && craco start",
-    "dev": "DISABLE_ESLINT_PLUGIN=true craco start",
-    "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
+    "build": "rm -rf ./lib && tsc",
     "eject": "react-scripts eject",
     "precommit": "lint-staged --allow-empty",
     "storybook": "storybook dev -p 6006",
@@ -43,6 +40,7 @@
     "@radix-ui/react-tooltip": "^1.1.5",
     "@react-pdf/renderer": "^4.1.4",
     "@storybook/addon-styling-webpack": "^1.0.1",
+    "@techabl/core-utils": "^0.0.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
