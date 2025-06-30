@@ -1,0 +1,3 @@
+[submodule "src/core-utils"]
+	path = src/core-utils
+	url = https://github.com/appasaheb4/techabl-utility.git
