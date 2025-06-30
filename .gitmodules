@@ -1,3 +1,9 @@
 [submodule "src/core-utils"]
 	path = src/core-utils
-	url = https://github.com/appasaheb4/techabl-utility.git
+	url = https://github.com/appasaheb4/techabl-core-utils.git
+[submodule "src/core-components"]
+	path = src/core-components
+	url = https://github.com/appasaheb4/techabl-core-components.git
+[submodule "src/core-hooks"]
+	path = src/core-hooks
+	url = https://github.com/appasaheb4/techabl-core-hooks.git
