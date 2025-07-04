@@ -1,9 +1,11 @@
 import type {Preview, ReactRenderer} from '@storybook/react';
 import {withThemeByClassName} from '@storybook/addon-themes';
-import '../src/index.css';
 import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import '../storybook-css.css';
-import '../src/tc.module.css';
+// import '../src/tc.module.css';
+// import '../src/index.css';
+import '../src/core-components/src/tc.module.css';
+import '../src/core-components/src/index.css';
 
 const preview: Preview = {
   parameters: {

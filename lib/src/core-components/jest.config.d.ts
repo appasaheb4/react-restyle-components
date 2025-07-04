@@ -1,11 +1,11 @@
 declare const _default: {
-    present: string;
+    preset: string;
     testEnvironment: string;
     transform: {
         '^.+\\.tsx?$': string;
     };
     moduleNameMapper: {
-        '\\.(css|sass)$': string;
+        '\\.(css|scss|sass|less|style|svg)$': string;
     };
 };
 export default _default;
