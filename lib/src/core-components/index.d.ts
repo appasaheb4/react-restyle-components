@@ -5,7 +5,6 @@ export * from './src/atoms/check-box/checkBox.component';
 export * from './src/atoms/date-picker/date-picker.component';
 export * from './src/atoms/input/input-otp.component';
 export * from './src/atoms/input/input-pin.component';
-export * from './src/atoms/input/input.component';
 export * from './src/atoms/input-dropdown/input-dropdown.component';
 export * from './src/atoms/loader/loader.component';
 export * from './src/atoms/radio/radio.component';

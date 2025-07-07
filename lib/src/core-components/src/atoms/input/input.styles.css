@@ -11,7 +11,7 @@ input:not(:placeholder-shown) ~ label,
 textarea:focus ~ label,
 textarea:not(:placeholder-shown) ~ label,
 select:focus ~ label,
-select:not([value=""]):valid ~ label {
+select:not([value='']):valid ~ label {
   /* @apply transform; scale-75; -translate-y-6; */
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -30,6 +30,6 @@ input:focus ~ label,
 select:focus ~ label {
   /* @apply text-black; left-0; */
   --tw-text-opacity: 1;
-  color: "#696969";
+  color: '#696969';
   left: 0px;
 }

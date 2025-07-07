@@ -1,4 +1,5 @@
 import React from 'react';
+import './toggle.css';
 interface LabelProps {
     htmlFor: string;
     hasError?: boolean;
