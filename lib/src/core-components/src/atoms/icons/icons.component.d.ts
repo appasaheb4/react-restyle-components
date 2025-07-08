@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { IconBaseProps } from 'react-icons/lib';
 interface IconProps {
     nameIcon: string;
