@@ -20,11 +20,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "sourceMap": false,
-    "types": [
-      "vite/client",
-      "vite-plugin-svgr/client",
-      "vitest-dom/extend-expect"
-    ]
+   "types": [ "jest", "node"],
   },
   "include": ["index.ts", "src/**/*"],
   "exclude": [
