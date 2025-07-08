@@ -28,7 +28,7 @@
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "go": "npm run build && npm publish",
     "local": "yarn add file:/Users/appasaheb4/Documents/project/npm/react-restyle-components/lib",
-    "test": "vitest",
+    "test:unit": "yarn jest",
     "test:ui": "vitest --ui --coverage",
     "coverage": "vitest run --coverage"
   },
