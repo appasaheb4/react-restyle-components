@@ -1,6 +1,6 @@
 {
   "name": "react-restyle-components",
-  "version": "0.3.8",
+  "version": "0.3.13",
   "private": false,
   "description": "Easy use restyle components",
   "author": {
@@ -33,6 +33,9 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@loadable/component": "^5.16.4",
