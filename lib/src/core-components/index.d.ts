@@ -32,5 +32,6 @@ export * from './src/molecules/color-picker-modal/color-picker-modal.component';
 export * from './src/molecules/auto-complete-filter-single-select/auto-complete-filter-single-select.component';
 export * from './src/molecules/auto-complete-filter-multi-select-selected-top-display/auto-complete-filter-multi-select-selected-top-display.component';
 export * from './src/molecules/auto-complete-filter-multi-select-multi-fields-display-drag-drop/auto-complete-filter-multi-select-multi-fields-display-drag-drop.component';
+export * from './src/molecules/single-select/single-select.component';
 export { Form };
 //# sourceMappingURL=index.d.ts.map
