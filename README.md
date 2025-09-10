@@ -26,7 +26,6 @@ yarn add react-restyle-components
 
 https://appasaheb4.github.io/react-restyle-components
 
-
 ### Built With
 
 - [ReactJS](https://reactjs.org/)
@@ -47,8 +46,8 @@ Website: www.tech-abl.com
     ### How To Contribute
         - Fork and clone this repository
         - Make some changes as required
-        - Write unit test to showcase its functionality
-        - Run the test suites to make sure it's not breaking anything `$ npm test`
+        <!-- - Write unit test to showcase its functionality
+        - Run the test suites to make sure it's not breaking anything `$ npm run test` -->
         - Submit a pull request under `master` branch
 
 😊 ALWAYS WELCOME 😊
