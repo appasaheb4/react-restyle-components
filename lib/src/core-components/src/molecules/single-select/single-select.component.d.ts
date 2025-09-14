@@ -2,6 +2,7 @@ import React from 'react';
 interface SingleSelectProps {
     options: Array<any>;
     displayKey?: string;
+    value?: string;
     hasError?: boolean;
     className?: string;
     style?: React.CSSProperties;
