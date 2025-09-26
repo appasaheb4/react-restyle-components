@@ -15,7 +15,7 @@ export interface AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayPro
         totalItemName: string;
     };
     onFilter?: (value: string) => void;
-    onUpdate: (item: any) => void;
+    onUpdate?: (item: any) => void;
     onSelect: (item: any) => any;
     onBlur?: (e: any) => void;
 }
