@@ -7,11 +7,12 @@ export interface AutoCompleteFilterMultiSelectSelectedTopDisplayProps {
     disable?: boolean;
     isUpperCase?: boolean;
     name?: string;
+    showSelectAllSection?: boolean;
     onFilter?: (value: string) => void;
-    onUpdate: (item: any) => void;
-    onSelect: (item: any, isSelectedRemove?: boolean) => any;
+    onUpdate: (items: Array<any>) => void;
+    onSelect: (items: any) => void;
     onBlur?: (e: any) => void;
     dynamicCheck?: string;
 }
-export declare const AutoCompleteFilterMultiSelectSelectedTopDisplay: ({ uniqueField, placeholder, data, hasError, disable, isUpperCase, name, onFilter, onUpdate, onSelect, onBlur, dynamicCheck, }: AutoCompleteFilterMultiSelectSelectedTopDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterMultiSelectSelectedTopDisplay: ({ uniqueField, loader, placeholder, data, hasError, disable, isUpperCase, name, showSelectAllSection, onFilter, onUpdate, onSelect, onBlur, dynamicCheck, }: AutoCompleteFilterMultiSelectSelectedTopDisplayProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=auto-complete-filter-multi-select-selected-top-display.component.d.ts.map
