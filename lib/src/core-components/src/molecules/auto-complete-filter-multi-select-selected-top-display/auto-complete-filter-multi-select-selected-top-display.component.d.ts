@@ -9,7 +9,7 @@ export interface AutoCompleteFilterMultiSelectSelectedTopDisplayProps {
     name?: string;
     showSelectAllSection?: boolean;
     onFilter?: (value: string) => void;
-    onUpdate: (items: Array<any>) => void;
+    onUpdate?: (items: Array<any>) => void;
     onSelect: (items: any) => void;
     onBlur?: (e: any) => void;
     dynamicCheck?: string;
