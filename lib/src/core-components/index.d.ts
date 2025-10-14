@@ -18,6 +18,7 @@ export * from './src/atoms/pdf/pdf-table.components';
 export * from './src/atoms/pdf/pdf-typography.components';
 export * from './src/atoms/pdf/pdf-wrapped-view.components';
 export * from './src/atoms/collapsible/collapsible.component';
+export * from './src/atoms/text-input-dropdown/text-input-dropdown.component';
 export * from './src/molecules/css-multiline-input/css-multiline-input.component';
 export * from './src/molecules/auto-complete-filter-multiple-select-multiple-fields-display/auto-complete-filter-multiple-select-multiple-fields-display.component';
 export * from './src/molecules/auto-complete-filter-single-select-multiple-fields-display/auto-complete-filter-single-select-multiple-fields-display.component';
