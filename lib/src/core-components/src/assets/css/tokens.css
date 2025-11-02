@@ -1,4 +1,4 @@
-:root {
+._ :global(:root) {
   --border-radius-100: 0.5rem;
   --border-radius-200: 1rem;
   --border-radius-300: 1.5rem;
@@ -138,8 +138,7 @@
   --gradient-light-stop-1: #370f5b;
   --gradient-light-stop-2: #001a42;
 }
-
-:root,
+._ :global(:root),
 .theme-light {
   --brand-white: #ffffff;
   --brand-black: #0c0e11;
@@ -393,7 +392,7 @@
 }
 
 /* Component-specific tokens */
-:root,
+._ :global(:root),
 .theme-dark,
 .theme-light,
 .partner-dark,
