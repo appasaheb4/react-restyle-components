@@ -17,8 +17,7 @@
   table tr:hover {
     @apply dark:bg-white;
   }
-
-  select {
+._ :global(select) {
     @apply dark:text-black;
   }
   .main {
@@ -31,8 +30,7 @@
     @apply dark:bg-boxdark;
   }
 }
-
-body {
+._ :global(body) {
   font-size: 14px;
   font-family: 'Arima Regular';
 }

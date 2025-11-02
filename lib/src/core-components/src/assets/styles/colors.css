@@ -1,11 +1,11 @@
-html.theme--dark {
+._ :global(html).theme--dark {
   color-scheme: dark;
 }
-html.theme--light {
+._ :global(html).theme--light {
   color-scheme: light;
 }
 
-:root {
+._ :global(:root) {
   --B25: #ebf3ff;
   --B50: #dbeaff;
   --B100: #b2d2ff;
