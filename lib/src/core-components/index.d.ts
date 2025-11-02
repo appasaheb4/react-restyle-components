@@ -1,3 +1,4 @@
+export * from './src/components/';
 import * as Form from './src/components/Form/form.component';
 export * from './src/components/button/button.component';
 export * from './src/components/button/buttonGroup/buttonGroup.component';
