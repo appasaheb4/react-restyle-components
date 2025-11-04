@@ -1,0 +1,1 @@
+git submodule update --remote --merge && yarn version --patch && yarn build && yarn build-storybook && yarn deploy-storybook && npm publish
