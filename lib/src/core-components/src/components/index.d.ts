@@ -1,4 +1,3 @@
-import * as Form from './Form/form.component';
 export * from './Accordion/AccordionSection';
 export * from './Loader/loader.component';
 export * from './Tabs/tabs.component';
@@ -6,9 +5,9 @@ export * from './tooltip/tooltip.component';
 export * from './Avatar/Avatar';
 export * from './Badge/Badge';
 export * from './FormField/FormField';
+export * from './FormField/components';
 export * from '../core-components/atoms/Input/Input';
 export * from '../core-components/atoms/Textarea/Textarea';
 export * from '../core-components/atoms/Label/Label';
 export * from './Icon';
-export { Form };
 //# sourceMappingURL=index.d.ts.map
