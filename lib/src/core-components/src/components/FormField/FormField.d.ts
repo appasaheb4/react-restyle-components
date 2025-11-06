@@ -2,7 +2,10 @@ import React from 'react';
 import { InputProps } from '../../core-components/atoms/Input/Input';
 import { TextareaProps } from '../../core-components/atoms/Textarea/Textarea';
 import { LabelProps } from '../../core-components/atoms/Label/Label';
+import { type RadioOption, type CheckboxOption } from './components';
 export type { InputProps, TextareaProps, LabelProps };
+export type { RadioOption, CheckboxOption } from './components';
+export { PasswordInput, ToggleInput, RadioInput, CheckboxInput, CheckboxGroupInput, DatePickerInput, DropdownInput, TextDropdownInput, PinInput, OtpInput, CssMultilineInput, } from './components';
 interface BaseFormFieldProps {
     /** Label text displayed above the input */
     label?: string;
@@ -14,13 +17,45 @@ interface BaseFormFieldProps {
     id?: string;
     /** Whether the field is required */
     required?: boolean;
-    /** Input type - use 'textarea' to render a Textarea component */
-    type?: React.InputHTMLAttributes<HTMLInputElement>['type'] | 'textarea';
+    /** Input type - use 'textarea', 'toggle', 'radio', 'checkbox', 'checkbox-group', 'date-picker', 'input-dropdown', 'text-input-dropdown', 'input-pin', 'input-otp', or 'css-multiline' for special types */
+    type?: React.InputHTMLAttributes<HTMLInputElement>['type'] | 'textarea' | 'toggle' | 'radio' | 'checkbox' | 'checkbox-group' | 'date-picker' | 'input-dropdown' | 'text-input-dropdown' | 'input-pin' | 'input-otp' | 'css-multiline';
+    /** Show password toggle button (only for type="password") */
+    showPasswordToggle?: boolean;
+    /** Radio options (only for type="radio") */
+    radioOptions?: RadioOption[];
+    /** Checkbox label (only for type="checkbox") */
+    checkboxLabel?: string;
+    /** Checkbox group options (only for type="checkbox-group") */
+    checkboxOptions?: CheckboxOption[];
+    /** Toggle label visibility (only for type="toggle") */
+    isToggleLabel?: boolean;
+    /** Date format (only for type="date-picker") */
+    dateFormat?: string;
+    /** Dropdown items (only for type="input-dropdown" or "text-input-dropdown") */
+    dropdownItems?: string[];
+    /** Allow custom input values (only for type="text-input-dropdown", default: true) */
+    allowCustomInput?: boolean;
+    /** PIN length (only for type="input-pin", default: 12) */
+    pinLength?: number;
+    /** OTP length (only for type="input-otp", default: 6) */
+    otpLength?: number;
+    /** PIN/OTP value array (only for type="input-pin" or "input-otp") */
+    pinValue?: Array<number | undefined>;
+    /** Error message for PIN/OTP (only for type="input-pin" or "input-otp") */
+    pinErrorMsg?: string;
+    /** Default message for PIN/OTP (only for type="input-pin" or "input-otp") */
+    pinDefaultMsg?: string;
+    /** CSS properties data (only for type="css-multiline") */
+    cssProperties?: Array<[string, string[]]>;
+    /** On reset callback (only for type="css-multiline") */
+    onReset?: (value: string) => void;
+    /** On more info callback (only for type="css-multiline") */
+    onMoreInfo?: () => void;
 }
 type HTMLFieldAttributes = React.InputHTMLAttributes<HTMLInputElement> | React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 type SafeHTMLAttributes = Pick<HTMLFieldAttributes, 'name' | 'placeholder' | 'value' | 'defaultValue' | 'disabled' | 'readOnly' | 'autoFocus' | 'autoComplete' | 'className' | 'style' | 'maxLength' | 'minLength' | 'tabIndex' | 'aria-label' | 'aria-describedby' | 'aria-invalid' | 'aria-required'>;
 type FieldEventHandlers = {
-    onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | string | boolean) => void;
     onFocus?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     onBlur?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;

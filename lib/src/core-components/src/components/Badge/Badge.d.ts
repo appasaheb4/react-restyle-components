@@ -7,6 +7,8 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
 } & {
     Inline: React.MemoExoticComponent<React.ForwardRefExoticComponent<{
         children?: React.ReactNode;
+        content?: string | undefined;
+        className?: string | undefined;
         slot?: string | undefined;
         style?: React.CSSProperties | undefined;
         title?: string | undefined;
@@ -17,7 +19,6 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         accessKey?: string | undefined;
         autoCapitalize?: "none" | (string & {}) | "off" | "on" | "sentences" | "words" | "characters" | undefined;
         autoFocus?: boolean | undefined;
-        className?: string | undefined;
         contentEditable?: "inherit" | (boolean | "true" | "false") | "plaintext-only" | undefined;
         contextMenu?: string | undefined;
         dir?: string | undefined;
@@ -33,7 +34,6 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         radioGroup?: string | undefined;
         role?: React.AriaRole | undefined;
         about?: string | undefined;
-        content?: string | undefined;
         datatype?: string | undefined;
         inlist?: any;
         prefix?: string | undefined;
@@ -54,11 +54,11 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         results?: number | undefined;
         security?: string | undefined;
         unselectable?: "off" | "on" | undefined;
-        inputMode?: "none" | "search" | "text" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
+        inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
         is?: string | undefined;
         "aria-activedescendant"?: string | undefined;
         "aria-atomic"?: (boolean | "true" | "false") | undefined;
-        "aria-autocomplete"?: "both" | "none" | "list" | "inline" | undefined;
+        "aria-autocomplete"?: "inline" | "both" | "none" | "list" | undefined;
         "aria-braillelabel"?: string | undefined;
         "aria-brailleroledescription"?: string | undefined;
         "aria-busy"?: (boolean | "true" | "false") | undefined;
@@ -73,7 +73,7 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         "aria-description"?: string | undefined;
         "aria-details"?: string | undefined;
         "aria-disabled"?: (boolean | "true" | "false") | undefined;
-        "aria-dropeffect"?: "none" | "link" | "copy" | "execute" | "move" | "popup" | undefined;
+        "aria-dropeffect"?: "link" | "none" | "copy" | "execute" | "move" | "popup" | undefined;
         "aria-errormessage"?: string | undefined;
         "aria-expanded"?: (boolean | "true" | "false") | undefined;
         "aria-flowto"?: string | undefined;

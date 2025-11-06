@@ -11,12 +11,12 @@ export type CoreButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     options?: ButtonOptions;
 };
 export declare const CoreButton: React.ForwardRefExoticComponent<React.ButtonHTMLAttributes<HTMLButtonElement> & {
-    variant?: "outline" | "flat" | "default" | "text" | undefined;
+    variant?: "text" | "outline" | "flat" | "default" | undefined;
     color?: "white" | "primary" | "secondary" | undefined;
     ariaLabel?: string | undefined;
     size?: "small" | "medium" | "large" | undefined;
     hasChildren?: boolean | undefined;
-    iconSide?: "left" | "right" | undefined;
+    iconSide?: "right" | "left" | undefined;
     hasIcon?: boolean | undefined;
     options?: ButtonOptions | undefined;
 } & React.RefAttributes<HTMLButtonElement>>;
