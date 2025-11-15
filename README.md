@@ -50,8 +50,6 @@ Website: www.tech-abl.com
         - Run the test suites to make sure it's not breaking anything `$ npm run test` -->
         - Submit a pull request under `master` branch
 
-😊 ALWAYS WELCOME 😊
-
 ## 💝 Support & Donations
 
 If you find this project helpful and would like to support its development, your contributions are greatly appreciated!
@@ -72,7 +70,7 @@ You can support this project by making a donation through UPI:
 <!-- Add your UPI QR code image here -->
 <!-- Example: ![UPI QR Code](./assets/upi-qr-code.png) -->
 
-![UPI QR Code](./upi-qr-code.png)
+<img src="./upi-qr-code.png" alt="UPI QR Code" width="200" height="200" style="display: block; margin: 0 auto;" />
 
 _Scan the QR code above or use the UPI ID to make a donation. Every contribution, no matter how small, makes a difference!_
 
