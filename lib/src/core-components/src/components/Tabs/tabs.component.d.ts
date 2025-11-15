@@ -11,7 +11,7 @@ export interface TabsProps {
         inActive?: boolean;
     }>;
     onSelect?: (item: any, index: number) => void;
-    children: React.JSX.Element[];
+    children: React.ReactNode;
 }
 export declare const Tabs: ({ options, onSelect, children }: TabsProps) => import("react/jsx-runtime").JSX.Element;
 export {};

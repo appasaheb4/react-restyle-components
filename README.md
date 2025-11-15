@@ -51,3 +51,29 @@ Website: www.tech-abl.com
         - Submit a pull request under `master` branch
 
 😊 ALWAYS WELCOME 😊
+
+## 💝 Support & Donations
+
+If you find this project helpful and would like to support its development, your contributions are greatly appreciated!
+
+Your support helps us:
+
+- 🚀 Continue developing and maintaining this project
+- 🐛 Fix bugs and improve performance
+- ✨ Add new features and components
+- 📚 Create better documentation and tutorials
+
+### Donate via UPI
+
+You can support this project by making a donation through UPI:
+
+**UPI ID:** `onlyappasaheb4@oksbi`
+
+<!-- Add your UPI QR code image here -->
+<!-- Example: ![UPI QR Code](./assets/upi-qr-code.png) -->
+
+![UPI QR Code](./upi-qr-code.png)
+
+_Scan the QR code above or use the UPI ID to make a donation. Every contribution, no matter how small, makes a difference!_
+
+Thank you for your support! 🙏
