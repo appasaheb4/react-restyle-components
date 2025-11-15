@@ -67,10 +67,11 @@ You can support this project by making a donation through UPI:
 
 **UPI ID:** `onlyappasaheb4@oksbi`
 
-<!-- Add your UPI QR code image here -->
-<!-- Example: ![UPI QR Code](./assets/upi-qr-code.png) -->
+<div align="center">
 
-<img src="./upi-qr-code.png" alt="UPI QR Code" width="200" height="200" style="display: block; margin: 0 auto;" />
+<img src="./upi-qr-code.png" alt="UPI QR Code" width="250" height="250" style="border: 2px solid #e1e4e8; border-radius: 12px; padding: 10px; background: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+
+</div>
 
 _Scan the QR code above or use the UPI ID to make a donation. Every contribution, no matter how small, makes a difference!_
 
