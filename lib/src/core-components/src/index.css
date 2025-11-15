@@ -1,4 +1,3 @@
-@import './assets/css/tokens.css';
 /* Import global CSS variables first (colors, theme) */
 @import './tc.global.css';
 @tailwind base;

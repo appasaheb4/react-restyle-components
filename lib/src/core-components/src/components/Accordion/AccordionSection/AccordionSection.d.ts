@@ -2,6 +2,8 @@ import React from 'react';
 import { IconProps } from '../../Icon';
 export type AccordionSectionProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     buttonClassName?: string;
+    headerClassName?: string;
+    subheaderClassName?: string;
     iconWrapperClassName?: string;
     /** @deprecated use `aria-label` instead */
     ariaLabel?: string;
@@ -20,6 +22,8 @@ export type AccordionSectionProps = React.ButtonHTMLAttributes<HTMLButtonElement
 };
 export declare const AccordionSection: React.ForwardRefExoticComponent<React.ButtonHTMLAttributes<HTMLButtonElement> & {
     buttonClassName?: string | undefined;
+    headerClassName?: string | undefined;
+    subheaderClassName?: string | undefined;
     iconWrapperClassName?: string | undefined;
     /** @deprecated use `aria-label` instead */
     ariaLabel?: string | undefined;
