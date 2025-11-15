@@ -39,17 +39,6 @@ Github: www.github.com/appasaheb4 <br />
 Website: www.tech-abl.com
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
 
-## Contributes / Support
-
-1.  More content here : https://www.youtube.com/@techabl
-2.  Submit your pr for idea / issue / feature
-    ### How To Contribute
-        - Fork and clone this repository
-        - Make some changes as required
-        <!-- - Write unit test to showcase its functionality
-        - Run the test suites to make sure it's not breaking anything `$ npm run test` -->
-        - Submit a pull request under `master` branch
-
 ## 💝 Support & Donations
 
 If you find this project helpful and would like to support its development, your contributions are greatly appreciated!
@@ -64,8 +53,6 @@ Your support helps us:
 ### Donate via UPI
 
 You can support this project by making a donation through UPI:
-
-**UPI ID:** `onlyappasaheb4@oksbi`
 
 <div align="center">
 
