@@ -7,7 +7,10 @@ export declare const AccordionSectionWrapper: import("styled-components/dist/typ
     $variant: AccordionVariant | 'inline' | 'full-page';
     $isOpen: boolean;
 }>> & string;
-export declare const ButtonElement: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, never>> & string;
+export declare const ButtonElement: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, {
+    $variant?: AccordionVariant | "inline" | "full-page" | undefined;
+    $isOpen?: boolean | undefined;
+}>> & string;
 export declare const AccordionSectionText: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
 type AccordionSectionContentProps = {
     $isOpen: boolean;
