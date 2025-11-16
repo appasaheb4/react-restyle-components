@@ -1,6 +1,6 @@
 import React from 'react';
-import { IconSize } from '../../components/Icon/iconTypes';
-import { TagSize } from '../../components/Tags/types';
+import { IconSize } from '../../components/Icon/types';
+import { TagSize } from '../../components/Tags1/types';
 import { ActionSize } from '../../components/Action/types';
 export type DefaultsContextType = {
     actionSize?: ActionSize;
