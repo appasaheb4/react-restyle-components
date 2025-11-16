@@ -1,7 +1,7 @@
 import React from 'react';
 import { PropsWithChildren } from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
-import { TooltipProps } from './Tooltip.types';
+import { TooltipProps } from './types';
 /**
  *  The `Tooltip` must be nested somewhere inside the `TooltipProvider` in the component tree.
  */
