@@ -11,14 +11,15 @@ configureSort({
     techABL: {
       '*': {
         status: null,
-        docs: null,
+        Documentation: null,
         'basic usage': null,
       },
     },
     '**': {
       status: null,
-      docs: null,
+      Documentation: null,
       'basic usage': null,
+      Basic: null,
     },
   },
   typeOrder: [],

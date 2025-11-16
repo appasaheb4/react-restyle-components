@@ -10,8 +10,25 @@ import '../src/core-components/src/index.css';
 const preview: Preview = {
   parameters: {
     options: {
-      storySort: (story1, story2) =>
-        globalThis['storybook-multilevel-sort:storySort'](story1, story2),
+      storySort: (story1, story2) => {
+        // Prioritize Documentation story to appear first
+        const name1 = story1.name.toLowerCase();
+        const name2 = story2.name.toLowerCase();
+
+        // If one is Documentation, it comes first
+        if (name1 === 'documentation' && name2 !== 'documentation') {
+          return -1;
+        }
+        if (name2 === 'documentation' && name1 !== 'documentation') {
+          return 1;
+        }
+
+        // Otherwise use the multilevel sort
+        return globalThis['storybook-multilevel-sort:storySort'](
+          story1,
+          story2
+        );
+      },
     },
     // actions: {argTypesRegex: '^on[A-Z].*'},
     controls: {
