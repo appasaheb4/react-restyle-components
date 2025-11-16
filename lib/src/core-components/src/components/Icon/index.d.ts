@@ -1,3 +1,3 @@
 export * from './Icon';
-export * from './iconTypes';
+export * from './types';
 //# sourceMappingURL=index.d.ts.map
