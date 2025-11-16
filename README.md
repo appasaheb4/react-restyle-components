@@ -56,7 +56,7 @@ You can support this project by making a donation through UPI:
 
 <div align="center">
 
-<img src="./upi-qr-code.png" alt="UPI QR Code" width="250" height="250" style="border: 2px solid #e1e4e8; border-radius: 12px; padding: 10px; background: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
+<img src="./upi-qr-code.png" alt="UPI QR Code" width="240" height="260" style="border: 2px solid #e1e4e8; border-radius: 12px; padding: 10px; background: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" />
 
 </div>
 
