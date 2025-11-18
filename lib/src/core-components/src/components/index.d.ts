@@ -14,5 +14,5 @@ export * from './Stepper2/stepper.component';
 export * from './Tabs/tabs.component';
 export * from './Tags1/Tags.component';
 export * from './Timer1/timer.component';
-export * from './Tooltip1/tooltip.component';
+export * from './Tooltip/tooltip.component';
 //# sourceMappingURL=index.d.ts.map
