@@ -1,24 +1,44 @@
 import React from 'react';
 import { InputProps } from '../../core-components/atoms/Input/Input';
 import { TextareaProps } from '../../core-components/atoms/Textarea/Textarea';
-import { LabelProps } from '../../core-components/atoms/Label/Label';
+import { LabelProps as ImportedLabelProps } from '../../core-components/atoms/Label/Label';
 import { type RadioOption, type CheckboxOption } from './components';
-export type { InputProps, TextareaProps, LabelProps };
+export type { InputProps, TextareaProps, LabelProps as ImportedLabelProps };
 export type { RadioOption, CheckboxOption } from './components';
+export type { LabelProps, InputWrapperProps };
 export { PasswordInput, ToggleInput, RadioInput, CheckboxInput, CheckboxGroupInput, DatePickerInput, DropdownInput, TextDropdownInput, PinInput, OtpInput, CssMultilineInput, } from './components';
+interface LabelProps {
+    htmlFor: string;
+    hasError?: boolean;
+    style?: any;
+    children?: React.ReactNode;
+}
+export declare const Label: React.FunctionComponent<LabelProps>;
+interface InputWrapperProps {
+    id?: string;
+    label?: string;
+    className?: string;
+    hasError?: boolean;
+    style?: any;
+    ref?: any;
+    children?: React.ReactNode;
+}
+export declare const InputWrapper: React.FunctionComponent<InputWrapperProps>;
 interface BaseFormFieldProps {
     /** Label text displayed above the input */
     label?: string;
     /** Error message displayed below the input */
     error?: string;
+    /** Whether the field has an error (shows error styling even without error message) */
+    hasError?: boolean;
     /** Additional props for the Label component */
-    labelProps?: Omit<LabelProps, 'htmlFor' | 'required' | 'children'>;
+    labelProps?: Omit<ImportedLabelProps, 'htmlFor' | 'required' | 'children'>;
     /** Unique identifier for the field */
     id?: string;
     /** Whether the field is required */
     required?: boolean;
-    /** Input type - use 'textarea', 'toggle', 'radio', 'checkbox', 'checkbox-group', 'date-picker', 'input-dropdown', 'text-input-dropdown', 'input-pin', 'input-otp', or 'css-multiline' for special types */
-    type?: React.InputHTMLAttributes<HTMLInputElement>['type'] | 'textarea' | 'toggle' | 'radio' | 'checkbox' | 'checkbox-group' | 'date-picker' | 'input-dropdown' | 'text-input-dropdown' | 'input-pin' | 'input-otp' | 'css-multiline';
+    /** Input type - use 'textarea', 'toggle', 'radio', 'checkbox', 'checkbox-group', 'date-picker', 'input-dropdown', 'text-input-dropdown', 'input-pin', 'input-otp', 'css-multiline', or 'input-wrapper' for special types */
+    type?: React.InputHTMLAttributes<HTMLInputElement>['type'] | 'textarea' | 'toggle' | 'radio' | 'checkbox' | 'checkbox-group' | 'date-picker' | 'input-dropdown' | 'text-input-dropdown' | 'input-pin' | 'input-otp' | 'css-multiline' | 'input-wrapper';
     /** Show password toggle button (only for type="password") */
     showPasswordToggle?: boolean;
     /** Radio options (only for type="radio") */
