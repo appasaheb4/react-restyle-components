@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconProps } from '../../Icon';
+import { IconProps } from '../../Icon/Icon';
 export type AccordionSectionProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     buttonClassName?: string;
     headerClassName?: string;

@@ -1,5 +1,4 @@
 import React from 'react';
-import 'react-datepicker/dist/react-datepicker.css';
 export interface DatePickerInputProps {
     id: string;
     label?: string;

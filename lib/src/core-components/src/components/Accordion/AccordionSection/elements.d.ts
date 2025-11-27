@@ -34,8 +34,8 @@ export declare const StyledLeadingTrailing: import("styled-components/dist/types
 export declare const AccordionDivider: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<Omit<import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLHRElement>, HTMLHRElement>, never>, "ref"> & {
     ref?: ((instance: HTMLHRElement | null) => void) | import("react").RefObject<HTMLHRElement> | null | undefined;
 }, never>> & string;
-export declare const RotatingIcon: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("../../Icon").IconProps, {
+export declare const RotatingIcon: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("../../Icon/Icon").IconProps, {
     $rotateIcon: boolean;
-}>> & string & Omit<({ nameIcon, ...props }: import("../../Icon").IconProps) => JSX.Element, keyof import("react").Component<any, {}, any>>;
+}>> & string & Omit<({ nameIcon, ...props }: import("../../Icon/Icon").IconProps) => JSX.Element, keyof import("react").Component<any, {}, any>>;
 export {};
 //# sourceMappingURL=elements.d.ts.map

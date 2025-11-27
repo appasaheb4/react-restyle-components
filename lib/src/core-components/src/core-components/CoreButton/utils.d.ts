@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonSize } from './types';
-import { IconProps } from '../../components';
+import { IconProps } from '../../components/Icon/Icon';
 export type addIconToChildrenProps = {
     children: React.ReactNode;
     size: ButtonSize;
