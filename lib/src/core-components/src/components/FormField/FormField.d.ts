@@ -75,9 +75,15 @@ interface BaseFormFieldProps {
 type HTMLFieldAttributes = React.InputHTMLAttributes<HTMLInputElement> | React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 type SafeHTMLAttributes = Pick<HTMLFieldAttributes, 'name' | 'placeholder' | 'value' | 'defaultValue' | 'disabled' | 'readOnly' | 'autoFocus' | 'autoComplete' | 'className' | 'style' | 'maxLength' | 'minLength' | 'tabIndex' | 'aria-label' | 'aria-describedby' | 'aria-invalid' | 'aria-required'>;
 type FieldEventHandlers = {
+    /** onChange handler - receives the event object (standard React pattern) */
     onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | string | boolean) => void;
+    /** onValueChange - receives just the string value (cleaner alternative to onChange for text inputs) */
+    onValueChange?: (value: string) => void;
     onFocus?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    /** onBlur handler - receives the event object (standard React pattern) */
     onBlur?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    /** onBlurValue - receives just the string value (cleaner alternative to onBlur for text inputs) */
+    onBlurValue?: (value: string) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
