@@ -1,0 +1,417 @@
+import {Meta} from '@storybook/blocks';
+import {Button} from '../../src/core-components/src/components/Button1/button.component';
+import {Badge} from '../../src/core-components/src/components/Badge/Badge';
+import {Icon} from '../../src/core-components/src/components/Icon/Icon';
+
+<Meta
+  title="Welcome"
+  parameters={{
+    previewTabs: {
+      canvas: {hidden: true},
+    },
+    supportsTheming: true,
+  }}
+/>
+
+<style>
+  {`
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .welcome-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .welcome-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 8px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .nav-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .nav-card:hover::before {
+    opacity: 1;
+  }
+
+  .nav-card:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+
+  .badge-item {
+    transition: transform 0.2s;
+  }
+
+  .badge-item:hover {
+    transform: scale(1.03);
+  }
+`}
+</style>
+
+<div className="sb-unstyled">
+  <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+      
+      {/* Hero Section */}
+      <div className="text-center mb-6 sm:mb-8 lg:mb-10 fade-in-up">
+        <div className="inline-block mb-4 sm:mb-5">
+          <div className="relative">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
+                React Restyle  Components
+              </span>
+            </h1>
+          </div>
+        </div>
+        
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-5 max-w-3xl mx-auto leading-relaxed px-4">
+          Modern, customizable, and production-ready React component library
+        </p>
+          <br/>
+        <div className="flex flex-wrap justify-center items-center gap-2 mb-4 sm:mb-5 px-4">
+          <img src="https://img.shields.io/npm/v/react-restyle-components.svg?style=flat-square&logo=npm" alt="NPM version" className="h-5" />
+          <img src="https://img.shields.io/npm/dm/react-restyle-components.svg?style=flat-square&logo=npm" alt="Downloads" className="h-5" />
+          <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" className="h-5" />
+          <img src="https://img.shields.io/npm/l/react-restyle-components.svg?style=flat-square" alt="License" className="h-5" />
+        </div>
+        <br/>
+
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center px-4">
+          <a
+            href="https://github.com/appasaheb4/react-restyle-components"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline"
+          >
+            <Button
+              variant="outline"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-base"
+              onClick={() => window.open('https://github.com/appasaheb4/react-restyle-components', '_blank')}
+            >
+              <span>⭐</span>
+              <span>View on GitHub</span>
+            </Button>
+          </a>
+        </div>
+      </div>
+
+{' '}
+
+<br />
+{/* Installation */}
+<div className="max-w-4xl mx-auto mb-6 sm:mb-8 lg:mb-10">
+  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3">
+      <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+        <span>🚀</span>
+        <span>Quick Installation</span>
+      </h2>
+    </div>
+    <div className="p-4 sm:p-5 space-y-3">
+      <div className="group">
+        <div className="flex items-center justify-between mb-1.5">
+          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+            npm
+          </span>
+        </div>
+        <div className="bg-gray-900 rounded-lg p-3 overflow-x-auto">
+          <code className="text-green-400 text-sm sm:text-base font-mono">
+            npm install react-restyle-components
+          </code>
+        </div>
+      </div>
+      <div className="group">
+        <div className="flex items-center justify-between mb-1.5">
+          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+            yarn
+          </span>
+        </div>
+        <div className="bg-gray-900 rounded-lg p-3 overflow-x-auto">
+          <code className="text-green-400 text-sm sm:text-base font-mono">
+            yarn add react-restyle-components
+          </code>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+{/* Features */}
+<div className="mb-6 sm:mb-8 lg:mb-10">
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
+    ✨ Why Choose Us?
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
+    {[
+      {
+        icon: '🎨',
+        title: 'Fully Customizable',
+        desc: 'Tailwind CSS & styled-components integration',
+      },
+      {
+        icon: '📦',
+        title: 'Rich Components',
+        desc: '50+ production-ready components',
+      },
+      {
+        icon: '🌓',
+        title: 'Dark Mode',
+        desc: 'Built-in theme switching support',
+      },
+      {icon: '📱', title: 'Responsive', desc: 'Mobile-first design approach'},
+      {
+        icon: '🔧',
+        title: 'TypeScript',
+        desc: 'Fully typed with TS definitions',
+      },
+      {
+        icon: '⚡',
+        title: 'Optimized',
+        desc: 'Tree-shakable & performance focused',
+      },
+    ].map((feature, idx) => (
+      <div
+        key={idx}
+        className="welcome-card bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-5 shadow-lg border border-gray-200 dark:border-gray-700"
+      >
+        <div className="text-2xl sm:text-3xl mb-2">{feature.icon}</div>
+        <h3 className="text-base sm:text-lg font-bold mb-1.5 text-gray-900 dark:text-white">
+          {feature.title}
+        </h3>
+        <p className="text-sm text-gray-600 dark:text-gray-300">
+          {feature.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+
+{' '}
+
+<br />
+{/* Navigation */}
+<div className="mb-6 sm:mb-8 lg:mb-10">
+  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
+    📚 Explore Documentation
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+    <a
+      href="?path=/docs/introduction--docs"
+      className="nav-card block bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-4 sm:p-5 shadow-xl text-white no-underline"
+    >
+      <div className="text-3xl mb-2">🚀</div>
+      <h3 className="text-lg sm:text-xl font-bold mb-2">Getting Started</h3>
+      <p className="text-blue-100 text-sm opacity-90">
+        Quick setup guide and installation instructions
+      </p>
+    </a>
+    <a
+      href="?path=/docs/foundations--docs"
+      className="nav-card block bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-4 sm:p-5 shadow-xl text-white no-underline"
+    >
+      <div className="text-3xl mb-2">🎨</div>
+      <h3 className="text-lg sm:text-xl font-bold mb-2">Foundations</h3>
+      <p className="text-purple-100 text-sm opacity-90">
+        Colors, typography, spacing, and design tokens
+      </p>
+    </a>
+    <a
+      href="?path=/docs/components--docs"
+      className="nav-card block bg-gradient-to-br from-green-500 to-green-700 rounded-2xl p-4 sm:p-5 shadow-xl text-white no-underline"
+    >
+      <div className="text-3xl mb-2">🧩</div>
+      <h3 className="text-lg sm:text-xl font-bold mb-2">Components</h3>
+      <p className="text-green-100 text-sm opacity-90">
+        Comprehensive component library with examples
+      </p>
+    </a>
+  </div>
+</div>
+
+{' '}
+
+<br />
+{/* Tech Stack */}
+<div className="mb-6 sm:mb-8 lg:mb-10">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
+    🛠️ Built With Modern Tech
+  </h2>
+  <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+    {[
+      '⚛️ React.js',
+      '📘 TypeScript',
+      '💅 Styled Components',
+      '🎨 Tailwind CSS',
+      '📚 Storybook',
+      '🧪 Vitest',
+    ].map((tech, idx) => (
+      <Badge.Inline
+        key={idx}
+        variant="neutral"
+        size="md"
+        className="badge-item px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base"
+      >
+        {tech}
+      </Badge.Inline>
+    ))}
+  </div>
+</div>
+
+  <br/>
+      {/* Support */}
+      <div className="max-w-5xl mx-auto mb-6 sm:mb-8">
+        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-2xl shadow-xl border-2 border-yellow-300 dark:border-yellow-700 overflow-hidden">
+          <div className="p-4 sm:p-5 lg:p-6">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-2 sm:mb-3 text-gray-900 dark:text-white">
+              💝 Support This Project
+            </h2>
+            <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-5 max-w-2xl mx-auto">
+              Your support helps us continue building amazing components for the community
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
+              <div>
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">
+                  💪 Your contributions help:
+                </h3>
+                <div className="space-y-1.5 sm:space-y-2">
+                  {[
+                    { icon: '🚀', text: 'Continuous development & maintenance' },
+                    { icon: '🐛', text: 'Bug fixes & performance improvements' },
+                    { icon: '✨', text: 'New features & components' },
+                    { icon: '📚', text: 'Better docs & tutorials' }
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-start gap-2">
+                      <span className="text-base flex-shrink-0">{item.icon}</span>
+                      <span className="text-sm text-gray-700 dark:text-gray-300">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="text-center">
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">
+                  🎁 Donate via UPI
+                </h3>
+                <div className="inline-block bg-white p-2 sm:p-3 rounded-xl shadow-xl border-2 border-orange-300 dark:border-orange-600">
+                  <img
+                    src="../../upi-qr-code.png"
+                    alt="UPI QR Code"
+                    style={{width:200}}
+                    className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto rounded-lg"
+                  />
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 sm:mt-3 italic max-w-xs mx-auto">
+                  Every contribution makes a difference! 🙏
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{' '}
+
+<br />
+{/* Links */}
+<div className="mb-6 sm:mb-8">
+  <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
+    🔗 Connect With Us
+  </h3>
+  <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+    <Button
+      variant="solid"
+      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base"
+      onClick={() =>
+        window.open(
+          'https://github.com/appasaheb4/react-restyle-components',
+          '_blank'
+        )
+      }
+    >
+      <span>⭐</span>
+      <span>GitHub</span>
+    </Button>
+    <Button
+      variant="solid"
+      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base bg-red-600 hover:bg-red-700"
+      onClick={() =>
+        window.open(
+          'https://www.npmjs.com/package/react-restyle-components',
+          '_blank'
+        )
+      }
+    >
+      <span>📦</span>
+      <span>NPM Package</span>
+    </Button>
+    <Button
+      variant="solid"
+      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base"
+      onClick={() => window.open('https://www.tech-abl.com', '_blank')}
+    >
+      <span>🌐</span>
+      <span>Website</span>
+    </Button>
+    <Button
+      variant="solid"
+      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base bg-green-600 hover:bg-green-700"
+      onClick={() => window.open('https://wa.me/919260303151', '_blank')}
+    >
+      <span>💬</span>
+      <span>WhatsApp</span>
+    </Button>
+  </div>
+</div>
+  <br/>
+      {/* Footer */}
+      <div className="text-center pt-4 sm:pt-6 border-t-2 border-gray-200 dark:border-gray-700">
+        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-2">
+          Made with <span className="text-red-500 text-xl">❤️</span> by{' '}
+          <a href="https://github.com/appasaheb4" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+            Lakade Appasaheb
+          </a>
+        </p>
+        
+        
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -31,7 +31,7 @@ https://appasaheb4.github.io/react-restyle-components
 - [ReactJS](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/m)
+- [Jest](https://jestjs.io)
 - [Playwright](https://playwright.dev/)
 
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
