@@ -1,10 +1,786 @@
 import {Meta} from '@storybook/blocks';
-import Intro from '../../markdown/INTRO.md?raw';
-import {Markdown} from '@storybook/blocks';
+import {Button} from '../../src/core-components/src/components/Button1/button.component';
+import {Badge} from '../../src/core-components/src/components/Badge/Badge';
 
 <Meta
   title="Introduction"
   parameters={{previewTabs: {canvas: {hidden: true}}}}
 />
 
-<Markdown>{Intro}</Markdown>
+<style>
+  {`
+  :root {
+    --intro-primary: #6366f1;
+    --intro-primary-dark: #4f46e5;
+    --intro-secondary: #ec4899;
+    --intro-accent: #06b6d4;
+    --intro-success: #10b981;
+    --intro-warning: #f59e0b;
+    --intro-bg-light: #fafbff;
+    --intro-bg-dark: #0f172a;
+    --intro-card-light: #ffffff;
+    --intro-card-dark: #1e293b;
+    --intro-text-light: #1e293b;
+    --intro-text-dark: #e2e8f0;
+    --intro-text-muted-light: #64748b;
+    --intro-text-muted-dark: #94a3b8;
+    --intro-border-light: #e2e8f0;
+    --intro-border-dark: #334155;
+    --intro-gradient-1: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --intro-gradient-2: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+    --intro-gradient-3: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+    --intro-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.25);
+    --intro-shadow-hover: 0 25px 50px -12px rgba(99, 102, 241, 0.35);
+  }
+
+  @keyframes introFadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes introFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes introGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+    }
+  }
+
+  @keyframes introGradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes introPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes introShimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .intro-container {
+    min-height: 100vh;
+    background: var(--intro-bg-light);
+    background-image: 
+      radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at center, rgba(6, 182, 212, 0.05) 0%, transparent 70%);
+    padding: 40px 20px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  .sb-main-padded .intro-container {
+    margin: -20px;
+  }
+
+  .intro-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .intro-hero {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: introFadeInUp 0.8s ease-out;
+  }
+
+  .intro-hero-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: introFloat 3s ease-in-out infinite;
+    display: inline-block;
+  }
+
+  .intro-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    background: var(--intro-gradient-1);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: introGradientMove 4s ease infinite;
+    line-height: 1.2;
+  }
+
+  .intro-subtitle {
+    font-size: 20px;
+    color: var(--intro-text-muted-light);
+    margin: 0 0 30px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .intro-section {
+    margin-bottom: 40px;
+    animation: introFadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .intro-section:nth-child(2) { animation-delay: 0.1s; }
+  .intro-section:nth-child(3) { animation-delay: 0.2s; }
+  .intro-section:nth-child(4) { animation-delay: 0.3s; }
+  .intro-section:nth-child(5) { animation-delay: 0.4s; }
+  .intro-section:nth-child(6) { animation-delay: 0.5s; }
+  .intro-section:nth-child(7) { animation-delay: 0.6s; }
+
+  .intro-card {
+    background: var(--intro-card-light);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: var(--intro-shadow);
+    border: 1px solid var(--intro-border-light);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--intro-gradient-1);
+  }
+
+  .intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--intro-shadow-hover);
+  }
+
+  .intro-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--intro-border-light);
+  }
+
+  .intro-card-icon {
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  .intro-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--intro-text-light);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .intro-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .intro-tech-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+    border-radius: 14px;
+    border: 1px solid var(--intro-border-light);
+    text-decoration: none;
+    color: var(--intro-text-light);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-tech-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .intro-tech-item:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    border-color: var(--intro-primary);
+    color: var(--intro-primary);
+  }
+
+  .intro-tech-item:hover::after {
+    left: 100%;
+  }
+
+  .intro-tech-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .intro-code-block {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 16px 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .intro-code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+  }
+
+  .intro-code-dots {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    z-index: 1;
+  }
+
+  .intro-code-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  .intro-code-dot.red { background: #ff5f57; }
+  .intro-code-dot.yellow { background: #febc2e; }
+  .intro-code-dot.green { background: #28c840; }
+
+  .intro-code-label {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .intro-code-content {
+    margin-top: 24px;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+
+  .intro-code-content code {
+    color: #e2e8f0;
+    display: block;
+    white-space: pre;
+  }
+
+  .intro-code-comment { color: #6b7280; }
+  .intro-code-keyword { color: #c792ea; }
+  .intro-code-string { color: #c3e88d; }
+  .intro-code-function { color: #82aaff; }
+  .intro-code-variable { color: #f78c6c; }
+  .intro-code-import { color: #89ddff; }
+  .intro-code-component { color: #ffcb6b; }
+
+  .intro-install-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .intro-install-tab {
+    padding: 10px 24px;
+    background: transparent;
+    border: 2px solid var(--intro-border-light);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--intro-text-muted-light);
+    transition: all 0.3s ease;
+  }
+
+  .intro-install-tab:hover,
+  .intro-install-tab.active {
+    background: var(--intro-primary);
+    border-color: var(--intro-primary);
+    color: white;
+  }
+
+  .intro-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .intro-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(6, 182, 212, 0.05));
+    border-radius: 14px;
+    border-left: 4px solid var(--intro-success);
+    transition: all 0.3s ease;
+  }
+
+  .intro-feature-item:hover {
+    transform: translateX(8px);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
+  }
+
+  .intro-feature-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .intro-feature-text {
+    color: var(--intro-text-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .intro-cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .intro-cta-card {
+    padding: 28px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .intro-cta-card:hover::before {
+    opacity: 1;
+  }
+
+  .intro-cta-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .intro-cta-github {
+    background: linear-gradient(135deg, #24292e, #1a1e22);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .intro-cta-github:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .intro-cta-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+  }
+
+  .intro-cta-whatsapp:hover {
+    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+  }
+
+  .intro-cta-website {
+    background: var(--intro-gradient-1);
+    color: white;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  }
+
+  .intro-cta-website:hover {
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+  }
+
+  .intro-cta-icon {
+    font-size: 36px;
+  }
+
+  .intro-cta-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .intro-cta-desc {
+    font-size: 14px;
+    opacity: 0.85;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .intro-footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-top: 2px solid var(--intro-border-light);
+    margin-top: 50px;
+  }
+
+  .intro-footer-text {
+    font-size: 18px;
+    color: var(--intro-text-muted-light);
+    margin: 0;
+  }
+
+  .intro-footer-link {
+    color: var(--intro-primary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+
+  .intro-footer-link:hover {
+    color: var(--intro-secondary);
+  }
+
+  .intro-footer-heart {
+    color: #ef4444;
+    font-size: 22px;
+    display: inline-block;
+    animation: introPulse 1.5s ease infinite;
+  }
+
+  @media (max-width: 768px) {
+    .intro-title {
+      font-size: 32px;
+    }
+    
+    .intro-subtitle {
+      font-size: 16px;
+    }
+    
+    .intro-card {
+      padding: 24px;
+    }
+    
+    .intro-card-title {
+      font-size: 20px;
+    }
+    
+    .intro-tech-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .intro-cta-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+`}
+</style>
+
+<div className="sb-unstyled intro-container">
+  <div className="intro-wrapper">
+    
+    {/* Hero Section */}
+    <div className="intro-hero">
+      <div className="intro-hero-icon">🚀</div>
+      <h1 className="intro-title">Getting Started</h1>
+      <p className="intro-subtitle">
+        Build beautiful, accessible React applications with our production-ready component library
+      </p>
+    </div>
+
+    {/* Built With Section */}
+    <div className="intro-section">
+      <div className="intro-card">
+        <div className="intro-card-header">
+          <div className="intro-card-icon">🛠️</div>
+          <h2 className="intro-card-title">Built With Modern Tech Stack</h2>
+        </div>
+        <div className="intro-tech-grid">
+          <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" className="intro-tech-item">
+            <span className="intro-tech-icon">⚛️</span>
+            <span>ReactJS</span>
+          </a>
+          <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" className="intro-tech-item">
+            <span className="intro-tech-icon">📘</span>
+            <span>TypeScript</span>
+          </a>
+          <a href="https://storybook.js.org/" target="_blank" rel="noopener noreferrer" className="intro-tech-item">
+            <span className="intro-tech-icon">📚</span>
+            <span>Storybook</span>
+          </a>
+          <a href="https://styled-components.com/" target="_blank" rel="noopener noreferrer" className="intro-tech-item">
+            <span className="intro-tech-icon">💅</span>
+            <span>Styled Components</span>
+          </a>
+          <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer" className="intro-tech-item">
+            <span className="intro-tech-icon">🧪</span>
+            <span>Jest</span>
+          </a>
+          <a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer" className="intro-tech-item">
+            <span className="intro-tech-icon">🎭</span>
+            <span>Playwright</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Installation Section */}
+    <div className="intro-section">
+      <div className="intro-card">
+        <div className="intro-card-header">
+          <div className="intro-card-icon">📦</div>
+          <h2 className="intro-card-title">Quick Installation</h2>
+        </div>
+        <div className="intro-code-block">
+          <div className="intro-code-dots">
+            <span className="intro-code-dot red"></span>
+            <span className="intro-code-dot yellow"></span>
+            <span className="intro-code-dot green"></span>
+          </div>
+          <span className="intro-code-label">terminal</span>
+          <div className="intro-code-content">
+            <code>
+              <span className="intro-code-comment"># Install with npm</span>{'\n'}
+              <span className="intro-code-function">npm</span> <span className="intro-code-keyword">install</span> <span className="intro-code-string">react-restyle-components</span>{'\n'}
+              {'\n'}
+              <span className="intro-code-comment"># Or install with yarn</span>{'\n'}
+              <span className="intro-code-function">yarn</span> <span className="intro-code-keyword">add</span> <span className="intro-code-string">react-restyle-components</span>
+            </code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Components Usage Section */}
+    <div className="intro-section">
+      <div className="intro-card">
+        <div className="intro-card-header">
+          <div className="intro-card-icon">✨</div>
+          <h2 className="intro-card-title">Using Components</h2>
+        </div>
+        <p style={{color: 'var(--intro-text-muted-light)', marginBottom: '20px', fontSize: '15px', lineHeight: '1.6'}}>
+          Import and use any component from our library in your React application:
+        </p>
+        <div className="intro-code-block">
+          <div className="intro-code-dots">
+            <span className="intro-code-dot red"></span>
+            <span className="intro-code-dot yellow"></span>
+            <span className="intro-code-dot green"></span>
+          </div>
+          <span className="intro-code-label">jsx</span>
+          <div className="intro-code-content">
+            <code>
+              <span className="intro-code-keyword">import</span> <span className="intro-code-variable">React</span> <span className="intro-code-keyword">from</span> <span className="intro-code-string">'react'</span>;{'\n'}
+              <span className="intro-code-keyword">import</span> {'{'}<span className="intro-code-component">Button</span>{'}'} <span className="intro-code-keyword">from</span> <span className="intro-code-string">'react-restyle-components'</span>;{'\n'}
+              {'\n'}
+              <span className="intro-code-keyword">export const</span> <span className="intro-code-function">DemoButton</span> = () {'=> ('}{'\n'}
+              {'  '}<span className="intro-code-import">{'<'}</span><span className="intro-code-component">Button</span>{'\n'}
+              {'    '}<span className="intro-code-variable">variant</span>=<span className="intro-code-string">"outline"</span>{'\n'}
+              {'    '}<span className="intro-code-variable">onClick</span>={'{() => console.log('}<span className="intro-code-string">'clicked'</span>{')}'}{'\n'}
+              {'  '}<span className="intro-code-import">{'>'}</span>{'\n'}
+              {'    '}Click me{'\n'}
+              {'  '}<span className="intro-code-import">{'</'}</span><span className="intro-code-component">Button</span><span className="intro-code-import">{'>'}</span>{'\n'}
+              {');'}
+            </code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Theme Section */}
+    <div className="intro-section">
+      <div className="intro-card">
+        <div className="intro-card-header">
+          <div className="intro-card-icon">🎨</div>
+          <h2 className="intro-card-title">Theme Configuration</h2>
+        </div>
+        <p style={{color: 'var(--intro-text-muted-light)', marginBottom: '20px', fontSize: '15px', lineHeight: '1.6'}}>
+          Customize the look and feel by configuring themes:
+        </p>
+        <div className="intro-code-block">
+          <div className="intro-code-dots">
+            <span className="intro-code-dot red"></span>
+            <span className="intro-code-dot yellow"></span>
+            <span className="intro-code-dot green"></span>
+          </div>
+          <span className="intro-code-label">jsx</span>
+          <div className="intro-code-content">
+            <code>
+              <span className="intro-code-keyword">import</span> <span className="intro-code-variable">React</span>, {'{'}<span className="intro-code-function">useEffect</span>{'}'} <span className="intro-code-keyword">from</span> <span className="intro-code-string">'react'</span>;{'\n'}
+              <span className="intro-code-keyword">import</span> {'{'}<span className="intro-code-function">updateTheme</span>{'}'} <span className="intro-code-keyword">from</span> <span className="intro-code-string">'react-restyle-components'</span>;{'\n'}
+              {'\n'}
+              <span className="intro-code-keyword">export const</span> <span className="intro-code-function">App</span> = () {'=> {'}{'\n'}
+              {'  '}<span className="intro-code-function">useEffect</span>(() {'=> {'}{'\n'}
+              {'    '}<span className="intro-code-function">updateTheme</span>(<span className="intro-code-string">'default'</span>);{'\n'}
+              {'  }'}{'}, [])'};{'\n'}
+              {'\n'}
+              {'  '}<span className="intro-code-keyword">return</span> <span className="intro-code-import">{'<>'}</span>...<span className="intro-code-import">{'</>'}</span>;{'\n'}
+              {'};'}
+            </code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Contributing Section */}
+    <div className="intro-section">
+      <div className="intro-card">
+        <div className="intro-card-header">
+          <div className="intro-card-icon">🍻</div>
+          <h2 className="intro-card-title">Contributing</h2>
+        </div>
+        <div className="intro-feature-list">
+          <div className="intro-feature-item">
+            <span className="intro-feature-icon">🚀</span>
+            <p className="intro-feature-text">
+              Contributions make our package awesome - an amazing community to learn, inspire, and create!
+            </p>
+          </div>
+          <div className="intro-feature-item">
+            <span className="intro-feature-icon">🐛</span>
+            <p className="intro-feature-text">
+              Interested in bug fixes or new features? Check out our GitHub repository!
+            </p>
+          </div>
+          <div className="intro-feature-item">
+            <span className="intro-feature-icon">🙏</span>
+            <p className="intro-feature-text">
+              Any contributions you make are greatly appreciated. Thank you!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Contact Section */}
+    <div className="intro-section">
+      <div className="intro-card">
+        <div className="intro-card-header">
+          <div className="intro-card-icon">💬</div>
+          <h2 className="intro-card-title">Let's Talk</h2>
+        </div>
+        <p style={{color: 'var(--intro-text-muted-light)', marginBottom: '24px', fontSize: '15px', lineHeight: '1.6'}}>
+          Get the conversation going! Reach out for questions, requests, or bug reports:
+        </p>
+        <div className="intro-cta-grid">
+          <a
+            href="https://github.com/appasaheb4/react-restyle-components"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="intro-cta-card intro-cta-github"
+          >
+            <span className="intro-cta-icon">⭐</span>
+            <h3 className="intro-cta-title">GitHub Repository</h3>
+            <p className="intro-cta-desc">View source code, report issues, and contribute</p>
+          </a>
+          <a
+            href="https://wa.me/919260303151"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="intro-cta-card intro-cta-whatsapp"
+          >
+            <span className="intro-cta-icon">💬</span>
+            <h3 className="intro-cta-title">WhatsApp Support</h3>
+            <p className="intro-cta-desc">General questions or any support needed</p>
+          </a>
+          <a
+            href="https://tech-abl.com/contact-us"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="intro-cta-card intro-cta-website"
+          >
+            <span className="intro-cta-icon">🌐</span>
+            <h3 className="intro-cta-title">Tech ABL Website</h3>
+            <p className="intro-cta-desc">Design & engineering updates and discussions</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Footer */}
+    <div className="intro-footer">
+      <p className="intro-footer-text">
+        Made with <span className="intro-footer-heart">❤️</span> by{' '}
+        <a
+          href="https://github.com/appasaheb4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="intro-footer-link"
+        >
+          Lakade Appasaheb
+        </a>
+      </p>
+    </div>
+
+  </div>
+</div>

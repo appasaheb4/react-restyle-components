@@ -1,7 +1,6 @@
 import {Meta} from '@storybook/blocks';
 import {Button} from '../../src/core-components/src/components/Button1/button.component';
 import {Badge} from '../../src/core-components/src/components/Badge/Badge';
-import {Icon} from '../../src/core-components/src/components/Icon/Icon';
 
 <Meta
   title="Welcome"
@@ -15,10 +14,35 @@ import {Icon} from '../../src/core-components/src/components/Icon/Icon';
 
 <style>
   {`
-  @keyframes fadeInUp {
+  :root {
+    --welcome-primary: #6366f1;
+    --welcome-primary-light: #818cf8;
+    --welcome-primary-dark: #4f46e5;
+    --welcome-secondary: #ec4899;
+    --welcome-accent: #06b6d4;
+    --welcome-success: #10b981;
+    --welcome-warning: #f59e0b;
+    --welcome-danger: #ef4444;
+    --welcome-bg: #f8faff;
+    --welcome-card-bg: #ffffff;
+    --welcome-text: #1e293b;
+    --welcome-text-muted: #64748b;
+    --welcome-border: #e2e8f0;
+    --welcome-gradient-hero: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --welcome-gradient-blue: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    --welcome-gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    --welcome-gradient-green: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --welcome-gradient-orange: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    --welcome-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --welcome-shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    --welcome-shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    --welcome-shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+  }
+
+  @keyframes welcomeFadeInUp {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;
@@ -26,391 +50,1001 @@ import {Icon} from '../../src/core-components/src/components/Icon/Icon';
     }
   }
 
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.8;
-    }
+  @keyframes welcomeFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(2deg); }
+    75% { transform: translateY(-4px) rotate(-2deg); }
   }
 
-  .fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
+  @keyframes welcomeGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
-  .welcome-card {
+  @keyframes welcomePulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+  }
+
+  @keyframes welcomeShine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  @keyframes welcomeOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes welcomeBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .welcome-container {
+    min-height: 100vh;
+    background: var(--welcome-bg);
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(6, 182, 212, 0.06) 0%, transparent 60%);
+    padding: 50px 24px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  .sb-main-padded .welcome-container {
+    margin: -20px;
+  }
+
+  .welcome-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Hero Section */
+  .welcome-hero {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: welcomeFadeInUp 0.8s ease-out;
+  }
+
+  .welcome-hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--welcome-primary);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .welcome-title {
+    font-size: 56px;
+    font-weight: 800;
+    margin: 0 0 24px 0;
+    line-height: 1.1;
+    background: var(--welcome-gradient-hero);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: welcomeGradient 4s ease infinite;
+  }
+
+  .welcome-subtitle {
+    font-size: 22px;
+    color: var(--welcome-text-muted);
+    margin: 0 0 32px 0;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .welcome-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .welcome-badge-img {
+    height: 22px;
+    transition: transform 0.3s ease;
+  }
+
+  .welcome-badge-img:hover {
+    transform: scale(1.1);
+  }
+
+  .welcome-hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .welcome-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    text-decoration: none;
+    cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .welcome-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 8px -5px rgba(0, 0, 0, 0.04);
-  }
-
-  .nav-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
     position: relative;
     overflow: hidden;
   }
 
-  .nav-card::before {
+  .welcome-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .welcome-btn:hover::before {
+    left: 200%;
+  }
+
+  .welcome-btn-primary {
+    background: var(--welcome-gradient-hero);
+    color: white;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.35);
+  }
+
+  .welcome-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.45);
+  }
+
+  .welcome-btn-outline {
+    background: white;
+    color: var(--welcome-text);
+    border: 2px solid var(--welcome-border);
+    box-shadow: var(--welcome-shadow-sm);
+  }
+
+  .welcome-btn-outline:hover {
+    border-color: var(--welcome-primary);
+    color: var(--welcome-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--welcome-shadow-md);
+  }
+
+  /* Section Styles */
+  .welcome-section {
+    margin-bottom: 60px;
+    animation: welcomeFadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .welcome-section:nth-child(2) { animation-delay: 0.1s; }
+  .welcome-section:nth-child(3) { animation-delay: 0.2s; }
+  .welcome-section:nth-child(4) { animation-delay: 0.3s; }
+  .welcome-section:nth-child(5) { animation-delay: 0.4s; }
+  .welcome-section:nth-child(6) { animation-delay: 0.5s; }
+  .welcome-section:nth-child(7) { animation-delay: 0.6s; }
+
+  .welcome-section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 36px 0;
+    color: var(--welcome-text);
+  }
+
+  /* Installation Card */
+  .welcome-install-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--welcome-card-bg);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--welcome-shadow-lg);
+    border: 1px solid var(--welcome-border);
+  }
+
+  .welcome-install-header {
+    background: var(--welcome-gradient-hero);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .welcome-install-header-icon {
+    font-size: 28px;
+    animation: welcomeBounce 2s ease infinite;
+  }
+
+  .welcome-install-header-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .welcome-install-body {
+    padding: 28px;
+  }
+
+  .welcome-install-item {
+    margin-bottom: 20px;
+  }
+
+  .welcome-install-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .welcome-install-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--welcome-text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .welcome-install-code {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border-radius: 14px;
+    padding: 18px 22px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+  }
+
+  .welcome-install-code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--welcome-gradient-hero);
+  }
+
+  .welcome-install-code code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 15px;
+    color: #4ade80;
+    display: block;
+  }
+
+  /* Features Grid */
+  .welcome-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .welcome-feature-card {
+    background: var(--welcome-card-bg);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: var(--welcome-shadow-md);
+    border: 1px solid var(--welcome-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .welcome-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--welcome-gradient-hero);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .welcome-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--welcome-shadow-lg), var(--welcome-shadow-glow);
+  }
+
+  .welcome-feature-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .welcome-feature-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: inline-block;
+    animation: welcomeFloat 3s ease-in-out infinite;
+  }
+
+  .welcome-feature-card:nth-child(2) .welcome-feature-icon { animation-delay: 0.5s; }
+  .welcome-feature-card:nth-child(3) .welcome-feature-icon { animation-delay: 1s; }
+  .welcome-feature-card:nth-child(4) .welcome-feature-icon { animation-delay: 1.5s; }
+  .welcome-feature-card:nth-child(5) .welcome-feature-icon { animation-delay: 2s; }
+  .welcome-feature-card:nth-child(6) .welcome-feature-icon { animation-delay: 2.5s; }
+
+  .welcome-feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--welcome-text);
+    margin: 0 0 10px 0;
+  }
+
+  .welcome-feature-desc {
+    font-size: 15px;
+    color: var(--welcome-text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  /* Navigation Cards */
+  .welcome-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .welcome-nav-card {
+    display: block;
+    padding: 32px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .welcome-nav-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
   }
 
-  .nav-card:hover::before {
+  .welcome-nav-card:hover::before {
     opacity: 1;
   }
 
-  .nav-card:hover {
-    transform: translateY(-3px) scale(1.01);
+  .welcome-nav-card:hover {
+    transform: translateY(-10px) scale(1.02);
   }
 
-  .badge-item {
-    transition: transform 0.2s;
+  .welcome-nav-blue {
+    background: var(--welcome-gradient-blue);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
   }
 
-  .badge-item:hover {
-    transform: scale(1.03);
+  .welcome-nav-blue:hover {
+    box-shadow: 0 20px 45px rgba(59, 130, 246, 0.45);
+  }
+
+  .welcome-nav-purple {
+    background: var(--welcome-gradient-purple);
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.35);
+  }
+
+  .welcome-nav-purple:hover {
+    box-shadow: 0 20px 45px rgba(139, 92, 246, 0.45);
+  }
+
+  .welcome-nav-green {
+    background: var(--welcome-gradient-green);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.35);
+  }
+
+  .welcome-nav-green:hover {
+    box-shadow: 0 20px 45px rgba(16, 185, 129, 0.45);
+  }
+
+  .welcome-nav-icon {
+    font-size: 42px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .welcome-nav-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+  }
+
+  .welcome-nav-desc {
+    font-size: 15px;
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+
+  /* Tech Stack */
+  .welcome-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .welcome-tech-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: var(--welcome-card-bg);
+    border-radius: 14px;
+    border: 1px solid var(--welcome-border);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--welcome-text);
+    box-shadow: var(--welcome-shadow-sm);
+    transition: all 0.3s ease;
+  }
+
+  .welcome-tech-item:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: var(--welcome-shadow-md);
+    border-color: var(--welcome-primary);
+    color: var(--welcome-primary);
+  }
+
+  /* Support Section */
+  .welcome-support-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+    border: 2px solid #fbbf24;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--welcome-shadow-lg);
+  }
+
+  .welcome-support-inner {
+    padding: 40px;
+  }
+
+  .welcome-support-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 12px 0;
+    color: var(--welcome-text);
+  }
+
+  .welcome-support-subtitle {
+    font-size: 16px;
+    text-align: center;
+    color: var(--welcome-text-muted);
+    margin: 0 0 32px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .welcome-support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .welcome-support-list-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: var(--welcome-text);
+  }
+
+  .welcome-support-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .welcome-support-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .welcome-support-item-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .welcome-support-item-text {
+    font-size: 15px;
+    color: var(--welcome-text);
+    line-height: 1.5;
+  }
+
+  .welcome-support-qr {
+    text-align: center;
+  }
+
+  .welcome-support-qr-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: var(--welcome-text);
+  }
+
+  .welcome-support-qr-wrapper {
+    display: inline-block;
+    background: white;
+    padding: 16px;
+    border-radius: 20px;
+    border: 2px solid #f97316;
+    box-shadow: var(--welcome-shadow-lg);
+  }
+
+  .welcome-support-qr-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .welcome-support-qr-note {
+    font-size: 14px;
+    color: var(--welcome-text-muted);
+    margin: 16px 0 0 0;
+    font-style: italic;
+  }
+
+  /* Connect Section */
+  .welcome-connect-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .welcome-connect-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .welcome-connect-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .welcome-connect-btn:hover::before {
+    left: 200%;
+  }
+
+  .welcome-connect-btn:hover {
+    transform: translateY(-4px);
+  }
+
+  .welcome-connect-github {
+    background: linear-gradient(135deg, #24292e, #1a1e22);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  .welcome-connect-github:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  .welcome-connect-npm {
+    background: linear-gradient(135deg, #cb3837, #a32929);
+    box-shadow: 0 8px 25px rgba(203, 56, 55, 0.35);
+  }
+
+  .welcome-connect-npm:hover {
+    box-shadow: 0 12px 35px rgba(203, 56, 55, 0.45);
+  }
+
+  .welcome-connect-website {
+    background: var(--welcome-gradient-hero);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.35);
+  }
+
+  .welcome-connect-website:hover {
+    box-shadow: 0 12px 35px rgba(99, 102, 241, 0.45);
+  }
+
+  .welcome-connect-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+  }
+
+  .welcome-connect-whatsapp:hover {
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.45);
+  }
+
+  /* Footer */
+  .welcome-footer {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-top: 2px solid var(--welcome-border);
+    margin-top: 60px;
+  }
+
+  .welcome-footer-text {
+    font-size: 18px;
+    color: var(--welcome-text-muted);
+    margin: 0;
+  }
+
+  .welcome-footer-heart {
+    color: #ef4444;
+    font-size: 22px;
+    display: inline-block;
+    animation: welcomePulse 1.5s ease infinite;
+  }
+
+  .welcome-footer-link {
+    color: var(--welcome-primary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+
+  .welcome-footer-link:hover {
+    color: var(--welcome-secondary);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .welcome-features-grid,
+    .welcome-nav-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 36px;
+    }
+
+    .welcome-subtitle {
+      font-size: 18px;
+    }
+
+    .welcome-section-title {
+      font-size: 28px;
+    }
+
+    .welcome-features-grid,
+    .welcome-nav-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .welcome-support-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .welcome-support-inner {
+      padding: 28px;
+    }
+
+    .welcome-hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .welcome-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+
+    .welcome-connect-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .welcome-connect-btn {
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
   }
 `}
 </style>
 
-<div className="sb-unstyled">
-  <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+<div className="sb-unstyled welcome-container">
+  <div className="welcome-wrapper">
+    
+    {/* Hero Section */}
+    <div className="welcome-hero">
+      <span className="welcome-hero-badge">✨ Production Ready</span>
+      <h1 className="welcome-title">React Restyle Components</h1>
+      <p className="welcome-subtitle">
+        Modern, customizable, and production-ready React component library for building beautiful user interfaces
+      </p>
       
-      {/* Hero Section */}
-      <div className="text-center mb-6 sm:mb-8 lg:mb-10 fade-in-up">
-        <div className="inline-block mb-4 sm:mb-5">
-          <div className="relative">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-                React Restyle  Components
-              </span>
-            </h1>
+      <div className="welcome-badges">
+        <img src="https://img.shields.io/npm/v/react-restyle-components.svg?style=flat-square&logo=npm" alt="NPM version" className="welcome-badge-img" />
+        <img src="https://img.shields.io/npm/dm/react-restyle-components.svg?style=flat-square&logo=npm" alt="Downloads" className="welcome-badge-img" />
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" className="welcome-badge-img" />
+        <img src="https://img.shields.io/npm/l/react-restyle-components.svg?style=flat-square" alt="License" className="welcome-badge-img" />
+      </div>
+
+      <div className="welcome-hero-cta">
+        <a
+          href="?path=/docs/introduction--docs"
+          className="welcome-btn welcome-btn-primary"
+        >
+          <span>🚀</span>
+          <span>Get Started</span>
+        </a>
+        <a
+          href="https://github.com/appasaheb4/react-restyle-components"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="welcome-btn welcome-btn-outline"
+        >
+          <span>⭐</span>
+          <span>View on GitHub</span>
+        </a>
+      </div>
+    </div>
+
+    {/* Installation Section */}
+    <div className="welcome-section">
+      <div className="welcome-install-card">
+        <div className="welcome-install-header">
+          <span className="welcome-install-header-icon">🚀</span>
+          <h2 className="welcome-install-header-text">Quick Installation</h2>
+        </div>
+        <div className="welcome-install-body">
+          <div className="welcome-install-item">
+            <div className="welcome-install-label">
+              <span>📦</span>
+              <span>npm</span>
+            </div>
+            <div className="welcome-install-code">
+              <code>npm install react-restyle-components</code>
+            </div>
           </div>
-        </div>
-        
-        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4 sm:mb-5 max-w-3xl mx-auto leading-relaxed px-4">
-          Modern, customizable, and production-ready React component library
-        </p>
-          <br/>
-        <div className="flex flex-wrap justify-center items-center gap-2 mb-4 sm:mb-5 px-4">
-          <img src="https://img.shields.io/npm/v/react-restyle-components.svg?style=flat-square&logo=npm" alt="NPM version" className="h-5" />
-          <img src="https://img.shields.io/npm/dm/react-restyle-components.svg?style=flat-square&logo=npm" alt="Downloads" className="h-5" />
-          <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" className="h-5" />
-          <img src="https://img.shields.io/npm/l/react-restyle-components.svg?style=flat-square" alt="License" className="h-5" />
-        </div>
-        <br/>
-
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center px-4">
-          <a
-            href="https://github.com/appasaheb4/react-restyle-components"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="no-underline"
-          >
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-base"
-              onClick={() => window.open('https://github.com/appasaheb4/react-restyle-components', '_blank')}
-            >
-              <span>⭐</span>
-              <span>View on GitHub</span>
-            </Button>
-          </a>
-        </div>
-      </div>
-
-{' '}
-
-<br />
-{/* Installation */}
-<div className="max-w-4xl mx-auto mb-6 sm:mb-8 lg:mb-10">
-  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-    <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3">
-      <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-        <span>🚀</span>
-        <span>Quick Installation</span>
-      </h2>
-    </div>
-    <div className="p-4 sm:p-5 space-y-3">
-      <div className="group">
-        <div className="flex items-center justify-between mb-1.5">
-          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            npm
-          </span>
-        </div>
-        <div className="bg-gray-900 rounded-lg p-3 overflow-x-auto">
-          <code className="text-green-400 text-sm sm:text-base font-mono">
-            npm install react-restyle-components
-          </code>
-        </div>
-      </div>
-      <div className="group">
-        <div className="flex items-center justify-between mb-1.5">
-          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
-            yarn
-          </span>
-        </div>
-        <div className="bg-gray-900 rounded-lg p-3 overflow-x-auto">
-          <code className="text-green-400 text-sm sm:text-base font-mono">
-            yarn add react-restyle-components
-          </code>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br />
-{/* Features */}
-<div className="mb-6 sm:mb-8 lg:mb-10">
-  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
-    ✨ Why Choose Us?
-  </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
-    {[
-      {
-        icon: '🎨',
-        title: 'Fully Customizable',
-        desc: 'Tailwind CSS & styled-components integration',
-      },
-      {
-        icon: '📦',
-        title: 'Rich Components',
-        desc: '50+ production-ready components',
-      },
-      {
-        icon: '🌓',
-        title: 'Dark Mode',
-        desc: 'Built-in theme switching support',
-      },
-      {icon: '📱', title: 'Responsive', desc: 'Mobile-first design approach'},
-      {
-        icon: '🔧',
-        title: 'TypeScript',
-        desc: 'Fully typed with TS definitions',
-      },
-      {
-        icon: '⚡',
-        title: 'Optimized',
-        desc: 'Tree-shakable & performance focused',
-      },
-    ].map((feature, idx) => (
-      <div
-        key={idx}
-        className="welcome-card bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-5 shadow-lg border border-gray-200 dark:border-gray-700"
-      >
-        <div className="text-2xl sm:text-3xl mb-2">{feature.icon}</div>
-        <h3 className="text-base sm:text-lg font-bold mb-1.5 text-gray-900 dark:text-white">
-          {feature.title}
-        </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300">
-          {feature.desc}
-        </p>
-      </div>
-    ))}
-  </div>
-</div>
-
-{' '}
-
-<br />
-{/* Navigation */}
-<div className="mb-6 sm:mb-8 lg:mb-10">
-  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
-    📚 Explore Documentation
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
-    <a
-      href="?path=/docs/introduction--docs"
-      className="nav-card block bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-4 sm:p-5 shadow-xl text-white no-underline"
-    >
-      <div className="text-3xl mb-2">🚀</div>
-      <h3 className="text-lg sm:text-xl font-bold mb-2">Getting Started</h3>
-      <p className="text-blue-100 text-sm opacity-90">
-        Quick setup guide and installation instructions
-      </p>
-    </a>
-    <a
-      href="?path=/docs/foundations--docs"
-      className="nav-card block bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-4 sm:p-5 shadow-xl text-white no-underline"
-    >
-      <div className="text-3xl mb-2">🎨</div>
-      <h3 className="text-lg sm:text-xl font-bold mb-2">Foundations</h3>
-      <p className="text-purple-100 text-sm opacity-90">
-        Colors, typography, spacing, and design tokens
-      </p>
-    </a>
-    <a
-      href="?path=/docs/components--docs"
-      className="nav-card block bg-gradient-to-br from-green-500 to-green-700 rounded-2xl p-4 sm:p-5 shadow-xl text-white no-underline"
-    >
-      <div className="text-3xl mb-2">🧩</div>
-      <h3 className="text-lg sm:text-xl font-bold mb-2">Components</h3>
-      <p className="text-green-100 text-sm opacity-90">
-        Comprehensive component library with examples
-      </p>
-    </a>
-  </div>
-</div>
-
-{' '}
-
-<br />
-{/* Tech Stack */}
-<div className="mb-6 sm:mb-8 lg:mb-10">
-  <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
-    🛠️ Built With Modern Tech
-  </h2>
-  <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-    {[
-      '⚛️ React.js',
-      '📘 TypeScript',
-      '💅 Styled Components',
-      '🎨 Tailwind CSS',
-      '📚 Storybook',
-      '🧪 Vitest',
-    ].map((tech, idx) => (
-      <Badge.Inline
-        key={idx}
-        variant="neutral"
-        size="md"
-        className="badge-item px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base"
-      >
-        {tech}
-      </Badge.Inline>
-    ))}
-  </div>
-</div>
-
-  <br/>
-      {/* Support */}
-      <div className="max-w-5xl mx-auto mb-6 sm:mb-8">
-        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-2xl shadow-xl border-2 border-yellow-300 dark:border-yellow-700 overflow-hidden">
-          <div className="p-4 sm:p-5 lg:p-6">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-2 sm:mb-3 text-gray-900 dark:text-white">
-              💝 Support This Project
-            </h2>
-            <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-5 max-w-2xl mx-auto">
-              Your support helps us continue building amazing components for the community
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-4 lg:gap-6 items-center">
-              <div>
-                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">
-                  💪 Your contributions help:
-                </h3>
-                <div className="space-y-1.5 sm:space-y-2">
-                  {[
-                    { icon: '🚀', text: 'Continuous development & maintenance' },
-                    { icon: '🐛', text: 'Bug fixes & performance improvements' },
-                    { icon: '✨', text: 'New features & components' },
-                    { icon: '📚', text: 'Better docs & tutorials' }
-                  ].map((item, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="text-base flex-shrink-0">{item.icon}</span>
-                      <span className="text-sm text-gray-700 dark:text-gray-300">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-gray-900 dark:text-white">
-                  🎁 Donate via UPI
-                </h3>
-                <div className="inline-block bg-white p-2 sm:p-3 rounded-xl shadow-xl border-2 border-orange-300 dark:border-orange-600">
-                  <img
-                    src="../../upi-qr-code.png"
-                    alt="UPI QR Code"
-                    style={{width:200}}
-                    className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 mx-auto rounded-lg"
-                  />
-                </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2 sm:mt-3 italic max-w-xs mx-auto">
-                  Every contribution makes a difference! 🙏
-                </p>
-              </div>
+          <div className="welcome-install-item">
+            <div className="welcome-install-label">
+              <span>🧶</span>
+              <span>yarn</span>
+            </div>
+            <div className="welcome-install-code">
+              <code>yarn add react-restyle-components</code>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-{' '}
-
-<br />
-{/* Links */}
-<div className="mb-6 sm:mb-8">
-  <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-5 text-gray-900 dark:text-white">
-    🔗 Connect With Us
-  </h3>
-  <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-    <Button
-      variant="solid"
-      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base"
-      onClick={() =>
-        window.open(
-          'https://github.com/appasaheb4/react-restyle-components',
-          '_blank'
-        )
-      }
-    >
-      <span>⭐</span>
-      <span>GitHub</span>
-    </Button>
-    <Button
-      variant="solid"
-      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base bg-red-600 hover:bg-red-700"
-      onClick={() =>
-        window.open(
-          'https://www.npmjs.com/package/react-restyle-components',
-          '_blank'
-        )
-      }
-    >
-      <span>📦</span>
-      <span>NPM Package</span>
-    </Button>
-    <Button
-      variant="solid"
-      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base"
-      onClick={() => window.open('https://www.tech-abl.com', '_blank')}
-    >
-      <span>🌐</span>
-      <span>Website</span>
-    </Button>
-    <Button
-      variant="solid"
-      className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base bg-green-600 hover:bg-green-700"
-      onClick={() => window.open('https://wa.me/919260303151', '_blank')}
-    >
-      <span>💬</span>
-      <span>WhatsApp</span>
-    </Button>
-  </div>
-</div>
-  <br/>
-      {/* Footer */}
-      <div className="text-center pt-4 sm:pt-6 border-t-2 border-gray-200 dark:border-gray-700">
-        <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-2">
-          Made with <span className="text-red-500 text-xl">❤️</span> by{' '}
-          <a href="https://github.com/appasaheb4" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
-            Lakade Appasaheb
-          </a>
-        </p>
-        
-        
+    {/* Features Section */}
+    <div className="welcome-section">
+      <h2 className="welcome-section-title">✨ Why Choose Us?</h2>
+      <div className="welcome-features-grid">
+        <div className="welcome-feature-card">
+          <span className="welcome-feature-icon">🎨</span>
+          <h3 className="welcome-feature-title">Fully Customizable</h3>
+          <p className="welcome-feature-desc">Tailwind CSS & styled-components integration for maximum flexibility</p>
+        </div>
+        <div className="welcome-feature-card">
+          <span className="welcome-feature-icon">📦</span>
+          <h3 className="welcome-feature-title">Rich Components</h3>
+          <p className="welcome-feature-desc">50+ production-ready components for every use case</p>
+        </div>
+        <div className="welcome-feature-card">
+          <span className="welcome-feature-icon">🌓</span>
+          <h3 className="welcome-feature-title">Dark Mode</h3>
+          <p className="welcome-feature-desc">Built-in theme switching support out of the box</p>
+        </div>
+        <div className="welcome-feature-card">
+          <span className="welcome-feature-icon">📱</span>
+          <h3 className="welcome-feature-title">Responsive</h3>
+          <p className="welcome-feature-desc">Mobile-first design approach for all devices</p>
+        </div>
+        <div className="welcome-feature-card">
+          <span className="welcome-feature-icon">🔧</span>
+          <h3 className="welcome-feature-title">TypeScript</h3>
+          <p className="welcome-feature-desc">Fully typed with comprehensive TS definitions</p>
+        </div>
+        <div className="welcome-feature-card">
+          <span className="welcome-feature-icon">⚡</span>
+          <h3 className="welcome-feature-title">Optimized</h3>
+          <p className="welcome-feature-desc">Tree-shakable & performance focused builds</p>
+        </div>
       </div>
+    </div>
+
+    {/* Navigation Section */}
+    <div className="welcome-section">
+      <h2 className="welcome-section-title">📚 Explore Documentation</h2>
+      <div className="welcome-nav-grid">
+        <a href="?path=/docs/introduction--docs" className="welcome-nav-card welcome-nav-blue">
+          <span className="welcome-nav-icon">🚀</span>
+          <h3 className="welcome-nav-title">Getting Started</h3>
+          <p className="welcome-nav-desc">Quick setup guide and installation instructions</p>
+        </a>
+        <a href="?path=/docs/foundations--docs" className="welcome-nav-card welcome-nav-purple">
+          <span className="welcome-nav-icon">🎨</span>
+          <h3 className="welcome-nav-title">Foundations</h3>
+          <p className="welcome-nav-desc">Colors, typography, spacing, and design tokens</p>
+        </a>
+        <a href="?path=/docs/components--docs" className="welcome-nav-card welcome-nav-green">
+          <span className="welcome-nav-icon">🧩</span>
+          <h3 className="welcome-nav-title">Components</h3>
+          <p className="welcome-nav-desc">Comprehensive component library with examples</p>
+        </a>
+      </div>
+    </div>
+
+    {/* Tech Stack Section */}
+    <div className="welcome-section">
+      <h2 className="welcome-section-title">🛠️ Built With Modern Tech</h2>
+      <div className="welcome-tech-grid">
+        <div className="welcome-tech-item">
+          <span>⚛️</span>
+          <span>React.js</span>
+        </div>
+        <div className="welcome-tech-item">
+          <span>📘</span>
+          <span>TypeScript</span>
+        </div>
+        <div className="welcome-tech-item">
+          <span>💅</span>
+          <span>Styled Components</span>
+        </div>
+        <div className="welcome-tech-item">
+          <span>🎨</span>
+          <span>Tailwind CSS</span>
+        </div>
+        <div className="welcome-tech-item">
+          <span>📚</span>
+          <span>Storybook</span>
+        </div>
+        <div className="welcome-tech-item">
+          <span>🧪</span>
+          <span>Vitest</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Support Section */}
+    <div className="welcome-section">
+      <div className="welcome-support-card">
+        <div className="welcome-support-inner">
+          <h2 className="welcome-support-title">💝 Support This Project</h2>
+          <p className="welcome-support-subtitle">
+            Your support helps us continue building amazing components for the community
+          </p>
+
+          <div className="welcome-support-grid">
+            <div>
+              <h3 className="welcome-support-list-title">💪 Your contributions help:</h3>
+              <div className="welcome-support-list">
+                <div className="welcome-support-item">
+                  <span className="welcome-support-item-icon">🚀</span>
+                  <span className="welcome-support-item-text">Continuous development & maintenance</span>
+                </div>
+                <div className="welcome-support-item">
+                  <span className="welcome-support-item-icon">🐛</span>
+                  <span className="welcome-support-item-text">Bug fixes & performance improvements</span>
+                </div>
+                <div className="welcome-support-item">
+                  <span className="welcome-support-item-icon">✨</span>
+                  <span className="welcome-support-item-text">New features & components</span>
+                </div>
+                <div className="welcome-support-item">
+                  <span className="welcome-support-item-icon">📚</span>
+                  <span className="welcome-support-item-text">Better docs & tutorials</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="welcome-support-qr">
+              <h3 className="welcome-support-qr-title">🎁 Donate via UPI</h3>
+              <div className="welcome-support-qr-wrapper">
+                <img
+                  src="/upi-qr-code.png"
+                  alt="UPI QR Code"
+                  className="welcome-support-qr-img"
+                />
+              </div>
+              <p className="welcome-support-qr-note">Every contribution makes a difference! 🙏</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Connect Section */}
+    <div className="welcome-section">
+      <h2 className="welcome-section-title">🔗 Connect With Us</h2>
+      <div className="welcome-connect-grid">
+        <a
+          href="https://github.com/appasaheb4/react-restyle-components"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="welcome-connect-btn welcome-connect-github"
+        >
+          <span>⭐</span>
+          <span>GitHub</span>
+        </a>
+        <a
+          href="https://www.npmjs.com/package/react-restyle-components"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="welcome-connect-btn welcome-connect-npm"
+        >
+          <span>📦</span>
+          <span>NPM Package</span>
+        </a>
+        <a
+          href="https://www.tech-abl.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="welcome-connect-btn welcome-connect-website"
+        >
+          <span>🌐</span>
+          <span>Website</span>
+        </a>
+        <a
+          href="https://wa.me/919260303151"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="welcome-connect-btn welcome-connect-whatsapp"
+        >
+          <span>💬</span>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    {/* Footer */}
+    <div className="welcome-footer">
+      <p className="welcome-footer-text">
+        Made with <span className="welcome-footer-heart">❤️</span> by{' '}
+        <a
+          href="https://github.com/appasaheb4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="welcome-footer-link"
+        >
+          Lakade Appasaheb
+        </a>
+      </p>
     </div>
 
   </div>
