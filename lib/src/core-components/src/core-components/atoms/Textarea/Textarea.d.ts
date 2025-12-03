@@ -8,8 +8,8 @@ export interface TextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTex
     onBlur?: (e: React.FocusEvent<HTMLTextAreaElement>) => void;
     /** onValueChange - receives just the string value (alternative to onChange) */
     onValueChange?: (value: string) => void;
-    /** onBlurValue - receives just the string value (alternative to onBlur) */
-    onBlurValue?: (value: string) => void;
+    /** onValueBlur - receives just the string value (alternative to onBlur) */
+    onValueBlur?: (value: string) => void;
 }
 export declare const Textarea: React.ForwardRefExoticComponent<TextareaProps & React.RefAttributes<HTMLTextAreaElement>>;
 //# sourceMappingURL=Textarea.d.ts.map

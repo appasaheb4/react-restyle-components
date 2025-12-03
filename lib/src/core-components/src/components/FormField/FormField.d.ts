@@ -82,8 +82,8 @@ type FieldEventHandlers = {
     onFocus?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     /** onBlur handler - receives the event object (standard React pattern) */
     onBlur?: (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-    /** onBlurValue - receives just the string value (cleaner alternative to onBlur for text inputs) */
-    onBlurValue?: (value: string) => void;
+    /** onValueBlur - receives just the string value (cleaner alternative to onBlur for text inputs) */
+    onValueBlur?: (value: string) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
     onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => void;

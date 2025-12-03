@@ -8,8 +8,8 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
     /** onValueChange - receives just the string value (alternative to onChange) */
     onValueChange?: (value: string) => void;
-    /** onBlurValue - receives just the string value (alternative to onBlur) */
-    onBlurValue?: (value: string) => void;
+    /** onValueBlur - receives just the string value (alternative to onBlur) */
+    onValueBlur?: (value: string) => void;
 }
 export declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<HTMLInputElement>>;
 //# sourceMappingURL=Input.d.ts.map
