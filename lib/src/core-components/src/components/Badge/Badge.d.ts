@@ -56,6 +56,8 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         unselectable?: "off" | "on" | undefined;
         inputMode?: "search" | "text" | "none" | "tel" | "url" | "email" | "numeric" | "decimal" | undefined;
         is?: string | undefined;
+        exportparts?: string | undefined;
+        part?: string | undefined;
         "aria-activedescendant"?: string | undefined;
         "aria-atomic"?: (boolean | "true" | "false") | undefined;
         "aria-autocomplete"?: "inline" | "both" | "none" | "list" | undefined;
@@ -130,7 +132,7 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         onBlurCapture?: React.FocusEventHandler<HTMLDivElement> | undefined;
         onChange?: React.FormEventHandler<HTMLDivElement> | undefined;
         onChangeCapture?: React.FormEventHandler<HTMLDivElement> | undefined;
-        onBeforeInput?: React.FormEventHandler<HTMLDivElement> | undefined;
+        onBeforeInput?: React.InputEventHandler<HTMLDivElement> | undefined;
         onBeforeInputCapture?: React.FormEventHandler<HTMLDivElement> | undefined;
         onInput?: React.FormEventHandler<HTMLDivElement> | undefined;
         onInputCapture?: React.FormEventHandler<HTMLDivElement> | undefined;
@@ -180,8 +182,6 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.R
         onProgressCapture?: React.ReactEventHandler<HTMLDivElement> | undefined;
         onRateChange?: React.ReactEventHandler<HTMLDivElement> | undefined;
         onRateChangeCapture?: React.ReactEventHandler<HTMLDivElement> | undefined;
-        onResize?: React.ReactEventHandler<HTMLDivElement> | undefined;
-        onResizeCapture?: React.ReactEventHandler<HTMLDivElement> | undefined;
         onSeeked?: React.ReactEventHandler<HTMLDivElement> | undefined;
         onSeekedCapture?: React.ReactEventHandler<HTMLDivElement> | undefined;
         onSeeking?: React.ReactEventHandler<HTMLDivElement> | undefined;
