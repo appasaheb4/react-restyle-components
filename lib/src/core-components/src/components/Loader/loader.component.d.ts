@@ -13,10 +13,16 @@ export interface LoadingAnimateSpinProps {
     color?: 'blue' | 'green' | 'gray' | 'primary' | 'white' | 'black' | string;
     /** Border width for the spinner (e.g., '4px', '10px', '1rem') */
     borderWidth?: string;
+    /** Custom width for the spinner (e.g., '2rem', '50px'). If not provided, uses className or defaults to '4rem' */
+    width?: string;
+    /** Custom height for the spinner (e.g., '2rem', '50px'). If not provided, uses className or defaults to '4rem' */
+    height?: string;
     /** Font size for the loading text (e.g., '1rem', '1.125rem', '1.5rem') */
     textFontSize?: string;
+    /** Loading text to display below the spinner. If not provided, no text is shown. */
+    loadingText?: string;
     /** Accessibility label */
     'aria-label'?: string;
 }
-export declare const LoadingAnimateSpin: ({ classWarper, className, variant, size, color, borderWidth, textFontSize, "aria-label": ariaLabel, }: LoadingAnimateSpinProps) => import("react/jsx-runtime").JSX.Element;
+export declare const LoadingAnimateSpin: ({ classWarper, className, variant, size, color, borderWidth, width, height, textFontSize, loadingText, "aria-label": ariaLabel, }: LoadingAnimateSpinProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=loader.component.d.ts.map
