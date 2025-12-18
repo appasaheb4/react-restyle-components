@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { BadgeProps } from './types';
-export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & React.RefAttributes<HTMLDivElement>, "ref"> & {
+export interface BadgeClassNames {
+    /** Custom className for the badge container */
+    container?: string;
+}
+export interface BadgeStyles {
+    /** Custom style for the badge container */
+    container?: CSSProperties;
+}
+export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & {
+    classNames?: BadgeClassNames | undefined;
+    styles?: BadgeStyles | undefined;
+} & React.RefAttributes<HTMLDivElement>, "ref"> & {
     ref?: ((instance: HTMLDivElement | null) => void) | React.RefObject<HTMLDivElement> | null | undefined;
 }> & {
-    readonly type: React.ForwardRefExoticComponent<BadgeProps & React.RefAttributes<HTMLDivElement>>;
+    readonly type: React.ForwardRefExoticComponent<BadgeProps & {
+        classNames?: BadgeClassNames | undefined;
+        styles?: BadgeStyles | undefined;
+    } & React.RefAttributes<HTMLDivElement>>;
 } & {
     Inline: React.MemoExoticComponent<React.ForwardRefExoticComponent<{
         children?: React.ReactNode;

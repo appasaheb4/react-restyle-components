@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 export type StepperSize = 'sm' | 'md' | 'lg';
 export type StepperStepStatus = 'completed' | 'current' | 'pending';
 export interface StepperStep {
@@ -27,6 +27,38 @@ export interface StepperColors {
     /** Text color for pending steps */
     pendingTextColor?: string;
 }
+export interface StepperClassNames {
+    /** Custom className for the root container */
+    container?: string;
+    /** Custom className for the steps wrapper */
+    stepsWrapper?: string;
+    /** Custom className for the background line */
+    backgroundLine?: string;
+    /** Custom className for the progress line */
+    progressLine?: string;
+    /** Custom className for individual step wrapper */
+    stepWrapper?: string;
+    /** Custom className for the step circle */
+    stepCircle?: string;
+    /** Custom className for the step description */
+    stepDescription?: string;
+}
+export interface StepperStyles {
+    /** Custom style for the root container */
+    container?: CSSProperties;
+    /** Custom style for the steps wrapper */
+    stepsWrapper?: CSSProperties;
+    /** Custom style for the background line */
+    backgroundLine?: CSSProperties;
+    /** Custom style for the progress line */
+    progressLine?: CSSProperties;
+    /** Custom style for individual step wrapper */
+    stepWrapper?: CSSProperties;
+    /** Custom style for the step circle */
+    stepCircle?: CSSProperties;
+    /** Custom style for the step description */
+    stepDescription?: CSSProperties;
+}
 export interface StepperProps {
     /** Additional className for the container */
     className?: string;
@@ -52,6 +84,10 @@ export interface StepperProps {
     style?: React.CSSProperties;
     /** Orientation (horizontal is default) */
     orientation?: 'horizontal' | 'vertical';
+    /** Custom classNames for component parts */
+    classNames?: StepperClassNames;
+    /** Custom inline styles for component parts */
+    styles?: StepperStyles;
 }
-export declare const Stepper: ({ className, steps, currentStep, onStepClick, size, colors, showNumbers, lineThickness, stepSize, clickable, style, orientation, }: StepperProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Stepper: ({ className, steps, currentStep, onStepClick, size, colors, showNumbers, lineThickness, stepSize, clickable, style, orientation, classNames: customClassNames, styles: customStyles, }: StepperProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=stepper.component.d.ts.map
