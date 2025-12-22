@@ -9,5 +9,5 @@ export declare const Wrappers: {
     Row: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
     Test: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
 };
-export declare const Decorators: Record<"Default" | "Dashed" | "TextInput" | "Modal" | "Row" | "Test", (Story: React.ComponentType) => JSX.Element>;
+export declare const Decorators: Record<"Default" | "Dashed" | "TextInput" | "Modal" | "Row" | "Test", (Story: React.ComponentType) => React.JSX.Element>;
 //# sourceMappingURL=Wrappers.d.ts.map

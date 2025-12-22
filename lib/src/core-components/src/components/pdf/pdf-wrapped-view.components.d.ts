@@ -18,7 +18,7 @@ interface PdfViewProps {
     children?: React.ReactNode;
 }
 export declare const PdfView: ({ mh, p, flexDirection, style, fixed, isBreak, alignItems, mt, isWrap, children, }: PdfViewProps) => import("react/jsx-runtime").JSX.Element;
-export declare const PdfBorderView: ({ mh, mv, p, borderColor, bw, style, flexDirection, fixed, isBreak, children, }: PdfViewProps) => import("react/jsx-runtime").JSX.Element;
+export declare const PdfBorderView: React.FC<PdfViewProps>;
 interface PdfHeaderProps {
     bg?: string;
     p?: number;

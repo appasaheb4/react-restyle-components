@@ -37,8 +37,8 @@ export interface CompatIconProps {
     [key: string]: any;
 }
 export declare const Icon: {
-    ({ nameIcon, propsIcon, className, tooltip, isDisable, classNames, styles, onClick, }: IconProps): JSX.Element;
-    SSR: ({ nameIcon, classNames, styles, ...props }: IconProps) => JSX.Element;
-    Compat: ({ src, className, style, ...props }: CompatIconProps) => JSX.Element;
+    ({ nameIcon, propsIcon, className, tooltip, isDisable, classNames, styles, onClick, }: IconProps): React.JSX.Element;
+    SSR: ({ nameIcon, classNames, styles, ...props }: IconProps) => React.JSX.Element;
+    Compat: ({ src, className, style, ...props }: CompatIconProps) => React.JSX.Element;
 };
 //# sourceMappingURL=Icon.d.ts.map

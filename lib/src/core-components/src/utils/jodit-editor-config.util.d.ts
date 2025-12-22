@@ -180,7 +180,7 @@ export declare const JODIT_PASTE_DIALOG_HANDLER: {
  * Common toolbar buttons configuration organized by category
  * Used across all JoditEditor instances for consistency
  */
-export declare const JODIT_TOOLBAR_BUTTONS: readonly ["source", "|", "bold", "italic", "underline", "strikethrough", "|", "superscript", "subscript", "|", "font", "fontsize", "lineHeight", "brush", "paragraph", "classSpan", "|", "ul", "ol", "|", "indent", "outdent", "|", "align", "left", "center", "right", "justify", "|", "image", "video", "file", "link", "|", "hr", "table", "symbol", "|", "cut", "copy", "paste", "selectall", "copyformat", "eraser", "|", "undo", "redo", "|", "find", "spellcheck", "print", "fullsize", "|", "dots"];
+export declare const JODIT_TOOLBAR_BUTTONS: readonly ["source", "preview", "print", "|", "bold", "italic", "underline", "strikethrough", "|", "superscript", "subscript", "|", "font", "fontsize", "lineHeight", "brush", "paragraph", "classSpan", "|", "ul", "ol", "|", "indent", "outdent", "|", "align", "left", "center", "right", "justify", "|", "image", "video", "file", "link", "|", "hr", "table", "symbol", "|", "cut", "copy", "paste", "selectall", "copyformat", "eraser", "|", "undo", "redo", "|", "find", "spellcheck", "print", "fullsize", "|", "dots"];
 /**
  * Type for toolbar button names
  */

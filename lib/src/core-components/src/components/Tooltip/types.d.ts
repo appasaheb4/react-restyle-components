@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 export type TooltipProps = {
     /** custom classname to pass to the tooltip element */
     className?: string;

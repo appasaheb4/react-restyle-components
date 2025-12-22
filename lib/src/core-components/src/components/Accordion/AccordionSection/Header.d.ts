@@ -5,7 +5,7 @@ type TextProps = React.HTMLAttributes<HTMLSpanElement> & {
     color?: string;
 };
 export type HeaderProps = {
-    children: React.ReactNode;
+    children?: React.ReactNode;
 };
 export declare const Header: (({ children }: HeaderProps) => import("react/jsx-runtime").JSX.Element) & {
     Heading: ({ children, ...props }: TextProps) => import("react/jsx-runtime").JSX.Element;

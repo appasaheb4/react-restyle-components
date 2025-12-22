@@ -19,8 +19,11 @@ export interface ModalDocxContentProps {
     showAIButton?: boolean;
     /** Whether to show voice recording buttons */
     showVoiceButtons?: boolean;
+    /** URL for file uploads */
     uploaderUrl?: string;
+    /** Folder name for file uploads */
     folder?: string;
+    /** Gemini API key - AI button only visible when valid key is provided */
     gemini_key?: string;
     /** Custom class names for styling */
     classNames?: {

@@ -7,11 +7,11 @@ export type addIconToChildrenProps = {
     icons?: IconProps;
     iconSide: 'left' | 'right';
 };
-export declare const addIconToChildren: ({ children, size, icons, iconSide, }: addIconToChildrenProps) => JSX.Element;
+export declare const addIconToChildren: ({ children, size, icons, iconSide, }: addIconToChildrenProps) => React.JSX.Element;
 export type addToSideProps = {
     children: React.ReactNode;
     element: React.ReactNode;
     side: 'left' | 'right';
 };
-export declare const addToSide: ({ children, element, side, }: addToSideProps) => JSX.Element;
+export declare const addToSide: ({ children, element, side, }: addToSideProps) => React.JSX.Element;
 //# sourceMappingURL=utils.d.ts.map

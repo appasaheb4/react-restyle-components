@@ -70,7 +70,7 @@ export interface DraggableSelectedItemProps {
     className?: string;
     style?: React.CSSProperties;
 }
-export declare const DraggableSelectedItem: ({ item, index, onRemove, displayKey, uniqueField, displayConfig, className, style: customStyle, }: DraggableSelectedItemProps) => import("react/jsx-runtime").JSX.Element;
+export declare const DraggableSelectedItem: React.FC<DraggableSelectedItemProps>;
 interface AutoCompleteFilterMultiSelectMultiFieldsDisplayDragDropProps {
     /** Component key for React */
     componentKey?: string;

@@ -36,6 +36,6 @@ export declare const AccordionDivider: import("styled-components/dist/types").IS
 }, never>> & string;
 export declare const RotatingIcon: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("../../Icon/Icon").IconProps, {
     $rotateIcon: boolean;
-}>> & string & Omit<({ nameIcon, classNames, styles, ...props }: import("../../Icon/Icon").IconProps) => JSX.Element, keyof import("react").Component<any, {}, any>>;
+}>> & string & Omit<({ nameIcon, classNames, styles, ...props }: import("../../Icon/Icon").IconProps) => import("react").JSX.Element, keyof import("react").Component<any, {}, any>>;
 export {};
 //# sourceMappingURL=elements.d.ts.map
