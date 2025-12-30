@@ -55,6 +55,8 @@ export interface ModalConfirmProps {
     closeTitle?: string;
     isClick?: boolean;
     isClose?: boolean;
+    /** Animation duration in milliseconds */
+    animationDuration?: number;
     /** Custom classNames for component parts */
     classNames?: ModalConfirmClassNames;
     /** Custom inline styles for component parts */
@@ -62,5 +64,5 @@ export interface ModalConfirmProps {
     onClick: () => void;
     onClose: () => void;
 }
-export declare const ModalConfirm: ({ visible, title, message, submitTitle, closeTitle, isClick, isClose, classNames, styles, onClick, onClose, }: ModalConfirmProps) => import("react/jsx-runtime").JSX.Element;
+export declare const ModalConfirm: ({ visible, title, message, submitTitle, closeTitle, isClick, isClose, animationDuration, classNames, styles, onClick, onClose, }: ModalConfirmProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=modal-confirm.component.d.ts.map

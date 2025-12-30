@@ -23,7 +23,7 @@ export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayClassNames
     /** Custom className for the empty state text */
     emptyStateText?: string;
     /** Custom className for the chevron icon */
-    icon?: string;
+    iconWrapper?: string;
 }
 export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayStyles {
     /** Custom style for the root container */
@@ -49,7 +49,9 @@ export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayStyles {
     /** Custom style for the empty state text */
     emptyStateText?: CSSProperties;
     /** Custom style for the chevron icon wrapper */
-    icon?: CSSProperties;
+    iconWrapper?: CSSProperties;
+    iconColor?: string;
+    iconSize?: number;
 }
 export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
     uniqueField?: string;
@@ -65,10 +67,12 @@ export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
     classNames?: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayClassNames;
     /** Custom inline styles for component parts */
     styles?: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayStyles;
+    /** Maximum height for dropdown (e.g., '200px', '300px'). Shows scrollbar when content exceeds this height */
+    maxHeight?: string;
     onFilter?: (value: string) => void;
     onUpdate: (item: any) => void;
     onSelect: (item: any) => any;
     onBlur?: (e: any) => void;
 }
-export declare const AutoCompleteFilterMultipleSelectMultipleFieldsDisplay: ({ uniqueField, isSelectedStringArray, loader, placeholder, data, hasError, disable, isUpperCase, name, classNames, styles, onFilter, onUpdate, onSelect, onBlur, }: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterMultipleSelectMultipleFieldsDisplay: ({ uniqueField, isSelectedStringArray, loader, placeholder, data, hasError, disable, isUpperCase, name, classNames, styles, maxHeight, onFilter, onUpdate, onSelect, onBlur, }: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=auto-complete-filter-multiple-select-multiple-fields-display.component.d.ts.map

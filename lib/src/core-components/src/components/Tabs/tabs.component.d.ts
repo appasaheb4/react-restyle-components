@@ -25,7 +25,7 @@ export interface TabsStyles {
 }
 interface TabProps {
     title: string;
-    children: React.JSX.Element;
+    children: React.ReactNode;
     className?: string;
     style?: CSSProperties;
 }
@@ -43,6 +43,6 @@ export interface TabsProps {
     /** Custom inline styles for component parts */
     styles?: TabsStyles;
 }
-export declare const Tabs: ({ options, onSelect, children, classNames, styles }: TabsProps) => import("react/jsx-runtime").JSX.Element;
+export declare const Tabs: ({ options, onSelect, children, classNames, styles, }: TabsProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=tabs.component.d.ts.map
