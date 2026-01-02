@@ -70,7 +70,7 @@ export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
     /** Maximum height for dropdown (e.g., '200px', '300px'). Shows scrollbar when content exceeds this height */
     maxHeight?: string;
     onFilter?: (value: string) => void;
-    onUpdate: (item: any) => void;
+    onUpdate: (selectedItems: any[]) => void;
     onSelect: (item: any) => any;
     onBlur?: (e: any) => void;
 }
