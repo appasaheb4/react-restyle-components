@@ -14,5 +14,17 @@ export * from './Stepper2/stepper.component';
 export * from './Tabs/tabs.component';
 export * from './Tags1/Tags.component';
 export * from './Timer1/timer.component';
-export * from './Tooltip/tooltip.component';
+export * from './Tooltip';
+export * from './Breadcrumb';
+export * from './DynamicGrid';
+export * from './AlertBanner';
+export * from './Chip';
+export * from './Divider';
+export * from './Skeleton';
+export * from './Switch';
+export * from './Toast';
+export * from './SpeedDial';
+export * from './Masonry';
+export * from './TreeSelect';
+export * from './Table';
 //# sourceMappingURL=index.d.ts.map

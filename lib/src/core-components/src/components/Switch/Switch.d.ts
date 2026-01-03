@@ -1,0 +1,4 @@
+import React from 'react';
+import { SwitchProps } from './types';
+export declare const Switch: React.ForwardRefExoticComponent<SwitchProps & React.RefAttributes<HTMLInputElement>>;
+//# sourceMappingURL=Switch.d.ts.map
