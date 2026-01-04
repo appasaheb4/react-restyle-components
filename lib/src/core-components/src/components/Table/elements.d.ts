@@ -8,6 +8,7 @@ export declare const ToolbarGroup: import("styled-components/dist/types").IStyle
 export declare const SearchInput: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
 export declare const ToolbarButton: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, {
     $active?: boolean | undefined;
+    $variant?: "gray" | "default" | "primary" | undefined;
 }>> & string;
 export declare const TableWrapper: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {
     $maxHeight?: string | number | undefined;
@@ -29,6 +30,7 @@ export declare const HeaderCell: import("styled-components/dist/types").IStyledC
     $width?: string | number | undefined;
     $minWidth?: string | number | undefined;
     $pinned?: false | "left" | "right" | undefined;
+    $customClass?: boolean | undefined;
 }>> & string;
 export declare const SortIcon: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {
     $active: boolean;
@@ -50,6 +52,7 @@ export declare const TableCell: import("styled-components/dist/types").IStyledCo
     $align: string;
     $compact: boolean;
     $pinned?: false | "left" | "right" | undefined;
+    $padding?: string | undefined;
 }>> & string;
 export declare const Checkbox: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("styled-components").FastOmit<import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, Omit<import("react").DetailedHTMLProps<import("react").InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & {
     ref?: ((instance: HTMLInputElement | null) => void) | import("react").RefObject<HTMLInputElement> | null | undefined;

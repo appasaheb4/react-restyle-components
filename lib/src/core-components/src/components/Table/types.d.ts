@@ -11,6 +11,44 @@ export type EditMode = 'none' | 'click' | 'dblclick';
 export type PaginationPosition = 'top' | 'bottom' | 'both';
 /** Column alignment */
 export type ColumnAlign = 'left' | 'center' | 'right';
+/** Field type for fieldTypeConfig */
+export type FieldConfigType = 'text' | 'string' | 'number' | 'date' | 'select' | 'boolean' | 'array' | 'object' | 'custom';
+/** Single field configuration */
+export interface FieldConfig<T = any> {
+    /** Field type */
+    type?: FieldConfigType;
+    /** For array/object type - fields to extract from each item */
+    fields?: string[];
+    /** For array type - separator between array items */
+    separator?: string;
+    /** For array type - max items to display */
+    maxItems?: number;
+    /** For object type - keys to display (alias for fields) */
+    keys?: string[];
+    /** For object type - label mapping for keys */
+    labelMap?: Record<string, string>;
+    /** Date format string */
+    dateFormat?: string;
+    /** Select options */
+    options?: Array<{
+        value: string;
+        label: string;
+    }>;
+    /** Custom formatter for display */
+    formatter?: (value: any, row: T) => React.ReactNode;
+    /** Is editable */
+    editable?: boolean;
+    /** Custom style */
+    style?: CSSProperties;
+    /** Hide from export */
+    hideFromExport?: boolean;
+    /** Export formatter - custom CSV value formatter */
+    exportFormatter?: (value: any, row: T) => string;
+    /** CSV export enabled (default true) */
+    csvExport?: boolean;
+}
+/** Field type configuration for dynamic rendering */
+export type FieldTypeConfig<T = any> = Record<string, FieldConfig<T>>;
 /** Column definition */
 export interface TableColumn<T = any> {
     /** Unique field key */
@@ -37,8 +75,10 @@ export interface TableColumn<T = any> {
     sortFunc?: (a: any, b: any, order: SortDirection, rowA: T, rowB: T) => number;
     /** Default sort order */
     defaultSort?: SortDirection;
-    /** Whether column is filterable */
-    filter?: boolean;
+    /** Custom sort caret renderer */
+    sortCaret?: (order: SortDirection, column: TableColumn<T>) => React.ReactNode;
+    /** Whether column is filterable, or a custom filter component */
+    filter?: boolean | React.ComponentType<TableFilterProps>;
     /** Filter type */
     filterType?: FilterType;
     /** Filter options (for select filter) */
@@ -46,12 +86,14 @@ export interface TableColumn<T = any> {
         value: string;
         label: string;
     }>;
-    /** Custom filter component */
+    /** Custom filter component (alias for filter when using component) */
     filterComponent?: React.ComponentType<TableFilterProps>;
+    /** Custom filter renderer */
+    filterRenderer?: (onFilter: (value: any) => void, column: TableColumn<T>) => React.ReactNode;
     /** Filter placeholder */
     filterPlaceholder?: string;
-    /** Whether column is editable */
-    editable?: boolean;
+    /** Whether column is editable - boolean or function returning boolean/custom editor */
+    editable?: boolean | ((cell: any, row: T, rowIndex: number, columnIndex: number) => boolean | React.ReactNode);
     /** Editor type */
     editorType?: 'text' | 'number' | 'date' | 'select' | 'checkbox' | 'textarea';
     /** Editor options (for select editor) */
@@ -59,6 +101,12 @@ export interface TableColumn<T = any> {
         value: string;
         label: string;
     }>;
+    /** Custom editor renderer */
+    editorRenderer?: (editorProps: TableEditorProps<T>, value: any, row: T, column: TableColumn<T>, rowIndex: number, columnIndex: number) => React.ReactNode;
+    /** Editor style */
+    editorStyle?: CSSProperties;
+    /** Editor CSS classes */
+    editorClasses?: string;
     /** Validator function */
     validator?: (value: any, row: T) => boolean | string;
     /** Custom cell renderer */
@@ -73,12 +121,20 @@ export interface TableColumn<T = any> {
     csvExport?: boolean;
     /** Header CSS class */
     headerClasses?: string;
+    /** Hide header text/title (only show filter and sort) - deprecated, use isHeaderTitle instead */
+    hideHeaderText?: boolean;
+    /** Show/hide header title (default: true) */
+    isHeaderTitle?: boolean;
+    /** Show/hide header filter component (default: true) */
+    isHeaderFilterComp?: boolean;
+    /** Show/hide header sort icon (default: true) */
+    isHeaderSort?: boolean;
     /** Cell CSS class */
-    classes?: string | ((cell: any, row: T, rowIndex: number) => string);
+    classes?: string | ((cell: any, row: T, rowIndex: number, colIndex: number) => string);
     /** Header style */
     headerStyle?: CSSProperties | ((column: TableColumn<T>) => CSSProperties);
     /** Cell style */
-    style?: CSSProperties | ((cell: any, row: T, rowIndex: number) => CSSProperties);
+    style?: CSSProperties | ((cell: any, row: T, rowIndex: number, colIndex: number) => CSSProperties);
     /** Whether column can be resized */
     resizable?: boolean;
     /** Whether column can be reordered */
@@ -99,6 +155,25 @@ export interface TableFilterProps {
     value: any;
     onChange: (value: any) => void;
     onClear: () => void;
+}
+/** Editor props passed to custom editor renderer */
+export interface TableEditorProps<T = any> {
+    /** Current value being edited */
+    value: any;
+    /** Callback to update the value */
+    onUpdate: (value: any) => void;
+    /** Callback to cancel editing */
+    onCancel: () => void;
+    /** Callback to blur/complete editing */
+    onBlur: () => void;
+    /** The row being edited */
+    row: T;
+    /** The column definition */
+    column: TableColumn<T>;
+    /** Row index */
+    rowIndex: number;
+    /** Column index */
+    columnIndex: number;
 }
 /** Pagination config */
 export interface TablePaginationConfig {
@@ -267,6 +342,14 @@ export interface TableProps<T = any> {
     defaultFilters?: TableFilterState;
     /** Controlled filters */
     filters?: TableFilterState;
+    /** Show filter row by default (when filterable is true) */
+    defaultShowFilters?: boolean;
+    /** Controlled show/hide filter row */
+    showFilters?: boolean;
+    /** Callback when filter visibility changes */
+    onShowFiltersChange?: (visible: boolean) => void;
+    /** Show filter toggle button in toolbar */
+    showFilterToggle?: boolean;
     /** Enable global search */
     searchable?: boolean;
     /** Search placeholder */
@@ -303,6 +386,8 @@ export interface TableProps<T = any> {
     hover?: boolean;
     /** Compact/dense mode */
     compact?: boolean;
+    /** Custom cell padding (e.g., '2px', '4px 6px'). Default is '2px' */
+    cellPadding?: string;
     /** Fixed header */
     stickyHeader?: boolean;
     /** Table max height (for sticky header) */
@@ -354,5 +439,215 @@ export interface TableProps<T = any> {
     'aria-label'?: string;
     /** ARIA labelledby */
     'aria-labelledby'?: string;
+    /** Enable delete action column */
+    isDelete?: boolean;
+    /** Enable edit/modify action */
+    isEditModify?: boolean;
+    /** Alias for isEditModify */
+    isUpdate?: boolean;
+    /** Enable export button (alias for exportable) */
+    isExport?: boolean;
+    /** Enable row selection (shorthand) */
+    isSelectRow?: boolean;
+    /** Export file name (alias for exportFileName) */
+    fileName?: string;
+    /** Hide export sheet button or array of fields to exclude from export */
+    hideExcelSheet?: boolean | string[];
+    /** Callback when rows are selected (simplified) */
+    onSelectedRow?: (rows: T[]) => void;
+    /** Callback when an item is updated */
+    onUpdateItem?: (value: any, dataField: string, id: string) => void;
+    /** Callback when page or size changes */
+    onPageSizeChange?: (page: number, size: number) => void;
+    /** Callback when filter changes with full context */
+    onFilter?: (type: 'filter' | 'search' | 'sort', filter: TableFilterState, page: number, size: number) => void;
+    /** Callback to clear all filters (user-defined reset logic) */
+    clearAllFilter?: () => void;
+    /** Dynamic styling fields configuration */
+    dynamicStylingFields?: string[];
+    /** Field type configuration for dynamic rendering */
+    fieldTypeConfig?: FieldTypeConfig<T>;
+    /** Show action column */
+    showActionColumn?: boolean;
+    /** Action column width */
+    actionColumnWidth?: number | string;
+    /** Action column title */
+    actionColumnTitle?: string;
+    /** Action column position */
+    actionColumnPosition?: 'first' | 'last';
+    /** Custom action column render */
+    actionColumnRender?: (row: T, rowIndex: number) => React.ReactNode;
+    /** On delete action */
+    onDelete?: (row: T, rowIndex: number) => void;
+    /** On edit action */
+    onEdit?: (row: T, rowIndex: number) => void;
+    /** On view action */
+    onView?: (row: T, rowIndex: number) => void;
+    /** Show view button in actions */
+    isView?: boolean;
+    /** Show row number column */
+    showRowNumber?: boolean;
+    /** Row number column width */
+    rowNumberWidth?: number | string;
+    /** Row number column title */
+    rowNumberTitle?: string;
+    /** Custom row number render */
+    rowNumberRender?: (rowIndex: number, row: T) => React.ReactNode;
+    /** Enable bulk actions */
+    bulkActions?: boolean;
+    /** Bulk action items */
+    bulkActionItems?: Array<{
+        key: string;
+        label: string;
+        icon?: React.ReactNode;
+        danger?: boolean;
+        disabled?: boolean;
+        onClick: (selectedRows: T[], selectedKeys: string[]) => void;
+    }>;
+    /** On bulk action */
+    onBulkAction?: (action: string, selectedRows: T[], selectedKeys: string[]) => void;
+    /** Enable print button */
+    printable?: boolean;
+    /** Print title */
+    printTitle?: string;
+    /** On print */
+    onPrint?: () => void;
+    /** Enable copy button */
+    copyable?: boolean;
+    /** On copy */
+    onCopy?: (data: T[]) => void;
+    /** Enable refresh button */
+    refreshable?: boolean;
+    /** On refresh */
+    onRefresh?: () => void;
+    /** Auto refresh interval (ms) */
+    autoRefreshInterval?: number;
+    /** Highlighted row keys */
+    highlightedRowKeys?: string[];
+    /** Highlight row style */
+    highlightRowStyle?: CSSProperties;
+    /** Highlight row class */
+    highlightRowClassName?: string;
+    /** Get row status */
+    getRowStatus?: (row: T) => 'success' | 'warning' | 'error' | 'info' | null;
+    /** Show row status indicator */
+    showRowStatus?: boolean;
+    /** Pinned left columns */
+    pinnedLeftColumns?: string[];
+    /** Pinned right columns */
+    pinnedRightColumns?: string[];
+    /** Show summary row */
+    showSummary?: boolean;
+    /** Summary data */
+    summaryData?: Partial<T>;
+    /** Custom summary render */
+    summaryRender?: (data: T[], column: TableColumn<T>) => React.ReactNode;
+    /** Enable virtual scrolling */
+    virtual?: boolean;
+    /** Virtual row height */
+    virtualRowHeight?: number;
+    /** Virtual buffer size */
+    virtualBuffer?: number;
+    /** Responsive mode */
+    responsive?: boolean;
+    /** Responsive breakpoint */
+    responsiveBreakpoint?: number;
+    /** Card view on mobile */
+    cardViewOnMobile?: boolean;
+    /** Mobile card render */
+    mobileCardRender?: (row: T, rowIndex: number) => React.ReactNode;
+    /** Enable context menu */
+    contextMenu?: boolean;
+    /** Context menu items */
+    contextMenuItems?: Array<{
+        key: string;
+        label: string;
+        icon?: React.ReactNode;
+        danger?: boolean;
+        disabled?: boolean | ((row: T) => boolean);
+        onClick: (row: T, rowIndex: number) => void;
+    }>;
+    /** Enable keyboard navigation */
+    keyboardNavigation?: boolean;
+    /** On key down */
+    onKeyDown?: (e: React.KeyboardEvent, row: T | null, rowIndex: number | null) => void;
+    /** Enable row dragging */
+    draggable?: boolean;
+    /** On row drag end */
+    onRowDragEnd?: (fromIndex: number, toIndex: number, data: T[]) => void;
+    /** Enable inline add row */
+    inlineAdd?: boolean;
+    /** Add row position */
+    addRowPosition?: 'top' | 'bottom';
+    /** On add row */
+    onAddRow?: (row: Partial<T>) => void;
+    /** Default new row values */
+    defaultNewRowValues?: Partial<T>;
+    /** Row click behavior */
+    rowClickBehavior?: 'select' | 'expand' | 'edit' | 'custom' | 'none';
+    /** Transform data before render */
+    transformData?: (data: T[]) => T[];
+    /** Error state */
+    error?: string | React.ReactNode;
+    /** On error retry */
+    onRetry?: () => void;
+    /** Show skeleton loading */
+    skeletonLoading?: boolean;
+    /** Skeleton row count */
+    skeletonRowCount?: number;
+    /** Enable state persistence (localStorage) */
+    persistState?: boolean;
+    /** State persistence key */
+    persistStateKey?: string;
+    /** Persist which states */
+    persistStateFields?: Array<'sort' | 'filter' | 'pagination' | 'columns' | 'search'>;
+    /** Toolbar position */
+    toolbarPosition?: 'top' | 'bottom' | 'both';
+    /** Left toolbar content */
+    toolbarLeft?: React.ReactNode;
+    /** Right toolbar content */
+    toolbarRight?: React.ReactNode;
+    /** Center toolbar content */
+    toolbarCenter?: React.ReactNode;
+    /** Hide header */
+    hideHeader?: boolean;
+    /** Header height */
+    headerHeight?: number | string;
+    /** Multi-line header */
+    multiLineHeader?: boolean;
+    /** Table size */
+    size?: 'small' | 'medium' | 'large';
+    /** Table theme */
+    theme?: 'light' | 'dark' | 'auto';
+    /** Primary color */
+    primaryColor?: string;
+    /** Fixed table layout */
+    fixedLayout?: boolean;
+    /** Table width */
+    tableWidth?: number | string;
+    /** Table min width */
+    tableMinWidth?: number | string;
+    /** On row mouse enter */
+    onRowMouseEnter?: (row: T, rowIndex: number, e: React.MouseEvent) => void;
+    /** On row mouse leave */
+    onRowMouseLeave?: (row: T, rowIndex: number, e: React.MouseEvent) => void;
+    /** On cell click */
+    onCellClick?: (cell: any, row: T, rowIndex: number, column: TableColumn<T>, columnIndex: number, e: React.MouseEvent) => void;
+    /** On cell double click */
+    onCellDoubleClick?: (cell: any, row: T, rowIndex: number, column: TableColumn<T>, columnIndex: number, e: React.MouseEvent) => void;
+    /** On header click */
+    onHeaderClick?: (column: TableColumn<T>, columnIndex: number, e: React.MouseEvent) => void;
+    /** On data change (after sort/filter/page) */
+    onDataChange?: (processedData: T[], info: TableChangeInfo) => void;
+    /** Enable screen reader announcements */
+    announceChanges?: boolean;
+    /** Custom screen reader text */
+    screenReaderText?: {
+        sortAscending?: string;
+        sortDescending?: string;
+        filterActive?: string;
+        rowSelected?: string;
+        rowExpanded?: string;
+    };
 }
 //# sourceMappingURL=types.d.ts.map

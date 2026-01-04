@@ -114,5 +114,5 @@ type TextareaSpecificProps = {
 export interface FormFieldProps extends BaseFormFieldProps, SafeHTMLAttributes, FieldEventHandlers, Partial<InputSpecificProps>, Partial<TextareaSpecificProps> {
     [key: string]: any;
 }
-export declare const FormField: React.ForwardRefExoticComponent<Omit<FormFieldProps, "ref"> & React.RefAttributes<HTMLTextAreaElement | HTMLInputElement>>;
+export declare const FormField: React.ForwardRefExoticComponent<Omit<FormFieldProps, "ref"> & React.RefAttributes<HTMLInputElement | HTMLTextAreaElement>>;
 //# sourceMappingURL=FormField.d.ts.map

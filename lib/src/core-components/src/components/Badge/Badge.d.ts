@@ -88,7 +88,7 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & {
         "aria-description"?: string | undefined;
         "aria-details"?: string | undefined;
         "aria-disabled"?: (boolean | "false" | "true") | undefined;
-        "aria-dropeffect"?: "none" | "copy" | "move" | "link" | "execute" | "popup" | undefined;
+        "aria-dropeffect"?: "copy" | "none" | "move" | "link" | "execute" | "popup" | undefined;
         "aria-errormessage"?: string | undefined;
         "aria-expanded"?: (boolean | "false" | "true") | undefined;
         "aria-flowto"?: string | undefined;
