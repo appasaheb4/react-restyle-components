@@ -10,6 +10,13 @@ export declare const ToolbarButton: import("styled-components/dist/types").IStyl
     $active?: boolean | undefined;
     $variant?: "gray" | "default" | "primary" | undefined;
 }>> & string;
+export declare const SelectionIndicator: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, {
+    $animate?: "none" | "up" | "down" | undefined;
+}>> & string;
+export declare const SelectionCount: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {
+    $animate?: "none" | "up" | "down" | undefined;
+}>> & string;
+export declare const SelectionIcon: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, never>> & string;
 export declare const TableWrapper: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {
     $maxHeight?: string | number | undefined;
     $stickyHeader: boolean;
