@@ -160,7 +160,7 @@ export interface TableFilterProps {
 export interface TableEditorProps<T = any> {
     /** Current value being edited */
     value: any;
-    /** Callback to update the value */
+    /** Callback to update the value and close editor */
     onUpdate: (value: any) => void;
     /** Callback to cancel editing */
     onCancel: () => void;
@@ -174,6 +174,12 @@ export interface TableEditorProps<T = any> {
     rowIndex: number;
     /** Column index */
     columnIndex: number;
+    /** Row ID (keyField value) */
+    rowId: string;
+    /** Data field name */
+    dataField: string;
+    /** Direct callback to update item and close editor */
+    onUpdateItem: (value: any) => void;
 }
 /** Pagination config */
 export interface TablePaginationConfig {
@@ -364,8 +370,10 @@ export interface TableProps<T = any> {
     rowSelection?: TableSelectionConfig<T>;
     /** Row expand config */
     expandable?: TableExpandConfig<T>;
-    /** Edit mode */
+    /** Edit mode (default: 'dblclick') */
     editMode?: EditMode;
+    /** Show edit pencil icon on editable cells (default: false) */
+    showEditIcon?: boolean;
     /** On cell edit */
     onCellEdit?: (value: any, dataField: string, row: T, rowIndex: number) => void;
     /** Enable CSV export */
@@ -439,7 +447,7 @@ export interface TableProps<T = any> {
     'aria-label'?: string;
     /** ARIA labelledby */
     'aria-labelledby'?: string;
-    /** Enable delete action column */
+    /** Enable delete action */
     isDelete?: boolean;
     /** Enable edit/modify action */
     isEditModify?: boolean;
@@ -447,6 +455,14 @@ export interface TableProps<T = any> {
     isUpdate?: boolean;
     /** Enable export button (alias for exportable) */
     isExport?: boolean;
+    /** Show view button */
+    isView?: boolean;
+    /** On delete action */
+    onDelete?: (row: T, rowIndex: number) => void;
+    /** On edit action */
+    onEdit?: (row: T, rowIndex: number) => void;
+    /** On view action */
+    onView?: (row: T, rowIndex: number) => void;
     /** Enable row selection (shorthand) */
     isSelectRow?: boolean;
     /** Export file name (alias for exportFileName) */
@@ -467,24 +483,6 @@ export interface TableProps<T = any> {
     dynamicStylingFields?: string[];
     /** Field type configuration for dynamic rendering */
     fieldTypeConfig?: FieldTypeConfig<T>;
-    /** Show action column */
-    showActionColumn?: boolean;
-    /** Action column width */
-    actionColumnWidth?: number | string;
-    /** Action column title */
-    actionColumnTitle?: string;
-    /** Action column position */
-    actionColumnPosition?: 'first' | 'last';
-    /** Custom action column render */
-    actionColumnRender?: (row: T, rowIndex: number) => React.ReactNode;
-    /** On delete action */
-    onDelete?: (row: T, rowIndex: number) => void;
-    /** On edit action */
-    onEdit?: (row: T, rowIndex: number) => void;
-    /** On view action */
-    onView?: (row: T, rowIndex: number) => void;
-    /** Show view button in actions */
-    isView?: boolean;
     /** Show row number column */
     showRowNumber?: boolean;
     /** Row number column width */
