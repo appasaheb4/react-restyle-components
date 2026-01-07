@@ -54,6 +54,7 @@ export declare const TableRow: import("styled-components/dist/types").IStyledCom
     $selected: boolean;
     $clickable: boolean;
     $disabled: boolean;
+    $hasCustomSelectedStyle?: boolean | undefined;
 }>> & string;
 export declare const TableCell: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>, {
     $align: string;

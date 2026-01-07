@@ -1,1 +1,0 @@
-{"version":3,"file":"InternalProvider.d.ts","sourceRoot":"","sources":["../../../../../../src/core-components/src/utils/context/InternalProvider.tsx"],"names":[],"mappings":"AAEA,OAAO,KAAkB,MAAM,OAAO,CAAC;AAKvC,MAAM,MAAM,qBAAqB,GAAG;IAClC,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;CAC5B,CAAC;AAIF;;;GAGG;AACH,eAAO,MAAM,gBAAgB,EAAE,KAAK,CAAC,EAAE,CAAC,qBAAqB,CAiB5D,CAAC"}

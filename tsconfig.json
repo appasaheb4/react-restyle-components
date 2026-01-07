@@ -32,6 +32,14 @@
     "jest.config.js",
     "jest.setup.js",
     ".eslintrc.js",
-    "**/*.stories.tsx"
+    "**/*.stories.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/setupTests.ts",
+    "**/reportWebVitals.ts",
+    "**/App.tsx",
+    "**/App.css"
   ]
 }

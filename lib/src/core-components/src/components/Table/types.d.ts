@@ -334,7 +334,7 @@ export interface TableProps<T = any> {
     paginationConfig?: Partial<TablePaginationConfig>;
     /** Total records (for server-side) */
     totalSize?: number;
-    /** Server-side mode */
+    /** Server-side mode (default: true) - data is fetched from server via onPageSizeChange */
     remote?: boolean;
     /** Default sort */
     defaultSort?: TableSortState;
@@ -471,6 +471,10 @@ export interface TableProps<T = any> {
     hideExcelSheet?: boolean | string[];
     /** Callback when rows are selected (simplified) */
     onSelectedRow?: (rows: T[]) => void;
+    /** Custom style for selected rows (when using isSelectRow) */
+    selectedRowStyle?: CSSProperties | ((row: T) => CSSProperties);
+    /** Custom class for selected rows (when using isSelectRow) */
+    selectedRowClassName?: string | ((row: T) => string);
     /** Callback when an item is updated */
     onUpdateItem?: (value: any, dataField: string, id: string) => void;
     /** Callback when page or size changes */
