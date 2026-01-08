@@ -83,4 +83,3 @@ export interface TooltipProps {
     /** Accessibility: aria-label override */
     ariaLabel?: string;
 }
-//# sourceMappingURL=types.d.ts.map

@@ -46,4 +46,3 @@ type ColorKey = keyof typeof colors;
 /** @deprecated */
 export type ColorValue = (typeof colors)[ColorKey];
 export {};
-//# sourceMappingURL=index.d.ts.map

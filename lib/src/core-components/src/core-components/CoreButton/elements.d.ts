@@ -41,4 +41,3 @@ export declare const IconWrapper: import("styled-components/dist/types").IStyled
     hasChildren: boolean;
 }>> & string;
 export {};
-//# sourceMappingURL=elements.d.ts.map

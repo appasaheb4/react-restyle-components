@@ -30,4 +30,3 @@ export declare const SkeletonCardContainer: import("styled-components/dist/types
 export declare const SkeletonTextContainer: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {
     $gap: string;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

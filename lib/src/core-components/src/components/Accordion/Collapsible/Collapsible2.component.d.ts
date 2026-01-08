@@ -44,4 +44,3 @@ interface CollapsibleProps {
 }
 export declare const Collapsible: ({ label, labelClassName, className, classNames, styles, variant, animationDuration, defaultOpen, isOpen: controlledOpen, hideIcon, icon, onExpand, onCollapse, children, }: CollapsibleProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=Collapsible2.component.d.ts.map

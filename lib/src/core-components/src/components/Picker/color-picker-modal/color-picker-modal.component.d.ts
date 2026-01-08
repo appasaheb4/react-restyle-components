@@ -11,4 +11,3 @@ interface ColorPickerModalProps {
 }
 export declare const ColorPickerModal: ({ color, isVisible, testId, tooltip, tooltipSide, onChange, onNoFill, onClose, }: ColorPickerModalProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=color-picker-modal.component.d.ts.map

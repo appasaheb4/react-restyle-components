@@ -10,4 +10,3 @@ export type ButtonColor = typeof BUTTON_COLORS[number];
 export type ButtonOptions = {
     useFigmaStyles?: boolean;
 };
-//# sourceMappingURL=types.d.ts.map

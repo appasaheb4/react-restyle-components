@@ -24,4 +24,3 @@ export declare const calculateAmountByKey: (amounts: Amounts, mode: AmountMode) 
     discountPercent: number;
 };
 export {};
-//# sourceMappingURL=calculation.util.d.ts.map

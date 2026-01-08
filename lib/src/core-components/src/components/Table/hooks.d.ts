@@ -104,4 +104,19 @@ export declare function getNestedValue(obj: any, path: string): any;
  * Export data to CSV
  */
 export declare function exportToCSV<T>(data: T[], columns: TableColumn<T>[], fileName: string): void;
-//# sourceMappingURL=hooks.d.ts.map
+/**
+ * Export data to Excel (.xlsx) - loads ExcelJS dynamically from CDN
+ */
+export declare function exportToExcel<T>(data: T[], columns: TableColumn<T>[], fileName: string, options?: {
+    sheetName?: string;
+    headerStyle?: {
+        font?: {
+            bold?: boolean;
+            color?: string;
+            size?: number;
+        };
+        fill?: {
+            color?: string;
+        };
+    };
+}): Promise<void>;

@@ -24,4 +24,3 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
     /** Children to wrap with badge */
     children?: React.ReactNode;
 }
-//# sourceMappingURL=types.d.ts.map

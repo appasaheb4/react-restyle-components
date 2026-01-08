@@ -20,4 +20,3 @@ export interface RadioInputProps {
     [key: string]: any;
 }
 export declare const RadioInput: React.ForwardRefExoticComponent<Omit<RadioInputProps, "ref"> & React.RefAttributes<HTMLInputElement>>;
-//# sourceMappingURL=RadioInput.d.ts.map

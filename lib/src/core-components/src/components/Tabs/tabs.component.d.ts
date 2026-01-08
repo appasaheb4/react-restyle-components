@@ -45,4 +45,3 @@ export interface TabsProps {
 }
 export declare const Tabs: ({ options, onSelect, children, classNames, styles, }: TabsProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=tabs.component.d.ts.map

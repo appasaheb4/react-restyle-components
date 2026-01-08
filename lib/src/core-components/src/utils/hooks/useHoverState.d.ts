@@ -8,4 +8,3 @@ type UseHoverStateReturnValue = {
 };
 export declare const useHoverState: (disabled?: boolean) => UseHoverStateReturnValue;
 export {};
-//# sourceMappingURL=useHoverState.d.ts.map

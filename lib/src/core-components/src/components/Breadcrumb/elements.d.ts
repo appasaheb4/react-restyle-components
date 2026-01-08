@@ -41,4 +41,3 @@ export declare const DropdownMenu: import("styled-components/dist/types").IStyle
     $isOpen: boolean;
 }>> & string;
 export declare const DropdownItem: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, never>> & string;
-//# sourceMappingURL=elements.d.ts.map

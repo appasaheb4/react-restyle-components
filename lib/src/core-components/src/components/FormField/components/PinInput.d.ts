@@ -15,4 +15,3 @@ export interface PinInputProps {
     [key: string]: any;
 }
 export declare const PinInput: React.ForwardRefExoticComponent<Omit<PinInputProps, "ref"> & React.RefAttributes<HTMLInputElement>>;
-//# sourceMappingURL=PinInput.d.ts.map

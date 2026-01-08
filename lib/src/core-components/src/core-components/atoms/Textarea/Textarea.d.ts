@@ -12,4 +12,3 @@ export interface TextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTex
     onValueBlur?: (value: string) => void;
 }
 export declare const Textarea: React.ForwardRefExoticComponent<TextareaProps & React.RefAttributes<HTMLTextAreaElement>>;
-//# sourceMappingURL=Textarea.d.ts.map

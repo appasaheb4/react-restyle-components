@@ -35,4 +35,3 @@ interface AutoCompleteFilterSingleSelectProps {
 }
 export declare const AutoCompleteFilterSingleSelect: ({ disable, loader, displayValue, placeholder, data, hasError, classNames, styles, onFilter, onSelect, }: AutoCompleteFilterSingleSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=auto-complete-filter-single-select.component.d.ts.map

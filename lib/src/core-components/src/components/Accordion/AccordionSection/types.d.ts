@@ -7,4 +7,3 @@ export declare enum AccordionVariant {
 }
 export declare const LEADING_TRAILING_ALIGNMENTS: readonly ["center", "top"];
 export type LeadingTrailingAlignment = (typeof LEADING_TRAILING_ALIGNMENTS)[number];
-//# sourceMappingURL=types.d.ts.map

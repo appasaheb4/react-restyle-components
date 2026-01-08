@@ -5,4 +5,3 @@ export declare const SkeletonGroup: React.ForwardRefExoticComponent<SkeletonGrou
 export declare const SkeletonText: React.ForwardRefExoticComponent<SkeletonTextProps & React.RefAttributes<HTMLDivElement>>;
 export declare const SkeletonAvatar: React.ForwardRefExoticComponent<SkeletonAvatarProps & React.RefAttributes<HTMLDivElement>>;
 export declare const SkeletonCard: React.ForwardRefExoticComponent<SkeletonCardProps & React.RefAttributes<HTMLDivElement>>;
-//# sourceMappingURL=Skeleton.d.ts.map

@@ -38,4 +38,3 @@ export declare const RotatingIcon: import("styled-components/dist/types").IStyle
     $rotateIcon: boolean;
 }>> & string & Omit<({ nameIcon, classNames, styles, ...props }: import("../../Icon/Icon").IconProps) => import("react").JSX.Element, keyof import("react").Component<any, {}, any>>;
 export {};
-//# sourceMappingURL=elements.d.ts.map

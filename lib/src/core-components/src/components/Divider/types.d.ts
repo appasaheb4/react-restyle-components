@@ -27,4 +27,3 @@ export interface DividerProps extends React.HTMLAttributes<HTMLDivElement> {
     /** Additional class name */
     className?: string;
 }
-//# sourceMappingURL=types.d.ts.map

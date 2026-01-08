@@ -25,4 +25,3 @@ export interface ColorPickerProps {
     styles?: ColorPickerStyles;
 }
 export declare const ColorPicker: ({ color, onChange, classNames, styles }: ColorPickerProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=color-picker.component.d.ts.map

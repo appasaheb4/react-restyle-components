@@ -114,4 +114,3 @@ export interface MasonryImageProps {
     /** Border radius */
     borderRadius?: string | number;
 }
-//# sourceMappingURL=types.d.ts.map

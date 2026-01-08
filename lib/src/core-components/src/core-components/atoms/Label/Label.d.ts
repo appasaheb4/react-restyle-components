@@ -5,4 +5,3 @@ export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> 
     label?: string;
 }
 export declare const Label: React.ForwardRefExoticComponent<LabelProps & React.RefAttributes<HTMLLabelElement>>;
-//# sourceMappingURL=Label.d.ts.map

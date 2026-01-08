@@ -15,4 +15,3 @@ export * from './useSafeLayoutEffect';
 export * from './useScrollingUp';
 export * from './useTrapFocus';
 export * from './useWindowDimensions';
-//# sourceMappingURL=index.d.ts.map

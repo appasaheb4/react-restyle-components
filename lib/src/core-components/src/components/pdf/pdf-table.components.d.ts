@@ -8,4 +8,3 @@ interface PdfTableProps {
 }
 export declare const PdfTable: ({ headerFixed, fields, data, style, headerStyle, }: PdfTableProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=pdf-table.components.d.ts.map

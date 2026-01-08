@@ -15,4 +15,3 @@ export declare const Header: (({ children }: HeaderProps) => import("react/jsx-r
     Trailing: (props: any) => import("react/jsx-runtime").JSX.Element;
 };
 export {};
-//# sourceMappingURL=Header.d.ts.map

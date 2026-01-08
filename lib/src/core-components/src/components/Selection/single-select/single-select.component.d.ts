@@ -46,4 +46,3 @@ interface SingleSelectProps {
 }
 export declare const SingleSelect: ({ options, displayKey, displayValue, hasError, className, style, classNames, styles, onSelect, }: SingleSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=single-select.component.d.ts.map

@@ -7,4 +7,3 @@ interface MultiSelectWithFieldProps {
 }
 export declare const MultiSelectWithField: ({ displayField, options, selectedItems, hasError, onSelect, }: MultiSelectWithFieldProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=multi-select-with-field.component.d.ts.map

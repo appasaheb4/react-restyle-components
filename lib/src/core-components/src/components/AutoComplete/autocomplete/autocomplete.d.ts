@@ -103,4 +103,3 @@ export interface AutocompleteProps {
     autoFocus?: boolean;
 }
 export declare const Autocomplete: ({ value, onValueChange, options, filterConfig, displayConfig, keyboardConfig, uiConfig, hasError, disabled, name, className, style, inputClassName, onInputValueChange, onOpen, onClose, onSelect, autoFocus, }: AutocompleteProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=autocomplete.d.ts.map

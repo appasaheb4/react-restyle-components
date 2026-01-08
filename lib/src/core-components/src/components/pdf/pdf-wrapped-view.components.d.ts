@@ -50,4 +50,3 @@ interface GridProps {
 }
 export declare const PdfGrid: React.FunctionComponent<GridProps>;
 export {};
-//# sourceMappingURL=pdf-wrapped-view.components.d.ts.map

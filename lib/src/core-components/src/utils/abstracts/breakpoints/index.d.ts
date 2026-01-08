@@ -26,4 +26,3 @@ export declare const breakpoints: {
 type BreakpointKey = keyof typeof breakpoints;
 export type BreakpointValue = (typeof breakpoints)[BreakpointKey];
 export {};
-//# sourceMappingURL=index.d.ts.map

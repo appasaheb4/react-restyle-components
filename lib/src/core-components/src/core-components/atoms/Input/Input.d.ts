@@ -12,4 +12,3 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
     onValueBlur?: (value: string) => void;
 }
 export declare const Input: React.ForwardRefExoticComponent<InputProps & React.RefAttributes<HTMLInputElement>>;
-//# sourceMappingURL=Input.d.ts.map

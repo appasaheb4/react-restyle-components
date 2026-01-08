@@ -18,4 +18,3 @@
  * @returns the top level component with otherComponents as static properties
  */
 export declare function attachSubComponents<C extends object, O extends Record<string, any>>(displayName: string, topLevelComponent: C, otherComponents: O): C & O;
-//# sourceMappingURL=attachSubComponents.d.ts.map

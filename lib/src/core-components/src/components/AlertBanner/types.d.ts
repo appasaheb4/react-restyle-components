@@ -43,4 +43,3 @@ export interface AlertBannerProps extends React.HTMLAttributes<HTMLDivElement> {
     /** Additional class names */
     className?: string;
 }
-//# sourceMappingURL=types.d.ts.map

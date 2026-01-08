@@ -54,4 +54,3 @@ export declare function useAsyncLoading(): {
     isLoading: (key: string) => boolean;
     isLoaded: (key: string) => boolean;
 };
-//# sourceMappingURL=hooks.d.ts.map

@@ -8,4 +8,3 @@ export type AccordionProps = {
     numbered?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 export declare const Accordion: React.FunctionComponent<AccordionProps>;
-//# sourceMappingURL=Accordion.d.ts.map

@@ -14,4 +14,3 @@ export declare const SelectionCardStrip: {
         disableSvgColorOverride?: boolean | undefined;
     }>> & string;
 };
-//# sourceMappingURL=selectionCardStrip.d.ts.map

@@ -76,4 +76,3 @@ export interface TagsProps {
     onTagRemove?: (tag: string, index: number) => void;
 }
 export declare const Tags: ({ defaultTags, placeholder, maxTags, disabled, className, label, hasError, errorMessage, removable, tagVariant, size, classNames, styles, onChange, onBlur, onTagAdd, onTagRemove, }: TagsProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=Tags.component.d.ts.map

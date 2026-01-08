@@ -6,4 +6,3 @@ interface PdfImageProps {
 }
 export declare const PdfImage: ({ src, style, }: PdfImageProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=pdf-images.components.d.ts.map

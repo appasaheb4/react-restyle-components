@@ -41,4 +41,3 @@ export declare const Icon: {
     SSR: ({ nameIcon, classNames, styles, ...props }: IconProps) => React.JSX.Element;
     Compat: ({ src, className, style, ...props }: CompatIconProps) => React.JSX.Element;
 };
-//# sourceMappingURL=Icon.d.ts.map

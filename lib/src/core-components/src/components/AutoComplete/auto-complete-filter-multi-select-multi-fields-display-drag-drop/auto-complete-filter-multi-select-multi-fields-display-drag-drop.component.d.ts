@@ -117,4 +117,3 @@ interface AutoCompleteFilterMultiSelectMultiFieldsDisplayDragDropProps {
 }
 export declare const AutoCompleteFilterMultiSelectMultiFieldsDisplayDragDrop: ({ componentKey, uniqueField, loader, placeholder, data, hasError, disable, isUpperCase, name, defaultValue, displayConfig, dragDropConfig, selectionConfig, uiConfig, onFilter, onUpdate, onSelect, onBlur, className, style, filterDebounceDelay, }: AutoCompleteFilterMultiSelectMultiFieldsDisplayDragDropProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=auto-complete-filter-multi-select-multi-fields-display-drag-drop.component.d.ts.map

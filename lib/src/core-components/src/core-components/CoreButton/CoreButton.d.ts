@@ -20,4 +20,3 @@ export declare const CoreButton: React.ForwardRefExoticComponent<React.ButtonHTM
     hasIcon?: boolean | undefined;
     options?: ButtonOptions | undefined;
 } & React.RefAttributes<HTMLButtonElement>>;
-//# sourceMappingURL=CoreButton.d.ts.map

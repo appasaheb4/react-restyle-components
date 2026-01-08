@@ -47,4 +47,3 @@ interface MultiSelectProps {
 }
 export declare const MultiSelect: ({ options, selectedItems, hasError, classNames, styles, onSelect, }: MultiSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=multi-select.component.d.ts.map

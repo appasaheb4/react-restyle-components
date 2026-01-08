@@ -48,4 +48,3 @@ export declare const VIEWPORTS: {
         type: string;
     };
 };
-//# sourceMappingURL=view-ports.d.ts.map

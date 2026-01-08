@@ -54,4 +54,3 @@ export declare const IconWrapper: import("styled-components/dist/types").IStyled
     $size: SpeedDialSize;
     $isAction?: boolean | undefined;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

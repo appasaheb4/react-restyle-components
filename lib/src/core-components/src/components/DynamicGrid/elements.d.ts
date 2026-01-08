@@ -46,4 +46,3 @@ export declare const ScrollDot: import("styled-components/dist/types").IStyledCo
     $active: boolean;
 }>> & string;
 export declare const LoadingOverlay: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
-//# sourceMappingURL=elements.d.ts.map

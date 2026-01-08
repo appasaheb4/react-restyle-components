@@ -6,4 +6,3 @@ interface MultiSelectDropdownProps {
 }
 export declare const MultiSelectionDropdown: React.FC<MultiSelectDropdownProps>;
 export {};
-//# sourceMappingURL=multi-selection-dropdown.component.d.ts.map

@@ -77,4 +77,3 @@ export interface SkeletonCardProps extends React.HTMLAttributes<HTMLDivElement> 
     /** Theme mode */
     theme?: SkeletonTheme;
 }
-//# sourceMappingURL=types.d.ts.map

@@ -25,4 +25,3 @@ export declare const ProgressBar: import("styled-components/dist/types").IStyled
     $type: ToastType;
     $duration: number;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

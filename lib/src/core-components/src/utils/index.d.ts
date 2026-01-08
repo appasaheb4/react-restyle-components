@@ -7,4 +7,3 @@ export * from './styling';
 export * from './testing';
 export * from './abstracts';
 export { tokens } from './designTokens';
-//# sourceMappingURL=index.d.ts.map

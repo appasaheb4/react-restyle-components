@@ -65,4 +65,3 @@ export interface ModalConfirmProps {
     onClose?: () => void;
 }
 export declare const ModalConfirm: ({ visible, title, message, submitTitle, closeTitle, isClick, isClose, animationDuration, classNames, styles, onClick, onClose, }: ModalConfirmProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=modal-confirm.component.d.ts.map

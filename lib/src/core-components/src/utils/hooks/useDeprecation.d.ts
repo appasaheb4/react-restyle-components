@@ -27,4 +27,3 @@ type PropValueDeprecationArgs<T> = {
 };
 export declare const usePropValueDeprecation: <T>({ component, prop, currentValue, deprecatedValues, version, }: PropValueDeprecationArgs<T>) => void;
 export {};
-//# sourceMappingURL=useDeprecation.d.ts.map

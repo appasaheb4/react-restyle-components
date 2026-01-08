@@ -116,7 +116,7 @@ export interface TableColumn<T = any> {
     /** Custom footer renderer */
     footerFormatter?: (column: TableColumn<T>, data: T[]) => React.ReactNode;
     /** CSV export formatter */
-    csvFormatter?: (cell: any, row: T) => string;
+    csvFormatter?: (cell: any, row: T, rowIndex: number) => string;
     /** Whether to include in CSV export */
     csvExport?: boolean;
     /** Header CSS class */
@@ -145,8 +145,8 @@ export interface TableColumn<T = any> {
     footer?: string | ((column: TableColumn<T>, data: T[]) => React.ReactNode);
     /** Events */
     events?: {
-        onClick?: (e: React.MouseEvent, cell: any, row: T, rowIndex: number) => void;
-        onDoubleClick?: (e: React.MouseEvent, cell: any, row: T, rowIndex: number) => void;
+        onClick?: (e: React.MouseEvent, row: T, rowIndex: number, column: TableColumn<T>, columnIndex: number) => void;
+        onDoubleClick?: (e: React.MouseEvent, row: T, rowIndex: number, column: TableColumn<T>, columnIndex: number) => void;
     };
 }
 /** Filter props passed to custom filter components */
@@ -334,7 +334,8 @@ export interface TableProps<T = any> {
     paginationConfig?: Partial<TablePaginationConfig>;
     /** Total records (for server-side) */
     totalSize?: number;
-    /** Server-side mode (default: true) - data is fetched from server via onPageSizeChange */
+    /** Server-side mode (default: true) - data is fetched from server via onPageSizeChange.
+     * Auto-detection: If totalSize <= data.length, automatically uses client-side mode (remote=false) */
     remote?: boolean;
     /** Default sort */
     defaultSort?: TableSortState;
@@ -376,10 +377,12 @@ export interface TableProps<T = any> {
     showEditIcon?: boolean;
     /** On cell edit */
     onCellEdit?: (value: any, dataField: string, row: T, rowIndex: number) => void;
-    /** Enable CSV export */
+    /** Enable export button */
     exportable?: boolean;
     /** Export file name */
     exportFileName?: string;
+    /** Export format: 'csv' (default) or 'excel' */
+    exportFormat?: 'csv' | 'excel';
     /** Enable column toggle */
     columnToggle?: boolean;
     /** Enable column reorder */
@@ -465,6 +468,10 @@ export interface TableProps<T = any> {
     onView?: (row: T, rowIndex: number) => void;
     /** Enable row selection (shorthand) */
     isSelectRow?: boolean;
+    /** Array of row IDs (keyField values) that cannot be selected */
+    getNonSelectableRows?: string[];
+    /** Style for non-selectable rows */
+    nonSelectableStyle?: CSSProperties;
     /** Export file name (alias for exportFileName) */
     fileName?: string;
     /** Hide export sheet button or array of fields to exclude from export */
@@ -652,4 +659,3 @@ export interface TableProps<T = any> {
         rowExpanded?: string;
     };
 }
-//# sourceMappingURL=types.d.ts.map

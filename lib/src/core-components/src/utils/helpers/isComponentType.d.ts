@@ -9,4 +9,3 @@ import React from 'react';
  * @returns true if element is an element with type == componentType
  */
 export declare const isComponentType: (element: React.ReactNode, componentType: React.ComponentType) => boolean;
-//# sourceMappingURL=isComponentType.d.ts.map

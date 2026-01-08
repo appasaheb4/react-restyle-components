@@ -90,4 +90,3 @@ export interface StepperProps {
     styles?: StepperStyles;
 }
 export declare const Stepper: ({ className, steps, currentStep, onStepClick, size, colors, showNumbers, lineThickness, stepSize, clickable, style, orientation, classNames: customClassNames, styles: customStyles, }: StepperProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=stepper.component.d.ts.map

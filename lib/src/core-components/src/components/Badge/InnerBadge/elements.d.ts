@@ -17,4 +17,3 @@ export declare const StyledIcon: import("styled-components/dist/types").IStyledC
     $size: BadgeSize;
 }>> & string;
 export {};
-//# sourceMappingURL=elements.d.ts.map

@@ -5,4 +5,3 @@ export type ActionVariant = (typeof ACTION_VARIANT)[number];
 export declare const ACTION_STATE: readonly ["enabled", "disabled", "loading", "readonly"];
 export type ActionState = (typeof ACTION_STATE)[number];
 export type ActionIconVariant = 'left' | 'right' | 'both' | 'none' | 'only';
-//# sourceMappingURL=types.d.ts.map

@@ -23,3 +23,26 @@ find lib -name "App.js" -type f -delete
 find lib -name "App.d.ts" -type f -delete
 find lib -name "App.css" -type f -delete
 rm -rf lib/src/core-components/__mocks__
+
+# Newly Added Those Lines for cleaning up the package
+# Remove source maps
+find lib -name "*.js.map" -type f -delete
+find lib -name "*.d.ts.map" -type f -delete
+
+# Remove fonts (use CDN instead to save ~400KB)
+rm -rf lib/src/core-components/src/library/assets/fonts
+
+# Remove test data files
+find lib -name "*TestData*" -type f -delete
+
+# Remove empty asset directories
+find lib -type d -empty -delete
+
+# Remove fontface.css if fonts are removed
+rm -f lib/src/core-components/src/assets/styles/fontface.css
+
+
+# Minify all JS files in lib
+find lib -name "*.js" -type f -exec sh -c '
+  npx esbuild "$1" --minify --outfile="$1" --allow-overwrite
+' _ {} \;

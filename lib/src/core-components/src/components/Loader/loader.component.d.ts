@@ -62,4 +62,3 @@ export interface LoadingAnimateSpinProps {
     'aria-label'?: string;
 }
 export declare const LoadingAnimateSpin: ({ classWarper, className, variant, size, color, borderWidth, width, height, textFontSize, loadingText, classNames, styles, "aria-label": ariaLabel, }: LoadingAnimateSpinProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=loader.component.d.ts.map

@@ -60,4 +60,3 @@ export declare const AccordionSection: React.ForwardRefExoticComponent<React.But
         Trailing: (props: any) => import("react/jsx-runtime").JSX.Element;
     };
 };
-//# sourceMappingURL=AccordionSection.d.ts.map

@@ -7,4 +7,3 @@ export type InternalProviderProps = {
  * Injects Styled Components theme prop via context.
  */
 export declare const InternalProvider: React.FC<InternalProviderProps>;
-//# sourceMappingURL=InternalProvider.d.ts.map

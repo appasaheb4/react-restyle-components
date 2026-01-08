@@ -5,4 +5,3 @@ export declare enum DeviceFormFactor {
     Desktop = "desktop"
 }
 export declare function useDeviceForm(): DeviceFormFactor;
-//# sourceMappingURL=useDeviceForm.d.ts.map

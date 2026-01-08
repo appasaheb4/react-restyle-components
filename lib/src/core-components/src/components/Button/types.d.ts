@@ -23,4 +23,3 @@ export type ToggleButtonProps = Omit<ButtonProps, 'variant'> & {
     /** What variant of button? Defaults to 'brand' */
     variant?: 'brand' | 'accent';
 };
-//# sourceMappingURL=types.d.ts.map

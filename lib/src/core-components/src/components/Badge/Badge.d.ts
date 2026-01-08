@@ -292,4 +292,3 @@ export declare const Badge: React.NamedExoticComponent<Omit<BadgeProps & {
         count?: string | number | undefined;
     } & React.RefAttributes<HTMLDivElement>>>;
 };
-//# sourceMappingURL=Badge.d.ts.map

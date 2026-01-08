@@ -146,4 +146,3 @@ export interface SpeedDialProps {
     /** ARIA label */
     ariaLabel?: string;
 }
-//# sourceMappingURL=types.d.ts.map

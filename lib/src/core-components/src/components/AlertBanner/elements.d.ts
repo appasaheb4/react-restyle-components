@@ -24,4 +24,3 @@ export declare const DismissButton: import("styled-components/dist/types").IStyl
     $type: AlertBannerType;
     $size: AlertBannerSize;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

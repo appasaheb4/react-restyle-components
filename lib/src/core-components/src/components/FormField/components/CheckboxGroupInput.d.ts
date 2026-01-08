@@ -17,4 +17,3 @@ export interface CheckboxGroupInputProps {
     [key: string]: any;
 }
 export declare const CheckboxGroupInput: React.ForwardRefExoticComponent<Omit<CheckboxGroupInputProps, "ref"> & React.RefAttributes<HTMLInputElement>>;
-//# sourceMappingURL=CheckboxGroupInput.d.ts.map

@@ -26,4 +26,3 @@ export type FontWeight = keyof typeof fontWeights;
 export declare const getFontWeight: (weight: FontWeight) => number;
 export type FontSize = keyof typeof fontSizes;
 export declare const getFontSize: (size: FontSize) => string;
-//# sourceMappingURL=index.d.ts.map

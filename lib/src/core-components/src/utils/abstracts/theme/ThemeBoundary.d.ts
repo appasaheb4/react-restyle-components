@@ -8,4 +8,3 @@ export type ThemeBoundaryProps = {
 };
 /** @experimental */
 export declare const ThemeBoundary: ({ theme, children }: ThemeBoundaryProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=ThemeBoundary.d.ts.map

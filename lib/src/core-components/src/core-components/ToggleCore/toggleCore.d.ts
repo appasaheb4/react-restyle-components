@@ -20,4 +20,3 @@ export declare const ToggleCore: React.ForwardRefExoticComponent<React.InputHTML
     toggleType: 'checkbox' | 'radio';
     indeterminate?: boolean | undefined;
 } & React.RefAttributes<HTMLInputElement>>;
-//# sourceMappingURL=toggleCore.d.ts.map

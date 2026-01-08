@@ -30,4 +30,3 @@ export declare const IconWrapper: import("styled-components/dist/types").IStyled
     $position: 'left' | 'right';
     $visible: boolean;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

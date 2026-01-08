@@ -11,4 +11,3 @@ export type DefaultsContextType = {
 };
 export declare const DefaultsContext: React.Context<DefaultsContextType>;
 export declare const DefaultsProvider: ({ value, children, }: React.ProviderProps<DefaultsContextType>) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=DefaultsProvider.d.ts.map

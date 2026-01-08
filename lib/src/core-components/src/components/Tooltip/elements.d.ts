@@ -16,4 +16,3 @@ export declare const TooltipArrow: import("styled-components/dist/types").IStyle
     $variant: TooltipVariant;
     $position: TooltipPosition;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

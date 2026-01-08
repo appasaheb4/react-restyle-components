@@ -202,4 +202,3 @@ export interface TreeSelectProps {
     /** Called on clear */
     onClear?: () => void;
 }
-//# sourceMappingURL=types.d.ts.map

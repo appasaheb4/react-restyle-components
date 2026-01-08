@@ -71,4 +71,3 @@ export declare const NodeTitle: import("styled-components/dist/types").IStyledCo
 }>> & string;
 export declare const EmptyState: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
 export declare const LoadingIndicator: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
-//# sourceMappingURL=elements.d.ts.map

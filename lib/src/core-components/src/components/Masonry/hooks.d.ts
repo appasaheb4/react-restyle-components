@@ -18,4 +18,3 @@ export declare function useImageLoading(): {
     isLoading: (id: string | number) => boolean;
     isLoaded: (id: string | number) => boolean;
 };
-//# sourceMappingURL=hooks.d.ts.map

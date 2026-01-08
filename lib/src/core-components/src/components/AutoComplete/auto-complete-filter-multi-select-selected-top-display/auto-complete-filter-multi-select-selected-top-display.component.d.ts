@@ -15,4 +15,3 @@ export interface AutoCompleteFilterMultiSelectSelectedTopDisplayProps {
     dynamicCheck?: string;
 }
 export declare const AutoCompleteFilterMultiSelectSelectedTopDisplay: ({ uniqueField, loader, placeholder, data, hasError, disable, isUpperCase, name, showSelectAllSection, onFilter, onUpdate, onSelect, onBlur, dynamicCheck, }: AutoCompleteFilterMultiSelectSelectedTopDisplayProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=auto-complete-filter-multi-select-selected-top-display.component.d.ts.map

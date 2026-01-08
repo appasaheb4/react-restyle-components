@@ -11,4 +11,3 @@ export interface BreadcrumbItemType {
     icon?: React.ReactNode;
     isActive?: boolean;
 }
-//# sourceMappingURL=types.d.ts.map

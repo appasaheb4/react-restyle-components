@@ -8929,4 +8929,3 @@ export declare const properties: ({
     borderBottomRightRadius?: undefined;
     borderBottomLeftRadius?: undefined;
 })[];
-//# sourceMappingURL=css-properties.d.ts.map

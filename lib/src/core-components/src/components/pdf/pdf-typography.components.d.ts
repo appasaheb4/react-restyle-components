@@ -18,4 +18,3 @@ export declare const PdfRegular: ({ fontWeight, fontSize, textAlign, fontFamily,
 export declare const PdfSmall: ({ fontSize, fontFamily, fontWeight, textAlign, lineHeight, fixed, style, children, }: PdfTextProps) => import("react/jsx-runtime").JSX.Element;
 export declare const PdfPageNumber: ({ style, bottom }: PdfTextProps) => import("react/jsx-runtime").JSX.Element;
 export {};
-//# sourceMappingURL=pdf-typography.components.d.ts.map

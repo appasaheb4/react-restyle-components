@@ -9,4 +9,3 @@ declare const GridContainer: import("styled-components/dist/types").IStyledCompo
     $scroll: ScrollProps;
 }>> & string;
 export default GridContainer;
-//# sourceMappingURL=GridContainer.d.ts.map

@@ -27,4 +27,3 @@ export declare const ActionSize: {
 type SpaceKey = keyof typeof space;
 export type SpaceValue = (typeof space)[SpaceKey];
 export {};
-//# sourceMappingURL=index.d.ts.map

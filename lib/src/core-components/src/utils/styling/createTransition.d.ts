@@ -5,4 +5,3 @@ export declare const createTransition: ({ properties, duration, timingFunction, 
     duration?: string | undefined;
     timingFunction?: string | undefined;
 }) => import("styled-components").RuleSet<object>;
-//# sourceMappingURL=createTransition.d.ts.map

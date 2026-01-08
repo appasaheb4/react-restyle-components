@@ -14,4 +14,3 @@ export type addToSideProps = {
     side: 'left' | 'right';
 };
 export declare const addToSide: ({ children, element, side, }: addToSideProps) => React.JSX.Element;
-//# sourceMappingURL=utils.d.ts.map

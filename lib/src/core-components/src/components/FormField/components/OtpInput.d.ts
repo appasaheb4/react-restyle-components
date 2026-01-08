@@ -15,4 +15,3 @@ export interface OtpInputProps {
     [key: string]: any;
 }
 export declare const OtpInput: React.ForwardRefExoticComponent<Omit<OtpInputProps, "ref"> & React.RefAttributes<HTMLInputElement>>;
-//# sourceMappingURL=OtpInput.d.ts.map

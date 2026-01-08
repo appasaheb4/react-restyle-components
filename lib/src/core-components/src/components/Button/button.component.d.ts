@@ -12,4 +12,3 @@ export declare const Button: React.ForwardRefExoticComponent<ButtonProps & React
     classNames?: ButtonClassNames | undefined;
     styles?: ButtonStyles | undefined;
 } & React.RefAttributes<HTMLButtonElement>>;
-//# sourceMappingURL=button.component.d.ts.map

@@ -16,7 +16,7 @@
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "declarationMap": true,
+    "declarationMap": false,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "sourceMap": false,

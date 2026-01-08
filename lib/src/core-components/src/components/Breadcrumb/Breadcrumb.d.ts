@@ -25,4 +25,3 @@ export interface BreadcrumbProps extends React.HTMLAttributes<HTMLElement> {
     ariaLabel?: string;
 }
 export declare const Breadcrumb: React.ForwardRefExoticComponent<BreadcrumbProps & React.RefAttributes<HTMLElement>>;
-//# sourceMappingURL=Breadcrumb.d.ts.map

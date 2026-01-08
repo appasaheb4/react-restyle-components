@@ -18,4 +18,3 @@ export interface ButtonGroupProps {
     styles?: ButtonGroupStyles;
 }
 export declare const ButtonGroup: ({ children, orientation, className, classNames, styles, }: ButtonGroupProps) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=buttonGroup.component.d.ts.map

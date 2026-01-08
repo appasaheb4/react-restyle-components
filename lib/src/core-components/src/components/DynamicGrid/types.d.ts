@@ -170,4 +170,3 @@ export interface ScrollProps {
     /** Show pagination dots */
     showDots?: boolean;
 }
-//# sourceMappingURL=types.d.ts.map

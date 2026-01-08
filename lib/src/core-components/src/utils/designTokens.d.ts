@@ -36,4 +36,3 @@ export declare const tokens: {
     stateLayerHover: string;
     stateLayerPress: string;
 };
-//# sourceMappingURL=designTokens.d.ts.map

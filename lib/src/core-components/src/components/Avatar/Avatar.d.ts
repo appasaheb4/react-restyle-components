@@ -56,4 +56,3 @@ export interface AvatarProps {
 export declare const Avatar: React.FC<AvatarProps>;
 export declare const AVATAR_SIZES: ("sm" | "md" | "lg" | "xl" | "xxl")[];
 export default Avatar;
-//# sourceMappingURL=Avatar.d.ts.map

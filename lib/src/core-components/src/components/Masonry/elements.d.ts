@@ -28,4 +28,3 @@ export declare const MasonryCard: import("styled-components/dist/types").IStyled
 }>> & string;
 export declare const MasonryCardImage: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>, never>> & string;
 export declare const MasonryCardContent: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
-//# sourceMappingURL=elements.d.ts.map

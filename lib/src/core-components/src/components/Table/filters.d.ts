@@ -239,4 +239,3 @@ export declare function SelectFilter(props: TableFilterProps): React.ReactElemen
  * Get filter component based on type
  */
 export declare const getFilterComponent: (type: string) => React.FC<TableFilterProps>;
-//# sourceMappingURL=filters.d.ts.map

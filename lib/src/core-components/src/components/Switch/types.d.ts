@@ -29,4 +29,3 @@ export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
     /** Additional class name */
     className?: string;
 }
-//# sourceMappingURL=types.d.ts.map

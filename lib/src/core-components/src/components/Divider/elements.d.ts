@@ -19,4 +19,3 @@ export declare const DividerLine: import("styled-components/dist/types").IStyled
 export declare const DividerLabel: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, {
     $color: DividerColor;
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

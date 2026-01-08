@@ -27,4 +27,3 @@ export type Theme = {
     textOnInverted: ThemeColor;
 };
 export {};
-//# sourceMappingURL=types.d.ts.map

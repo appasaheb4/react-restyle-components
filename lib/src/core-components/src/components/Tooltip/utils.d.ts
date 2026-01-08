@@ -23,4 +23,3 @@ export declare const clampToViewport: (coords: TooltipCoords, tooltipDimensions:
  * Convert side + align to position
  */
 export declare const sideAlignToPosition: (side: 'top' | 'right' | 'bottom' | 'left', align: 'start' | 'center' | 'end') => TooltipPosition;
-//# sourceMappingURL=utils.d.ts.map

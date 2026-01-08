@@ -24,4 +24,3 @@ export declare const ChipGroupElement: import("styled-components/dist/types").IS
     $scrollable: boolean;
     $direction: 'row' | 'column';
 }>> & string;
-//# sourceMappingURL=elements.d.ts.map

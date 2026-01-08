@@ -4,4 +4,3 @@ export declare const Tooltip: React.ForwardRefExoticComponent<TooltipProps & Rea
 export declare const TooltipProvider: React.FC<{
     children: React.ReactNode;
 }>;
-//# sourceMappingURL=Tooltip.d.ts.map

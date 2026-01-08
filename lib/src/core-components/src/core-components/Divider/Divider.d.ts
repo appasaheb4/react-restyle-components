@@ -3,4 +3,3 @@ export declare const StyledDivider: import("styled-components/dist/types").IStyl
     isInsideCard: boolean;
 }>> & string;
 export declare const Divider: (props: React.HTMLAttributes<HTMLHRElement>) => import("react/jsx-runtime").JSX.Element;
-//# sourceMappingURL=Divider.d.ts.map

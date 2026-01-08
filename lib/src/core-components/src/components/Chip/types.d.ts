@@ -51,4 +51,3 @@ export interface ChipGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     /** Additional class name */
     className?: string;
 }
-//# sourceMappingURL=types.d.ts.map

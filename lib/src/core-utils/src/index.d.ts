@@ -5,4 +5,3 @@ export * from './convert/typography/camelCaseToTitleCase.util';
 export * from './colors/color.util';
 export * from './uuid/uuid.util';
 export * from './form-helper/form-helper.util';
-//# sourceMappingURL=index.d.ts.map
