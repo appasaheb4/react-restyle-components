@@ -658,4 +658,62 @@ export interface TableProps<T = any> {
         rowSelected?: string;
         rowExpanded?: string;
     };
+    /**
+     * Enable column resizing via drag handle
+     * @default true
+     */
+    resizable?: boolean;
+    /**
+     * Column resize configuration
+     * Only used when resizable={true}
+     */
+    resizeConfig?: {
+        /** Minimum column width in pixels (default: 50) */
+        minWidth?: number;
+        /** Maximum column width in pixels (default: 800) */
+        maxWidth?: number;
+        /** Enable double-click to auto-fit width (default: true) */
+        autoFit?: boolean;
+        /** Callback when column is resized */
+        onResize?: (columnWidths: Record<string, number>) => void;
+        /** Callback when resize starts */
+        onResizeStart?: (dataField: string, width: number) => void;
+        /** Callback when resize ends */
+        onResizeEnd?: (dataField: string, width: number) => void;
+        /** Initial column widths */
+        defaultWidths?: Record<string, number>;
+        /** Handle color */
+        handleColor?: string;
+        /** Handle hover color */
+        handleHoverColor?: string;
+        /** Handle width in pixels (default: 4) */
+        handleWidth?: number;
+    };
+    /**
+     * Enable column reordering via long press and drag
+     * @default true
+     */
+    reorderable?: boolean;
+    /**
+     * Column reorder configuration
+     * Only used when reorderable={true}
+     */
+    reorderConfig?: {
+        /** Long press delay in ms before drag starts (default: 200) */
+        longPressDelay?: number;
+        /** Callback when columns are reordered */
+        onReorder?: (newColumns: TableColumn<T>[], fromIndex: number, toIndex: number) => void;
+        /** Callback when drag starts */
+        onDragStart?: (column: TableColumn<T>, index: number) => void;
+        /** Callback when drag ends */
+        onDragEnd?: (column: TableColumn<T>, index: number) => void;
+        /** Disable specific columns from being dragged */
+        disabledColumns?: string[];
+        /** Ghost element opacity (default: 0.8) */
+        ghostOpacity?: number;
+        /** Drop indicator color */
+        dropIndicatorColor?: string;
+        /** Enable animation (default: true) */
+        animated?: boolean;
+    };
 }
