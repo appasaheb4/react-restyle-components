@@ -1,13 +1,13 @@
 export declare const tokens: {
-    surface: any;
-    onSurface: any;
-    primary: any;
-    onPrimary: any;
-    outline: any;
-    outlineSoft: any;
-    success: any;
-    error: any;
-    warning: any;
+    surface: string;
+    onSurface: string;
+    primary: string;
+    onPrimary: string;
+    outline: string;
+    outlineSoft: string;
+    success: string;
+    error: string;
+    warning: string;
     red: any;
     darkGray: any;
     white: any;
