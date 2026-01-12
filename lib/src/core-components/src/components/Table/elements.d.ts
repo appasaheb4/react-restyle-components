@@ -56,6 +56,11 @@ export declare const TableRow: import("styled-components/dist/types").IStyledCom
     $disabled: boolean;
     $hasCustomSelectedStyle?: boolean | undefined;
 }>> & string;
+export declare const TableCellContent: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("styled-components").FastOmit<import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, Omit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & {
+    ref?: import("react").RefObject<HTMLDivElement> | ((instance: HTMLDivElement | null) => void) | null | undefined;
+}>, never>, {
+    $hasFormatter?: boolean | undefined;
+}>> & string;
 export declare const TableCell: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").TdHTMLAttributes<HTMLTableDataCellElement>, HTMLTableDataCellElement>, {
     $align: string;
     $compact: boolean;
