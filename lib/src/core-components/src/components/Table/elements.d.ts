@@ -69,7 +69,7 @@ export declare const TableCell: import("styled-components/dist/types").IStyledCo
     $hasCustomClass?: boolean | undefined;
     $disabled?: boolean | undefined;
     $isEditable?: boolean | undefined;
-    $isInAllowRows?: boolean | undefined;
+    $isInAllowedCells?: boolean | undefined;
 }>> & string;
 export declare const Checkbox: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("styled-components").FastOmit<import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, Omit<import("react").DetailedHTMLProps<import("react").InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "ref"> & {
     ref?: ((instance: HTMLInputElement | null) => void) | import("react").RefObject<HTMLInputElement> | null | undefined;
