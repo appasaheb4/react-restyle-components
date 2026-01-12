@@ -64,6 +64,12 @@ export interface UIConfig {
     emptyStateMessage?: string;
     /** Empty state description */
     emptyStateDescription?: string;
+    /** Enable internal filtering (filters data locally without external callback) */
+    enableInternalFilter?: boolean;
+    /** Show search input for each group separately */
+    showGroupSearch?: boolean;
+    /** Minimum items in group to show group search input */
+    groupSearchMinItems?: number;
 }
 export interface AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayProps {
     /** Unique identifier field name for items */
@@ -106,5 +112,7 @@ export interface AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayPro
     style?: React.CSSProperties;
     /** Debounce delay for filter (ms) */
     filterDebounceDelay?: number;
+    /** Key to re-render options list without remounting whole component */
+    optionsRenderKey?: string | number;
 }
-export declare const AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplay: ({ uniqueField, groupByField, selectionConfig, displayConfig, uiConfig, loader, placeholder, data, hasError, disable, isUpperCase, name, groupByDetails, onFilter, onUpdate, onSelect, onBlur, className, style, filterDebounceDelay, }: AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplay: ({ uniqueField, groupByField, selectionConfig, displayConfig, uiConfig, loader, placeholder, data, hasError, disable, isUpperCase, name, groupByDetails, onFilter, onUpdate, onSelect, onBlur, className, style, filterDebounceDelay, optionsRenderKey, }: AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;

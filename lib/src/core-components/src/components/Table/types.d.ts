@@ -229,6 +229,8 @@ export interface TableSelectionConfig<T = any> {
     columnWidth?: number | string;
     /** Column title */
     columnTitle?: React.ReactNode;
+    /** Array of column dataField values that should remain editable and without opacity when row is disabled */
+    allowRows?: string[];
 }
 /** Row expand config */
 export interface TableExpandConfig<T = any> {

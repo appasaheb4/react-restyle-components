@@ -30,6 +30,14 @@ export interface IconProps {
     /** Custom styles for internal elements */
     styles?: IconStyles;
 }
+export interface IconContextProps {
+    isDisable?: boolean;
+    color?: string;
+    size?: string;
+    onClick?: () => void;
+    children?: React.ReactNode;
+    style?: CSSProperties;
+}
 export interface CompatIconProps {
     src: string | React.ReactNode;
     className?: string;
@@ -41,3 +49,4 @@ export declare const Icon: {
     SSR: ({ nameIcon, classNames, styles, ...props }: IconProps) => React.JSX.Element;
     Compat: ({ src, className, style, ...props }: CompatIconProps) => React.JSX.Element;
 };
+export declare const IconContext: React.FunctionComponent<IconContextProps>;
