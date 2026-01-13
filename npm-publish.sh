@@ -43,6 +43,6 @@ rm -f lib/src/core-components/src/assets/styles/fontface.css
 
 
 # Minify all JS files in lib
-# find lib -name "*.js" -type f -exec sh -c '
-#   npx esbuild "$1" --minify --outfile="$1" --allow-overwrite
-# ' _ {} \;
+find lib -name "*.js" -type f -exec sh -c '
+  npx esbuild "$1" --minify --outfile="$1" --allow-overwrite
+' _ {} \;
