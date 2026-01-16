@@ -104,6 +104,8 @@ export interface AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayPro
     onUpdate?: (items: AutoCompleteItem[]) => void;
     /** Select callback (fires when OK is clicked or dropdown closes) */
     onSelect: (selectedGroups: GroupedData) => void;
+    /** Clear all callback (fires when Clear All is clicked) */
+    onClearAll?: () => void;
     /** Blur callback */
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
     /** Additional className */
@@ -115,4 +117,4 @@ export interface AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayPro
     /** Key to re-render options list without remounting whole component */
     optionsRenderKey?: string | number;
 }
-export declare const AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplay: ({ uniqueField, groupByField, selectionConfig, displayConfig, uiConfig, loader, placeholder, data, hasError, disable, isUpperCase, name, groupByDetails, onFilter, onUpdate, onSelect, onBlur, className, style, filterDebounceDelay, optionsRenderKey, }: AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplay: ({ uniqueField, groupByField, selectionConfig, displayConfig, uiConfig, loader, placeholder, data, hasError, disable, isUpperCase, name, groupByDetails, onFilter, onUpdate, onSelect, onClearAll, onBlur, className, style, filterDebounceDelay, optionsRenderKey, }: AutoCompleteFilterGroupByMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
