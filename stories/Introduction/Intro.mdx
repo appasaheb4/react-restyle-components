@@ -657,41 +657,6 @@ import {Badge} from '../../src/core-components/src/components/Badge/Badge';
       </div>
     </div>
 
-    {/* Theme Section */}
-    <div className="intro-section">
-      <div className="intro-card">
-        <div className="intro-card-header">
-          <div className="intro-card-icon">🎨</div>
-          <h2 className="intro-card-title">Theme Configuration</h2>
-        </div>
-        <p style={{color: 'var(--intro-text-muted-light)', marginBottom: '20px', fontSize: '15px', lineHeight: '1.6'}}>
-          Customize the look and feel by configuring themes:
-        </p>
-        <div className="intro-code-block">
-          <div className="intro-code-dots">
-            <span className="intro-code-dot red"></span>
-            <span className="intro-code-dot yellow"></span>
-            <span className="intro-code-dot green"></span>
-          </div>
-          <span className="intro-code-label">jsx</span>
-          <div className="intro-code-content">
-            <code>
-              <span className="intro-code-keyword">import</span> <span className="intro-code-variable">React</span>, {'{'}<span className="intro-code-function">useEffect</span>{'}'} <span className="intro-code-keyword">from</span> <span className="intro-code-string">'react'</span>;{'\n'}
-              <span className="intro-code-keyword">import</span> {'{'}<span className="intro-code-function">updateTheme</span>{'}'} <span className="intro-code-keyword">from</span> <span className="intro-code-string">'react-restyle-components'</span>;{'\n'}
-              {'\n'}
-              <span className="intro-code-keyword">export const</span> <span className="intro-code-function">App</span> = () {'=> {'}{'\n'}
-              {'  '}<span className="intro-code-function">useEffect</span>(() {'=> {'}{'\n'}
-              {'    '}<span className="intro-code-function">updateTheme</span>(<span className="intro-code-string">'default'</span>);{'\n'}
-              {'  }'}{'}, [])'};{'\n'}
-              {'\n'}
-              {'  '}<span className="intro-code-keyword">return</span> <span className="intro-code-import">{'<>'}</span>...<span className="intro-code-import">{'</>'}</span>;{'\n'}
-              {'};'}
-            </code>
-          </div>
-        </div>
-      </div>
-    </div>
-
     {/* Contributing Section */}
     <div className="intro-section">
       <div className="intro-card">

@@ -28,3 +28,4 @@ export * from './Masonry';
 export * from './TreeSelect';
 export * from './Table';
 export * from './ag-grid';
+export * from './ProgressStepper';

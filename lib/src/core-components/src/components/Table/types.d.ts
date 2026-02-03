@@ -473,7 +473,7 @@ export interface TableProps<T = any> {
     /** Array of row IDs (keyField values) that cannot be selected */
     getNonSelectableRows?: string[];
     /** Style for non-selectable rows */
-    nonSelectableStyle?: CSSProperties;
+    nonSelectableStyle?: CSSProperties | ((row: T, rowIndex: number) => CSSProperties);
     /** Export file name (alias for exportFileName) */
     fileName?: string;
     /** Hide export sheet button or array of fields to exclude from export */

@@ -37,7 +37,7 @@ export const DemoButton = () => (
 );
 ```
 
-### 🎨 Theme
+<!-- ### 🎨 Theme
 
 ```jsx
 import React, {useEffect} from 'react';
@@ -50,7 +50,7 @@ export const App = () => {
 
   return <>...</>;
 };
-```
+``` -->
 
 ## 🍻 Contributing
 

@@ -70,6 +70,8 @@ export interface ModalProps {
     overlayOpacity?: number;
     /** Overlay background color */
     overlayColor?: string;
+    /** Base z-index for overlay/content stack */
+    zIndex?: number;
     /** Click overlay to close */
     closeOnOverlayClick?: boolean;
     /** Close on Escape key */
@@ -97,4 +99,4 @@ export interface ModalProps {
     /** Modal content */
     children: React.ReactNode;
 }
-export declare const Modal: ({ visible, title, className, contentClassName, headerClassName, style, contentStyle, onClose, isAutoClose, autoCloseDelay, size, position, showCloseButton, closeButton, overlayOpacity, overlayColor, closeOnOverlayClick, closeOnEscape, showHeader, headerBgColor, headerTextColor, borderRadius, maxWidth, contentPadding, headerPadding, animationDuration, classNames, styles, children, }: ModalProps) => React.JSX.Element | null;
+export declare const Modal: ({ visible, title, className, contentClassName, headerClassName, style, contentStyle, onClose, isAutoClose, autoCloseDelay, size, position, showCloseButton, closeButton, overlayOpacity, overlayColor, zIndex, closeOnOverlayClick, closeOnEscape, showHeader, headerBgColor, headerTextColor, borderRadius, maxWidth, contentPadding, headerPadding, animationDuration, classNames, styles, children, }: ModalProps) => React.JSX.Element | null;
