@@ -1,2 +1,2 @@
 export * from './ProgressBar';
-export * from './types';
+export type { ProgressBarProps } from './types';

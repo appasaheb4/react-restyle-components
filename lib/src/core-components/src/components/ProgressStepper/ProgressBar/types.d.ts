@@ -1,31 +1,29 @@
 import React from 'react';
-export type ProgressBarSize = 'small' | 'medium' | 'large';
-export type ProgressBarVariant = 'continuous' | 'segmented';
 export interface ProgressBarProps extends React.HTMLAttributes<HTMLDivElement> {
     /** Label text displayed above the progress bar */
     label?: string;
     /** Support text displayed below the progress bar */
     supportText?: string;
-    /** Current progress value (0-100) */
+    /** Current progress value */
     value: number;
     /** Maximum value (default: 100) */
     max?: number;
     /** Size of the progress bar */
-    size?: ProgressBarSize;
+    size?: 'small' | 'medium' | 'large';
     /** Variant of the progress bar */
-    variant?: ProgressBarVariant;
-    /** Number of segments (only for segmented variant) */
+    variant?: 'continuous' | 'segmented';
+    /** Number of segments (for segmented variant) */
     segments?: number;
-    /** Color of the progress fill */
+    /** Custom color for the progress fill */
     color?: string;
-    /** Background color of the track */
+    /** Custom color for the track */
     trackColor?: string;
     /** Whether to show the percentage value */
     showValue?: boolean;
     /** Whether the progress bar is in loading/indeterminate state */
     isIndeterminate?: boolean;
+    /** Whether to show loading animations (shimmer, pulse effects). Default: true */
+    showAnimation?: boolean;
     /** Custom class name */
     className?: string;
-    /** Custom styles */
-    style?: React.CSSProperties;
 }

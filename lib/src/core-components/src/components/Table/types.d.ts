@@ -387,6 +387,8 @@ export interface TableProps<T = any> {
     exportFormat?: 'csv' | 'excel';
     /** Enable column toggle */
     columnToggle?: boolean;
+    /** Enable Show/Hide Columns (field selector) - controls column visibility panel (default: true) */
+    isFieldSelector?: boolean;
     /** Enable column reorder */
     columnReorder?: boolean;
     /** Enable column resize */

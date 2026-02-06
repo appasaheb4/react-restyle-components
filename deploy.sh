@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update submodules, version, build, and publish
-git submodule update --remote --merge && yarn version --patch && yarn build && yarn build-storybook && yarn deploy-storybook && npm publish
+git submodule update --remote --merge && yarn version --patch && yarn build && yarn build-storybook && yarn deploy-storybook && npm login && npm publish
 
 # # Stage all changes
 # git add .
