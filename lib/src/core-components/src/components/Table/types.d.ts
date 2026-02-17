@@ -152,9 +152,14 @@ export interface TableColumn<T = any> {
 /** Filter props passed to custom filter components */
 export interface TableFilterProps {
     column: TableColumn;
-    value: any;
-    onChange: (value: any) => void;
-    onClear: () => void;
+    /** Current filter value */
+    value?: any;
+    /** Callback when filter value changes */
+    onChange?: (value: any) => void;
+    /** Alias for onChange - for backwards compatibility with filter-comp.tsx pattern */
+    onFilter?: (value: any) => void;
+    /** Callback to clear the filter */
+    onClear?: () => void;
 }
 /** Editor props passed to custom editor renderer */
 export interface TableEditorProps<T = any> {
@@ -535,6 +540,8 @@ export interface TableProps<T = any> {
     onRefresh?: () => void;
     /** Auto refresh interval (ms) */
     autoRefreshInterval?: number;
+    /** Force reload table when toggled (flipping this value triggers onRefresh) */
+    isForceReload?: boolean;
     /** Highlighted row keys */
     highlightedRowKeys?: string[];
     /** Highlight row style */

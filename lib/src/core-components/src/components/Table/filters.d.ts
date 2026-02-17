@@ -61,11 +61,8 @@ export interface NumberFilterOptions {
     allowDecimal?: boolean;
     /** Callback to get filter instance for external control */
     getFilter?: (filter: NumberFilterInstance) => void;
-    /** Callback when filter value changes */
-    onFilter?: (value: {
-        number: string;
-        comparator: string;
-    } | null) => void;
+    /** Callback when filter value changes - passes string value */
+    onFilter?: (value: string | null) => void;
     /** Input ID */
     id?: string;
     /** Disabled state */
@@ -88,7 +85,7 @@ export interface NumberFilterInstance {
     setValue: (value: {
         number: string;
         comparator: string;
-    } | null) => void;
+    } | string | null) => void;
     /** Clear the filter */
     clear: () => void;
 }
@@ -193,7 +190,9 @@ export interface DateFilterInstance {
  * // As a component (for direct usage)
  * <TextFilter column={column} value={value} onChange={onChange} />
  */
-export declare function TextFilter(options: TextFilterOptions): React.FC<TableFilterProps>;
+export declare function TextFilter(options: TextFilterOptions): React.FC<TableFilterProps> & {
+    props: TextFilterOptions;
+};
 export declare function TextFilter(props: TableFilterProps): React.ReactElement;
 /**
  * Number filter - can be used as a component or factory function
@@ -207,7 +206,9 @@ export declare function TextFilter(props: TableFilterProps): React.ReactElement;
  *   getFilter: (filter) => { myFilterRef = filter; },
  * })
  */
-export declare function NumberFilter(options: NumberFilterOptions): React.FC<TableFilterProps>;
+export declare function NumberFilter(options: NumberFilterOptions): React.FC<TableFilterProps> & {
+    props: NumberFilterOptions;
+};
 export declare function NumberFilter(props: TableFilterProps): React.ReactElement;
 /**
  * Date filter - can be used as a component or factory function
@@ -220,7 +221,9 @@ export declare function NumberFilter(props: TableFilterProps): React.ReactElemen
  *   getFilter: (filter) => { myFilterRef = filter; },
  * })
  */
-export declare function DateFilter(options: DateFilterOptions): React.FC<TableFilterProps>;
+export declare function DateFilter(options: DateFilterOptions): React.FC<TableFilterProps> & {
+    props: DateFilterOptions;
+};
 export declare function DateFilter(props: TableFilterProps): React.ReactElement;
 /**
  * Select filter - can be used as a component or factory function
@@ -233,8 +236,198 @@ export declare function DateFilter(props: TableFilterProps): React.ReactElement;
  *   getFilter: (filter) => { myFilterRef = filter; },
  * })
  */
-export declare function SelectFilter(options: SelectFilterOptions): React.FC<TableFilterProps>;
+export declare function SelectFilter(options: SelectFilterOptions): React.FC<TableFilterProps> & {
+    props: SelectFilterOptions;
+};
 export declare function SelectFilter(props: TableFilterProps): React.ReactElement;
+/**
+ * Custom filter options for factory function pattern
+ * Allows rendering any custom filter component while integrating with Table's filter system
+ */
+export interface CustomFilterOptions<T = any> {
+    /** Custom render function for the filter UI (optional if using column.filterRenderer) */
+    render?: (props: CustomFilterRenderProps<T>) => React.ReactNode;
+    /** Placeholder text (passed to render props) */
+    placeholder?: string;
+    /** CSS class name(s) for the filter */
+    className?: string;
+    /** Inline style for the filter */
+    style?: React.CSSProperties;
+    /** Default value for the filter */
+    defaultValue?: T;
+    /** Debounce delay in milliseconds */
+    delay?: number;
+    /** Callback to get filter instance for external control */
+    getFilter?: (filter: CustomFilterInstance<T>) => void;
+    /** Callback when filter value changes */
+    onFilter?: (value: T | null) => void;
+    /** Custom filter function for data filtering */
+    filterFunction?: (cellValue: any, filterValue: T, row: any) => boolean;
+    /** Input ID */
+    id?: string;
+    /** Disabled state */
+    disabled?: boolean;
+}
+/**
+ * Props passed to custom filter render function
+ */
+export interface CustomFilterRenderProps<T = any> {
+    /** Current filter value */
+    value: T | null;
+    /** Callback to update filter value */
+    onChange: (value: T | null) => void;
+    /** Column configuration */
+    column: any;
+    /** Clear the filter */
+    clear: () => void;
+    /** Placeholder text from options */
+    placeholder?: string;
+    /** CSS class name from options */
+    className?: string;
+    /** Style from options */
+    style?: React.CSSProperties;
+    /** Input ID from options */
+    id?: string;
+    /** Disabled state from options */
+    disabled?: boolean;
+}
+/**
+ * Custom filter instance returned by getFilter callback
+ */
+export interface CustomFilterInstance<T = any> {
+    /** Current filter value */
+    value: T | null;
+    /** Set filter value programmatically */
+    setValue: (value: T | null) => void;
+    /** Clear the filter */
+    clear: () => void;
+}
+/**
+ * Custom filter - allows rendering any custom filter component
+ *
+ * @example
+ * // Basic custom filter with input
+ * filter: CustomFilter({
+ *   render: ({ value, onChange }) => (
+ *     <input
+ *       type="text"
+ *       value={value || ''}
+ *       onChange={(e) => onChange(e.target.value || null)}
+ *       placeholder="Custom filter..."
+ *     />
+ *   ),
+ * })
+ *
+ * @example
+ * // Using render props (placeholder, className, etc.)
+ * filter: CustomFilter({
+ *   placeholder: 'Search...',
+ *   className: 'my-custom-input',
+ *   render: ({ value, onChange, placeholder, className }) => (
+ *     <input
+ *       type="text"
+ *       value={value || ''}
+ *       onChange={(e) => onChange(e.target.value || null)}
+ *       placeholder={placeholder}
+ *       className={className}
+ *     />
+ *   ),
+ * })
+ *
+ * @example
+ * // Using with column.filterRenderer (simple options pattern)
+ * // This allows using existing filter components with custom configuration
+ * {
+ *   dataField: 'picture',
+ *   text: 'Picture',
+ *   filter: CustomFilter({
+ *     placeholder: 'Picture',
+ *     getFilter: (filter) => {
+ *       pictureFilterRef.current = filter;
+ *     },
+ *   }),
+ *   filterRenderer: (onFilter, column) => (
+ *     <NumberFilter onFilter={onFilter} column={column} />
+ *   ),
+ * }
+ *
+ * @example
+ * // Custom range filter
+ * filter: CustomFilter({
+ *   render: ({ value, onChange }) => (
+ *     <div style={{ display: 'flex', gap: 4 }}>
+ *       <input
+ *         type="number"
+ *         placeholder="Min"
+ *         value={value?.min || ''}
+ *         onChange={(e) => onChange({ ...value, min: e.target.value })}
+ *       />
+ *       <input
+ *         type="number"
+ *         placeholder="Max"
+ *         value={value?.max || ''}
+ *         onChange={(e) => onChange({ ...value, max: e.target.value })}
+ *       />
+ *     </div>
+ *   ),
+ *   filterFunction: (cellValue, filterValue) => {
+ *     if (!filterValue) return true;
+ *     const { min, max } = filterValue;
+ *     const num = Number(cellValue);
+ *     if (min && num < Number(min)) return false;
+ *     if (max && num > Number(max)) return false;
+ *     return true;
+ *   },
+ * })
+ *
+ * @example
+ * // Custom multi-select filter with checkboxes
+ * filter: CustomFilter({
+ *   render: ({ value, onChange }) => {
+ *     const selected = value || [];
+ *     const options = ['Active', 'Inactive', 'Pending'];
+ *     return (
+ *       <div>
+ *         {options.map(opt => (
+ *           <label key={opt}>
+ *             <input
+ *               type="checkbox"
+ *               checked={selected.includes(opt)}
+ *               onChange={(e) => {
+ *                 if (e.target.checked) {
+ *                   onChange([...selected, opt]);
+ *                 } else {
+ *                   onChange(selected.filter(s => s !== opt));
+ *                 }
+ *               }}
+ *             />
+ *             {opt}
+ *           </label>
+ *         ))}
+ *       </div>
+ *     );
+ *   },
+ *   filterFunction: (cellValue, filterValue) => {
+ *     if (!filterValue?.length) return true;
+ *     return filterValue.includes(cellValue);
+ *   },
+ * })
+ *
+ * @example
+ * // External control with getFilter
+ * filter: CustomFilter({
+ *   placeholder: 'Custom...',
+ *   getFilter: (filter) => {
+ *     customFilterRef.current = filter;
+ *     // filter.value - get current value
+ *     // filter.setValue(newValue) - set value programmatically
+ *     // filter.clear() - clear the filter
+ *   },
+ * })
+ */
+export declare function CustomFilter<T = any>(options: CustomFilterOptions<T>): React.FC<TableFilterProps> & {
+    props: CustomFilterOptions<T>;
+};
 /**
  * Get filter component based on type
  */
