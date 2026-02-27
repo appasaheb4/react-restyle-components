@@ -17,6 +17,7 @@ export declare const SelectionCount: import("styled-components/dist/types").ISty
     $animate?: "none" | "up" | "down" | undefined;
 }>> & string;
 export declare const SelectionIcon: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, never>> & string;
+export declare const SelectSortButton: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<import("react").DetailedHTMLProps<import("react").ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, never>> & string;
 export declare const TableWrapper: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components/dist/types").Substitute<import("react").DetailedHTMLProps<import("react").HTMLAttributes<HTMLDivElement>, HTMLDivElement>, {
     $maxHeight?: string | number | undefined;
     $stickyHeader: boolean;

@@ -55,6 +55,8 @@ export interface AutocompleteUIConfig {
     itemHeight?: number;
     /** Maximum height for dropdown */
     maxHeight?: string;
+    /** How long (ms) to show "Loading..." before "No Results Found". Default 1000. */
+    loadingDelayMs?: number;
     /** Z-index for dropdown */
     zIndex?: number;
     /** Show dropdown on focus */
@@ -63,6 +65,8 @@ export interface AutocompleteUIConfig {
     showOnClick?: boolean;
     /** Auto-select first option */
     autoSelectFirst?: boolean;
+    /** Optional: when true, parent controls loading (e.g. API fetch) */
+    loading?: boolean;
 }
 export interface AutocompleteProps {
     /** Current value */

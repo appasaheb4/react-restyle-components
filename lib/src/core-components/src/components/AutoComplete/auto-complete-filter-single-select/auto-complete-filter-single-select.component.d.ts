@@ -23,6 +23,8 @@ export interface AutoCompleteFilterSingleSelectStyles {
 }
 interface AutoCompleteFilterSingleSelectProps {
     loader?: boolean;
+    /** How long (ms) to show "Loading..." before "No Results Found". Default 1000. */
+    filterDebounceDelay?: number;
     disable?: boolean;
     displayValue?: string;
     placeholder?: string;
@@ -33,5 +35,5 @@ interface AutoCompleteFilterSingleSelectProps {
     onFilter: (item: any) => void;
     onSelect: (item: any) => any;
 }
-export declare const AutoCompleteFilterSingleSelect: ({ disable, loader, displayValue, placeholder, data, hasError, classNames, styles, onFilter, onSelect, }: AutoCompleteFilterSingleSelectProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterSingleSelect: ({ disable, loader, filterDebounceDelay, displayValue, placeholder, data, hasError, classNames, styles, onFilter, onSelect, }: AutoCompleteFilterSingleSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};

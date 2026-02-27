@@ -591,6 +591,38 @@ export interface TableProps<T = any> {
     keyboardNavigation?: boolean;
     /** On key down */
     onKeyDown?: (e: React.KeyboardEvent, row: T | null, rowIndex: number | null) => void;
+    /**
+     * Show select-sort icon button in pagination area
+     * @default false
+     */
+    isSelectSort?: boolean;
+    /**
+     * Callback when user clicks the select-sort button
+     * Receives selected rows and their keys - parent can handle reordering
+     */
+    onSelectSort?: (selectedRows: T[], selectedKeys: string[]) => void;
+    /**
+     * Array of action items to display when rows are selected
+     * Each action item can have an icon, props, and onClick handler
+     */
+    selectionActions?: Array<{
+        /** Name of the icon from react-icons library (e.g., 'FaWhatsapp', 'FaTrash') */
+        nameIcon: string;
+        /** Props to pass to the Icon component */
+        propsIcon?: {
+            size?: string | number;
+            color?: string;
+            [key: string]: any;
+        };
+        /** Click handler - receives selected rows and their keys */
+        onClick: (selectedRows: T[], selectedKeys: string[]) => void;
+        /** Tooltip text to display on hover */
+        tooltip?: string;
+        /** Whether the action is disabled */
+        disabled?: boolean;
+        /** Additional className for the icon container */
+        className?: string;
+    }>;
     /** Enable row dragging */
     draggable?: boolean;
     /** On row drag end */

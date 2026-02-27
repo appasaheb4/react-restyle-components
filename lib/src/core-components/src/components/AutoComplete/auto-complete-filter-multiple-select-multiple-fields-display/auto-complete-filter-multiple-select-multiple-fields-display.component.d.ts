@@ -69,9 +69,12 @@ export interface AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps {
     styles?: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayStyles;
     /** Maximum height for dropdown (e.g., '200px', '300px'). Shows scrollbar when content exceeds this height */
     maxHeight?: string;
+    /** How long (ms) to show "Loading..." before "No Results Found". Default 1000. */
+    filterDebounceDelay?: number;
     onFilter?: (value: string) => void;
     onUpdate: (selectedItems: any[]) => void;
     onSelect: (item: any) => any;
     onBlur?: (e: any) => void;
+    onClickInput?: () => void;
 }
-export declare const AutoCompleteFilterMultipleSelectMultipleFieldsDisplay: ({ uniqueField, isSelectedStringArray, loader, placeholder, data, hasError, disable, isUpperCase, name, classNames, styles, maxHeight, onFilter, onUpdate, onSelect, onBlur, }: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterMultipleSelectMultipleFieldsDisplay: ({ uniqueField, isSelectedStringArray, loader, placeholder, data, hasError, disable, isUpperCase, name, classNames, styles, maxHeight, filterDebounceDelay, onFilter, onUpdate, onSelect, onBlur, onClickInput, }: AutoCompleteFilterMultipleSelectMultipleFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;

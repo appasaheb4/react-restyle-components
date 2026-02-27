@@ -33,11 +33,13 @@ interface AutoCompleteFilterSingleSelectMultiFieldsDisplayProps {
     className?: string;
     posstion?: string;
     keyboard?: string;
+    /** How long (ms) to show "Loading..." message before "No Results Found". Default 1000. */
+    filterDebounceDelay?: number;
     classNames?: AutoCompleteFilterSingleSelectMultiFieldsDisplayClassNames;
     styles?: AutoCompleteFilterSingleSelectMultiFieldsDisplayStyles;
     onFilter?: (item: any) => void;
     onSelect?: (item: any) => any;
     onBlur?: (item: any) => any;
 }
-export declare const AutoCompleteFilterSingleSelectMultiFieldsDisplay: ({ disable, loader, displayValue, placeholder, data, hasError, className, posstion, keyboard, classNames: customClassNames, styles: customStyles, onFilter, onSelect, onBlur, }: AutoCompleteFilterSingleSelectMultiFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
+export declare const AutoCompleteFilterSingleSelectMultiFieldsDisplay: ({ disable, loader, displayValue, placeholder, data, hasError, className, posstion, keyboard, filterDebounceDelay, classNames: customClassNames, styles: customStyles, onFilter, onSelect, onBlur, }: AutoCompleteFilterSingleSelectMultiFieldsDisplayProps) => import("react/jsx-runtime").JSX.Element;
 export {};
