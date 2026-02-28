@@ -335,6 +335,8 @@ export interface TableProps<T = any> {
     loading?: boolean;
     /** Custom loading indicator */
     loadingIndicator?: React.ReactNode;
+    /** Show loading spinner at top right (uses LoadingAnimateSpin) */
+    isLoading?: boolean;
     /** Enable pagination */
     pagination?: boolean;
     /** Pagination config */
@@ -623,6 +625,31 @@ export interface TableProps<T = any> {
         /** Additional className for the icon container */
         className?: string;
     }>;
+    /**
+     * Header toolbar actions (after Show/Hide Columns).
+     * Accepts array of action items OR a single React component.
+     * Each array item can be an icon (nameIcon) or a custom component (customComponent).
+     */
+    selectionHeaderActions?: Array<{
+        /** Name of the icon from react-icons library (e.g., 'FaWhatsapp', 'FaTrash') */
+        nameIcon?: string;
+        /** Custom component - when provided, renders this instead of Icon */
+        customComponent?: React.ReactNode;
+        /** Props to pass to the Icon component (when using nameIcon) */
+        propsIcon?: {
+            size?: string | number;
+            color?: string;
+            [key: string]: any;
+        };
+        /** Click handler - receives selected rows and their keys (when using nameIcon) */
+        onClick?: (selectedRows: T[], selectedKeys: string[]) => void;
+        /** Tooltip text to display on hover */
+        tooltip?: string;
+        /** Whether the action is disabled */
+        disabled?: boolean;
+        /** Additional className for the icon container */
+        className?: string;
+    }> | React.ReactNode;
     /** Enable row dragging */
     draggable?: boolean;
     /** On row drag end */
