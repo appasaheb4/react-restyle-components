@@ -604,8 +604,9 @@ export interface TableProps<T = any> {
      */
     onSelectSort?: (selectedRows: T[], selectedKeys: string[]) => void;
     /**
-     * Array of action items to display when rows are selected
-     * Each action item can have an icon, props, and onClick handler
+     * Array of action items to display when rows are selected.
+     * Can be a static array OR a function that receives selectedRows and returns an array.
+     * Each action item can have an icon, props, and onClick handler.
      */
     selectionActions?: Array<{
         /** Name of the icon from react-icons library (e.g., 'FaWhatsapp', 'FaTrash') */
@@ -616,15 +617,26 @@ export interface TableProps<T = any> {
             color?: string;
             [key: string]: any;
         };
-        /** Click handler - receives selected rows and their keys */
-        onClick: (selectedRows: T[], selectedKeys: string[]) => void;
+        /** Click handler - receives selected rows and their keys (selectedRows is optional) */
+        onClick: (selectedRows: T[], selectedKeys?: string[]) => void;
         /** Tooltip text to display on hover */
         tooltip?: string;
         /** Whether the action is disabled */
         disabled?: boolean;
         /** Additional className for the icon container */
         className?: string;
-    }>;
+    }> | ((selectedRows: T[]) => Array<{
+        nameIcon: string;
+        propsIcon?: {
+            size?: string | number;
+            color?: string;
+            [key: string]: any;
+        };
+        onClick: (selectedRows: T[], selectedKeys?: string[]) => void;
+        tooltip?: string;
+        disabled?: boolean;
+        className?: string;
+    }>);
     /**
      * Header toolbar actions (after Show/Hide Columns).
      * Accepts array of action items OR a single React component.
