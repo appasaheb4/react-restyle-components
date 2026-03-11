@@ -5,6 +5,7 @@ interface MultiSelectDropdownProps {
     onClear?: () => void;
     placeholder?: string;
     disabled?: boolean;
+    preSelected?: string[];
 }
 export declare const MultiSelectionDropdown: React.FC<MultiSelectDropdownProps>;
 export {};
