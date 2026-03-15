@@ -35,6 +35,8 @@ interface SingleSelectProps {
     options: Array<any>;
     displayKey?: string;
     displayValue?: string;
+    /** Placeholder text when no value is selected. Optional, defaults to "Select" */
+    placeholder?: string;
     hasError?: boolean;
     className?: string;
     style?: React.CSSProperties;
@@ -44,5 +46,5 @@ interface SingleSelectProps {
     styles?: SingleSelectStyles;
     onSelect: (item: any) => any;
 }
-export declare const SingleSelect: ({ options, displayKey, displayValue, hasError, className, style, classNames, styles, onSelect, }: SingleSelectProps) => import("react/jsx-runtime").JSX.Element;
+export declare const SingleSelect: ({ options, displayKey, displayValue, placeholder, hasError, className, style, classNames, styles, onSelect, }: SingleSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};
