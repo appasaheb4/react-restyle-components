@@ -390,8 +390,24 @@ export interface TableProps<T = any> {
     exportable?: boolean;
     /** Export file name */
     exportFileName?: string;
-    /** Export format: 'csv' (default) or 'excel' */
+    /** Export format: 'excel' (default) or 'csv' */
     exportFormat?: 'csv' | 'excel';
+    /** Sheet name used when exporting to Excel */
+    exportSheetName?: string;
+    /**
+     * Style applied to the header row of the exported Excel file.
+     * Defaults: gray background (#6b7280), white text, bold, size 12.
+     */
+    exportHeaderStyle?: {
+        /** Header cell background color (hex, e.g. '#1e40af') */
+        backgroundColor?: string;
+        /** Header cell text color (hex, e.g. '#ffffff') */
+        color?: string;
+        /** Bold header text (default: true) */
+        bold?: boolean;
+        /** Header font size (default: 12) */
+        fontSize?: number;
+    };
     /** Enable column toggle */
     columnToggle?: boolean;
     /** Enable Show/Hide Columns (field selector) - controls column visibility panel (default: true) */
