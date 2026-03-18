@@ -1,6 +1,111 @@
 import React, { CSSProperties } from 'react';
 /** Sort direction */
 export type SortDirection = 'asc' | 'desc' | null;
+/**
+ * A summary row appended at the bottom of the main exported sheet.
+ * Values are keyed by column dataField. Optional per-cell and row-level
+ * style overrides are passed straight to ExcelJS.
+ */
+export interface ExportSummaryRow {
+    /** Cell values keyed by column dataField */
+    values: Record<string, any>;
+    /** Row-level fill color (hex, e.g. '#1e40af') */
+    backgroundColor?: string;
+    /** Row-level text color (hex) */
+    color?: string;
+    /** Row-level bold override */
+    bold?: boolean;
+    /** Row-level font size override */
+    fontSize?: number;
+    /** Per-cell style overrides, keyed by dataField */
+    cellStyles?: Record<string, {
+        backgroundColor?: string;
+        color?: string;
+        bold?: boolean;
+        fontSize?: number;
+        /** ExcelJS numFmt string, e.g. '#,##0.00' */
+        numFmt?: string;
+        /** Horizontal alignment */
+        align?: 'left' | 'center' | 'right';
+    }>;
+}
+/** A single data series inside an ExportChart */
+export interface ExportChartDataset {
+    /** Legend label for this series */
+    label: string;
+    /** Numeric values — one per label */
+    values: number[];
+    /**
+     * Line / bar fill colour.
+     * Pass a single hex string for a uniform colour, or an array for per-bar /
+     * per-slice colours (most useful for pie / doughnut charts).
+     */
+    color?: string | string[];
+    /** Alias for color — mirrors Chart.js naming */
+    backgroundColor?: string | string[];
+}
+export type ExportChartType = 'bar' | 'line' | 'pie' | 'doughnut';
+/**
+ * A chart to embed in an exported Excel sheet.
+ * Rendered at export time via the browser Canvas 2D API — no extra
+ * dependencies are required.
+ */
+export interface ExportChart {
+    /** Chart variety */
+    type: ExportChartType;
+    /** Optional title drawn above the plot area */
+    title?: string;
+    /** X-axis tick labels (or pie / doughnut slice labels) */
+    labels: string[];
+    /** One or more data series */
+    datasets: ExportChartDataset[];
+    /** Canvas render width in pixels (default: 600) */
+    width?: number;
+    /** Canvas render height in pixels (default: 350) */
+    height?: number;
+    /**
+     * Gap rows between the last data / summary row and the chart top-left.
+     * Default: 2
+     */
+    rowOffset?: number;
+    /** 0-indexed column where the chart's left edge is anchored. Default: 0 */
+    colOffset?: number;
+    /** Number of Excel columns the chart spans. Default: 8 */
+    colSpan?: number;
+    /** Number of Excel rows the chart spans. Default: 20 */
+    rowSpan?: number;
+}
+/**
+ * An additional worksheet to append to the exported Excel file at runtime.
+ * Sheet2, Sheet3, etc.
+ */
+export interface ExportExtraSheet<T = any> {
+    /** Sheet tab name */
+    name: string;
+    /** Rows of data to write */
+    data: T[];
+    /** Column definitions (subset of TableColumn) */
+    columns: Array<{
+        dataField: string;
+        text: string;
+        csvFormatter?: (cell: any, row: T, rowIndex: number) => string;
+        csvExport?: boolean;
+    }>;
+    /** Optional header style for this sheet */
+    headerStyle?: {
+        backgroundColor?: string;
+        color?: string;
+        bold?: boolean;
+        fontSize?: number;
+    };
+    /** Optional summary rows appended at the bottom of this extra sheet */
+    summaryRows?: ExportSummaryRow[];
+    /**
+     * Charts to embed in this sheet after the data table and summary rows.
+     * Rendered via the browser Canvas 2D API — bar, line, pie, or doughnut.
+     */
+    charts?: ExportChart[];
+}
 /** Filter type */
 export type FilterType = 'text' | 'number' | 'date' | 'dateRange' | 'select' | 'custom';
 /** Row selection mode */
@@ -408,6 +513,23 @@ export interface TableProps<T = any> {
         /** Header font size (default: 12) */
         fontSize?: number;
     };
+    /**
+     * Extra worksheets to include in the exported Excel file (Sheet2, Sheet3 …).
+     * Each sheet can have its own data, columns, header style, and summary rows.
+     * Evaluated at export time so the caller can supply fresh data reactively.
+     */
+    exportExtraSheets?: ExportExtraSheet[];
+    /**
+     * Summary rows appended at the bottom of the main data sheet.
+     * Useful for totals, averages, or any other aggregated values.
+     * Each row can carry per-cell and row-level style overrides.
+     */
+    exportSummaryRows?: ExportSummaryRow[];
+    /**
+     * Charts to embed in the main exported sheet after data and summary rows.
+     * Rendered via the browser Canvas 2D API — bar, line, pie, or doughnut.
+     */
+    exportCharts?: ExportChart[];
     /** Enable column toggle */
     columnToggle?: boolean;
     /** Enable Show/Hide Columns (field selector) - controls column visibility panel (default: true) */

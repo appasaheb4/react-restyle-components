@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { TableColumn, TableSortState, SortDirection, TableFilterState } from './types';
+import { TableColumn, TableSortState, SortDirection, TableFilterState, ExportExtraSheet, ExportSummaryRow, ExportChart } from './types';
 /**
  * Debounce function for table
  */
@@ -105,7 +105,13 @@ export declare function getNestedValue(obj: any, path: string): any;
  */
 export declare function exportToCSV<T>(data: T[], columns: TableColumn<T>[], fileName: string): void;
 /**
- * Export data to Excel (.xlsx) - loads ExcelJS dynamically from CDN
+ * Export data to Excel (.xlsx) - loads ExcelJS dynamically from CDN.
+ *
+ * Supports:
+ *  - Custom header styles
+ *  - Summary rows at the bottom of the main sheet
+ *  - Extra sheets (Sheet2, Sheet3 …) each with their own data / columns /
+ *    header styles / summary rows
  */
 export declare function exportToExcel<T>(data: T[], columns: TableColumn<T>[], fileName: string, options?: {
     sheetName?: string;
@@ -119,4 +125,10 @@ export declare function exportToExcel<T>(data: T[], columns: TableColumn<T>[], f
             color?: string;
         };
     };
+    /** Summary rows appended at the bottom of the main sheet */
+    summaryRows?: ExportSummaryRow[];
+    /** Charts embedded after data + summary rows on the main sheet */
+    charts?: ExportChart[];
+    /** Extra worksheets to add after the main sheet */
+    extraSheets?: ExportExtraSheet[];
 }): Promise<void>;
