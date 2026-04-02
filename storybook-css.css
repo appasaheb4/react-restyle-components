@@ -1,0 +1,17 @@
+.theme--dark {
+  background: var(--Gl950);
+  color: var(--N0);
+}
+
+.theme--dark .docs-story {
+  background: var(--Gl950);
+  color: var(--N0);
+}
+
+.theme--light {
+  background: var(--N0);
+}
+
+.theme--light .docs-story {
+  background: var(--N0);
+}
