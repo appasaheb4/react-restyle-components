@@ -1,5 +1,8 @@
 import React from 'react';
 import { TableFilterProps } from './types';
+export declare const FilterValueProvider: React.FC<React.PropsWithChildren<{
+    value: any;
+}>>;
 /**
  * Text filter options for factory function pattern
  */
