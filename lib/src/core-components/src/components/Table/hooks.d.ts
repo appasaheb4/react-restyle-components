@@ -45,6 +45,7 @@ export declare function usePaginationState(defaultPage?: number, defaultPageSize
  */
 export declare function useRowSelection<T>(data: T[], keyField?: string, mode?: 'none' | 'single' | 'multiple' | 'checkbox', controlledSelectedKeys?: string[], getCheckboxProps?: (row: T) => {
     disabled?: boolean;
+    checkboxOnly?: boolean;
 }): {
     selectedKeys: Set<string>;
     isSelected: (key: string) => boolean;

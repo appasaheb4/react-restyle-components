@@ -332,9 +332,12 @@ export interface TableSelectionConfig<T = any> {
     keyField?: string;
     /** Callback when selection changes */
     onChange?: (selectedRowKeys: string[], selectedRows: T[]) => void;
-    /** Function to determine if row is selectable */
+    /** Function to determine if row is selectable.
+     * Return `disabled: true` to disable the entire row (checkbox + row interaction + styling).
+     * Return `disabled: true, checkboxOnly: true` to disable only the checkbox while keeping the row fully interactive and editable. */
     getCheckboxProps?: (row: T) => {
         disabled?: boolean;
+        checkboxOnly?: boolean;
         name?: string;
     };
     /** Selected row style */
