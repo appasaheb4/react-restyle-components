@@ -6,6 +6,7 @@ interface MultiSelectDropdownProps {
     placeholder?: string;
     disabled?: boolean;
     preSelected?: string[];
+    hasError?: boolean;
 }
 export declare const MultiSelectionDropdown: React.FC<MultiSelectDropdownProps>;
 export {};
