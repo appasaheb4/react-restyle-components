@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 import { TableColumn, TableSortState, SortDirection, TableFilterState, ExportExtraSheet, ExportSummaryRow, ExportChart } from './types';
 /**
  * Debounce function for table
@@ -13,7 +13,7 @@ export declare function useSortState(defaultSort?: TableSortState, controlledSor
         field: string;
         order: SortDirection;
     };
-    setSort: import("react").Dispatch<import("react").SetStateAction<TableSortState>>;
+    setSort: React.Dispatch<React.SetStateAction<TableSortState>>;
 };
 /**
  * Hook for managing filter state
@@ -22,7 +22,7 @@ export declare function useFilterState(defaultFilters?: TableFilterState, contro
     filters: TableFilterState;
     setFilter: (field: string, value: any) => void;
     clearFilters: () => void;
-    setFilters: import("react").Dispatch<import("react").SetStateAction<TableFilterState>>;
+    setFilters: React.Dispatch<React.SetStateAction<TableFilterState>>;
 };
 /**
  * Hook for managing pagination state
@@ -37,8 +37,8 @@ export declare function usePaginationState(defaultPage?: number, defaultPageSize
     goToFirstPage: () => void;
     goToLastPage: () => void;
     changePageSize: (newSize: number) => void;
-    setPage: import("react").Dispatch<import("react").SetStateAction<number>>;
-    setPageSize: import("react").Dispatch<import("react").SetStateAction<number>>;
+    setPage: React.Dispatch<React.SetStateAction<number>>;
+    setPageSize: React.Dispatch<React.SetStateAction<number>>;
 };
 /**
  * Hook for managing row selection
@@ -60,7 +60,7 @@ export declare function useRowSelection<T>(data: T[], keyField?: string, mode?: 
     isAllSelected: boolean;
     isIndeterminate: boolean;
     clearSelection: () => void;
-    setSelected: import("react").Dispatch<import("react").SetStateAction<Set<string>>>;
+    setSelected: React.Dispatch<React.SetStateAction<Set<string>>>;
 };
 /**
  * Hook for managing row expansion
@@ -73,7 +73,7 @@ export declare function useRowExpansion<T>(keyField?: string, defaultExpandedKey
         expanded: boolean;
         row: T;
     };
-    setExpanded: import("react").Dispatch<import("react").SetStateAction<Set<string>>>;
+    setExpanded: React.Dispatch<React.SetStateAction<Set<string>>>;
 };
 /**
  * Hook for managing column visibility
@@ -101,6 +101,11 @@ export declare function paginateData<T>(data: T[], page: number, pageSize: numbe
  * Get nested value from object
  */
 export declare function getNestedValue(obj: any, path: string): any;
+/**
+ * Resolves display/export value when {@link TableColumn.cellDefault} is set
+ * and the raw cell is `null` or `undefined`.
+ */
+export declare function applyCellDefault<T = any>(raw: any, column: TableColumn<T>): any;
 /**
  * Export data to CSV
  */

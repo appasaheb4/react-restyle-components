@@ -224,6 +224,13 @@ export interface TableColumn<T = any> {
     editorClasses?: string;
     /** Validator function */
     validator?: (value: any, row: T) => boolean | string;
+    /**
+     * Shown when the cell value is `null` or `undefined` (display and CSV/Excel
+     * export). Does not mutate row data.
+     * When `formatter` is set, it receives the raw cell value; apply defaults
+     * inside the formatter if needed.
+     */
+    cellDefault?: React.ReactNode;
     /** Custom cell renderer */
     formatter?: (cell: any, row: T, rowIndex: number, columnIndex: number) => React.ReactNode;
     /** Custom header renderer */
