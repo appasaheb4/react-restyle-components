@@ -26,6 +26,8 @@ export interface ButtonGroupListProps<T extends string = string> {
     tooltipContent?: React.ReactNode;
     /** Extra props for the trigger tooltip (position, delay, etc.). */
     tooltipProps?: Omit<TooltipProps, 'children' | 'content'>;
+    /** Called when the square trigger is clicked (before open/close toggle). */
+    onBaseClick?: React.MouseEventHandler<HTMLButtonElement>;
     disabled?: boolean;
     /** Merged onto the root wrapper. */
     className?: string;
@@ -41,7 +43,7 @@ export interface ButtonGroupListProps<T extends string = string> {
     /** `aria-label` on the listbox. */
     listboxAriaLabel?: string;
 }
-export declare function ButtonGroupList<T extends string = string>({ options, value, onChange, triggerIcon, triggerIconProps, tooltipContent, tooltipProps, disabled, className, style, triggerClassName, triggerButtonStyle, dropdownClassName, dropdownStyle, triggerAriaLabel, listboxAriaLabel, }: ButtonGroupListProps<T>): import("react/jsx-runtime").JSX.Element;
+export declare function ButtonGroupList<T extends string = string>({ options, value, onChange, triggerIcon, triggerIconProps, tooltipContent, tooltipProps, onBaseClick, disabled, className, style, triggerClassName, triggerButtonStyle, dropdownClassName, dropdownStyle, triggerAriaLabel, listboxAriaLabel, }: ButtonGroupListProps<T>): import("react/jsx-runtime").JSX.Element;
 export type ButtonGuideListValue = 'noneGuide' | 'operationalGuide' | 'technicalGuide';
 export declare const LIBRARY_GUIDE_OPTIONS: readonly ButtonGroupListOption<ButtonGuideListValue>[];
 export type ButtonGuideListProps = Omit<ButtonGroupListProps<ButtonGuideListValue>, 'options'> & {
