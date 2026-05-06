@@ -54,7 +54,7 @@ export interface DragDropUIConfig {
     selectedPlaceholder?: string | ((count: number) => string);
     /** Empty state message */
     emptyStateMessage?: string;
-    /** Maximum height for dropdown */
+    /** Maximum height for the scrollable options list (CSS length, e.g. min(70vh, 22rem)) */
     maxHeight?: string;
     /** Z-index for dropdown */
     zIndex?: number;
@@ -67,6 +67,8 @@ export interface DraggableSelectedItemProps {
     displayKey?: string[];
     uniqueField?: string;
     displayConfig?: DragDropDisplayConfig;
+    /** Sortable reorder animation duration (ms), from dragDropConfig.animationDuration */
+    sortableTransitionMs?: number;
     className?: string;
     style?: React.CSSProperties;
 }
