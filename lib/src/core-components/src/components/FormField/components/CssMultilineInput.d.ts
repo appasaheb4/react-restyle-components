@@ -1,4 +1,12 @@
 import React from 'react';
+export interface CssLayoutPreset {
+    id: string;
+    title: string;
+    hint: string;
+    /** Comma-separated fragment appended to current CSS (same quoting rules as picker) */
+    snippet: string;
+}
+export declare const DEFAULT_LAYOUT_PRESETS: CssLayoutPreset[];
 export interface CssMultilineInputProps {
     id: string;
     label?: string;
@@ -16,6 +24,8 @@ export interface CssMultilineInputProps {
     placeholder?: string;
     className?: string;
     labelProps?: any;
+    /** Quick layout stacks shown above the property list (defaults built-in) */
+    layoutPresets?: CssLayoutPreset[];
     [key: string]: any;
 }
 export declare const CssMultilineInput: React.ForwardRefExoticComponent<Omit<CssMultilineInputProps, "ref"> & React.RefAttributes<HTMLTextAreaElement>>;
