@@ -3,6 +3,9 @@ import { TableFilterProps } from './types';
 export declare const FilterValueProvider: React.FC<React.PropsWithChildren<{
     value: any;
 }>>;
+export declare const FilterClickApplyProvider: React.FC<React.PropsWithChildren<{
+    value: boolean;
+}>>;
 /**
  * Text filter options for factory function pattern
  */
@@ -29,6 +32,10 @@ export interface TextFilterOptions {
     id?: string;
     /** Disabled state */
     disabled?: boolean;
+    /**
+     * When true, Enter-to-apply mode is on. Table/column `isClickFilter` overrides `false` here.
+     */
+    isClickFilter?: boolean;
 }
 /**
  * Filter instance returned by getFilter callback
@@ -74,6 +81,10 @@ export interface NumberFilterOptions {
     hideComparator?: boolean;
     /** Available comparators */
     comparators?: Array<'=' | '!=' | '>' | '>=' | '<' | '<='>;
+    /**
+     * When true, Enter-to-apply mode is on. Table/column `isClickFilter` overrides `false` here.
+     */
+    isClickFilter?: boolean;
 }
 /**
  * Number filter instance returned by getFilter callback
@@ -166,6 +177,10 @@ export interface DateFilterOptions {
     minDate?: string;
     /** Max date */
     maxDate?: string;
+    /**
+     * When true, Enter-to-apply mode is on. Table/column `isClickFilter` overrides `false` here.
+     */
+    isClickFilter?: boolean;
 }
 /**
  * Date filter instance returned by getFilter callback

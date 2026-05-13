@@ -164,6 +164,12 @@ export interface TableFilterRendererContext {
     value: any;
     /** Clear this column’s filter only */
     onClear: () => void;
+    /**
+     * Resolved from {@link TableColumn.isClickFilter} or table {@link TableProps.isClickFilter}.
+     * When true, call `onFilter` only when applying (Enter in built-in Text/Number/Date filters), not on each keystroke.
+     * Table also exposes this via `FilterClickApplyProvider` — child filters inherit it when `isClickFilter` is omitted on the element.
+     */
+    isClickFilter?: boolean;
 }
 export interface TableColumn<T = any> {
     /** Unique field key */
@@ -207,6 +213,11 @@ export interface TableColumn<T = any> {
     filterRenderer?: (onFilter: (value: any) => void, column: TableColumn<T>, context?: TableFilterRendererContext) => React.ReactNode;
     /** Filter placeholder */
     filterPlaceholder?: string;
+    /**
+     * When true, built-in Text/Number/Date filters commit when the user presses Enter in the filter control, not while typing.
+     * Overrides table {@link TableProps.isClickFilter} when set.
+     */
+    isClickFilter?: boolean;
     /** Whether column is editable - boolean or function returning boolean/custom editor */
     editable?: boolean | ((cell: any, row: T, rowIndex: number, columnIndex: number) => boolean | React.ReactNode);
     /** Editor type */
@@ -282,6 +293,11 @@ export interface TableFilterProps {
     onFilter?: (value: any) => void;
     /** Callback to clear the filter */
     onClear?: () => void;
+    /**
+     * When true (from {@link TableProps.isClickFilter}, column override, or filter factory options),
+     * built-in Text/Number/Date filters commit on Enter, not each debounced keystroke or date change.
+     */
+    isClickFilter?: boolean;
 }
 /** Editor props passed to custom editor renderer */
 export interface TableEditorProps<T = any> {
@@ -491,6 +507,12 @@ export interface TableProps<T = any> {
     onShowFiltersChange?: (visible: boolean) => void;
     /** Show filter toggle button in toolbar */
     showFilterToggle?: boolean;
+    /**
+     * When true, Text/Number/Date column filters apply when the user presses Enter in those controls (not each keystroke).
+     * The default global search box uses the same behavior: typing only updates a draft until Enter (or Clear), so {@link TableProps.onSearch}, {@link TableProps.onFilter}, and client filtering run only after apply—not on every keystroke.
+     * Override per column with {@link TableColumn.isClickFilter}.
+     */
+    isClickFilter?: boolean;
     /** Enable global search */
     searchable?: boolean;
     /** Search placeholder */
@@ -606,6 +628,8 @@ export interface TableProps<T = any> {
     toolbar?: React.ReactNode | ((props: {
         searchValue: string;
         onSearch: (value: string) => void;
+        /** When {@link TableProps.isClickFilter} is true, call to apply the current toolbar `searchValue` draft (same as pressing Enter in the default toolbar). */
+        commitGlobalSearch?: () => void;
         onClearFilters: () => void;
         onExport: () => void;
     }) => React.ReactNode);
