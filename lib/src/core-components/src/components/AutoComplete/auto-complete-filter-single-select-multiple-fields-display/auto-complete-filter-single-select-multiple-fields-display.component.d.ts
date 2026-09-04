@@ -23,12 +23,21 @@ export interface AutoCompleteFilterSingleSelectMultiFieldsDisplayStyles {
     emptyState?: CSSProperties;
     loadingContainer?: CSSProperties;
 }
+export interface AutoCompleteMultiFieldsDisplayData {
+    list: any[];
+    displayKey: string[];
+    /**
+     * Optional per-field character limits for display.
+     * Example: `[{ accountName: 10 }]` truncates `accountName` to 10 chars + `...`
+     */
+    limitText?: Array<Record<string, number>>;
+}
 interface AutoCompleteFilterSingleSelectMultiFieldsDisplayProps {
     loader?: boolean;
     disable?: boolean;
     displayValue?: string;
     placeholder?: string;
-    data: any;
+    data: AutoCompleteMultiFieldsDisplayData;
     hasError?: boolean;
     className?: string;
     posstion?: string;
