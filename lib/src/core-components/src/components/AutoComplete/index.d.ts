@@ -2,6 +2,7 @@ export * from './auto-complete-filter-multiple-select-multiple-fields-display/au
 export * from './auto-complete-filter-single-select-multiple-fields-display/auto-complete-filter-single-select-multiple-fields-display.component';
 export * from './autocomplete/autocomplete';
 export * from './auto-complete-group-by/auto-complete-group-by.component';
+export * from './auto-complete-group-by-check/auto-complete-group-by-check.component';
 export * from './auto-complete-filter-single-select/auto-complete-filter-single-select.component';
 export * from './auto-complete-filter-multi-select-selected-top-display/auto-complete-filter-multi-select-selected-top-display.component';
 export * from './auto-complete-filter-multi-select-multi-fields-display-drag-drop/auto-complete-filter-multi-select-multi-fields-display-drag-drop.component';
