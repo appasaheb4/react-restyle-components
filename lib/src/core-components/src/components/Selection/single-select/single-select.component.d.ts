@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react';
+import { IconBaseProps } from 'react-icons/lib';
 export interface SingleSelectClassNames {
     /** Custom className for the container */
     container?: string;
@@ -14,6 +15,18 @@ export interface SingleSelectClassNames {
     listItem?: string;
     /** Custom className for the item text */
     itemText?: string;
+}
+export interface SingleSelectIconProps {
+    /** Icon when the list is closed. Default `FaChevronDown`. */
+    nameIcon?: string;
+    /** Icon when the list is open. Default `FaChevronUp`. */
+    openNameIcon?: string;
+    /** Icon size. Default `16`. */
+    size?: IconBaseProps['size'];
+    /** Icon color. Omit to keep the Icon default. */
+    color?: string;
+    /** Extra props forwarded to the icon. `size` and `color` above take precedence. */
+    propsIcon?: IconBaseProps;
 }
 export interface SingleSelectStyles {
     /** Custom style for the container */
@@ -44,7 +57,12 @@ interface SingleSelectProps {
     classNames?: SingleSelectClassNames;
     /** Custom inline styles for component parts */
     styles?: SingleSelectStyles;
+    /**
+     * Chevron icons. Closed and open names, size, and color can change at runtime.
+     * Defaults stay `FaChevronDown` / `FaChevronUp` at size 16.
+     */
+    iconProps?: SingleSelectIconProps;
     onSelect: (item: any) => any;
 }
-export declare const SingleSelect: ({ options, displayKey, displayValue, placeholder, hasError, className, style, classNames, styles, onSelect, }: SingleSelectProps) => import("react/jsx-runtime").JSX.Element;
+export declare const SingleSelect: ({ options, displayKey, displayValue, placeholder, hasError, className, style, classNames, styles, iconProps, onSelect, }: SingleSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};
